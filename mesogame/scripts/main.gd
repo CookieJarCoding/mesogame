@@ -4,6 +4,7 @@ extends Node
 const TILE_WIDTH: int = 128
 const TILE_HEIGHT: int = 128
 const DROP_SPACE: PackedScene = preload("res://scenes/drop_space.tscn")
+const TEST_ITEM: PackedScene = preload("res://scenes/item_unit.tscn")
 
 @export var box_width: int = 5
 @export var box_height: int = 5
@@ -14,12 +15,11 @@ const DROP_SPACE: PackedScene = preload("res://scenes/drop_space.tscn")
 func _ready() -> void:
 	for i in range(box_height):
 		for j in range(box_width):
-			var drop_instance = DROP_SPACE.instantiate()
-			drop_instance.modulate = Color(Color.MEDIUM_PURPLE, 0.7)
-			drop_instance.position = $InvTopLeftCorner.position + Vector2(i * (TILE_WIDTH + 10), j * (TILE_HEIGHT + 10))
-			add_child(drop_instance)
-	for i in range(box_height):
-		for j in range(box_width):
 			var box_instance = DROP_SPACE.instantiate()
 			box_instance.position = $BoxTopLeftCorner.position + Vector2(i * (TILE_WIDTH + 10), j * (TILE_HEIGHT + 10))
 			add_child(box_instance)
+	var ran_x = randf_range(0, 900)
+	var ran_y = randf_range(900, 1000)
+	var test_instance = TEST_ITEM.instantiate()
+	test_instance.global_position = Vector2(ran_x, ran_y)
+	add_child(test_instance)

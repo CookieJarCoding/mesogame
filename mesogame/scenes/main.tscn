@@ -12,8 +12,5 @@ position = Vector2(1054, 941)
 [node name="object2" parent="." unique_id=948301917 instance=ExtResource("1_0wfyh")]
 position = Vector2(858, 969)
 
-[node name="InvTopLeftCorner" type="Node2D" parent="." unique_id=1000437860]
-position = Vector2(218, 146)
-
 [node name="BoxTopLeftCorner" type="Node2D" parent="." unique_id=1971797032]
 position = Vector2(1020, 146)
