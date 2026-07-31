@@ -8,10 +8,10 @@
 script = ExtResource("1_sugp2")
 
 [node name="object" parent="." unique_id=218751151 instance=ExtResource("1_0wfyh")]
-position = Vector2(896, 943)
+position = Vector2(1054, 941)
 
 [node name="object2" parent="." unique_id=948301917 instance=ExtResource("1_0wfyh")]
-position = Vector2(724, 1049)
+position = Vector2(858, 969)
 
 [node name="BoxTopLeftCorner" type="Node2D" parent="." unique_id=1000437860]
 position = Vector2(1007, 308)

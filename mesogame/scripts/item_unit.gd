@@ -4,6 +4,7 @@ var draggable = false
 var is_inside_dropable = false
 var is_animating: bool = false
 var body_ref
+var prev_body_ref
 var offset: Vector2
 var initialPos: Vector2
 
@@ -24,7 +25,7 @@ func _process(_delta: float) -> void:
 			offset = get_global_mouse_position() - global_position
 			if body_ref:
 				print("Press")
-				body_ref.occupied = false
+				#body_ref.occupied = false
 			Globals.is_dragging = true
 		if Input.is_action_pressed("click"):
 			global_position = get_global_mouse_position() - offset
@@ -37,10 +38,12 @@ func _process(_delta: float) -> void:
 				tween.tween_property(self,"global_position",body_ref.global_position, 0.2).set_ease(Tween.EASE_OUT)
 				if body_ref:
 					print("Release")
-					body_ref.occupied = true
+					#body_ref.occupied = true
 			else:
 				tween.tween_property(self,"global_position",initialPos, 0.2).set_ease(Tween.EASE_OUT)
-			
+				if prev_body_ref:
+					body_ref = prev_body_ref
+					#body_ref.occupied = true
 
 
 func _physics_process(_delta: float) -> void:
@@ -63,15 +66,18 @@ func _on_area_2d_mouse_entered() -> void:
 		draggable = true
 		scale = Vector2(1.05, 1.05)
 
-func _on_area_2d_body_exited(body) -> void:
-	if body.is_in_group('dropable'):
-		is_inside_dropable = false
-		body.modulate = Color(Color.MEDIUM_PURPLE, 0.7)
-		
 
-func _on_area_2d_body_entered(body) -> void:
-	if body.is_in_group('dropable') and body is DropSpace:
-		if not body.occupied:
+func _on_tile_area_entered(area: Area2D) -> void:
+	if area.is_in_group("dropable") and area is DropSpace:
+		if not area.occupied:
 			is_inside_dropable = true
-			body.modulate = Color(Color.REBECCA_PURPLE, 1)
-			body_ref = body
+			area.modulate = Color(Color.REBECCA_PURPLE, 1)
+			body_ref = area
+
+
+func _on_tile_area_exited(area: Area2D) -> void:
+	if area.is_in_group("dropable") and area is DropSpace:
+		is_inside_dropable = false
+		area.modulate = Color(Color.MEDIUM_PURPLE, 0.7)
+		prev_body_ref = body_ref
+		body_ref = null

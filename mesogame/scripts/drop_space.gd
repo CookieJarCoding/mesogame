@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends Area2D
 
 
 class_name DropSpace
@@ -19,7 +19,9 @@ func _process(delta: float) -> void:
 	else:
 		visible = false
 	
-	if occupied:
+	if get_overlapping_areas().size() > 0:
+		occupied = true
 		modulate = Color(0, 0, 0)
 	else:
+		occupied = false
 		modulate = Color(Color.MEDIUM_PURPLE, 0.7)
