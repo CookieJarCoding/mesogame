@@ -14,10 +14,13 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if draggable and not is_animating:
 		if Input.is_action_just_pressed("click"):
-			initialPos = global_position
+			if body_ref:
+				initialPos = body_ref.global_position
+			else:
+				initialPos = global_position
 			offset = get_global_mouse_position() - global_position
 			if body_ref:
 				print("Press")
@@ -31,14 +34,18 @@ func _process(delta: float) -> void:
 			var tween = get_tree().create_tween()
 			tween.connect("finished", finish_snap)
 			if is_inside_dropable:
-				tween.tween_property(self,"position",body_ref.position, 0.2).set_ease(Tween.EASE_OUT)
+				tween.tween_property(self,"global_position",body_ref.global_position, 0.2).set_ease(Tween.EASE_OUT)
+				if body_ref:
+					print("Release")
+					body_ref.occupied = true
 			else:
 				tween.tween_property(self,"global_position",initialPos, 0.2).set_ease(Tween.EASE_OUT)
-			if body_ref:
-				print("Release")
-				body_ref.occupied = true
+			
 
 
+func _physics_process(_delta: float) -> void:
+	if body_ref:
+		print(body_ref.position)
 
 
 

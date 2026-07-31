@@ -7,12 +7,6 @@
 [node name="Main" type="Node" unique_id=1421864953]
 script = ExtResource("1_sugp2")
 
-[node name="drop-space" parent="." unique_id=1979598311 instance=ExtResource("2_sugp2")]
-position = Vector2(1180, 140)
-
-[node name="drop-space2" parent="." unique_id=828273517 instance=ExtResource("2_sugp2")]
-position = Vector2(1043, 135)
-
 [node name="object" parent="." unique_id=218751151 instance=ExtResource("1_0wfyh")]
 position = Vector2(896, 943)
 
@@ -21,3 +15,12 @@ position = Vector2(724, 1049)
 
 [node name="BoxTopLeftCorner" type="Node2D" parent="." unique_id=1000437860]
 position = Vector2(1007, 308)
+
+[node name="OffsetParent" type="Node2D" parent="." unique_id=936290256]
+position = Vector2(450, 292)
+
+[node name="drop-space2" parent="OffsetParent" unique_id=828273517 instance=ExtResource("2_sugp2")]
+position = Vector2(1043, 135)
+
+[node name="drop-space" parent="OffsetParent" unique_id=1979598311 instance=ExtResource("2_sugp2")]
+position = Vector2(1180, 140)

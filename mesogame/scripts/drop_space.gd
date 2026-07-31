@@ -18,3 +18,8 @@ func _process(delta: float) -> void:
 		visible = true
 	else:
 		visible = false
+	
+	if occupied:
+		modulate = Color(0, 0, 0)
+	else:
+		modulate = Color(Color.MEDIUM_PURPLE, 0.7)
