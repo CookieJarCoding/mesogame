@@ -6,7 +6,7 @@
 [node name="Main" type="Node" unique_id=1421864953]
 
 [node name="drop-space" parent="." unique_id=1979598311 instance=ExtResource("2_sugp2")]
-position = Vector2(240, 314)
+position = Vector2(151, 161)
 
 [node name="drop-space2" parent="." unique_id=828273517 instance=ExtResource("2_sugp2")]
 position = Vector2(792, 122)
