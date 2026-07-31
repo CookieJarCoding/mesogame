@@ -23,22 +23,18 @@ func _process(_delta: float) -> void:
 			else:
 				initialPos = global_position
 			offset = get_global_mouse_position() - global_position
-			if body_ref:
-				print("Press")
-				#body_ref.occupied = false
+			print("Press")
 			Globals.is_dragging = true
-		if Input.is_action_pressed("click"):
+		if Input.is_action_pressed("click") and Globals.is_dragging:
 			global_position = get_global_mouse_position() - offset
 		elif Input.is_action_just_released("click"):
 			Globals.is_dragging = false
 			is_animating = true
 			var tween = get_tree().create_tween()
+			print("Release")
 			tween.connect("finished", finish_snap)
 			if is_inside_dropable:
 				tween.tween_property(self,"global_position",body_ref.global_position, 0.2).set_ease(Tween.EASE_OUT)
-				if body_ref:
-					print("Release")
-					#body_ref.occupied = true
 			else:
 				tween.tween_property(self,"global_position",initialPos, 0.2).set_ease(Tween.EASE_OUT)
 				if prev_body_ref:
@@ -47,8 +43,8 @@ func _process(_delta: float) -> void:
 
 
 func _physics_process(_delta: float) -> void:
-	if body_ref:
-		print(body_ref.position)
+	pass
+		# print(body_ref.position)
 
 
 
