@@ -1,14 +1,19 @@
 [gd_scene format=3 uid="uid://cogxdgtms8ujh"]
 
 [ext_resource type="Texture2D" uid="uid://cautauyh3x54p" path="res://assets/ph_titlecard.png" id="1_3vvtq"]
+[ext_resource type="Script" uid="uid://ciobess4djik1" path="res://scripts/main_menu.gd" id="1_wf3n4"]
 [ext_resource type="Texture2D" uid="uid://biu2h8systml5" path="res://assets/ph_play.png" id="2_s5g8n"]
 [ext_resource type="Texture2D" uid="uid://v474h3ls6hx8" path="res://assets/ph_settings.png" id="3_7yvfd"]
 [ext_resource type="Script" uid="uid://54l4p12b51if" path="res://scripts/play_button.gd" id="3_dfy5j"]
 [ext_resource type="Texture2D" uid="uid://dyole7ptc67rb" path="res://assets/ph_quit.png" id="4_dfy5j"]
-[ext_resource type="Script" uid="uid://myibuuhsbtb6" path="res://scenes/settings_button.gd" id="5_dfy5j"]
+[ext_resource type="Script" uid="uid://myibuuhsbtb6" path="res://scripts/settings_button.gd" id="5_dfy5j"]
 [ext_resource type="Script" uid="uid://dlgogkaaa05v8" path="res://scripts/quit_button.gd" id="5_s5g8n"]
+[ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="8_85riq"]
 
-[node name="MainMenu" type="MarginContainer" unique_id=447913294]
+[node name="CanvasLayer" type="Node" unique_id=1814970323]
+script = ExtResource("1_wf3n4")
+
+[node name="MainMenu" type="MarginContainer" parent="." unique_id=447913294]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -21,39 +26,42 @@ offset_bottom = 225.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=773726621]
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMenu" unique_id=773726621]
 layout_mode = 2
 
-[node name="TitleCardTexture" type="TextureRect" parent="HBoxContainer" unique_id=1747600658]
+[node name="TitleCardTexture" type="TextureRect" parent="MainMenu/HBoxContainer" unique_id=1747600658]
 layout_mode = 2
 texture = ExtResource("1_3vvtq")
 stretch_mode = 2
 
-[node name="Control" type="Control" parent="HBoxContainer" unique_id=744002170]
+[node name="Control" type="Control" parent="MainMenu/HBoxContainer" unique_id=744002170]
 layout_mode = 2
 size_flags_horizontal = 3
 offset_transform_position = Vector2(100, 0)
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer" unique_id=1838381428]
+[node name="VBoxContainer2" type="VBoxContainer" parent="MainMenu/HBoxContainer" unique_id=1838381428]
 layout_mode = 2
 offset_transform_position = Vector2(100, 0)
 alignment = 1
 
-[node name="PlayButton" type="Button" parent="HBoxContainer/VBoxContainer2" unique_id=1790271217]
+[node name="PlayButton" type="Button" parent="MainMenu/HBoxContainer/VBoxContainer2" unique_id=1790271217]
 layout_mode = 2
 icon = ExtResource("2_s5g8n")
 script = ExtResource("3_dfy5j")
 
-[node name="SettingsButton" type="Button" parent="HBoxContainer/VBoxContainer2" unique_id=887409443]
+[node name="SettingsButton" type="Button" parent="MainMenu/HBoxContainer/VBoxContainer2" unique_id=887409443]
 layout_mode = 2
 icon = ExtResource("3_7yvfd")
 script = ExtResource("5_dfy5j")
 
-[node name="QuitButton" type="Button" parent="HBoxContainer/VBoxContainer2" unique_id=1304250429]
+[node name="QuitButton" type="Button" parent="MainMenu/HBoxContainer/VBoxContainer2" unique_id=1304250429]
 layout_mode = 2
 icon = ExtResource("4_dfy5j")
 script = ExtResource("5_s5g8n")
 
-[connection signal="pressed" from="HBoxContainer/VBoxContainer2/PlayButton" to="HBoxContainer/VBoxContainer2/PlayButton" method="_on_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer2/SettingsButton" to="HBoxContainer/VBoxContainer2/SettingsButton" method="_on_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer2/QuitButton" to="HBoxContainer/VBoxContainer2/QuitButton" method="_on_pressed"]
+[node name="SettingsMenu" parent="." unique_id=2007337710 instance=ExtResource("8_85riq")]
+visible = false
+
+[connection signal="pressed" from="MainMenu/HBoxContainer/VBoxContainer2/PlayButton" to="MainMenu/HBoxContainer/VBoxContainer2/PlayButton" method="_on_pressed"]
+[connection signal="pressed" from="MainMenu/HBoxContainer/VBoxContainer2/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="MainMenu/HBoxContainer/VBoxContainer2/QuitButton" to="MainMenu/HBoxContainer/VBoxContainer2/QuitButton" method="_on_pressed"]

@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://fqbg8anvcm5a" path="res://scenes/item_unit_3.tscn" id="4_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://dyole7ptc67rb" path="res://assets/ph_quit.png" id="5_tefeu"]
 [ext_resource type="Script" uid="uid://dlgogkaaa05v8" path="res://scripts/quit_button.gd" id="6_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="7_o6xl0"]
+[ext_resource type="Texture2D" uid="uid://v474h3ls6hx8" path="res://assets/ph_settings.png" id="8_85g3d"]
+[ext_resource type="Script" uid="uid://myibuuhsbtb6" path="res://scripts/settings_button.gd" id="9_choun"]
 
 [node name="Main" type="Node" unique_id=1421864953]
 script = ExtResource("1_sugp2")
@@ -33,4 +36,16 @@ offset_bottom = 979.0
 icon = ExtResource("5_tefeu")
 script = ExtResource("6_o6xl0")
 
+[node name="SettingsMenu" parent="." unique_id=2007337710 instance=ExtResource("7_o6xl0")]
+visible = false
+
+[node name="SettingsButton" type="Button" parent="." unique_id=450620378]
+offset_left = 1262.0
+offset_top = 860.0
+offset_right = 1397.0
+offset_bottom = 910.0
+icon = ExtResource("8_85g3d")
+script = ExtResource("9_choun")
+
 [connection signal="pressed" from="QuitButton" to="QuitButton" method="_on_pressed"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]

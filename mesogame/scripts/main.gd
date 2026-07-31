@@ -9,8 +9,6 @@ const TEST_ITEM: PackedScene = preload("res://scenes/item_unit.tscn")
 @export var box_width: int = 5
 @export var box_height: int = 5
 
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	for i in range(box_height):
@@ -23,3 +21,6 @@ func _ready() -> void:
 	var test_instance = TEST_ITEM.instantiate()
 	test_instance.global_position = Vector2(ran_x, ran_y)
 	add_child(test_instance)
+
+func _on_settings_button_pressed() -> void:
+	$SettingsMenu.visible = true;

@@ -1,5 +1,11 @@
 extends Node2D
 
+@export var fragile = false
+@export var soft = false
+@export var liquid_container = false
+@export var liquid_risk = false
+@export var wrapped = false
+
 var draggable = false
 var is_inside_dropable = false
 var is_animating: bool = false
