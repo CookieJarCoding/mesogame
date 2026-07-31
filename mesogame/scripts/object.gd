@@ -14,12 +14,10 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if draggable:
-		print("bap!")
 		if Input.is_action_just_pressed("click"):
 			initialPos = global_position
 			offset = get_global_mouse_position() - global_position
 			global.is_dragging = true
-			print("click!")
 		if Input.is_action_pressed("click"):
 			global_position = get_global_mouse_position() - offset
 		elif Input.is_action_just_released("click"):
@@ -40,13 +38,12 @@ func _on_area_2d_mouse_entered() -> void:
 	if not global.is_dragging:
 		draggable = true
 		scale = Vector2(1.05, 1.05)
-		print("boop!")
 
 func _on_area_2d_body_exited(body) -> void:
 	if body.is_in_group('dropable'):
 		is_inside_dropable = false
-		body_ref = null
 		body.modulate = Color(Color.MEDIUM_PURPLE, 0.7)
+		body_ref = null
 
 func _on_area_2d_body_entered(body: StaticBody2D) -> void:
 	if body.is_in_group('dropable'):
