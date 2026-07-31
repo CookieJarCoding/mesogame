@@ -29,7 +29,7 @@ func _process(delta: float) -> void:
 				tween.tween_property(self,"position",body_ref.position,0.2).set_ease(Tween.EASE_OUT)
 			else:
 				tween.tween_property(self,"global_position",initialPos,0.2).set_ease(Tween.EASE_OUT)
-				
+
 
 func _on_area_2d_mouse_exited() -> void:
 	if not global.is_dragging:
@@ -43,8 +43,9 @@ func _on_area_2d_mouse_entered() -> void:
 		print("boop!")
 
 func _on_area_2d_body_exited(body) -> void:
-	if body.is_in_group('false'):
-		is_inside_dropable = true
+	if body.is_in_group('dropable'):
+		is_inside_dropable = false
+		body_ref = null
 		body.modulate = Color(Color.MEDIUM_PURPLE, 0.7)
 
 func _on_area_2d_body_entered(body: StaticBody2D) -> void:
