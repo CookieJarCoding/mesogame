@@ -1,10 +1,8 @@
-[gd_scene format=3 uid="uid://b36scux8j7dc3"]
+[gd_scene format=3 uid="uid://dmn2p1wb735ad"]
 
 [ext_resource type="Texture2D" uid="uid://dp0px7g0jvfy7" path="res://icon.svg" id="1_5cy3u"]
 [ext_resource type="Script" uid="uid://dat06wuy3tvfy" path="res://scripts/item_unit.gd" id="1_v2v1w"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wnm2j"]
-size = Vector2(128, 128)
+[ext_resource type="PackedScene" uid="uid://drugy3tw1e82w" path="res://scenes/tile_collision.tscn" id="3_14g6c"]
 
 [node name="ItemUnit2" type="Node2D" unique_id=705416440]
 script = ExtResource("1_v2v1w")
@@ -19,20 +17,12 @@ position = Vector2(129, -63)
 scale = Vector2(0.98437506, 1.984375)
 texture = ExtResource("1_5cy3u")
 
-[node name="Node" type="Node" parent="." unique_id=1848776628]
+[node name="AreaGroup" type="Node2D" parent="." unique_id=528034439]
 
-[node name="Area" type="Area2D" parent="Node" unique_id=773723335]
+[node name="Area" parent="AreaGroup" unique_id=974894371 instance=ExtResource("3_14g6c")]
 
-[node name="Collision" type="CollisionShape2D" parent="Node/Area" unique_id=71144828]
-shape = SubResource("RectangleShape2D_wnm2j")
-
-[node name="Collision2" type="CollisionShape2D" parent="Node/Area" unique_id=1831614475]
+[node name="Area2" parent="AreaGroup" unique_id=1338945821 instance=ExtResource("3_14g6c")]
 position = Vector2(128, 0)
-shape = SubResource("RectangleShape2D_wnm2j")
 
-[node name="Collision3" type="CollisionShape2D" parent="Node/Area" unique_id=297995834]
+[node name="Area3" parent="AreaGroup" unique_id=1214395660 instance=ExtResource("3_14g6c")]
 position = Vector2(128, -128)
-shape = SubResource("RectangleShape2D_wnm2j")
-
-[connection signal="area_entered" from="Node/Area" to="." method="_on_tile_area_entered"]
-[connection signal="area_exited" from="Node/Area" to="." method="_on_tile_area_exited"]

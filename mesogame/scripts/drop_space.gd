@@ -13,15 +13,17 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Globals.is_dragging:
 		visible = true
 	else:
 		visible = false
 	
 	if get_overlapping_areas().size() > 0:
-		occupied = true
-		modulate = Color(0, 0, 0)
+		#if get_overlapping_areas()[0] is TileCollision:
+			
+			occupied = true
+			modulate = Color(0, 0, 0)
 	else:
 		occupied = false
 		modulate = Color(Color.MEDIUM_PURPLE, 0.7)

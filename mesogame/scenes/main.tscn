@@ -17,4 +17,4 @@ position = Vector2(858, 969)
 position = Vector2(1020, 146)
 
 [node name="ItemUnit2" parent="." unique_id=705416440 instance=ExtResource("3_sugp2")]
-position = Vector2(494, 973)
+position = Vector2(169, 722)
