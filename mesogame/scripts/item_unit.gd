@@ -16,27 +16,26 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	if draggable and not is_animating:
+	print(get_global_mouse_position(), " ", $Area/Collision.shape.size.x, " ", $Area/Collision.global_position)
+	if draggable:
 		if Input.is_action_just_pressed("click"):
 			if body_ref:
 				initialPos = body_ref.global_position
 			else:
 				initialPos = global_position
 			offset = get_global_mouse_position() - global_position
-			print("Press")
+			#print("Press")
 			Globals.is_dragging = true
-		if Input.is_action_pressed("click") and Globals.is_dragging:
+		if Input.is_action_pressed("click"):
 			global_position = get_global_mouse_position() - offset
 		elif Input.is_action_just_released("click"):
 			Globals.is_dragging = false
 			is_animating = true
-			var tween = get_tree().create_tween()
-			print("Release")
-			tween.connect("finished", finish_snap)
+			#print("Release")
 			if is_inside_dropable:
-				tween.tween_property(self,"global_position",body_ref.global_position, 0.2).set_ease(Tween.EASE_OUT)
+				global_position = body_ref.global_position
 			else:
-				tween.tween_property(self,"global_position",initialPos, 0.2).set_ease(Tween.EASE_OUT)
+				global_position = initialPos
 				if prev_body_ref:
 					body_ref = prev_body_ref
 					#body_ref.occupied = true
@@ -47,7 +46,6 @@ func _physics_process(_delta: float) -> void:
 		# print(body_ref.position)
 
 
-
 func finish_snap() -> void:
 	is_animating = false
 
@@ -56,6 +54,7 @@ func _on_area_2d_mouse_exited() -> void:
 	if not Globals.is_dragging:
 		draggable = false
 		scale = Vector2(1, 1)
+
 
 func _on_area_2d_mouse_entered() -> void:
 	if not Globals.is_dragging:

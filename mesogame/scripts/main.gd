@@ -15,5 +15,5 @@ func _ready() -> void:
 	for i in range(box_height):
 		for j in range(box_width):
 			var drop_instance = DROP_SPACE.instantiate()
-			drop_instance.position = Vector2(i * (TILE_WIDTH + 10), j * (TILE_HEIGHT + 10))
+			drop_instance.position = $BoxTopLeftCorner.position + Vector2(i * (TILE_WIDTH + 10), j * (TILE_HEIGHT + 10))
 			add_child(drop_instance)

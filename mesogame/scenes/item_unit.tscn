@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dp0px7g0jvfy7" path="res://icon.svg" id="1_pkda2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_syy7v"]
-size = Vector2(129, 128)
+size = Vector2(128, 128)
 
 [node name="Object" type="Sprite2D" unique_id=642822548]
 texture = ExtResource("1_pkda2")
@@ -13,6 +13,7 @@ script = ExtResource("1_cbfvs")
 [node name="Area" type="Area2D" parent="." unique_id=843913616]
 
 [node name="Collision" type="CollisionShape2D" parent="Area" unique_id=142287021]
+visible = false
 shape = SubResource("RectangleShape2D_syy7v")
 
 [connection signal="area_entered" from="Area" to="." method="_on_tile_area_entered"]
