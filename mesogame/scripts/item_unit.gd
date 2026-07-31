@@ -16,6 +16,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	if body_ref:
+		print(body_ref.global_position)
 	if ($Area/Collision.global_position.x - $Area/Collision.shape.size.x/2 < get_global_mouse_position().x and get_global_mouse_position().x < $Area/Collision.global_position.x + $Area/Collision.shape.size.x/2) and ($Area/Collision.global_position.y - $Area/Collision.shape.size.y/2 < get_global_mouse_position().y and get_global_mouse_position().y < $Area/Collision.global_position.y + $Area/Collision.shape.size.y/2):
 		if not Globals.is_dragging:
 			draggable = true
@@ -38,7 +40,7 @@ func _process(_delta: float) -> void:
 			global_position = get_global_mouse_position() - offset
 		elif Input.is_action_just_released("click"):
 			Globals.is_dragging = false
-			is_animating = true
+			#is_animating = true
 			#print("Release")
 			if is_inside_dropable:
 				global_position = body_ref.global_position
@@ -54,8 +56,8 @@ func _physics_process(_delta: float) -> void:
 		# print(body_ref.position)
 
 
-func finish_snap() -> void:
-	is_animating = false
+#func finish_snap() -> void:
+	#is_animating = false
 
 
 """

@@ -10,15 +10,16 @@ size = Vector2(128, 128)
 texture = ExtResource("1_pkda2")
 script = ExtResource("1_cbfvs")
 
-[node name="Area" type="Area2D" parent="." unique_id=843913616]
+[node name="AreaGroup" type="Node" parent="." unique_id=717295601]
 
-[node name="Collision" type="CollisionShape2D" parent="Area" unique_id=142287021]
-visible = false
+[node name="Area" type="Area2D" parent="AreaGroup" unique_id=843913616]
+
+[node name="Collision" type="CollisionShape2D" parent="AreaGroup/Area" unique_id=142287021]
 shape = SubResource("RectangleShape2D_syy7v")
 
-[connection signal="area_entered" from="Area" to="." method="_on_tile_area_entered"]
-[connection signal="area_exited" from="Area" to="." method="_on_tile_area_exited"]
-[connection signal="body_entered" from="Area" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area" to="." method="_on_area_2d_body_exited"]
-[connection signal="mouse_entered" from="Area" to="." method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Area" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="area_entered" from="AreaGroup/Area" to="." method="_on_tile_area_entered"]
+[connection signal="area_exited" from="AreaGroup/Area" to="." method="_on_tile_area_exited"]
+[connection signal="body_entered" from="AreaGroup/Area" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="AreaGroup/Area" to="." method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="AreaGroup/Area" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="AreaGroup/Area" to="." method="_on_area_2d_mouse_exited"]
