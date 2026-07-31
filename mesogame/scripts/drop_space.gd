@@ -20,10 +20,14 @@ func _process(_delta: float) -> void:
 		visible = false
 	
 	if get_overlapping_areas().size() > 0:
-		#if get_overlapping_areas()[0] is TileCollision:
-			
-			occupied = true
-			modulate = Color(0, 0, 0)
+		var overlap = get_overlapping_areas()[0]
+		if overlap is TileCollision:
+			if not overlap.draggable:
+				occupied = true
+				modulate = Color(0, 0, 0)
+			else:
+				occupied = false
+				modulate = Color(Color.MEDIUM_PURPLE, 0.7)
 	else:
 		occupied = false
 		modulate = Color(Color.MEDIUM_PURPLE, 0.7)

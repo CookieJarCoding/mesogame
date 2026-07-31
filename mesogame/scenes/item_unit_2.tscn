@@ -8,13 +8,13 @@
 script = ExtResource("1_v2v1w")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1709111924]
-position = Vector2(64, 0)
-scale = Vector2(2, 1)
+position = Vector2(69.5, 0)
+scale = Vector2(2.0859375, 1)
 texture = ExtResource("1_5cy3u")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=874816160]
-position = Vector2(129, -63)
-scale = Vector2(0.98437506, 1.984375)
+position = Vector2(138, -70)
+scale = Vector2(0.98437506, 2.078125)
 texture = ExtResource("1_5cy3u")
 
 [node name="AreaGroup" type="Node2D" parent="." unique_id=528034439]
@@ -22,7 +22,7 @@ texture = ExtResource("1_5cy3u")
 [node name="Area" parent="AreaGroup" unique_id=974894371 instance=ExtResource("3_14g6c")]
 
 [node name="Area2" parent="AreaGroup" unique_id=1338945821 instance=ExtResource("3_14g6c")]
-position = Vector2(128, 0)
+position = Vector2(138, 0)
 
 [node name="Area3" parent="AreaGroup" unique_id=1214395660 instance=ExtResource("3_14g6c")]
-position = Vector2(128, -128)
+position = Vector2(138, -138)
