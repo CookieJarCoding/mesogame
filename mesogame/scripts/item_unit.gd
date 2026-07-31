@@ -16,7 +16,15 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	print(get_global_mouse_position(), " ", $Area/Collision.shape.size.x, " ", $Area/Collision.global_position)
+	if ($Area/Collision.global_position.x - $Area/Collision.shape.size.x/2 < get_global_mouse_position().x and get_global_mouse_position().x < $Area/Collision.global_position.x + $Area/Collision.shape.size.x/2) and ($Area/Collision.global_position.y - $Area/Collision.shape.size.y/2 < get_global_mouse_position().y and get_global_mouse_position().y < $Area/Collision.global_position.y + $Area/Collision.shape.size.y/2):
+		if not Globals.is_dragging:
+			draggable = true
+			scale = Vector2(1.05, 1.05)
+	else:
+		if not Globals.is_dragging:
+			draggable = false
+			scale = Vector2(1, 1)
+	#print(get_global_mouse_position(), " ", $Area/Collision.shape.size.x, " ", $Area/Collision.global_position)
 	if draggable:
 		if Input.is_action_just_pressed("click"):
 			if body_ref:
@@ -50,6 +58,7 @@ func finish_snap() -> void:
 	is_animating = false
 
 
+"""
 func _on_area_2d_mouse_exited() -> void:
 	if not Globals.is_dragging:
 		draggable = false
@@ -60,6 +69,7 @@ func _on_area_2d_mouse_entered() -> void:
 	if not Globals.is_dragging:
 		draggable = true
 		scale = Vector2(1.05, 1.05)
+"""
 
 
 func _on_tile_area_entered(area: Area2D) -> void:
