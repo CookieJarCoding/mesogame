@@ -5,6 +5,8 @@ class_name ItemUnit
 signal packed(item: ItemUnit)
 signal removed(item: ItemUnit)
 
+const CLICK_COOLDOWN = 10
+
 @export var fragile = false
 @export var soft = false
 @export var liquid_container = false
@@ -15,7 +17,7 @@ signal removed(item: ItemUnit)
 var draggable = false
 var is_inside_dropable = false
 var is_animating: bool = false
-var in_grid: bool = false;
+var in_grid: bool = false
 var body_ref
 var prev_body_ref
 var offset: Vector2
@@ -23,6 +25,8 @@ var initialPos: Vector2
 var area_group: Node
 var areas = []
 var last_area_touched
+var clicked
+var released
 @export var placeholder: int = 0
 
 
@@ -35,6 +39,13 @@ func _ready() -> void:
 		#if area is Area2D:
 			#area.area_entered.connect(_on_tile_area_entered.bind(area))
 			#area.area_exited.connect(_on_tile_area_exited)
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.is_action_pressed("click"):
+			clicked = true
+		elif event.is_action_released("click"):
+			released = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -81,7 +92,8 @@ func _process(_delta: float) -> void:
 			area.draggable = true
 	
 	if draggable:
-		if Input.is_action_just_pressed("click"):
+		if clicked:
+			clicked = not clicked
 			if body_ref:
 				initialPos = body_ref.global_position - last_area_touched.position
 			else:
@@ -90,14 +102,17 @@ func _process(_delta: float) -> void:
 			#print("Press")
 			Globals.is_dragging = true
 			removed.emit(self)
-		if Input.is_action_pressed("click") and Globals.is_dragging:
+			#print("boop0")
+		elif Input.is_action_pressed("click") and Globals.is_dragging:
 			global_position = get_global_mouse_position() - offset
-		elif Input.is_action_just_released("click"):
+		elif released:
+			released = not released
 			Globals.is_dragging = false
 			#print("Release")
 			if is_inside_dropable and body_ref:
 				global_position = body_ref.global_position - last_area_touched.position
 				packed.emit(self)
+				#print("boop1")
 				in_grid = true
 			else:
 				global_position = initialPos
@@ -105,6 +120,7 @@ func _process(_delta: float) -> void:
 					body_ref = prev_body_ref
 				if in_grid:
 					packed.emit(self)
+					#print("boop2")
 
 
 func _physics_process(_delta: float) -> void:

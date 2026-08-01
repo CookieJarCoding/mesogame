@@ -94,6 +94,7 @@ func tally_scores() -> void:
 			elif item.type not in character.dislikes:
 				character.score += 1
 		character.update_score()
+		print(character.score)
 
 func check_win() -> bool:
 	# TODO: Loop across the items_in_grid array, to check if the fragile and liquid risks are satisfied
