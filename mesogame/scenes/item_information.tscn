@@ -1,0 +1,450 @@
+[gd_scene format=3 uid="uid://blwn3kp63m1yf"]
+
+[ext_resource type="Script" uid="uid://cjy8omn3eyewb" path="res://scripts/item_information.gd" id="1_su6px"]
+[ext_resource type="Texture2D" uid="uid://bhkxl34c72doh" path="res://assets/beigeboard.png" id="1_v8vm6"]
+[ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="2_hkufb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jscy8"]
+texture = ExtResource("1_v8vm6")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_syy7v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_su6px"]
+bg_color = Color(1, 0.8, 0.8, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.6666667, 0.6666667, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a7fto"]
+bg_color = Color(1, 0.8352941, 0.627451, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.64705884, 0.1254902, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cll0c"]
+bg_color = Color(1, 1, 0.6666667, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.8745098, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_emo2q"]
+bg_color = Color(0.8666667, 1, 0.8666667, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.53333336, 0.93333334, 0.53333336, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3xbmm"]
+bg_color = Color(0.8, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.4, 0.8666667, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5wg0m"]
+bg_color = Color(0.8666667, 0.8666667, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.6, 0.6, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ymxg"]
+bg_color = Color(0.9372549, 0.8, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.7490196, 0.53333336, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5hylm"]
+bg_color = Color(0.21384487, 0.4073464, 0.98585385, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w3ib2"]
+bg_color = Color(0.32941177, 0.67058825, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x733b"]
+bg_color = Color(0.5918081, 0, 0.13499725, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2jo7s"]
+bg_color = Color(0.92156863, 0.64705884, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="ItemInformation" type="CanvasLayer" unique_id=1848763749]
+script = ExtResource("1_su6px")
+
+[node name="ItemInformationPanel" type="Panel" parent="." unique_id=1876405338]
+custom_minimum_size = Vector2(200, 160)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_jscy8")
+
+[node name="ItemInformationGrid" type="GridContainer" parent="ItemInformationPanel" unique_id=1826704819]
+custom_minimum_size = Vector2(200, 160)
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 160.0
+
+[node name="ItemNameLabel" type="RichTextLabel" parent="ItemInformationPanel/ItemInformationGrid" unique_id=405258950]
+custom_minimum_size = Vector2(0, 40)
+custom_maximum_size = Vector2(-1, 45)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_hkufb")
+theme_override_font_sizes/normal_font_size = 22
+bbcode_enabled = true
+text = "<name>"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TypeGrid" type="GridContainer" parent="ItemInformationPanel/ItemInformationGrid" unique_id=527802215]
+custom_minimum_size = Vector2(0, 35)
+custom_maximum_size = Vector2(-1, 35)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 3
+
+[node name="Panel" type="Panel" parent="ItemInformationPanel/ItemInformationGrid/TypeGrid" unique_id=1439486995]
+custom_minimum_size = Vector2(5, 0)
+custom_maximum_size = Vector2(5, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_syy7v")
+
+[node name="LuxuryPanel" type="Panel" parent="ItemInformationPanel/ItemInformationGrid/TypeGrid" unique_id=485376773]
+visible = false
+custom_minimum_size = Vector2(20, 30)
+custom_maximum_size = Vector2(-1, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_su6px")
+
+[node name="LuxuryLabel" type="RichTextLabel" parent="ItemInformationPanel/ItemInformationGrid/TypeGrid/LuxuryPanel" unique_id=1993426202]
+custom_minimum_size = Vector2(182, 30)
+custom_maximum_size = Vector2(182, 30)
+layout_mode = 0
+offset_right = 47.0
+offset_bottom = 40.0
+theme_override_colors/default_color = Color(1, 0.26666668, 0.26666668, 1)
+theme_override_fonts/normal_font = ExtResource("2_hkufb")
+theme_override_font_sizes/normal_font_size = 16
+text = "Luxury"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ConsumablePanel" type="Panel" parent="ItemInformationPanel/ItemInformationGrid/TypeGrid" unique_id=159269904]
+visible = false
+custom_minimum_size = Vector2(20, 30)
+custom_maximum_size = Vector2(-1, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_a7fto")
+
+[node name="ConsumableLabel" type="RichTextLabel" parent="ItemInformationPanel/ItemInformationGrid/TypeGrid/ConsumablePanel" unique_id=1169904272]
+custom_minimum_size = Vector2(182, 30)
+custom_maximum_size = Vector2(182, 30)
+layout_mode = 0
+offset_right = 47.0
+offset_bottom = 40.0
+theme_override_colors/default_color = Color(1, 0.4392157, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_hkufb")
+theme_override_font_sizes/normal_font_size = 16
+text = "Consumable"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ToyPanel" type="Panel" parent="ItemInformationPanel/ItemInformationGrid/TypeGrid" unique_id=52471815]
+visible = false
+custom_minimum_size = Vector2(20, 30)
+custom_maximum_size = Vector2(-1, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_cll0c")
+
+[node name="ToyLabel" type="RichTextLabel" parent="ItemInformationPanel/ItemInformationGrid/TypeGrid/ToyPanel" unique_id=274285256]
+custom_minimum_size = Vector2(182, 30)
+custom_maximum_size = Vector2(182, 30)
+layout_mode = 0
+offset_right = 47.0
+offset_bottom = 40.0
+theme_override_colors/default_color = Color(1, 0.78039217, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_hkufb")
+theme_override_font_sizes/normal_font_size = 16
+text = "Toy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HandicraftPanel" type="Panel" parent="ItemInformationPanel/ItemInformationGrid/TypeGrid" unique_id=261575427]
+visible = false
+custom_minimum_size = Vector2(20, 30)
+custom_maximum_size = Vector2(-1, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_emo2q")
+
+[node name="HandicraftLabel" type="RichTextLabel" parent="ItemInformationPanel/ItemInformationGrid/TypeGrid/HandicraftPanel" unique_id=1496935230]
+custom_minimum_size = Vector2(182, 30)
+custom_maximum_size = Vector2(182, 30)
+layout_mode = 0
+offset_right = 47.0
+offset_bottom = 40.0
+theme_override_colors/default_color = Color(0.33333334, 0.8, 0.33333334, 1)
+theme_override_fonts/normal_font = ExtResource("2_hkufb")
+theme_override_font_sizes/normal_font_size = 16
+text = "Handicraft"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PracticalPanel" type="Panel" parent="ItemInformationPanel/ItemInformationGrid/TypeGrid" unique_id=490861399]
+visible = false
+custom_minimum_size = Vector2(20, 30)
+custom_maximum_size = Vector2(-1, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_3xbmm")
+
+[node name="PracticalLabel" type="RichTextLabel" parent="ItemInformationPanel/ItemInformationGrid/TypeGrid/PracticalPanel" unique_id=1315524138]
+custom_minimum_size = Vector2(182, 30)
+custom_maximum_size = Vector2(182, 30)
+layout_mode = 0
+offset_right = 47.0
+offset_bottom = 40.0
+theme_override_colors/default_color = Color(0, 0.6666667, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_hkufb")
+theme_override_font_sizes/normal_font_size = 16
+text = "Practical"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ApparelPanel" type="Panel" parent="ItemInformationPanel/ItemInformationGrid/TypeGrid" unique_id=1853037524]
+visible = false
+custom_minimum_size = Vector2(20, 30)
+custom_maximum_size = Vector2(-1, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_5wg0m")
+
+[node name="ApparelLabel" type="RichTextLabel" parent="ItemInformationPanel/ItemInformationGrid/TypeGrid/ApparelPanel" unique_id=724395615]
+custom_minimum_size = Vector2(182, 30)
+custom_maximum_size = Vector2(182, 30)
+layout_mode = 0
+offset_right = 47.0
+offset_bottom = 40.0
+theme_override_colors/default_color = Color(0.4, 0.4, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_hkufb")
+theme_override_font_sizes/normal_font_size = 16
+text = "Apparel"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TechnologyPanel" type="Panel" parent="ItemInformationPanel/ItemInformationGrid/TypeGrid" unique_id=692128910]
+visible = false
+custom_minimum_size = Vector2(20, 30)
+custom_maximum_size = Vector2(-1, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ymxg")
+
+[node name="TechnologyLabel" type="RichTextLabel" parent="ItemInformationPanel/ItemInformationGrid/TypeGrid/TechnologyPanel" unique_id=20084759]
+custom_minimum_size = Vector2(182, 30)
+custom_maximum_size = Vector2(182, 30)
+layout_mode = 0
+offset_right = 47.0
+offset_bottom = 40.0
+theme_override_colors/default_color = Color(0.49803922, 0.4, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_hkufb")
+theme_override_font_sizes/normal_font_size = 16
+text = "Technology"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel4" type="Panel" parent="ItemInformationPanel/ItemInformationGrid/TypeGrid" unique_id=102554801]
+custom_minimum_size = Vector2(5, 0)
+custom_maximum_size = Vector2(5, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_syy7v")
+
+[node name="TagGrid" type="GridContainer" parent="ItemInformationPanel/ItemInformationGrid" unique_id=733000693]
+custom_minimum_size = Vector2(0, 35)
+custom_maximum_size = Vector2(-1, 35)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 4
+
+[node name="Panel" type="Panel" parent="ItemInformationPanel/ItemInformationGrid/TagGrid" unique_id=989853085]
+custom_minimum_size = Vector2(5, 0)
+custom_maximum_size = Vector2(5, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_syy7v")
+
+[node name="LiquidPanel" type="Panel" parent="ItemInformationPanel/ItemInformationGrid/TagGrid" unique_id=333878580]
+visible = false
+custom_minimum_size = Vector2(20, 30)
+custom_maximum_size = Vector2(-1, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_5hylm")
+
+[node name="LiquidLabel" type="RichTextLabel" parent="ItemInformationPanel/ItemInformationGrid/TagGrid/LiquidPanel" unique_id=815645935]
+custom_minimum_size = Vector2(89, 30)
+custom_maximum_size = Vector2(89, 30)
+layout_mode = 0
+offset_right = 47.0
+offset_bottom = 40.0
+theme_override_fonts/normal_font = ExtResource("2_hkufb")
+theme_override_font_sizes/normal_font_size = 16
+text = "Liquid"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LiquidRiskPanel" type="Panel" parent="ItemInformationPanel/ItemInformationGrid/TagGrid" unique_id=1007887554]
+visible = false
+custom_minimum_size = Vector2(20, 30)
+custom_maximum_size = Vector2(-1, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_w3ib2")
+
+[node name="LiquidRiskLabel" type="RichTextLabel" parent="ItemInformationPanel/ItemInformationGrid/TagGrid/LiquidRiskPanel" unique_id=98235010]
+custom_minimum_size = Vector2(89, 30)
+custom_maximum_size = Vector2(89, 30)
+layout_mode = 0
+offset_right = 47.0
+offset_bottom = 40.0
+theme_override_fonts/normal_font = ExtResource("2_hkufb")
+theme_override_font_sizes/normal_font_size = 16
+text = "Porous"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FragilePanel" type="Panel" parent="ItemInformationPanel/ItemInformationGrid/TagGrid" unique_id=649275202]
+visible = false
+custom_minimum_size = Vector2(20, 30)
+custom_maximum_size = Vector2(-1, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_x733b")
+
+[node name="FragileLabel" type="RichTextLabel" parent="ItemInformationPanel/ItemInformationGrid/TagGrid/FragilePanel" unique_id=915972962]
+custom_minimum_size = Vector2(89, 30)
+custom_maximum_size = Vector2(89, 30)
+layout_mode = 0
+offset_right = 47.0
+offset_bottom = 40.0
+theme_override_fonts/normal_font = ExtResource("2_hkufb")
+theme_override_font_sizes/normal_font_size = 16
+text = "Fragile"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SoftPanel" type="Panel" parent="ItemInformationPanel/ItemInformationGrid/TagGrid" unique_id=1770958194]
+visible = false
+custom_minimum_size = Vector2(20, 30)
+custom_maximum_size = Vector2(-1, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_2jo7s")
+
+[node name="SoftLabel" type="RichTextLabel" parent="ItemInformationPanel/ItemInformationGrid/TagGrid/SoftPanel" unique_id=2014500502]
+custom_minimum_size = Vector2(89, 30)
+custom_maximum_size = Vector2(89, 30)
+layout_mode = 0
+offset_right = 47.0
+offset_bottom = 40.0
+theme_override_fonts/normal_font = ExtResource("2_hkufb")
+theme_override_font_sizes/normal_font_size = 16
+text = "Soft"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel4" type="Panel" parent="ItemInformationPanel/ItemInformationGrid/TagGrid" unique_id=1462080717]
+custom_minimum_size = Vector2(5, 0)
+custom_maximum_size = Vector2(5, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_syy7v")
+
+[node name="ItemDescriptionLabel" type="RichTextLabel" parent="ItemInformationPanel/ItemInformationGrid" unique_id=152798264]
+custom_minimum_size = Vector2(0, 48)
+custom_maximum_size = Vector2(-1, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_hkufb")
+bbcode_enabled = true
+text = "<ebas maybe>"
+horizontal_alignment = 1

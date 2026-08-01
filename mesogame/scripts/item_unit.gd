@@ -4,9 +4,12 @@ class_name ItemUnit
 
 signal packed(item: ItemUnit)
 signal removed(item: ItemUnit)
+signal hovered(item: ItemUnit)
 
 const CLICK_COOLDOWN = 10
 
+@export var item_name = ""
+@export var item_description = ""
 @export var fragile = false
 @export var soft = false
 @export var liquid_container = false
@@ -85,6 +88,7 @@ func _process(_delta: float) -> void:
 	
 	for area in areas:
 		if area is TileCollision and area.hovered_over:
+			hovered.emit(self)
 			draggable = true
 	
 	if draggable:

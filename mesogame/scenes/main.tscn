@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://c4yjamtvwcpmh" path="res://scenes/hud.tscn" id="7_tipki"]
 [ext_resource type="Texture2D" uid="uid://su86w6p5cupc" path="res://assets/tile_bg.png" id="9_85g3d"]
 [ext_resource type="Texture2D" uid="uid://b6fgaeuibgs2t" path="res://assets/table.png" id="13_trceg"]
+[ext_resource type="PackedScene" uid="uid://blwn3kp63m1yf" path="res://scenes/item_information.tscn" id="16_jbj1t"]
 
 [sub_resource type="Animation" id="Animation_jkv2x"]
 length = 0.001
@@ -146,21 +147,33 @@ script = ExtResource("6_jkv2x")
 
 [node name="Scarf" parent="ItemGroup" unique_id=705416440 instance=ExtResource("2_o6xl0")]
 position = Vector2(2296, 1504)
+item_name = "Scarf"
+item_description = "flavor text, maybe"
 
 [node name="Pillow" parent="ItemGroup" unique_id=1455073183 instance=ExtResource("3_tipki")]
 position = Vector2(1328, 1448)
+item_name = "Pillow"
+item_description = "flavor text, maybe"
 
 [node name="ActionFigure" parent="ItemGroup" unique_id=816862143 instance=ExtResource("4_85g3d")]
 position = Vector2(1968, 1584)
+item_name = "Action Figure"
+item_description = "flavor text, maybe"
 
 [node name="Backpack" parent="ItemGroup" unique_id=127231213 instance=ExtResource("6_ya4ey")]
 position = Vector2(696, 1464)
+item_name = "Backpack"
+item_description = "flavor text, maybe"
 
 [node name="HoneyJars" parent="ItemGroup" unique_id=1468410506 instance=ExtResource("6_eb6dy")]
 position = Vector2(3920, 1528)
+item_name = "Honey Jars"
+item_description = "flavor text, maybe"
 
 [node name="FridgeMagnet" parent="ItemGroup" unique_id=765727931 instance=ExtResource("7_eb6dy")]
 position = Vector2(4440, 1496)
+item_name = "Fridge Magnet"
+item_description = "flavor text, maybe"
 
 [node name="Camera" type="Camera2D" parent="." unique_id=113758559]
 anchor_mode = 0
@@ -205,6 +218,8 @@ region_rect = Rect2(0, 771.6155, 1920, 308.38452)
 [node name="Intro" type="AnimationPlayer" parent="." unique_id=822451176]
 libraries/ = SubResource("AnimationLibrary_jkv2x")
 autoplay = &"entrance"
+
+[node name="ItemInformation" parent="." unique_id=1848763749 instance=ExtResource("16_jbj1t")]
 
 [connection signal="pressed" from="HUD/PauseButton" to="HUD/SettingsMenu" method="_on_pause_button_pressed"]
 [connection signal="pressed" from="HUD/NextButton" to="." method="_on_next_button_pressed"]

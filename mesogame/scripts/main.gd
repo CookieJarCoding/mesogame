@@ -39,6 +39,7 @@ func _ready() -> void:
 	for item in $ItemGroup.get_children():
 		item.packed.connect(_on_item_packed)
 		item.removed.connect(_on_item_removed)
+		item.hovered.connect(_on_item_hovered)
 	
 	# func create_character(char_name: String, score: int, quota: int, likes: Array, dislikes: Array)
 	## NOTE: Max two likes/dislikes
@@ -93,6 +94,9 @@ func _on_item_removed(item: Node2D) -> void:
 	for i in items_in_grid:
 		i.top_level = true
 	tally_scores()
+
+func _on_item_hovered(item: Node2D) -> void:
+	$ItemInformation.update(item)
 
 func tally_scores() -> void:
 	for character in CharacterQuota.characters:
