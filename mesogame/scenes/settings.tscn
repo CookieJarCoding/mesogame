@@ -31,6 +31,8 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 8
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_esf6n"]
+
 [node name="SettingsMenu" type="Panel" unique_id=2007337710]
 anchors_preset = 8
 anchor_left = 0.5
@@ -135,6 +137,22 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Close"
 
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="MainGrid" unique_id=821008602]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Area2D" type="Area2D" parent="MainGrid/AspectRatioContainer" unique_id=877577491]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainGrid/AspectRatioContainer/Area2D" unique_id=1099495461]
+shape = SubResource("RectangleShape2D_esf6n")
+
+[node name="QuitButton" type="Button" parent="MainGrid" unique_id=575629705]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Quit"
+
 [connection signal="value_changed" from="MainGrid/MusicVolume/MusicVolumeSlider" to="." method="_on_music_volume_slider_value_changed"]
 [connection signal="value_changed" from="MainGrid/SoundVolume/SoundVolumeSlider" to="." method="_on_sound_volume_slider_value_changed"]
 [connection signal="pressed" from="MainGrid/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="MainGrid/QuitButton" to="." method="_on_quit_button_pressed"]

@@ -4,48 +4,33 @@
 [ext_resource type="Script" uid="uid://c2ua7whw5qmh8" path="res://scripts/main.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://dmn2p1wb735ad" path="res://scenes/item_unit_2.tscn" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://fqbg8anvcm5a" path="res://scenes/item_unit_3.tscn" id="4_jyhfs"]
-[ext_resource type="Texture2D" uid="uid://dyole7ptc67rb" path="res://assets/ph_quit.png" id="5_tefeu"]
-[ext_resource type="Script" uid="uid://dlgogkaaa05v8" path="res://scripts/quit_button.gd" id="6_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="7_o6xl0"]
-[ext_resource type="Texture2D" uid="uid://v474h3ls6hx8" path="res://assets/ph_settings.png" id="8_85g3d"]
-[ext_resource type="Script" uid="uid://myibuuhsbtb6" path="res://scripts/settings_button.gd" id="9_choun"]
+[ext_resource type="Texture2D" uid="uid://dx726r3ijjfrv" path="res://assets/ph_pause.png" id="10_choun"]
 
 [node name="Main" type="Node" unique_id=1421864953]
 script = ExtResource("1_sugp2")
 
 [node name="object" parent="." unique_id=218751151 instance=ExtResource("1_0wfyh")]
-position = Vector2(1054, 941)
+position = Vector2(1054, 793)
 
 [node name="object2" parent="." unique_id=948301917 instance=ExtResource("1_0wfyh")]
-position = Vector2(892, 941)
+position = Vector2(892, 793)
 
 [node name="BoxTopLeftCorner" type="Node2D" parent="." unique_id=1971797032]
-position = Vector2(1020, 146)
+position = Vector2(1180, 146)
 
 [node name="ItemUnit2" parent="." unique_id=705416440 instance=ExtResource("3_sugp2")]
-position = Vector2(169, 722)
+position = Vector2(169, 574)
 
 [node name="ItemUnit3" parent="." unique_id=1484645761 instance=ExtResource("4_jyhfs")]
-position = Vector2(365, 910)
-
-[node name="QuitButton" type="Button" parent="." unique_id=283163360]
-offset_left = 1265.0
-offset_top = 921.0
-offset_right = 1374.0
-offset_bottom = 979.0
-icon = ExtResource("5_tefeu")
-script = ExtResource("6_o6xl0")
+position = Vector2(365, 762)
 
 [node name="SettingsMenu" parent="." unique_id=2007337710 instance=ExtResource("7_o6xl0")]
 visible = false
 
-[node name="SettingsButton" type="Button" parent="." unique_id=450620378]
-offset_left = 1262.0
-offset_top = 860.0
-offset_right = 1397.0
-offset_bottom = 910.0
-icon = ExtResource("8_85g3d")
-script = ExtResource("9_choun")
+[node name="PauseButton" type="Button" parent="." unique_id=281643289]
+offset_right = 8.0
+offset_bottom = 8.0
+icon = ExtResource("10_choun")
 
-[connection signal="pressed" from="QuitButton" to="QuitButton" method="_on_pressed"]
-[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="PauseButton" to="SettingsMenu" method="_on_pause_button_pressed"]
