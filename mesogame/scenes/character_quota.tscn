@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://btoc50khy8pek"]
+
+[node name="CharQuota" type="VBoxContainer" unique_id=454399947]
+
+[node name="HBox" type="HBoxContainer" parent="." unique_id=333082711]
+layout_mode = 2
+
+[node name="Name" type="RichTextLabel" parent="HBox" unique_id=654314691]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Character 1"
+fit_content = true
+
+[node name="Score" type="RichTextLabel" parent="HBox" unique_id=1089166409]
+custom_minimum_size = Vector2(64.69, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+text = "0/10"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Likes" type="RichTextLabel" parent="." unique_id=606044562]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 12
+text = "Likes: 1, 2, 3
+Dislikes: 1, 2, 3"
+fit_content = true

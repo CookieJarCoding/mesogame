@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dmn2p1wb735ad" path="res://scenes/item_unit_2.tscn" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://fqbg8anvcm5a" path="res://scenes/item_unit_3.tscn" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="7_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://c4yjamtvwcpmh" path="res://scenes/hud.tscn" id="7_tipki"]
 [ext_resource type="Texture2D" uid="uid://dx726r3ijjfrv" path="res://assets/ph_pause.png" id="10_choun"]
 
 [node name="Main" type="Node" unique_id=1421864953]
@@ -40,5 +41,7 @@ icon = ExtResource("10_choun")
 [node name="Camera" type="Camera2D" parent="." unique_id=113758559]
 offset = Vector2(960, 540)
 zoom = Vector2(0.5, 0.5)
+
+[node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("7_tipki")]
 
 [connection signal="pressed" from="PauseButton" to="SettingsMenu" method="_on_pause_button_pressed"]
