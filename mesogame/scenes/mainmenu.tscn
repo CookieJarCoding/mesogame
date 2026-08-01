@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cogxdgtms8ujh"]
 
-[ext_resource type="Texture2D" uid="uid://cautauyh3x54p" path="res://assets/ph_titlecard.png" id="1_3vvtq"]
 [ext_resource type="Script" uid="uid://ciobess4djik1" path="res://scripts/main_menu.gd" id="1_wf3n4"]
+[ext_resource type="FontFile" uid="uid://dpbs3ivk67st" path="res://fonts/ADELIA.otf" id="2_7yvfd"]
 [ext_resource type="Texture2D" uid="uid://biu2h8systml5" path="res://assets/ph_play.png" id="2_s5g8n"]
 [ext_resource type="Texture2D" uid="uid://v474h3ls6hx8" path="res://assets/ph_settings.png" id="3_7yvfd"]
 [ext_resource type="Texture2D" uid="uid://dyole7ptc67rb" path="res://assets/ph_quit.png" id="4_dfy5j"]
@@ -26,10 +26,13 @@ grow_vertical = 2
 [node name="HBoxContainer" type="HBoxContainer" parent="MainMenu" unique_id=773726621]
 layout_mode = 2
 
-[node name="TitleCardTexture" type="TextureRect" parent="MainMenu/HBoxContainer" unique_id=1747600658]
+[node name="RichTextLabel" type="RichTextLabel" parent="MainMenu/HBoxContainer" unique_id=1032970206]
 layout_mode = 2
-texture = ExtResource("1_3vvtq")
-stretch_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/normal_font = ExtResource("2_7yvfd")
+theme_override_font_sizes/normal_font_size = 44
+text = "TITLE CARD"
+fit_content = true
 
 [node name="Control" type="Control" parent="MainMenu/HBoxContainer" unique_id=744002170]
 layout_mode = 2
