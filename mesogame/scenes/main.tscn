@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cudfh4mjop57l"]
 
-[ext_resource type="PackedScene" uid="uid://by4bw2r1d0bkl" path="res://scenes/item_unit.tscn" id="1_0wfyh"]
 [ext_resource type="Script" uid="uid://b2monko8e05e7" path="res://scripts/main.gd" id="1_sugp2"]
-[ext_resource type="PackedScene" uid="uid://dmn2p1wb735ad" path="res://scenes/item_unit_2.tscn" id="3_sugp2"]
-[ext_resource type="PackedScene" uid="uid://fqbg8anvcm5a" path="res://scenes/item_unit_3.tscn" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://dp48b0gpq6w0o" path="res://scenes/items/scarf.tscn" id="2_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://c55i08wr8w2f1" path="res://scenes/items/pillow.tscn" id="3_tipki"]
+[ext_resource type="PackedScene" uid="uid://c8m74t5h186ib" path="res://scenes/items/action_figure.tscn" id="4_85g3d"]
 [ext_resource type="Texture2D" uid="uid://bd3yrl67sc6we" path="res://assets/box.png" id="7_85g3d"]
 [ext_resource type="Texture2D" uid="uid://dyevrv6ok3m4q" path="res://assets/pause.png" id="7_choun"]
 [ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="7_o6xl0"]
@@ -15,17 +15,14 @@ script = ExtResource("1_sugp2")
 
 [node name="ItemGroup" type="Node" parent="." unique_id=883022206]
 
-[node name="object" parent="ItemGroup" unique_id=218751151 instance=ExtResource("1_0wfyh")]
-position = Vector2(883, 991)
+[node name="Scarf" parent="ItemGroup" unique_id=705416440 instance=ExtResource("2_o6xl0")]
+position = Vector2(117, 854)
 
-[node name="ItemUnit2" parent="ItemGroup" unique_id=705416440 instance=ExtResource("3_sugp2")]
-position = Vector2(106, 997)
-soft = true
+[node name="Pillow" parent="ItemGroup" unique_id=1455073183 instance=ExtResource("3_tipki")]
+position = Vector2(685, 859)
 
-[node name="ItemUnit3" parent="ItemGroup" unique_id=1484645761 instance=ExtResource("4_jyhfs")]
-position = Vector2(491, 991)
-soft = true
-type = 0
+[node name="ActionFigure" parent="ItemGroup" unique_id=816862143 instance=ExtResource("4_85g3d")]
+position = Vector2(1277, 1015)
 
 [node name="Camera" type="Camera2D" parent="." unique_id=113758559]
 offset = Vector2(960, 540)
@@ -62,12 +59,14 @@ texture = ExtResource("7_85g3d")
 position = Vector2(-377, -353)
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=867550278]
+z_index = -2000
 offset_left = 17.0
 offset_top = 1000.0
 offset_right = 6816.0
 offset_bottom = 1073.0
 
 [node name="TileBg" type="Sprite2D" parent="." unique_id=2116371449]
+visible = false
 z_index = -1000
 texture_repeat = 2
 position = Vector2(4400, 4450)

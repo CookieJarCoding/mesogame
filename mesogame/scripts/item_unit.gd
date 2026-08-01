@@ -20,6 +20,7 @@ var body_ref
 var prev_body_ref
 var offset: Vector2
 var initialPos: Vector2
+var initialRot: float
 var area_group: Node
 var areas = []
 var last_area_touched
@@ -58,6 +59,7 @@ func _process(_delta: float) -> void:
 	
 	## NOTE: Nullifies if any are occupied
 	for area in areas:
+		#print(area.get_overlapping_areas().size())
 		if area.has_overlapping_areas():
 			var overlap = area.get_overlapping_areas()
 			for o in overlap:
@@ -65,6 +67,7 @@ func _process(_delta: float) -> void:
 					drop_space = null
 					body_ref = null
 		else:
+			print("I'm confused")
 			drop_space = null
 			body_ref = null
 	
@@ -83,24 +86,30 @@ func _process(_delta: float) -> void:
 	if draggable:
 		if Input.is_action_just_pressed("click"):
 			if body_ref:
-				initialPos = body_ref.global_position - last_area_touched.position
+				initialPos = body_ref.global_position - (last_area_touched.global_position - global_position)
+				initialRot = rotation_degrees
 			else:
 				initialPos = global_position
+				initialRot = rotation_degrees
 			offset = get_global_mouse_position() - global_position
 			#print("Press")
 			Globals.is_dragging = true
 			removed.emit(self)
 		if Input.is_action_pressed("click") and Globals.is_dragging:
 			global_position = get_global_mouse_position() - offset
+			if Input.is_action_just_pressed("rotate"):
+				rotate(deg_to_rad(90))
 		elif Input.is_action_just_released("click"):
 			Globals.is_dragging = false
 			#print("Release")
 			if is_inside_dropable and body_ref:
-				global_position = body_ref.global_position - last_area_touched.position
+				global_position = body_ref.global_position - (last_area_touched.global_position - global_position)
+				print(last_area_touched.global_position - global_position)
 				packed.emit(self)
 				in_grid = true
 			else:
 				global_position = initialPos
+				rotation_degrees = initialRot
 				if prev_body_ref:
 					body_ref = prev_body_ref
 				if in_grid:
