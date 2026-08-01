@@ -10,3 +10,4 @@ enum item_types {
 	APPAREL,
 	TECHNOLOGY
 }
+var level_counter = 1

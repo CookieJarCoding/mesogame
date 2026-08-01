@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://b0qj8iafurudd"]
+[gd_scene format=3 uid="uid://dc63twgyf24km"]
 
-[ext_resource type="Script" path="res://scripts/opening_scroll_text.gd" id="1_nrfxv"]
-[ext_resource type="FontFile" uid="uid://bnnmmatd1h5g3" path="res://fonts/Miracle History.ttf" id="2_etjxm"]
+[ext_resource type="Script" uid="uid://wittqcvaxkni" path="res://scripts/interstitial_letter.gd" id="1_8gbjm"]
+[ext_resource type="FontFile" uid="uid://bnnmmatd1h5g3" path="res://fonts/Miracle History.ttf" id="2_2ofmt"]
 
-[node name="OpeningScrollText" type="MarginContainer" unique_id=1230503490]
+[node name="IntroLetter" type="MarginContainer" unique_id=1230503490]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -15,37 +15,24 @@ offset_right = 463.0
 offset_bottom = 254.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_nrfxv")
+script = ExtResource("1_8gbjm")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=383481100]
 layout_mode = 2
 
 [node name="Letter" type="RichTextLabel" parent="VBoxContainer" unique_id=389964967]
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_fonts/normal_font = ExtResource("2_etjxm")
+theme_override_fonts/normal_font = ExtResource("2_2ofmt")
 theme_override_font_sizes/normal_font_size = 21
-text = "Dear Skye and Randolf,
+text = "Dear Toni,
 
-
-We're no strangers to love
-You know the rules and so do I
-A full commitment's what I'm thinking of
-You wouldn't get this from any other guy
-I just wanna tell you how I'm feeling
-Gotta make you understand
-Never gonna give you up
-Never gonna let you down
-Never gonna run around and desert you
-Never gonna make you cry
-Never gonna say goodbye
-Never gonna tell a lie and hurt you
+Hi! It’s your nanang again. I’m so happy you get to come back here to Batangas! Jay and Ethan have gotten so tall while you were away. Do you remember in 1971, they were only up to your stomach? Now they’re probably up to your shoulder already! Ang saya, ‘di ba? Maybe you could pack some toys and sweets for them in your balikbayan box? Promise, ‘di ko hahayaang kunin ulit ng Tita Kara mo yung mga padala mo. Alam mo naman kung paano siya, e.
 
 
 
-                                                                                                                                                                                                  Rick Acetylene"
+Lovelove, Nanang
+"
 fit_content = true
-scroll_active = false
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1070539578]
 layout_mode = 2

@@ -36,17 +36,20 @@ func _ready() -> void:
 	)
 
 func _physics_process(_delta: float) -> void:
-	tally_scores()
+	
 	print("Win?: ", check_win())
 
 func _on_settings_button_pressed() -> void:
 	$SettingsMenu.visible = true;
 
+
 func _on_item_packed(item: Node2D) -> void:
 	items_in_grid.append(item)
+	tally_scores()
 
 func _on_item_removed(item: Node2D) -> void:
 	items_in_grid.erase(item)
+	tally_scores()
 
 func tally_scores() -> void:
 	for character in CharacterQuota.characters:
@@ -67,3 +70,9 @@ func check_win() -> bool:
 			winning = false
 	return winning
 		
+
+
+func _on_next_button_pressed() -> void:
+	get_tree().change_scene_to_file("res:///scenes/interstitial_letter.tscn")
+	Globals.level_counter +=1
+	print(Globals.level_counter)

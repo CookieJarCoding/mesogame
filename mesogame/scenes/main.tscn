@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cudfh4mjop57l"]
 
 [ext_resource type="PackedScene" uid="uid://by4bw2r1d0bkl" path="res://scenes/item_unit.tscn" id="1_0wfyh"]
-[ext_resource type="Script" uid="uid://c2ua7whw5qmh8" path="res://scripts/main.gd" id="1_sugp2"]
+[ext_resource type="Script" uid="uid://b2monko8e05e7" path="res://scripts/main.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://dmn2p1wb735ad" path="res://scenes/item_unit_2.tscn" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://fqbg8anvcm5a" path="res://scenes/item_unit_3.tscn" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="7_o6xl0"]
@@ -63,5 +63,13 @@ offset_right = 125.0
 offset_bottom = 88.0
 icon = ExtResource("10_choun")
 
+[node name="NextButton" type="Button" parent="." unique_id=848256786]
+offset_left = 1599.0
+offset_top = 618.0
+offset_right = 1799.0
+offset_bottom = 704.0
+text = "NEXT"
+
 [connection signal="pressed" from="PauseButton" to="SettingsMenu" method="_on_pause_button_pressed"]
 [connection signal="pressed" from="HUD/PauseButton" to="HUD/SettingsMenu" method="_on_pause_button_pressed"]
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]

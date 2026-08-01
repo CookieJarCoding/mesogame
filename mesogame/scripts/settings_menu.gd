@@ -2,7 +2,6 @@ extends Panel
 
 signal settings_close
 
-
 func _on_music_volume_slider_value_changed(value: float) -> void:
 	var bus_idx = AudioServer.get_bus_index("Music")
 	AudioServer.set_bus_volume_linear(0, value)
