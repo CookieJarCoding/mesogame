@@ -32,18 +32,18 @@ visible = false
 position = Vector2(365, 762)
 soft = true
 
-[node name="SettingsMenu" parent="." unique_id=2007337710 instance=ExtResource("7_o6xl0")]
-visible = false
-
-[node name="PauseButton" type="Button" parent="." unique_id=281643289]
-offset_right = 8.0
-offset_bottom = 8.0
-icon = ExtResource("10_choun")
-
 [node name="Camera" type="Camera2D" parent="." unique_id=113758559]
 offset = Vector2(960, 540)
 zoom = Vector2(0.5, 0.5)
 
 [node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("7_tipki")]
 
-[connection signal="pressed" from="PauseButton" to="SettingsMenu" method="_on_pause_button_pressed"]
+[node name="SettingsMenu" parent="HUD" unique_id=2007337710 instance=ExtResource("7_o6xl0")]
+visible = false
+
+[node name="PauseButton" type="Button" parent="HUD" unique_id=281643289]
+offset_right = 125.0
+offset_bottom = 88.0
+icon = ExtResource("10_choun")
+
+[connection signal="pressed" from="HUD/PauseButton" to="HUD/SettingsMenu" method="_on_pause_button_pressed"]
