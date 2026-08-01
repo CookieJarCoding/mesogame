@@ -4,50 +4,26 @@
 [ext_resource type="Script" uid="uid://b2monko8e05e7" path="res://scripts/main.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://dmn2p1wb735ad" path="res://scenes/item_unit_2.tscn" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://fqbg8anvcm5a" path="res://scenes/item_unit_3.tscn" id="4_jyhfs"]
+[ext_resource type="Texture2D" uid="uid://bd3yrl67sc6we" path="res://assets/box.png" id="7_85g3d"]
 [ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="7_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://c4yjamtvwcpmh" path="res://scenes/hud.tscn" id="7_tipki"]
-[ext_resource type="Texture2D" uid="uid://dx726r3ijjfrv" path="res://assets/ph_pause.png" id="10_choun"]
 
 [node name="Main" type="Node" unique_id=1421864953]
 script = ExtResource("1_sugp2")
 
-[node name="BoxTopLeftCorner" type="Node2D" parent="." unique_id=1971797032]
-visible = false
-position = Vector2(1180, 146)
-
 [node name="ItemGroup" type="Node" parent="." unique_id=883022206]
 
 [node name="object" parent="ItemGroup" unique_id=218751151 instance=ExtResource("1_0wfyh")]
-position = Vector2(1054, 793)
-
-[node name="object2" parent="ItemGroup" unique_id=948301917 instance=ExtResource("1_0wfyh")]
-position = Vector2(892, 793)
-fragile = true
-
-[node name="object3" parent="ItemGroup" unique_id=779771771 instance=ExtResource("1_0wfyh")]
-position = Vector2(1090, 645)
-fragile = true
-
-[node name="object4" parent="ItemGroup" unique_id=205703530 instance=ExtResource("1_0wfyh")]
-position = Vector2(899, 975)
-fragile = true
+position = Vector2(779, 952)
 
 [node name="ItemUnit2" parent="ItemGroup" unique_id=705416440 instance=ExtResource("3_sugp2")]
-position = Vector2(564, 987)
+position = Vector2(114, 968)
 soft = true
 
 [node name="ItemUnit3" parent="ItemGroup" unique_id=1484645761 instance=ExtResource("4_jyhfs")]
-position = Vector2(1139, 1099)
+position = Vector2(442, 960)
 soft = true
 type = 0
-
-[node name="SettingsMenu" parent="." unique_id=2007337710 instance=ExtResource("7_o6xl0")]
-visible = false
-
-[node name="PauseButton" type="Button" parent="." unique_id=281643289]
-offset_right = 8.0
-offset_bottom = 8.0
-icon = ExtResource("10_choun")
 
 [node name="Camera" type="Camera2D" parent="." unique_id=113758559]
 offset = Vector2(960, 540)
@@ -59,9 +35,8 @@ zoom = Vector2(0.5, 0.5)
 visible = false
 
 [node name="PauseButton" type="Button" parent="HUD" unique_id=1608088921]
-offset_right = 125.0
-offset_bottom = 88.0
-icon = ExtResource("10_choun")
+offset_right = 52.0
+offset_bottom = 47.0
 
 [node name="NextButton" type="Button" parent="." unique_id=848256786]
 offset_left = 1599.0
@@ -70,6 +45,13 @@ offset_right = 1799.0
 offset_bottom = 704.0
 text = "NEXT"
 
-[connection signal="pressed" from="PauseButton" to="SettingsMenu" method="_on_pause_button_pressed"]
+[node name="Box" type="Sprite2D" parent="." unique_id=705402282]
+z_index = -200
+position = Vector2(1348, 399)
+texture = ExtResource("7_85g3d")
+
+[node name="BoxTopLeftCorner" type="Node2D" parent="Box" unique_id=1971797032]
+position = Vector2(-382.59, -358.06)
+
 [connection signal="pressed" from="HUD/PauseButton" to="HUD/SettingsMenu" method="_on_pause_button_pressed"]
 [connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]

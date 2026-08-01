@@ -11,18 +11,15 @@ const TEST_ITEM: PackedScene = preload("res://scenes/item_unit.tscn")
 
 var items_in_grid = []
 
+@onready var next_level_btn = $NextButton
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	for i in range(box_height):
 		for j in range(box_width):
 			var box_instance = DROP_SPACE.instantiate()
-			box_instance.position = $BoxTopLeftCorner.position + Vector2(i * (TILE_WIDTH + 10), j * (TILE_HEIGHT + 10))
+			box_instance.position = $Box/BoxTopLeftCorner.global_position + Vector2(104, 79) + Vector2(i * (TILE_WIDTH + 10), j * (TILE_HEIGHT + 10))
 			add_child(box_instance)
-	var ran_x = randf_range(0, 900)
-	var ran_y = randf_range(900, 1000)
-	var test_instance = TEST_ITEM.instantiate()
-	test_instance.global_position = Vector2(ran_x, ran_y)
-	add_child(test_instance)
 
 	for item in $ItemGroup.get_children():
 		item.packed.connect(_on_item_packed)
@@ -34,10 +31,24 @@ func _ready() -> void:
 		[Globals.item_types.APPAREL],
 		[]
 	)
+	#$HUD.create_character("Jay and Ethan", 0, 10,
+		#[Globals.item_types.TOYS, Globals.item_types.CONSUMABLES],
+		#[Globals.item_types.APPAREL]
+	#)
+	#$HUD.create_character("TEST", 0, 10,
+		#[],
+		#[]
+	#)
+
 
 func _physics_process(_delta: float) -> void:
-	
-	print("Win?: ", check_win())
+	if check_win():
+		next_level_btn.visible = true
+		next_level_btn.disabled = false
+	else: 
+		next_level_btn.visible = false
+		next_level_btn.disabled = true
+
 
 func _on_settings_button_pressed() -> void:
 	$SettingsMenu.visible = true;
@@ -63,7 +74,6 @@ func tally_scores() -> void:
 
 func check_win() -> bool:
 	# TODO: Loop across the items_in_grid array, to check if the fragile and liquid risks are satisfied
-
 	var winning = true
 	for character in CharacterQuota.characters:
 		if character.score < character.quota:

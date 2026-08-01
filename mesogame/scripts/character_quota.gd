@@ -11,6 +11,8 @@ var likes = []
 var dislikes = []
 
 @onready var score_label = $HBox/Score
+@onready var likes_label = $MarginContainer/Likes
+@onready var dislikes_label = $MarginContainer2/Dislikes
 
 func _ready() -> void:
 	characters.append(self)
@@ -18,18 +20,18 @@ func _ready() -> void:
 	$HBox/Name.text = char_name
 	
 	if likes.size() == 1:
-		$Likes.text = "Likes: " + ets(likes[0])
+		likes_label.text = "Likes: " + ets(likes[0])
 	elif likes.size() == 2:
-		$Likes.text = "Likes: " + ets(likes[0]) + ", " + ets(likes[1])
+		likes_label.text = "Likes: " + ets(likes[0]) + ", " + ets(likes[1])
 	else:
-		$Likes.text = "Likes: "
+		likes_label.text = "Likes: "
 	
 	if dislikes.size() == 1:
-		$Dislikes.text = "Dislikes: " + ets(dislikes[0])
+		dislikes_label.text = "Dislikes: " + ets(dislikes[0])
 	elif dislikes.size() == 2:
-		$Dislikes.text = "Dislikes: " + ets(dislikes[0]) + ", " + ets(dislikes[1])
+		dislikes_label.text = "Dislikes: " + ets(dislikes[0]) + ", " + ets(dislikes[1])
 	else:
-		$Dislikes.text = "Dislikes: "
+		dislikes_label.text = "Dislikes: "
 	
 	update_score()
 
@@ -55,4 +57,4 @@ func ets(enum_val) -> String:
 
 
 func update_score() -> void:
-	score_label.text = str(score) + "/ " + str(quota)
+	score_label.text = str(score) + " / " + str(quota)

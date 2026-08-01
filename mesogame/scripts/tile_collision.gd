@@ -32,7 +32,7 @@ func _process(_delta: float) -> void:
 			#draggable = false
 			#scale = Vector2(1, 1)
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var item_parent = self.get_parent().get_parent()
 	# collide([item_parent.fragile, item_parent.soft, item_parent.liquid_container, item_parent.liquid_risk, item_parent.wrapped])
 

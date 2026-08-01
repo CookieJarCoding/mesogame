@@ -3,7 +3,7 @@ extends CanvasLayer
 
 const char_quota: PackedScene = preload("res://scenes/character_quota.tscn")
 
-@onready var vbox: VBoxContainer = $VBox
+@onready var vbox: VBoxContainer = $Panel/MarginContainer/ScrollContainer/VBox
 
 
 func create_character(char_name: String, score: int, quota: int, likes: Array, dislikes: Array) -> void:
