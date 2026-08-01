@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://dlgogkaaa05v8" path="res://scripts/quit_button.gd" id="5_s5g8n"]
 [ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="8_85riq"]
 
-[node name="CanvasLayer" type="Node" unique_id=1814970323]
+[node name="MainMenuNode" type="Node" unique_id=1814970323]
 script = ExtResource("1_wf3n4")
 
 [node name="MainMenu" type="MarginContainer" parent="." unique_id=447913294]
@@ -65,3 +65,4 @@ visible = false
 [connection signal="pressed" from="MainMenu/HBoxContainer/VBoxContainer2/PlayButton" to="MainMenu/HBoxContainer/VBoxContainer2/PlayButton" method="_on_pressed"]
 [connection signal="pressed" from="MainMenu/HBoxContainer/VBoxContainer2/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="MainMenu/HBoxContainer/VBoxContainer2/QuitButton" to="MainMenu/HBoxContainer/VBoxContainer2/QuitButton" method="_on_pressed"]
+[connection signal="settings_close" from="SettingsMenu" to="." method="_on_settings_close_button_pressed"]

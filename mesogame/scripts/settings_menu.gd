@@ -1,5 +1,6 @@
 extends Panel
 
+signal settings_close
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,14 +23,11 @@ func _on_sound_volume_slider_value_changed(value: float) -> void:
 
 func _on_close_button_pressed() -> void:
 	self.visible = false
-
+	print(self.get_parent())
+	emit_signal("settings_close")
 
 func _on_pause_button_pressed() -> void:
-	if not self.visible:
-		self.visible = true
-	else:
-		self.visible = false
-
+	self.visible = not self.visible
 
 func _on_quit_button_pressed() -> void:
 	get_tree().quit()
