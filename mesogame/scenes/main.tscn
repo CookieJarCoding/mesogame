@@ -5,8 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://dmn2p1wb735ad" path="res://scenes/item_unit_2.tscn" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://fqbg8anvcm5a" path="res://scenes/item_unit_3.tscn" id="4_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://bd3yrl67sc6we" path="res://assets/box.png" id="7_85g3d"]
+[ext_resource type="Texture2D" uid="uid://dyevrv6ok3m4q" path="res://assets/pause.png" id="7_choun"]
 [ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="7_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://c4yjamtvwcpmh" path="res://scenes/hud.tscn" id="7_tipki"]
+[ext_resource type="Texture2D" uid="uid://su86w6p5cupc" path="res://assets/tile_bg.png" id="9_85g3d"]
 
 [node name="Main" type="Node" unique_id=1421864953]
 script = ExtResource("1_sugp2")
@@ -14,14 +16,14 @@ script = ExtResource("1_sugp2")
 [node name="ItemGroup" type="Node" parent="." unique_id=883022206]
 
 [node name="object" parent="ItemGroup" unique_id=218751151 instance=ExtResource("1_0wfyh")]
-position = Vector2(779, 952)
+position = Vector2(883, 991)
 
 [node name="ItemUnit2" parent="ItemGroup" unique_id=705416440 instance=ExtResource("3_sugp2")]
-position = Vector2(114, 968)
+position = Vector2(106, 997)
 soft = true
 
 [node name="ItemUnit3" parent="ItemGroup" unique_id=1484645761 instance=ExtResource("4_jyhfs")]
-position = Vector2(442, 960)
+position = Vector2(491, 991)
 soft = true
 type = 0
 
@@ -34,9 +36,14 @@ zoom = Vector2(0.5, 0.5)
 [node name="SettingsMenu" parent="HUD" unique_id=186484164 instance=ExtResource("7_o6xl0")]
 visible = false
 
-[node name="PauseButton" type="Button" parent="HUD" unique_id=1608088921]
-offset_right = 52.0
-offset_bottom = 47.0
+[node name="PauseButton" type="TextureButton" parent="HUD" unique_id=1637305200]
+texture_filter = 1
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 63.0
+offset_bottom = 63.0
+scale = Vector2(0.585, 0.585)
+texture_normal = ExtResource("7_choun")
 
 [node name="NextButton" type="Button" parent="." unique_id=848256786]
 offset_left = 1599.0
@@ -45,13 +52,29 @@ offset_right = 1799.0
 offset_bottom = 704.0
 text = "NEXT"
 
-[node name="Box" type="Sprite2D" parent="." unique_id=705402282]
+[node name="Box" type="Sprite2D" parent="." unique_id=296530830]
 z_index = -200
-position = Vector2(1348, 399)
+position = Vector2(1321.9999, 399)
+scale = Vector2(0.94, 1)
 texture = ExtResource("7_85g3d")
 
-[node name="BoxTopLeftCorner" type="Node2D" parent="Box" unique_id=1971797032]
-position = Vector2(-382.59, -358.06)
+[node name="BoxTopLeftCorner" type="Node2D" parent="Box" unique_id=151532924]
+position = Vector2(-377, -353)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=867550278]
+offset_left = 17.0
+offset_top = 1000.0
+offset_right = 6816.0
+offset_bottom = 1073.0
+
+[node name="TileBg" type="Sprite2D" parent="." unique_id=2116371449]
+z_index = -1000
+texture_repeat = 2
+position = Vector2(4400, 4450)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("9_85g3d")
+region_enabled = true
+region_rect = Rect2(0, 0, 10000, 10000)
 
 [connection signal="pressed" from="HUD/PauseButton" to="HUD/SettingsMenu" method="_on_pause_button_pressed"]
 [connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dc63twgyf24km"]
 
 [ext_resource type="Script" uid="uid://wittqcvaxkni" path="res://scripts/interstitial_letter.gd" id="1_8gbjm"]
-[ext_resource type="FontFile" uid="uid://bnnmmatd1h5g3" path="res://fonts/Miracle History.ttf" id="2_2ofmt"]
+[ext_resource type="FontFile" uid="uid://dlwf6aj0kpa40" path="res://fonts/SwilyBright-Italic.otf" id="2_8gbjm"]
 
 [node name="IntroLetter" type="MarginContainer" unique_id=1230503490]
 anchors_preset = 8
@@ -22,7 +22,8 @@ layout_mode = 2
 
 [node name="Letter" type="RichTextLabel" parent="VBoxContainer" unique_id=389964967]
 layout_mode = 2
-theme_override_fonts/normal_font = ExtResource("2_2ofmt")
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = ExtResource("2_8gbjm")
 theme_override_font_sizes/normal_font_size = 21
 text = "Dear Toni,
 

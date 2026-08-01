@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://b0qj8iafurudd"]
+[gd_scene format=3 uid="uid://2hjxrxi356x3"]
 
 [ext_resource type="Script" path="res://scripts/opening_scroll_text.gd" id="1_nrfxv"]
-[ext_resource type="FontFile" uid="uid://bnnmmatd1h5g3" path="res://fonts/Miracle History.ttf" id="2_etjxm"]
+[ext_resource type="FontFile" uid="uid://dlwf6aj0kpa40" path="res://fonts/SwilyBright-Italic.otf" id="2_etjxm"]
 
 [node name="OpeningScrollText" type="MarginContainer" unique_id=1230503490]
 anchors_preset = 8

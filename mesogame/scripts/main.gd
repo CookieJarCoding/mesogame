@@ -5,6 +5,7 @@ const TILE_WIDTH: int = 128
 const TILE_HEIGHT: int = 128
 const DROP_SPACE: PackedScene = preload("res://scenes/drop_space.tscn")
 const TEST_ITEM: PackedScene = preload("res://scenes/item_unit.tscn")
+const BOX_DEFAULT_SCALE: Vector2 = Vector2(0.94, 1.0)
 
 @export var box_width: int = 5
 @export var box_height: int = 5
@@ -15,10 +16,15 @@ var items_in_grid = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$Box.scale = BOX_DEFAULT_SCALE * box_width / 5.0
+	
 	for i in range(box_height):
 		for j in range(box_width):
 			var box_instance = DROP_SPACE.instantiate()
-			box_instance.position = $Box/BoxTopLeftCorner.global_position + Vector2(104, 79) + Vector2(i * (TILE_WIDTH + 10), j * (TILE_HEIGHT + 10))
+			var drop_space_center = Vector2(64, 64)
+			var offset = Vector2(5 + box_width, 5 + box_width)
+			box_instance.position = $Box/BoxTopLeftCorner.global_position + drop_space_center + offset + Vector2(i * (TILE_WIDTH + 10), j * (TILE_HEIGHT + 10)) + Vector2(3,0)
+			print($Box/BoxTopLeftCorner.global_position + Vector2(99, 79) + Vector2(i * (TILE_WIDTH + 10), j * (TILE_HEIGHT + 10)))
 			add_child(box_instance)
 
 	for item in $ItemGroup.get_children():
@@ -42,6 +48,7 @@ func _ready() -> void:
 
 
 func _physics_process(_delta: float) -> void:
+	print($Box/BoxTopLeftCorner.global_position + Vector2(99, 79) + Vector2(4 * (TILE_WIDTH + 10), 4 * (TILE_HEIGHT + 10)))
 	if check_win():
 		next_level_btn.visible = true
 		next_level_btn.disabled = false

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://4g7wdacjvf8j"]
+
+[ext_resource type="Texture2D" uid="uid://bd3yrl67sc6we" path="res://assets/box.png" id="1_3inec"]
+
+[node name="Box" type="Sprite2D" unique_id=296530830]
+z_index = -200
+position = Vector2(350.51, 353)
+scale = Vector2(0.94, 1)
+texture = ExtResource("1_3inec")
+
+[node name="BoxTopLeftCorner" type="Node2D" parent="." unique_id=151532924]
+position = Vector2(-377, -353)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1671960978]
+visible = false
+top_level = true
+offset_right = 700.0
+offset_bottom = 700.0

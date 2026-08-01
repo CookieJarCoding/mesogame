@@ -68,8 +68,9 @@ clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 72
+theme_override_font_sizes/normal_font_size = 64
 text = "Settings"
+autowrap_mode = 0
 horizontal_alignment = 1
 
 [node name="MusicVolume" type="GridContainer" parent="MainGrid" unique_id=210953242]
