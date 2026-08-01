@@ -4,6 +4,44 @@
 [ext_resource type="StyleBox" uid="uid://canmf3wayoyeg" path="res://resources/score_board.tres" id="2_oo0fn"]
 [ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="3_5ysmq"]
 
+[sub_resource type="Animation" id="Animation_6fi6k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(100, -34)]
+}
+
+[sub_resource type="Animation" id="Animation_5ysmq"]
+resource_name = "hud_entrance"
+length = 1.5
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(0.24148409, 1),
+"update": 0,
+"values": [Vector2(100, -254), Vector2(100, -34)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6fi6k"]
+_data = {
+&"RESET": SubResource("Animation_6fi6k"),
+&"hud_entrance": SubResource("Animation_5ysmq")
+}
+
 [node name="HUD" type="CanvasLayer" unique_id=2074363166]
 script = ExtResource("1_ahhtf")
 
@@ -59,3 +97,7 @@ horizontal_alignment = 2
 [node name="CharQuota" parent="Panel/VBoxContainer/MarginContainer/ScrollContainer/VBox" unique_id=454399947 instance_placeholder="res://scenes/character_quota.tscn"]
 visible = false
 layout_mode = 2
+
+[node name="Intro" type="AnimationPlayer" parent="." unique_id=1992133697]
+libraries/ = SubResource("AnimationLibrary_6fi6k")
+autoplay = &"hud_entrance"
