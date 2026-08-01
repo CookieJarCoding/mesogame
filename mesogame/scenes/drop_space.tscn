@@ -22,4 +22,5 @@ offset_right = 64.0
 offset_bottom = 64.0
 
 [node name="DashedSquare" type="Sprite2D" parent="." unique_id=1673210306]
+z_index = 100
 texture = ExtResource("2_ymacs")

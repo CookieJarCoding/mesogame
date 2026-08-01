@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://cudfh4mjop57l"]
 
-[ext_resource type="PackedScene" uid="uid://by4bw2r1d0bkl" path="res://scenes/item_unit.tscn" id="1_0wfyh"]
 [ext_resource type="Script" uid="uid://b2monko8e05e7" path="res://scripts/main.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://dp48b0gpq6w0o" path="res://scenes/items/scarf.tscn" id="2_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://c55i08wr8w2f1" path="res://scenes/items/pillow.tscn" id="3_tipki"]
 [ext_resource type="PackedScene" uid="uid://c8m74t5h186ib" path="res://scenes/items/action_figure.tscn" id="4_85g3d"]
+[ext_resource type="PackedScene" uid="uid://bo66gsffkyhc5" path="res://scenes/items/honey_jars.tscn" id="6_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://bwxgenndeaqsm" path="res://scenes/items/backpack.tscn" id="6_ya4ey"]
 [ext_resource type="Texture2D" uid="uid://bd3yrl67sc6we" path="res://assets/box.png" id="7_85g3d"]
 [ext_resource type="Texture2D" uid="uid://dyevrv6ok3m4q" path="res://assets/pause.png" id="7_choun"]
+[ext_resource type="PackedScene" uid="uid://duc7f3cqg1p7h" path="res://scenes/items/fridge_magnet.tscn" id="7_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="7_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://c4yjamtvwcpmh" path="res://scenes/hud.tscn" id="7_tipki"]
 [ext_resource type="Texture2D" uid="uid://su86w6p5cupc" path="res://assets/tile_bg.png" id="9_85g3d"]
@@ -15,26 +16,29 @@
 [node name="Main" type="Node" unique_id=1421864953]
 script = ExtResource("1_sugp2")
 
-[node name="ItemGroup" type="Node" parent="." unique_id=883022206]
+[node name="ItemGroup" type="Node2D" parent="." unique_id=1210610719]
 
 [node name="Scarf" parent="ItemGroup" unique_id=705416440 instance=ExtResource("2_o6xl0")]
-position = Vector2(117, 854)
+position = Vector2(1462, 942)
 
 [node name="Pillow" parent="ItemGroup" unique_id=1455073183 instance=ExtResource("3_tipki")]
-position = Vector2(685, 859)
+position = Vector2(687, 1036)
 
 [node name="ActionFigure" parent="ItemGroup" unique_id=816862143 instance=ExtResource("4_85g3d")]
-position = Vector2(1161, 999)
-
-[node name="Object" parent="ItemGroup" unique_id=779771771 instance=ExtResource("1_0wfyh")]
-position = Vector2(720, 492)
+position = Vector2(1202, 1087)
 
 [node name="Backpack" parent="ItemGroup" unique_id=127231213 instance=ExtResource("6_ya4ey")]
-position = Vector2(1422, 1132)
+position = Vector2(160, 1078)
+
+[node name="HoneyJars" parent="ItemGroup" unique_id=1468410506 instance=ExtResource("6_eb6dy")]
+position = Vector2(2417, 1032)
+
+[node name="FridgeMagnet" parent="ItemGroup" unique_id=765727931 instance=ExtResource("7_eb6dy")]
+position = Vector2(2852, 966)
 
 [node name="Camera" type="Camera2D" parent="." unique_id=113758559]
-offset = Vector2(960, 540)
-zoom = Vector2(0.5, 0.5)
+anchor_mode = 0
+zoom = Vector2(0.45, 0.45)
 
 [node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("7_tipki")]
 
@@ -50,11 +54,18 @@ offset_bottom = 63.0
 scale = Vector2(0.585, 0.585)
 texture_normal = ExtResource("7_choun")
 
-[node name="NextButton" type="Button" parent="." unique_id=848256786]
-offset_left = 1599.0
-offset_top = 618.0
-offset_right = 1799.0
-offset_bottom = 704.0
+[node name="NextButton" type="Button" parent="HUD" unique_id=848256786]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -220.0
+offset_top = -106.0
+offset_right = -20.0
+offset_bottom = -19.999878
+grow_horizontal = 0
+grow_vertical = 0
 text = "NEXT"
 
 [node name="Box" type="Sprite2D" parent="." unique_id=296530830]
@@ -66,22 +77,22 @@ texture = ExtResource("7_85g3d")
 [node name="BoxTopLeftCorner" type="Node2D" parent="Box" unique_id=151532924]
 position = Vector2(-377, -353)
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=867550278]
-z_index = -2000
+[node name="PlaceholderTable" type="ColorRect" parent="." unique_id=867550278]
+z_index = -999
 offset_left = 17.0
 offset_top = 1000.0
 offset_right = 6816.0
 offset_bottom = 1073.0
 
-[node name="TileBg" type="Sprite2D" parent="." unique_id=2116371449]
+[node name="TileBG" type="Sprite2D" parent="." unique_id=2116371449]
 visible = false
 z_index = -1000
 texture_repeat = 2
-position = Vector2(4400, 4450)
+position = Vector2(4400, 863)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("9_85g3d")
 region_enabled = true
-region_rect = Rect2(0, 0, 10000, 10000)
+region_rect = Rect2(0, 0, 20000, 5000)
 
 [connection signal="pressed" from="HUD/PauseButton" to="HUD/SettingsMenu" method="_on_pause_button_pressed"]
-[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="HUD/NextButton" to="." method="_on_next_button_pressed"]

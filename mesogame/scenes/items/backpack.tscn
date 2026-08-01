@@ -6,8 +6,7 @@
 
 [node name="Backpack" type="Node2D" unique_id=705416440]
 script = ExtResource("1_ltbm8")
-soft = true
-type = 4
+liquid_risk = true
 placeholder = 1
 
 [node name="Backpack" type="Sprite2D" parent="." unique_id=1331438369]
@@ -24,6 +23,9 @@ position = Vector2(138, 0)
 
 [node name="Area3" parent="AreaGroup" unique_id=1214395660 instance=ExtResource("3_gts3v")]
 position = Vector2(276, 0)
+
+[node name="Area11" parent="AreaGroup" unique_id=2040122640 instance=ExtResource("3_gts3v")]
+position = Vector2(276, -138)
 
 [node name="Area4" parent="AreaGroup" unique_id=882035104 instance=ExtResource("3_gts3v")]
 position = Vector2(0, 138)

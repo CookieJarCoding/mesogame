@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bo66gsffkyhc5"]
+
+[ext_resource type="Script" uid="uid://dat06wuy3tvfy" path="res://scripts/item_unit.gd" id="1_lfw5b"]
+[ext_resource type="Texture2D" uid="uid://c6j6opb01hlu5" path="res://assets/items/honey.png" id="2_lfw5b"]
+[ext_resource type="PackedScene" uid="uid://drugy3tw1e82w" path="res://scenes/tile_collision.tscn" id="3_auh11"]
+
+[node name="HoneyJars" type="Node2D" unique_id=705416440]
+script = ExtResource("1_lfw5b")
+liquid_container = true
+type = 1
+placeholder = 1
+
+[node name="HoneyJars" type="Sprite2D" parent="." unique_id=1331438369]
+position = Vector2(69, -69)
+scale = Vector2(0.8156862, 0.81568617)
+texture = ExtResource("2_lfw5b")
+
+[node name="AreaGroup" type="Node2D" parent="." unique_id=528034439]
+
+[node name="Area1" parent="AreaGroup" unique_id=974894371 instance=ExtResource("3_auh11")]
+
+[node name="Area2" parent="AreaGroup" unique_id=1338945821 instance=ExtResource("3_auh11")]
+position = Vector2(138, 0)
+
+[node name="Area7" parent="AreaGroup" unique_id=1878093580 instance=ExtResource("3_auh11")]
+position = Vector2(0, -138)
+
+[node name="Area8" parent="AreaGroup" unique_id=849255024 instance=ExtResource("3_auh11")]
+position = Vector2(138, -138)

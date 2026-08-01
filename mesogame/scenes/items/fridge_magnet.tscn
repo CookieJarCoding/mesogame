@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://duc7f3cqg1p7h"]
+
+[ext_resource type="Script" uid="uid://dat06wuy3tvfy" path="res://scripts/item_unit.gd" id="1_lgi7m"]
+[ext_resource type="Texture2D" uid="uid://q5cle6n0rfgv" path="res://assets/items/fridge magnet.png" id="2_lgi7m"]
+[ext_resource type="PackedScene" uid="uid://drugy3tw1e82w" path="res://scenes/tile_collision.tscn" id="3_uyy7d"]
+
+[node name="FridgeMagnet" type="Node2D" unique_id=705416440]
+script = ExtResource("1_lgi7m")
+type = 3
+placeholder = 1
+
+[node name="FridgeMagnet" type="Sprite2D" parent="." unique_id=1331438369]
+scale = Vector2(0.8156862, 0.81568617)
+texture = ExtResource("2_lgi7m")
+
+[node name="AreaGroup" type="Node2D" parent="." unique_id=528034439]
+
+[node name="Area1" parent="AreaGroup" unique_id=974894371 instance=ExtResource("3_uyy7d")]
