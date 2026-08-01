@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://2hjxrxi356x3"]
 
 [ext_resource type="Script" uid="uid://wittqcvaxkni" path="res://scripts/opening_scroll_text.gd" id="1_nrfxv"]
+[ext_resource type="FontFile" uid="uid://bugyrbcuuwqvy" path="res://fonts/VerandahReverie_PERSONAL_USE_ONLY.otf" id="2_etjxm"]
 
 [node name="OpeningScrollText" type="MarginContainer" unique_id=1230503490]
 anchors_preset = 8
@@ -22,6 +23,8 @@ layout_mode = 2
 [node name="Letter" type="RichTextLabel" parent="VBoxContainer" unique_id=389964967]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("2_etjxm")
+theme_override_font_sizes/normal_font_size = 21
 text = "Dear Skye and Randolf,
 
 
@@ -51,11 +54,13 @@ theme_override_constants/separation = 4
 [node name="QuitButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1891715441]
 layout_mode = 2
 size_flags_horizontal = 3
+tooltip_text = "this kills you"
 text = "Quit"
 
 [node name="StartButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=921955346]
 layout_mode = 2
 size_flags_horizontal = 3
+tooltip_text = "this makes you a member of the IDF"
 text = "Start!
 "
 
