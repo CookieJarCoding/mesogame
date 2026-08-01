@@ -6,6 +6,7 @@
 
 [node name="ItemUnit3" type="Node2D" unique_id=705416440]
 script = ExtResource("1_jh4in")
+liquid_container = true
 placeholder = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1709111924]
@@ -30,7 +31,7 @@ texture = ExtResource("2_0doa1")
 
 [node name="AreaGroup" type="Node2D" parent="." unique_id=528034439]
 
-[node name="Area" parent="AreaGroup" unique_id=974894371 instance=ExtResource("3_wiy25")]
+[node name="Area1" parent="AreaGroup" unique_id=974894371 instance=ExtResource("3_wiy25")]
 
 [node name="Area2" parent="AreaGroup" unique_id=1338945821 instance=ExtResource("3_wiy25")]
 position = Vector2(138, 0)

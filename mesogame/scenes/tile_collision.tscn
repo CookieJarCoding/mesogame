@@ -10,3 +10,22 @@ script = ExtResource("1_7sfpy")
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=631607362]
 shape = SubResource("RectangleShape2D_wnm2j")
+
+[node name="NorthRay" type="RayCast2D" parent="." unique_id=705436845]
+position = Vector2(0, -64)
+target_position = Vector2(0, -50)
+collide_with_areas = true
+
+[node name="SouthRay" type="RayCast2D" parent="." unique_id=522203790]
+position = Vector2(0, 64)
+collide_with_areas = true
+
+[node name="WestRay" type="RayCast2D" parent="." unique_id=19511334]
+position = Vector2(-64, 0)
+target_position = Vector2(-50, 0)
+collide_with_areas = true
+
+[node name="EastRay" type="RayCast2D" parent="." unique_id=145984952]
+position = Vector2(64, 0)
+target_position = Vector2(50, 0)
+collide_with_areas = true

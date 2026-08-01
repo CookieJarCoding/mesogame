@@ -6,6 +6,7 @@
 
 [node name="ItemUnit2" type="Node2D" unique_id=705416440]
 script = ExtResource("1_v2v1w")
+liquid_risk = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1709111924]
 position = Vector2(69.5, 0)
@@ -19,7 +20,7 @@ texture = ExtResource("1_5cy3u")
 
 [node name="AreaGroup" type="Node2D" parent="." unique_id=528034439]
 
-[node name="Area" parent="AreaGroup" unique_id=974894371 instance=ExtResource("3_14g6c")]
+[node name="Area1a" parent="AreaGroup" unique_id=974894371 instance=ExtResource("3_14g6c")]
 
 [node name="Area2" parent="AreaGroup" unique_id=1338945821 instance=ExtResource("3_14g6c")]
 position = Vector2(138, 0)

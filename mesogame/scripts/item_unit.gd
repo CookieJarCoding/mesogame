@@ -96,5 +96,39 @@ func _process(_delta: float) -> void:
 
 
 func _physics_process(_delta: float) -> void:
-	pass
-		# print(body_ref.position)
+	print(is_valid_liquid())
+	print(is_valid_fragile())
+
+# call these either when the player is submitting or as a limitation when trying to place
+func is_valid_liquid() -> bool:
+	for area in areas:
+		var collisions = area.collide()
+		for opposite_item in collisions:
+			if opposite_item != null:
+				if (self.liquid_risk and not self.wrapped and opposite_item.liquid_container):
+					print(self.name,": ", "liquid risk!")
+					return false
+				else:
+					pass
+					# print(self.name,": ", "you're fine for now!")
+	#print(self.name,": ", "not at risk of liquid!")
+	return true
+
+func is_valid_fragile() -> bool:
+	if self.fragile and not self.wrapped:
+		var surroundings = []
+		for area in areas:
+			var collisions = area.collide()
+			for opposite_item in collisions:
+				if opposite_item != null:
+					surroundings.append(opposite_item) 
+					# not optimized since this double counts, but yeah
+				else:
+					print(self.name,": ","one of the surrounding cells is empty, so not all surroundings are soft")
+					return false
+		for item in surroundings:
+			if not item.soft:
+				print(self.name,": ","one of the surrounding items is not soft, so invalid")
+				return false
+	#print(self.name,": ", "not at risk of breakage!")
+	return true
