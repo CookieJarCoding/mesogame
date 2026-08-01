@@ -7,7 +7,7 @@
 [node name="ActionFigure" type="Node2D" unique_id=705416440]
 script = ExtResource("1_im0ku")
 soft = true
-type = 4
+type = 2
 placeholder = 1
 
 [node name="ActionFigure" type="Sprite2D" parent="." unique_id=1331438369]
