@@ -23,10 +23,12 @@ visible = false
 position = Vector2(1180, 146)
 
 [node name="ItemUnit2" parent="." unique_id=705416440 instance=ExtResource("3_sugp2")]
+visible = false
 position = Vector2(169, 574)
 soft = true
 
 [node name="ItemUnit3" parent="." unique_id=1484645761 instance=ExtResource("4_jyhfs")]
+visible = false
 position = Vector2(365, 762)
 soft = true
 

@@ -1,11 +1,16 @@
 extends CanvasLayer
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+const char_qouta: PackedScene = preload("res://scenes/character_quota.tscn")
+
+@onready var vbox: VBoxContainer = $VBox
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func create_character(char_name: String, score: int, quota: int, likes: Array, dislikes: Array) -> void:
+	var q = char_qouta.instantiate()
+	q.char_name = char_name
+	q.score = score
+	q.quota = quota
+	q.likes.append_array(likes)
+	q.dislikes.append_array(dislikes)
+	vbox.add_child(q)

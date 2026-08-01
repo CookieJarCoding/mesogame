@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://btoc50khy8pek"]
 
+[ext_resource type="Script" uid="uid://c4gk1kt3gbfrg" path="res://scripts/character_quota.gd" id="1_rbgsv"]
+
 [node name="CharQuota" type="VBoxContainer" unique_id=454399947]
+offset_right = 189.0
+offset_bottom = 65.0
+script = ExtResource("1_rbgsv")
 
 [node name="HBox" type="HBoxContainer" parent="." unique_id=333082711]
 layout_mode = 2
@@ -22,6 +27,11 @@ horizontal_alignment = 1
 [node name="Likes" type="RichTextLabel" parent="." unique_id=606044562]
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 12
-text = "Likes: 1, 2, 3
-Dislikes: 1, 2, 3"
+text = "Likes: 1, 2, 3"
+fit_content = true
+
+[node name="Dislikes" type="RichTextLabel" parent="." unique_id=1147449617]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 12
+text = "Likes: 1, 2, 3"
 fit_content = true

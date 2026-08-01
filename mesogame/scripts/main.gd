@@ -21,6 +21,13 @@ func _ready() -> void:
 	var test_instance = TEST_ITEM.instantiate()
 	test_instance.global_position = Vector2(ran_x, ran_y)
 	add_child(test_instance)
+	
+	# func create_character(char_name: String, score: int, quota: int, likes: Array, dislikes: Array)
+	## NOTE: Max two likes/dislikes
+	$HUD.create_character("Joanne", 0, 10,
+		[Globals.item_types.APPAREL],
+		[]
+	)
 
 func _on_settings_button_pressed() -> void:
 	$SettingsMenu.visible = true;
