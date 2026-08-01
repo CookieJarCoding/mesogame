@@ -21,6 +21,11 @@ global="*uid://bweaojkgobbgi"
 Globals="*uid://bweaojkgobbgi"
 GameSettings="*uid://c1pv43urt6ofe"
 
+[display]
+
+window/size/viewport_width=960
+window/size/viewport_height=540
+
 [input]
 
 click={

@@ -10,9 +10,19 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+
 func _on_settings_button_pressed() -> void:
 	$SettingsMenu.visible = true
 	$MainMenu.visible = false
 
+
 func _on_settings_close_button_pressed() -> void:
 	$MainMenu.visible = true
+
+
+func _on_play_button_pressed() -> void:
+	get_tree().change_scene_to_file("res:///scenes/main.tscn")
+
+
+func _on_quit_button_pressed() -> void:
+	get_tree().quit()
