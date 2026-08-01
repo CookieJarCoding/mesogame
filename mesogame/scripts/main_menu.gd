@@ -1,14 +1,28 @@
 extends Node
 
 
+const BOB_SPEED: float = 4.0
+const BOB_AMPLITUDE: float = 3.0
+const OFFSET_DIFFERENTIAL: float = 0.7
+var letters: Array
+var initial_positions: Array
+var delta_counter = 0.0
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	letters = $Logo.get_children()
+	for letter in letters:
+		initial_positions.append(letter.position)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	for i in range(letters.size()):
+		var letter = letters[i]
+		letter.position.y = initial_positions[i].y + BOB_AMPLITUDE * sin(BOB_SPEED * delta_counter + OFFSET_DIFFERENTIAL * i)
+	
+	delta_counter += delta
 
 
 func _on_settings_button_pressed() -> void:

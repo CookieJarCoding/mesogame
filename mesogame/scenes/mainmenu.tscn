@@ -27,6 +27,7 @@ grow_vertical = 2
 layout_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MainMenu/HBoxContainer" unique_id=1032970206]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/normal_font = ExtResource("2_7yvfd")
@@ -58,6 +59,63 @@ icon = ExtResource("4_dfy5j")
 
 [node name="SettingsMenu" parent="." unique_id=2007337710 instance=ExtResource("8_85riq")]
 visible = false
+
+[node name="Logo" type="Control" parent="." unique_id=764757910]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="T" type="RichTextLabel" parent="Logo" unique_id=2025730266]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 98.0
+offset_right = 92.0
+offset_bottom = 170.0
+theme_override_fonts/normal_font = ExtResource("2_7yvfd")
+theme_override_font_sizes/normal_font_size = 44
+text = "T"
+
+[node name="I" type="RichTextLabel" parent="Logo" unique_id=25681036]
+layout_mode = 0
+offset_left = 64.105
+offset_top = 98.0
+offset_right = 124.10501
+offset_bottom = 170.0
+theme_override_fonts/normal_font = ExtResource("2_7yvfd")
+theme_override_font_sizes/normal_font_size = 44
+text = "I
+"
+
+[node name="T2" type="RichTextLabel" parent="Logo" unique_id=1673654344]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 98.0
+offset_right = 144.0
+offset_bottom = 170.0
+theme_override_fonts/normal_font = ExtResource("2_7yvfd")
+theme_override_font_sizes/normal_font_size = 44
+text = "T"
+
+[node name="L" type="RichTextLabel" parent="Logo" unique_id=733684283]
+layout_mode = 0
+offset_left = 119.34
+offset_top = 98.0
+offset_right = 179.33997
+offset_bottom = 170.0
+theme_override_fonts/normal_font = ExtResource("2_7yvfd")
+theme_override_font_sizes/normal_font_size = 44
+text = "L"
+
+[node name="E" type="RichTextLabel" parent="Logo" unique_id=1466514123]
+layout_mode = 0
+offset_left = 140.055
+offset_top = 95.015
+offset_right = 200.05492
+offset_bottom = 167.01505
+theme_override_fonts/normal_font = ExtResource("2_7yvfd")
+theme_override_font_sizes/normal_font_size = 44
+text = "E"
 
 [connection signal="pressed" from="MainMenu/HBoxContainer/VBoxContainer2/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="MainMenu/HBoxContainer/VBoxContainer2/SettingsButton" to="." method="_on_settings_button_pressed"]

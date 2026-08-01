@@ -56,4 +56,3 @@ func ets(enum_val) -> String:
 
 func update_score() -> void:
 	score_label.text = str(score) + "/ " + str(quota)
-
