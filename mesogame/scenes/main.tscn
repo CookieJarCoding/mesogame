@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dp48b0gpq6w0o" path="res://scenes/items/scarf.tscn" id="2_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://c55i08wr8w2f1" path="res://scenes/items/pillow.tscn" id="3_tipki"]
 [ext_resource type="PackedScene" uid="uid://c8m74t5h186ib" path="res://scenes/items/action_figure.tscn" id="4_85g3d"]
+[ext_resource type="Texture2D" uid="uid://imdai3c5bn6g" path="res://assets/arrow.png" id="5_a8y0u"]
 [ext_resource type="PackedScene" uid="uid://bo66gsffkyhc5" path="res://scenes/items/honey_jars.tscn" id="6_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://bwxgenndeaqsm" path="res://scenes/items/backpack.tscn" id="6_ya4ey"]
 [ext_resource type="Texture2D" uid="uid://bd3yrl67sc6we" path="res://assets/box.png" id="7_85g3d"]
@@ -12,33 +13,18 @@
 [ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="7_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://c4yjamtvwcpmh" path="res://scenes/hud.tscn" id="7_tipki"]
 [ext_resource type="Texture2D" uid="uid://su86w6p5cupc" path="res://assets/tile_bg.png" id="9_85g3d"]
+[ext_resource type="Texture2D" uid="uid://b6fgaeuibgs2t" path="res://assets/table.png" id="13_trceg"]
+
+[sub_resource type="Animation" id="Animation_a8y0u"]
+resource_name = "entrance"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jkv2x"]
+_data = {
+&"entrance": SubResource("Animation_a8y0u")
+}
 
 [node name="Main" type="Node" unique_id=1421864953]
 script = ExtResource("1_sugp2")
-
-[node name="ItemGroup" type="Node2D" parent="." unique_id=1210610719]
-
-[node name="Scarf" parent="ItemGroup" unique_id=705416440 instance=ExtResource("2_o6xl0")]
-position = Vector2(1462, 942)
-
-[node name="Pillow" parent="ItemGroup" unique_id=1455073183 instance=ExtResource("3_tipki")]
-position = Vector2(687, 1036)
-
-[node name="ActionFigure" parent="ItemGroup" unique_id=816862143 instance=ExtResource("4_85g3d")]
-position = Vector2(1202, 1087)
-
-[node name="Backpack" parent="ItemGroup" unique_id=127231213 instance=ExtResource("6_ya4ey")]
-position = Vector2(160, 1078)
-
-[node name="HoneyJars" parent="ItemGroup" unique_id=1468410506 instance=ExtResource("6_eb6dy")]
-position = Vector2(2417, 1032)
-
-[node name="FridgeMagnet" parent="ItemGroup" unique_id=765727931 instance=ExtResource("7_eb6dy")]
-position = Vector2(2852, 966)
-
-[node name="Camera" type="Camera2D" parent="." unique_id=113758559]
-anchor_mode = 0
-zoom = Vector2(0.3, 0.3)
 
 [node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("7_tipki")]
 
@@ -60,17 +46,72 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -220.0
-offset_top = -106.0
-offset_right = -20.0
-offset_bottom = -19.999878
+offset_left = -672.0
+offset_top = -260.0
+offset_right = -568.0
+offset_bottom = -205.99988
 grow_horizontal = 0
 grow_vertical = 0
 text = "NEXT"
 
+[node name="Left" type="TextureButton" parent="HUD" unique_id=1777119729]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -920.0
+offset_top = -228.0
+offset_right = -620.0
+offset_bottom = -78.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.31, 0.31)
+texture_normal = ExtResource("5_a8y0u")
+flip_h = true
+
+[node name="Right" type="TextureButton" parent="HUD" unique_id=1285339589]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -135.99994
+offset_top = -228.0
+offset_right = 164.0
+offset_bottom = -78.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.31, 0.31)
+texture_normal = ExtResource("5_a8y0u")
+
+[node name="ItemGroup" type="Node2D" parent="." unique_id=1210610719]
+
+[node name="Scarf" parent="ItemGroup" unique_id=705416440 instance=ExtResource("2_o6xl0")]
+position = Vector2(2296, 1504)
+
+[node name="Pillow" parent="ItemGroup" unique_id=1455073183 instance=ExtResource("3_tipki")]
+position = Vector2(1328, 1448)
+
+[node name="ActionFigure" parent="ItemGroup" unique_id=816862143 instance=ExtResource("4_85g3d")]
+position = Vector2(1968, 1584)
+
+[node name="Backpack" parent="ItemGroup" unique_id=127231213 instance=ExtResource("6_ya4ey")]
+position = Vector2(696, 1464)
+
+[node name="HoneyJars" parent="ItemGroup" unique_id=1468410506 instance=ExtResource("6_eb6dy")]
+position = Vector2(3920, 1528)
+
+[node name="FridgeMagnet" parent="ItemGroup" unique_id=765727931 instance=ExtResource("7_eb6dy")]
+position = Vector2(4440, 1496)
+
+[node name="Camera" type="Camera2D" parent="." unique_id=113758559]
+anchor_mode = 0
+zoom = Vector2(0.3, 0.3)
+
 [node name="Box" type="Sprite2D" parent="." unique_id=296530830]
 z_index = -200
-position = Vector2(2410, 886)
+position = Vector2(2170, 668)
 scale = Vector2(0.94, 1)
 texture = ExtResource("7_85g3d")
 
@@ -78,11 +119,12 @@ texture = ExtResource("7_85g3d")
 position = Vector2(-377, -353)
 
 [node name="PlaceholderTable" type="ColorRect" parent="." unique_id=867550278]
+visible = false
 z_index = -999
-offset_left = 17.0
-offset_top = 1000.0
-offset_right = 6816.0
-offset_bottom = 1073.0
+offset_left = 108.0
+offset_top = 1596.0
+offset_right = 6710.0
+offset_bottom = 1669.0
 
 [node name="TileBG" type="Sprite2D" parent="." unique_id=2116371449]
 visible = false
@@ -94,5 +136,18 @@ texture = ExtResource("9_85g3d")
 region_enabled = true
 region_rect = Rect2(0, 0, 20000, 5000)
 
+[node name="Table" type="Sprite2D" parent="." unique_id=1608285561]
+z_index = -999
+position = Vector2(1600, 1602)
+scale = Vector2(1.6666669, 1.7037036)
+texture = ExtResource("13_trceg")
+region_enabled = true
+region_rect = Rect2(0, 771.6155, 1920, 308.38452)
+
+[node name="Intro" type="AnimationPlayer" parent="." unique_id=822451176]
+libraries/ = SubResource("AnimationLibrary_jkv2x")
+
 [connection signal="pressed" from="HUD/PauseButton" to="HUD/SettingsMenu" method="_on_pause_button_pressed"]
 [connection signal="pressed" from="HUD/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="HUD/Left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="HUD/Right" to="." method="_on_right_pressed"]

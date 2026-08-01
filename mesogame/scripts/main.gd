@@ -6,34 +6,35 @@ const TILE_HEIGHT: int = 128
 const DROP_SPACE: PackedScene = preload("res://scenes/drop_space.tscn")
 const TEST_ITEM: PackedScene = preload("res://scenes/item_unit.tscn")
 const BOX_DEFAULT_SCALE: Vector2 = Vector2(0.94, 1.0)
-const VIEWPORT_WIDTH: float = 960.
-const VIEWPORT_HEIGHT: float = 540.0
+const VIEWPORT_WIDTH: float = 960
+const VIEWPORT_HEIGHT: float = 540
 
 @export var box_width: int = 5
 @export var box_height: int = 5
 
 var items_in_grid = []
-var cam_pos: int = 0
-var box_default_x: float
+var table_pos: int = 0
+var movement_ongoing: bool = false
 
 @onready var next_level_btn = $HUD/NextButton
 @onready var camera = $Camera
-@onready var box = $Box
+@onready var table = $PlaceholderTable
+@onready var item_group = $ItemGroup
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Box.scale = BOX_DEFAULT_SCALE * box_width / 5.0
 	$TileBG.visible = true
-	box_default_x = box.position.x
+	$Table.visible = true
 	
 	for i in range(box_height):
 		for j in range(box_width):
-			var drop_instance = DROP_SPACE.instantiate()
+			var box_instance = DROP_SPACE.instantiate()
 			var drop_space_center = Vector2(64, 64)
 			var offset = Vector2(5 + box_width, 5 + box_width)
-			drop_instance.position = $Box/BoxTopLeftCorner.position + drop_space_center + offset + Vector2(i * (TILE_WIDTH + 10), j * (TILE_HEIGHT + 10)) + Vector2(3,0)
-			box.add_child(drop_instance)
+			box_instance.position = $Box/BoxTopLeftCorner.global_position + drop_space_center + offset + Vector2(i * (TILE_WIDTH + 10), j * (TILE_HEIGHT + 10)) + Vector2(3,0)
+			add_child(box_instance)
 
 	for item in $ItemGroup.get_children():
 		item.packed.connect(_on_item_packed)
@@ -41,7 +42,7 @@ func _ready() -> void:
 	
 	# func create_character(char_name: String, score: int, quota: int, likes: Array, dislikes: Array)
 	## NOTE: Max two likes/dislikes
-	$HUD.create_character("Joanne", 0, 10,
+	$HUD.create_character("Joanne", 0, 1,
 		[Globals.item_types.APPAREL],
 		[]
 	)
@@ -55,13 +56,13 @@ func _ready() -> void:
 	#)
 
 
-func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("left") or Input.is_action_just_pressed("ui_left") and cam_pos > 0:
-		cam_pos -= 1
-		move_cam(cam_pos)
-	if Input.is_action_just_pressed("right") or Input.is_action_just_pressed("ui_right"):
-		cam_pos += 1
-		move_cam(cam_pos)
+#func _process(_delta: float) -> void:
+	#if Input.is_action_just_pressed("left") or Input.is_action_just_pressed("ui_left") and table_pos > 0 and not Input.is_action_pressed("click"):
+		#table_pos -= 1
+		#move_table(table_pos)
+	#if Input.is_action_just_pressed("right") or Input.is_action_just_pressed("ui_right") and not Input.is_action_pressed("click"):
+		#table_pos += 1
+		#move_table(table_pos)
 
 
 func _physics_process(_delta: float) -> void:
@@ -79,10 +80,18 @@ func _on_settings_button_pressed() -> void:
 
 func _on_item_packed(item: Node2D) -> void:
 	items_in_grid.append(item)
+	for k in item_group.get_children():
+		k.top_level = false
+	for i in items_in_grid:
+		i.top_level = true
 	tally_scores()
 
 func _on_item_removed(item: Node2D) -> void:
 	items_in_grid.erase(item)
+	for k in item_group.get_children():
+		k.top_level = false
+	for i in items_in_grid:
+		i.top_level = true
 	tally_scores()
 
 func tally_scores() -> void:
@@ -108,13 +117,29 @@ func check_win() -> bool:
 func _on_next_button_pressed() -> void:
 	get_tree().change_scene_to_file("res:///scenes/interstitial_letter.tscn")
 	Globals.level_counter +=1
-	print(Globals.level_counter)
+	#print(Globals.level_counter)
 
 
-func move_cam(pos: int) -> void:
-	var cam_tween = create_tween()
-	cam_tween.set_parallel(true)
-	cam_tween.tween_property(camera, "position", Vector2(pos * (VIEWPORT_WIDTH * (1 / camera.zoom.x)), camera.position.y), 0.8).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_EXPO)
-	cam_tween.tween_property(box, "position", Vector2(pos * (VIEWPORT_WIDTH * (1 / camera.zoom.x)) + box_default_x, box.position.y), 0.8).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
-	for item in items_in_grid:
-		cam_tween.tween_property(item, "global_position", Vector2(pos * (VIEWPORT_WIDTH * (1 / camera.zoom.x)) + item.body_ref.global_position.x - item.last_area_touched.position.x, item.position.y), 0.8).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+func move_table(pos: int) -> void:
+	var table_tween = create_tween()
+	var ADJUSTED_VW: float = VIEWPORT_WIDTH * (1 / camera.zoom.x)
+	table_tween.set_parallel(true)
+	table_tween.connect("finished", declare_not_moving)
+	table_tween.tween_property(item_group, "position", Vector2(-pos * ADJUSTED_VW, item_group.position.y), 0.8).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_EXPO)
+	#table_tween.tween_property(table, "position", Vector2(-pos * ADJUSTED_VW, table.position.y), 0.8).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_EXPO)
+
+func declare_not_moving() -> void:
+	movement_ongoing = false
+
+func _on_left_pressed() -> void:
+	if table_pos > 0 and not movement_ongoing:
+		movement_ongoing = true
+		table_pos -= 1
+		move_table(table_pos)
+
+
+func _on_right_pressed() -> void:
+	if not movement_ongoing:
+		movement_ongoing = true
+		table_pos += 1
+		move_table(table_pos)
