@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://cudfh4mjop57l"]
 
+[ext_resource type="PackedScene" uid="uid://by4bw2r1d0bkl" path="res://scenes/item_unit.tscn" id="1_0wfyh"]
 [ext_resource type="Script" uid="uid://b2monko8e05e7" path="res://scripts/main.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://dp48b0gpq6w0o" path="res://scenes/items/scarf.tscn" id="2_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://c55i08wr8w2f1" path="res://scenes/items/pillow.tscn" id="3_tipki"]
 [ext_resource type="PackedScene" uid="uid://c8m74t5h186ib" path="res://scenes/items/action_figure.tscn" id="4_85g3d"]
+[ext_resource type="PackedScene" uid="uid://bwxgenndeaqsm" path="res://scenes/items/backpack.tscn" id="6_ya4ey"]
 [ext_resource type="Texture2D" uid="uid://bd3yrl67sc6we" path="res://assets/box.png" id="7_85g3d"]
 [ext_resource type="Texture2D" uid="uid://dyevrv6ok3m4q" path="res://assets/pause.png" id="7_choun"]
 [ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="7_o6xl0"]
@@ -22,7 +24,13 @@ position = Vector2(117, 854)
 position = Vector2(685, 859)
 
 [node name="ActionFigure" parent="ItemGroup" unique_id=816862143 instance=ExtResource("4_85g3d")]
-position = Vector2(1277, 1015)
+position = Vector2(1161, 999)
+
+[node name="Object" parent="ItemGroup" unique_id=779771771 instance=ExtResource("1_0wfyh")]
+position = Vector2(720, 492)
+
+[node name="Backpack" parent="ItemGroup" unique_id=127231213 instance=ExtResource("6_ya4ey")]
+position = Vector2(1422, 1132)
 
 [node name="Camera" type="Camera2D" parent="." unique_id=113758559]
 offset = Vector2(960, 540)

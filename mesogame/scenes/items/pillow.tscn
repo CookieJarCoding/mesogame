@@ -11,12 +11,11 @@ type = 4
 placeholder = 1
 
 [node name="Pillow" type="Sprite2D" parent="." unique_id=1331438369]
-position = Vector2(0, 1)
+position = Vector2(138, 1)
 scale = Vector2(0.8156862, 0.81568617)
 texture = ExtResource("2_udwtr")
 
 [node name="AreaGroup" type="Node2D" parent="." unique_id=528034439]
-position = Vector2(-138, 0)
 
 [node name="Area1" parent="AreaGroup" unique_id=974894371 instance=ExtResource("3_8coy1")]
 
