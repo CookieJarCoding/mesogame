@@ -11,26 +11,43 @@
 [node name="Main" type="Node" unique_id=1421864953]
 script = ExtResource("1_sugp2")
 
-[node name="object" parent="." unique_id=218751151 instance=ExtResource("1_0wfyh")]
-position = Vector2(1054, 793)
-
-[node name="object2" parent="." unique_id=948301917 instance=ExtResource("1_0wfyh")]
-position = Vector2(892, 793)
-fragile = true
-
 [node name="BoxTopLeftCorner" type="Node2D" parent="." unique_id=1971797032]
 visible = false
 position = Vector2(1180, 146)
 
-[node name="ItemUnit2" parent="." unique_id=705416440 instance=ExtResource("3_sugp2")]
-visible = false
-position = Vector2(169, 574)
+[node name="ItemGroup" type="Node" parent="." unique_id=883022206]
+
+[node name="object" parent="ItemGroup" unique_id=218751151 instance=ExtResource("1_0wfyh")]
+position = Vector2(1054, 793)
+
+[node name="object2" parent="ItemGroup" unique_id=948301917 instance=ExtResource("1_0wfyh")]
+position = Vector2(892, 793)
+fragile = true
+
+[node name="object3" parent="ItemGroup" unique_id=779771771 instance=ExtResource("1_0wfyh")]
+position = Vector2(1090, 645)
+fragile = true
+
+[node name="object4" parent="ItemGroup" unique_id=205703530 instance=ExtResource("1_0wfyh")]
+position = Vector2(899, 975)
+fragile = true
+
+[node name="ItemUnit2" parent="ItemGroup" unique_id=705416440 instance=ExtResource("3_sugp2")]
+position = Vector2(564, 987)
 soft = true
 
-[node name="ItemUnit3" parent="." unique_id=1484645761 instance=ExtResource("4_jyhfs")]
-visible = false
-position = Vector2(365, 762)
+[node name="ItemUnit3" parent="ItemGroup" unique_id=1484645761 instance=ExtResource("4_jyhfs")]
+position = Vector2(1139, 1099)
 soft = true
+type = 0
+
+[node name="SettingsMenu" parent="." unique_id=2007337710 instance=ExtResource("7_o6xl0")]
+visible = false
+
+[node name="PauseButton" type="Button" parent="." unique_id=281643289]
+offset_right = 8.0
+offset_bottom = 8.0
+icon = ExtResource("10_choun")
 
 [node name="Camera" type="Camera2D" parent="." unique_id=113758559]
 offset = Vector2(960, 540)
@@ -38,6 +55,19 @@ zoom = Vector2(0.5, 0.5)
 
 [node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("7_tipki")]
 
+[connection signal="packed" from="ItemGroup/object" to="." method="_on_item_packed"]
+[connection signal="removed" from="ItemGroup/object" to="." method="_on_item_removed"]
+[connection signal="packed" from="ItemGroup/object2" to="." method="_on_item_packed"]
+[connection signal="removed" from="ItemGroup/object2" to="." method="_on_item_removed"]
+[connection signal="packed" from="ItemGroup/object3" to="." method="_on_item_packed"]
+[connection signal="removed" from="ItemGroup/object3" to="." method="_on_item_removed"]
+[connection signal="packed" from="ItemGroup/object4" to="." method="_on_item_packed"]
+[connection signal="removed" from="ItemGroup/object4" to="." method="_on_item_removed"]
+[connection signal="packed" from="ItemGroup/ItemUnit2" to="." method="_on_item_packed"]
+[connection signal="removed" from="ItemGroup/ItemUnit2" to="." method="_on_item_removed"]
+[connection signal="packed" from="ItemGroup/ItemUnit3" to="." method="_on_item_packed"]
+[connection signal="removed" from="ItemGroup/ItemUnit3" to="." method="_on_item_removed"]
+[connection signal="pressed" from="PauseButton" to="SettingsMenu" method="_on_pause_button_pressed"]
 [node name="SettingsMenu" parent="HUD" unique_id=2007337710 instance=ExtResource("7_o6xl0")]
 visible = false
 

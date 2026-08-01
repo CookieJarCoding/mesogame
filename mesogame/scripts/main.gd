@@ -9,6 +9,8 @@ const TEST_ITEM: PackedScene = preload("res://scenes/item_unit.tscn")
 @export var box_width: int = 5
 @export var box_height: int = 5
 
+var items_in_grid = []
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	for i in range(box_height):
@@ -21,6 +23,10 @@ func _ready() -> void:
 	var test_instance = TEST_ITEM.instantiate()
 	test_instance.global_position = Vector2(ran_x, ran_y)
 	add_child(test_instance)
+
+	for item in $ItemGroup.get_children():
+		item.packed.connect(_on_item_packed)
+		item.removed.connect(_on_item_removed)
 	
 	# func create_character(char_name: String, score: int, quota: int, likes: Array, dislikes: Array)
 	## NOTE: Max two likes/dislikes
@@ -29,5 +35,35 @@ func _ready() -> void:
 		[]
 	)
 
+func _physics_process(_delta: float) -> void:
+	tally_scores()
+	print("Win?: ", check_win())
+
 func _on_settings_button_pressed() -> void:
 	$SettingsMenu.visible = true;
+
+func _on_item_packed(item: Node2D) -> void:
+	items_in_grid.append(item)
+
+func _on_item_removed(item: Node2D) -> void:
+	items_in_grid.erase(item)
+
+func tally_scores() -> void:
+	for character in CharacterQuota.characters:
+		character.score = 0
+		for item in items_in_grid:
+			if item.type in character.likes:
+				character.score += 2
+			elif item.type not in character.dislikes:
+				character.score += 1
+		character.update_score()
+
+func check_win() -> bool:
+	# TODO: Loop across the items_in_grid array, to check if the fragile and liquid risks are satisfied
+
+	var winning = true
+	for character in CharacterQuota.characters:
+		if character.score < character.quota:
+			winning = false
+	return winning
+		

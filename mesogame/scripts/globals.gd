@@ -2,11 +2,11 @@ extends Node2D
 
 var is_dragging = false
 enum item_types {
-	TOILETRIES,
+	LUXURY,
 	CONSUMABLES,
 	TOYS,
 	HANDICRAFTS,
-	KITCHENWARE,
+	PRACTICAL,
 	APPAREL,
 	TECHNOLOGY
 }

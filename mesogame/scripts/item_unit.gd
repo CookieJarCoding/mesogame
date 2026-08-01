@@ -1,14 +1,21 @@
 extends Node2D
 
+class_name ItemUnit
+
+signal packed(item: ItemUnit)
+signal removed(item: ItemUnit)
+
 @export var fragile = false
 @export var soft = false
 @export var liquid_container = false
 @export var liquid_risk = false
 @export var wrapped = false
+@export var type: Globals.item_types = Globals.item_types.APPAREL
 
 var draggable = false
 var is_inside_dropable = false
 var is_animating: bool = false
+var in_grid: bool = false;
 var body_ref
 var prev_body_ref
 var offset: Vector2
@@ -82,6 +89,7 @@ func _process(_delta: float) -> void:
 			offset = get_global_mouse_position() - global_position
 			#print("Press")
 			Globals.is_dragging = true
+			removed.emit(self)
 		if Input.is_action_pressed("click") and Globals.is_dragging:
 			global_position = get_global_mouse_position() - offset
 		elif Input.is_action_just_released("click"):
@@ -89,15 +97,20 @@ func _process(_delta: float) -> void:
 			#print("Release")
 			if is_inside_dropable and body_ref:
 				global_position = body_ref.global_position - last_area_touched.position
+				packed.emit(self)
+				in_grid = true
 			else:
 				global_position = initialPos
 				if prev_body_ref:
 					body_ref = prev_body_ref
+				if in_grid:
+					packed.emit(self)
 
 
 func _physics_process(_delta: float) -> void:
-	print(is_valid_liquid())
-	print(is_valid_fragile())
+	pass
+	#print(is_valid_liquid())
+	#print(is_valid_fragile())
 
 # call these either when the player is submitting or as a limitation when trying to place
 func is_valid_liquid() -> bool:
@@ -106,7 +119,7 @@ func is_valid_liquid() -> bool:
 		for opposite_item in collisions:
 			if opposite_item != null:
 				if (self.liquid_risk and not self.wrapped and opposite_item.liquid_container):
-					print(self.name,": ", "liquid risk!")
+					#print(self.name,": ", "liquid risk!")
 					return false
 				else:
 					pass
@@ -124,11 +137,15 @@ func is_valid_fragile() -> bool:
 					surroundings.append(opposite_item) 
 					# not optimized since this double counts, but yeah
 				else:
-					print(self.name,": ","one of the surrounding cells is empty, so not all surroundings are soft")
+					#print(self.name,": ","one of the surrounding cells is empty, so not all surroundings are soft")
 					return false
 		for item in surroundings:
 			if not item.soft:
-				print(self.name,": ","one of the surrounding items is not soft, so invalid")
+				#print(self.name,": ","one of the surrounding items is not soft, so invalid")
 				return false
 	#print(self.name,": ", "not at risk of breakage!")
 	return true
+
+
+func _on_packed(item: Node2D) -> void:
+	pass # Replace with function body.

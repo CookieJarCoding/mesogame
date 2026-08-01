@@ -1,5 +1,8 @@
 extends VBoxContainer
 
+class_name CharacterQuota
+
+static var characters = []
 
 var char_name: String = ""
 var score: int = 0
@@ -9,8 +12,9 @@ var dislikes = []
 
 @onready var score_label = $HBox/Score
 
-
 func _ready() -> void:
+	characters.append(self)
+
 	$HBox/Name.text = char_name
 	
 	if likes.size() == 1:
@@ -32,16 +36,16 @@ func _ready() -> void:
 
 ## NOTE: Enum To String
 func ets(enum_val) -> String:
-	if enum_val == Globals.item_types.TOILETRIES:
-		return "Toiletries"
+	if enum_val == Globals.item_types.LUXURY:
+		return "Luxury"
 	elif enum_val == Globals.item_types.CONSUMABLES:
 		return "Consumables"
 	elif enum_val == Globals.item_types.TOYS:
 		return "Toys"
 	elif enum_val == Globals.item_types.HANDICRAFTS:
 		return "Handicrafts"
-	elif enum_val == Globals.item_types.KITCHENWARE:
-		return "Kitchenware"
+	elif enum_val == Globals.item_types.PRACTICAL:
+		return "Practical"
 	elif enum_val == Globals.item_types.APPAREL:
 		return "Apparel"
 	elif enum_val == Globals.item_types.TECHNOLOGY:
@@ -52,3 +56,4 @@ func ets(enum_val) -> String:
 
 func update_score() -> void:
 	score_label.text = str(score) + "/ " + str(quota)
+
