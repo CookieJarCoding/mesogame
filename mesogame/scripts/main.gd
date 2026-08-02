@@ -12,6 +12,7 @@ const TOOLTIP_OFFSET: Vector2 = Vector2(20,-60)
 
 @export var box_width: int = 5
 @export var box_height: int = 5
+@export var level_title: String = ""
 
 var items_in_grid = []
 var item_explained
@@ -32,6 +33,7 @@ func _ready() -> void:
 	$Box.scale = BOX_DEFAULT_SCALE * box_width / 5.0
 	$TileBG.visible = true
 	$Table.visible = true
+	$HUD/LevelTitle.text = level_title
 	
 	for i in range(box_height):
 		for j in range(box_width):
