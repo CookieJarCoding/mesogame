@@ -7,7 +7,7 @@
 [node name="Chocolates" type="Node2D" unique_id=705416440]
 script = ExtResource("1_iikpl")
 item_name = "Box of Chocolates"
-item_description = "flavor text"
+item_description = "Won't melt. Probably."
 type = 1
 placeholder = 1
 

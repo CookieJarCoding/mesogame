@@ -7,7 +7,7 @@
 [node name="Chopsticks2" type="Node2D" unique_id=705416440]
 script = ExtResource("1_oqh0y")
 item_name = "Chopsticks"
-item_description = "flavor text"
+item_description = "Not for chopping or sticking."
 type = 4
 placeholder = 1
 

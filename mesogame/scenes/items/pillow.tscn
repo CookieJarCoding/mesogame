@@ -7,7 +7,7 @@
 [node name="Pillow" type="Node2D" unique_id=705416440]
 script = ExtResource("1_udwtr")
 item_name = "Pillow"
-item_description = "flavor text"
+item_description = "Sweet dreams are made of these."
 soft = true
 type = 4
 placeholder = 1

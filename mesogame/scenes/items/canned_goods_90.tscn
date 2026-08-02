@@ -7,7 +7,7 @@
 [node name="CannedGoods90" type="Node2D" unique_id=705416440]
 script = ExtResource("1_qmu8o")
 item_name = "Canned Goods"
-item_description = "flavor text maybe"
+item_description = "Buy 6 take 0."
 liquid_container = true
 type = 1
 placeholder = 1

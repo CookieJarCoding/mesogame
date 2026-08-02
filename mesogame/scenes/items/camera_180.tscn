@@ -7,7 +7,7 @@
 [node name="Camera" type="Node2D" unique_id=705416440]
 script = ExtResource("1_418jc")
 item_name = "Camera"
-item_description = "flavor text"
+item_description = "Can't wait to take pics w/ them."
 fragile = true
 liquid_risk = true
 type = 6

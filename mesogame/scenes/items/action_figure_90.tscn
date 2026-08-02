@@ -7,7 +7,7 @@
 [node name="ActionFigure90" type="Node2D" unique_id=705416440]
 script = ExtResource("1_5ms1f")
 item_name = "Action Figure"
-item_description = "flavor text"
+item_description = "Si optimum pride oh"
 type = 2
 placeholder = 1
 

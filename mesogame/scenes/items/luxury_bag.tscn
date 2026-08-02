@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://m2p5xgunqcah"]
+[gd_scene format=3 uid="uid://bvmpry8rndv88"]
 
 [ext_resource type="Script" uid="uid://dat06wuy3tvfy" path="res://scripts/item_unit.gd" id="1_62tos"]
 [ext_resource type="Texture2D" uid="uid://iuj4ekll1cxs" path="res://assets/items/luxury_bag.png" id="2_62tos"]
@@ -7,7 +7,7 @@
 [node name="LuxuryBag" type="Node2D" unique_id=705416440]
 script = ExtResource("1_62tos")
 item_name = "'Luxury' Bag"
-item_description = "flavor text"
+item_description = "Tita would love this."
 soft = true
 liquid_risk = true
 type = 0

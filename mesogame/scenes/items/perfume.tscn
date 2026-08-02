@@ -7,7 +7,7 @@
 [node name="Perfume" type="Node2D" unique_id=705416440]
 script = ExtResource("1_cicbb")
 item_name = "Perfume"
-item_description = "flavor text"
+item_description = "R stands for lauRen, apparently."
 fragile = true
 liquid_container = true
 type = 0

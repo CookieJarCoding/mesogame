@@ -7,7 +7,7 @@
 [node name="LuxuryBag" type="Node2D" unique_id=705416440]
 script = ExtResource("1_akhig")
 item_name = "'Luxury' Bag"
-item_description = "flavor text"
+item_description = "Tita would love this."
 soft = true
 liquid_risk = true
 type = 0

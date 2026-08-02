@@ -7,7 +7,7 @@
 [node name="Backpack" type="Node2D" unique_id=705416440]
 script = ExtResource("1_5wpah")
 item_name = "Backpack"
-item_description = "flavor text"
+item_description = "...should've put stuff inside."
 soft = true
 placeholder = 1
 
