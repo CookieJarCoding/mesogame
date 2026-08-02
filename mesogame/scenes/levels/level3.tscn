@@ -383,25 +383,25 @@ z_index = 100
 position = Vector2(0, 800)
 
 [node name="CannedGoods" parent="ItemGroup" unique_id=705416440 instance=ExtResource("11_lsxft")]
-position = Vector2(637, 1612)
+position = Vector2(587, 1673)
 
 [node name="StuffedAnimal" parent="ItemGroup" unique_id=754929349 instance=ExtResource("12_rfqup")]
-position = Vector2(1317, 1718)
+position = Vector2(1287, 1885)
 
 [node name="Chocolates" parent="ItemGroup" unique_id=91019937 instance=ExtResource("13_0y7c6")]
 position = Vector2(4046, 1435)
 
 [node name="ActionFigure" parent="ItemGroup" unique_id=769774734 instance=ExtResource("14_d1mne")]
-position = Vector2(1137, 1630)
+position = Vector2(1107, 1797)
 
 [node name="ActionFigure2" parent="ItemGroup" unique_id=1766210661 instance=ExtResource("14_d1mne")]
-position = Vector2(2214, 1717)
+position = Vector2(2245, 1745)
 
 [node name="HoneyJars" parent="ItemGroup" unique_id=1060283158 instance=ExtResource("15_ul42b")]
-position = Vector2(2431, 1582)
+position = Vector2(2401, 1749)
 
 [node name="Shirt" parent="ItemGroup" unique_id=1209161982 instance=ExtResource("16_dc8aq")]
-position = Vector2(1714, 1639)
+position = Vector2(1664, 1877)
 
 [node name="Scarf" parent="ItemGroup" unique_id=1146730901 instance=ExtResource("17_5bnxw")]
 position = Vector2(4724, 1627)
@@ -442,9 +442,9 @@ region_enabled = true
 region_rect = Rect2(0, 0, 20000, 5000)
 
 [node name="Table" type="Sprite2D" parent="." unique_id=1608285561]
-z_index = -999
-position = Vector2(1600, 1602)
-scale = Vector2(1.6666669, 1.7037036)
+z_index = -150
+position = Vector2(1600, 1602.1852)
+scale = Vector2(1.6666669, 1.702501)
 texture = ExtResource("21_ojfwg")
 region_enabled = true
 region_rect = Rect2(0, 771.6155, 1920, 308.38452)

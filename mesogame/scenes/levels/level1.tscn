@@ -387,17 +387,17 @@ position = Vector2(1770, 1617)
 position = Vector2(1999, 1539)
 
 [node name="FridgeMagnet" parent="ItemGroup" unique_id=765727931 instance=ExtResource("16_6i0tl")]
-position = Vector2(1183, 1515)
+position = Vector2(1052, 1525)
 item_description = "flavor text, maybe"
 
 [node name="Shirt" parent="ItemGroup" unique_id=1563393135 instance=ExtResource("17_gvm5i")]
-position = Vector2(538, 1672)
+position = Vector2(334, 1682)
 
 [node name="Chopsticks" parent="ItemGroup" unique_id=1149282944 instance=ExtResource("18_jrfo0")]
-position = Vector2(1409, 1434)
+position = Vector2(1340, 1444)
 
 [node name="Scarf" parent="ItemGroup" unique_id=705416440 instance=ExtResource("11_4niyd")]
-position = Vector2(2340, 1333)
+position = Vector2(2714, 1490)
 
 [node name="Camera" type="Camera2D" parent="." unique_id=113758559]
 anchor_mode = 0

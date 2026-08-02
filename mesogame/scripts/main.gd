@@ -33,10 +33,7 @@ var finished_moving_items: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if Globals.level_counter < 7:
-		$Box/BoxTopLeftCorner.position = Vector2(1818 - 70 * (box_width - 5), 316 - 70 * (box_width - 5))
-	else:
-		$Box/BoxTopLeftCorner.position = Vector2(2795 - 70 * (box_width - 5), 620 - 70 * (box_width - 5))
+	$Box/BoxTopLeftCorner.position = Vector2(1818 - 70 * (box_width - 5), 316 - 70 * (box_width - 5))
 	AudioLibrary.play_music(AudioLibrary.music.GAMEPLAY)
 	
 	finished_moving_items = false
