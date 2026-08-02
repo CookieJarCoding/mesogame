@@ -117,7 +117,7 @@ func _process(_delta: float) -> void:
 			Globals.is_dragging = true
 			removed.emit(self)
 			#print("boop0")
-		elif Input.is_action_pressed("click") and Globals.is_dragging:
+		if Input.is_action_pressed("click") and Globals.is_dragging:
 			global_position = get_global_mouse_position() - offset
 		elif released:
 			released = not released
