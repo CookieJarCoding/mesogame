@@ -29,4 +29,4 @@ var level_paths: Array[String] = ["fill",
 ## NOTE: for debugging purposes
 func _ready() -> void:
 	if OS.is_debug_build():
-		level_counter = 0
+		level_counter = 1

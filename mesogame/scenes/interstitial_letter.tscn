@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bceume708lr4x" path="res://assets/Button.png" id="3_x17jk"]
 [ext_resource type="Script" uid="uid://bme42p1aic0si" path="res://scripts/hoverable.gd" id="4_eit5r"]
 [ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="5_bsrl5"]
+[ext_resource type="Texture2D" uid="uid://bmy28447hvi" path="res://assets/envelope.png" id="6_eit5r"]
 
 [node name="IntroLetter" type="MarginContainer" unique_id=1230503490]
 anchors_preset = 8
@@ -22,31 +23,46 @@ script = ExtResource("1_8gbjm")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=383481100]
 layout_mode = 2
+theme_override_constants/separation = 29
 
-[node name="Letter" type="RichTextLabel" parent="VBoxContainer" unique_id=389964967]
+[node name="Intro" type="RichTextLabel" parent="VBoxContainer" unique_id=389964967]
 layout_mode = 2
 theme_override_constants/line_separation = 12
 theme_override_fonts/normal_font = ExtResource("2_8gbjm")
 theme_override_font_sizes/normal_font_size = 21
-text = "Dear Toni,
-
-Hi! It’s your nanang again. I’m so happy you get to come back here to Batangas! Jay and Ethan have gotten so tall while you were away. Do you remember in 1971, they were only up to your stomach? Now they’re probably up to your shoulder already! Ang saya, ‘di ba? Maybe you could pack some toys and sweets for them in your balikbayan box? Promise, ‘di ko hahayaang kunin ulit ng Tita Kara mo yung mga padala mo. Alam mo naman kung paano siya, e.
-
-
-
-Lovelove, Nanang
-"
+text = "Dear Toni,"
 fit_content = true
 
-[node name="StartButton" type="TextureButton" parent="VBoxContainer" unique_id=439018090]
+[node name="Letter" type="RichTextLabel" parent="VBoxContainer" unique_id=513206348]
+layout_mode = 2
+theme_override_constants/line_separation = 12
+theme_override_fonts/normal_font = ExtResource("2_8gbjm")
+theme_override_font_sizes/normal_font_size = 21
+text = "Hi! It’s your nanang again. I’m so happy you get to come back here to Batangas! Jay and Ethan have gotten so tall while you were away. Do you remember in 1971, they were only up to your stomach? Now they’re probably up to your shoulder already! Ang saya, ‘di ba? Maybe you could pack some toys and sweets for them in your balikbayan box? Promise, ‘di ko hahayaang kunin ulit ng Tita Kara mo yung mga padala mo. Alam mo naman kung paano siya, e."
+fit_content = true
+
+[node name="Salutations" type="RichTextLabel" parent="VBoxContainer" unique_id=1037942577]
+layout_mode = 2
+theme_override_constants/line_separation = 12
+theme_override_fonts/normal_font = ExtResource("2_8gbjm")
+theme_override_font_sizes/normal_font_size = 21
+text = "Lovelove, Nanang!"
+fit_content = true
+
+[node name="DummyNode" type="Node2D" parent="." unique_id=326143746]
+position = Vector2(-55, 2)
+
+[node name="StartButton" type="TextureButton" parent="." unique_id=439018090]
+visible = false
 custom_maximum_size = Vector2(150, 61.48)
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 8
+size_flags_vertical = 8
 texture_normal = ExtResource("3_x17jk")
 stretch_mode = 5
 script = ExtResource("4_eit5r")
 
-[node name="Text" type="RichTextLabel" parent="VBoxContainer/StartButton" unique_id=181505931]
+[node name="Text" type="RichTextLabel" parent="StartButton" unique_id=181505931]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -60,4 +76,11 @@ text = "START!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[node name="Envelope" type="Sprite2D" parent="." unique_id=129040398]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(426, 345.705)
+rotation = -0.31415927
+scale = Vector2(0.12588236, 0.12588236)
+texture = ExtResource("6_eit5r")
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
