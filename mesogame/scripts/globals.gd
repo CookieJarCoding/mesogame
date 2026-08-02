@@ -23,4 +23,4 @@ var level_paths: Array[String] = ["fill",
 "res:///scenes/level9.tscn",
 "res:///scenes/level10.tscn",
 "res:///scenes/level11.tscn",
-"res:///scenes/end.tscn"]
+"res:///scenes/ending.tscn"]

@@ -141,9 +141,9 @@ func _on_next_button_pressed() -> void:
 	#print(Globals.level_counter)
 
 	# CHECK IF THIS WORKS SUCH THAT THESE ARE SPACED OUT EVERY THREE LEVELS
-	if Globals.level_counter % 3 == 1:
+	if Globals.level_counter % 3 == 1 or Globals.level_counter == 12:
 		@warning_ignore("integer_division")
-		if Globals.level_counter / 3 == 4: 
+		if Globals.level_counter == 13: 
 			get_tree().change_scene_to_file("res:///scenes/ending.tscn")
 		else:
 			get_tree().change_scene_to_file("res:///scenes/interstitial_letter.tscn")

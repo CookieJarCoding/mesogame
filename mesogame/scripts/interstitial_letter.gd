@@ -30,7 +30,8 @@ It’s your nanang. Everything’s arranged. We’ll wait for you at the airport
 
 
 See you soon, Nanang
-"""]
+""",
+"""Oh? I think I forgot something..."""]
 @onready var labelB = $VBoxContainer/Letter
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
