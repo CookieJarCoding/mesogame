@@ -31,9 +31,6 @@ func _on_settings_button_pressed() -> void:
 	$MainMenu.visible = false
 	$Logo.visible = false
 
-
-
-
 func _on_settings_close_button_pressed() -> void:
 	$MainMenu.visible = true
 	$Logo.visible = true
