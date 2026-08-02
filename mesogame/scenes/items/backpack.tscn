@@ -6,7 +6,9 @@
 
 [node name="Backpack" type="Node2D" unique_id=705416440]
 script = ExtResource("1_ltbm8")
-liquid_risk = true
+item_name = "Backpack"
+item_description = "flavor text"
+soft = true
 placeholder = 1
 
 [node name="Backpack" type="Sprite2D" parent="." unique_id=1331438369]

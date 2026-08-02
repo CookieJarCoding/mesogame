@@ -6,7 +6,8 @@
 
 [node name="ActionFigure" type="Node2D" unique_id=705416440]
 script = ExtResource("1_im0ku")
-soft = true
+item_name = "Action Figure"
+item_description = "flavor text"
 type = 2
 placeholder = 1
 

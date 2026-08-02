@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://1ajxi2hkjtyg"]
+
+[ext_resource type="Script" uid="uid://dat06wuy3tvfy" path="res://scripts/item_unit.gd" id="1_cicbb"]
+[ext_resource type="Texture2D" uid="uid://lmfex2rqao0k" path="res://assets/items/perfume.png" id="2_cicbb"]
+[ext_resource type="PackedScene" uid="uid://drugy3tw1e82w" path="res://scenes/tile_collision.tscn" id="3_wbkhj"]
+
+[node name="Perfume" type="Node2D" unique_id=705416440]
+script = ExtResource("1_cicbb")
+item_name = "Perfume"
+item_description = "flavor text"
+fragile = true
+liquid_container = true
+type = 0
+placeholder = 1
+
+[node name="Perfume" type="Sprite2D" parent="." unique_id=1331438369]
+position = Vector2(-0.03389597, 5.90086e-06)
+scale = Vector2(0.6666668, 0.6666666)
+texture = ExtResource("2_cicbb")
+
+[node name="AreaGroup" type="Node2D" parent="." unique_id=528034439]
+
+[node name="Area1" parent="AreaGroup" unique_id=974894371 instance=ExtResource("3_wbkhj")]

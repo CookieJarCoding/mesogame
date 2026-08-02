@@ -6,6 +6,8 @@
 
 [node name="FridgeMagnet" type="Node2D" unique_id=705416440]
 script = ExtResource("1_lgi7m")
+item_name = "Fridge Magnet"
+item_description = "flavor text"
 type = 3
 placeholder = 1
 
