@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://tcpaxhvkoq8i"]
+[gd_scene format=3 uid="uid://bxd5oievwqopp"]
 
 [ext_resource type="Script" uid="uid://dat06wuy3tvfy" path="res://scripts/item_unit.gd" id="1_n6bj8"]
-[ext_resource type="Texture2D" uid="uid://db2sntxu5k0ox" path="res://assets/items/canned_good.png" id="2_n6bj8"]
+[ext_resource type="Texture2D" uid="uid://c3mi3bv71ja1u" path="res://assets/items/canned_good2.png" id="2_n6bj8"]
 [ext_resource type="PackedScene" uid="uid://drugy3tw1e82w" path="res://scenes/tile_collision.tscn" id="3_lsfp1"]
 
 [node name="CannedGoods" type="Node2D" unique_id=705416440]
@@ -13,8 +13,8 @@ type = 1
 placeholder = 1
 
 [node name="CannedGoods" type="Sprite2D" parent="." unique_id=1331438369]
-position = Vector2(138, -70.00001)
-scale = Vector2(0.7165619, 0.7165619)
+position = Vector2(131, -68)
+scale = Vector2(0.825, 0.82500005)
 texture = ExtResource("2_n6bj8")
 
 [node name="AreaGroup" type="Node2D" parent="." unique_id=528034439]
