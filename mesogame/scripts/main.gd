@@ -71,7 +71,7 @@ func _ready() -> void:
 		#[]
 	#)
 
-	if Globals.level_counter == 1 or Globals.level_counter == 9 or Globals.level_counter > 10:
+	if Globals.level_counter == 9 or Globals.level_counter > 10:
 		set_handle_with_care()
 
 
