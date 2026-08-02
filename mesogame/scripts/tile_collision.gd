@@ -45,11 +45,13 @@ func collide() -> Array:
 
 	for ray: RayCast2D in rays:
 		if ray.is_colliding():
+			var opposite_item
+			
 			if ray.get_collider().get_parent() == self.get_parent() or not ray.get_collider().get_parent().get_parent().visible:
 				# print(ray.get_collider().get_parent().get_parent().name)
-				ray.add_exception(ray.get_collider())
-			
-			var opposite_item = ray.get_collider().get_parent().get_parent()
+				opposite_item = self.get_parent().get_parent()
+			else:
+				opposite_item = ray.get_collider().get_parent().get_parent()
 
 			if opposite_item is Node2D:
 				item_collisions.append(opposite_item)
