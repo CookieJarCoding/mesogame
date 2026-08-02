@@ -22,10 +22,12 @@ var draggable = false
 var is_inside_dropable = false
 var is_animating: bool = false
 var in_grid: bool = false
+var on_table: bool = false
 var body_ref
 var prev_body_ref
 var offset: Vector2
 var initialPos: Vector2
+var starting_position: Vector2
 var area_group: Node
 var areas = []
 var last_area_touched
@@ -38,6 +40,7 @@ var is_hovered_over
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	initialPos = global_position
+	starting_position = global_position
 	area_group = $AreaGroup
 	areas = area_group.get_children()
 	#for area in areas:
@@ -52,13 +55,14 @@ func _input(event: InputEvent) -> void:
 		elif event.is_action_released("click"):
 			released = true
 
-
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	#if body_ref:
 		#print(body_ref.global_position)
 	
 	is_inside_dropable = false
+	on_table = false
 	var drop_space = null
 	
 	## NOTE: Checks for any free space
@@ -68,6 +72,9 @@ func _process(_delta: float) -> void:
 			for o in overlap:
 				if o is DropSpace and not o.occupied:
 					drop_space = o
+				
+				if o.is_in_group("table"):
+					on_table = true
 			body_ref = drop_space
 			is_inside_dropable = true
 			last_area_touched = area
@@ -99,7 +106,6 @@ func _process(_delta: float) -> void:
 		#hovered.emit(self)
 	#else:
 		#unhovered.emit(self)
-
 	
 	if draggable:
 		for area in areas:
@@ -128,6 +134,8 @@ func _process(_delta: float) -> void:
 				packed.emit(self)
 				#print("boop1")
 				in_grid = true
+			elif on_table:
+				global_position = get_parent().position + starting_position
 			else:
 				global_position = initialPos
 				if prev_body_ref:
@@ -170,7 +178,8 @@ func is_valid_fragile() -> bool:
 			for opposite_item in collisions:
 				if opposite_item != null:
 					surroundings.append(opposite_item) 
-					# not optimized since this double counts, but yeah
+					# NOTE: this is a note
+					# WARNING: not optimized since this double counts, but yeah
 				else:
 					#print(self.name,": ","one of the surrounding cells is empty, so not all surroundings are soft")
 					return false
@@ -180,7 +189,3 @@ func is_valid_fragile() -> bool:
 				return false
 	#print(self.name,": ", "not at risk of breakage!")
 	return true
-
-
-func _on_packed(item: Node2D) -> void:
-	pass # Replace with function body.

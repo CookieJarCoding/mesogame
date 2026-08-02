@@ -138,7 +138,7 @@ func check_win() -> bool:
 
 func _on_next_button_pressed() -> void:
 	Globals.level_counter += 1
-	print(Globals.level_counter)
+	#print(Globals.level_counter)
 
 	# CHECK IF THIS WORKS SUCH THAT THESE ARE SPACED OUT EVERY THREE LEVELS
 	if Globals.level_counter % 3 == 1:
@@ -177,3 +177,9 @@ func set_handle_with_care() -> void:
 	for item in $ItemGroup.get_children():
 		if not item.soft:
 			item.fragile = true
+
+
+func _on_reset_button_pressed() -> void:
+	CharacterQuota.characters.clear()
+	items_in_grid.clear()
+	get_tree().call_deferred("reload_current_scene")

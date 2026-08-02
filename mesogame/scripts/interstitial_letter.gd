@@ -37,7 +37,7 @@ func _ready() -> void:
 	scroll_text(labelB)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Globals.level_counter < 5:
 		labelB.text = letters[Globals.level_counter/3+1] # CHECK
 	else:
@@ -48,7 +48,6 @@ func scroll_text(scroll) -> void:
 	var tween = get_tree().create_tween()
 	tween.tween_property(scroll, "visible_characters", scroll.get_total_character_count(), 5)
 	
-		
 	
 func _on_quit_button_pressed() -> void:
 	get_tree().quit()

@@ -17,6 +17,9 @@
 [ext_resource type="Texture2D" uid="uid://b6fgaeuibgs2t" path="res://assets/table.png" id="13_trceg"]
 [ext_resource type="PackedScene" uid="uid://blwn3kp63m1yf" path="res://scenes/item_information.tscn" id="16_jbj1t"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jbj1t"]
+size = Vector2(2452.7998, 225.39142)
+
 [sub_resource type="Animation" id="Animation_jkv2x"]
 length = 0.001
 tracks/0/type = "value"
@@ -102,13 +105,27 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -672.0
-offset_top = -260.0
-offset_right = -568.0
-offset_bottom = -205.99988
+offset_left = -656.0
+offset_top = -276.0
+offset_right = -584.0
+offset_bottom = -221.99988
 grow_horizontal = 0
 grow_vertical = 0
 text = "NEXT"
+
+[node name="ResetButton" type="Button" parent="HUD" unique_id=386650858]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -736.0
+offset_top = -276.0
+offset_right = -664.0
+offset_bottom = -221.99988
+grow_horizontal = 0
+grow_vertical = 0
+text = "RESET"
 
 [node name="Left" type="TextureButton" parent="HUD" unique_id=1777119729]
 anchors_preset = 3
@@ -215,6 +232,12 @@ texture = ExtResource("13_trceg")
 region_enabled = true
 region_rect = Rect2(0, 771.6155, 1920, 308.38452)
 
+[node name="Area" type="Area2D" parent="Table" unique_id=1451915230 groups=["table"]]
+
+[node name="Collision" type="CollisionShape2D" parent="Table/Area" unique_id=2078446036]
+position = Vector2(-45.600037, 41.087036)
+shape = SubResource("RectangleShape2D_jbj1t")
+
 [node name="Intro" type="AnimationPlayer" parent="." unique_id=822451176]
 libraries/ = SubResource("AnimationLibrary_jkv2x")
 autoplay = &"entrance"
@@ -223,5 +246,6 @@ autoplay = &"entrance"
 
 [connection signal="pressed" from="HUD/PauseButton" to="HUD/SettingsMenu" method="_on_pause_button_pressed"]
 [connection signal="pressed" from="HUD/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="HUD/ResetButton" to="." method="_on_reset_button_pressed"]
 [connection signal="pressed" from="HUD/Left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="HUD/Right" to="." method="_on_right_pressed"]
