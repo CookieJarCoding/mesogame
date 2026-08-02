@@ -11,24 +11,23 @@ enum item_types {
 	TECHNOLOGY
 }
 var level_counter: int = 0
-var levels: Array[PackedScene] = [preload("res:///scenes/main.tscn"),
-preload("res:///scenes/levels/debug_room.tscn"),
-#preload("res:///scenes/levels/level1.tscn"),
-#preload("res:///scenes/levels/level2.tscn"),
-#preload("res:///scenes/levels/level3.tscn"),
-#preload("res:///scenes/levels/level4.tscn"),
-#preload("res:///scenes/levels/level5.tscn"),
-#preload("res:///scenes/levels/level6.tscn"),
-#preload("res:///scenes/levels/level7.tscn"),
-#preload("res:///scenes/levels/level8.tscn"),
-#preload("res:///scenes/levels/level9.tscn"),
-#preload("res:///scenes/levels/level10.tscn"),
-#preload("res:///scenes/levels/level11.tscn"),
-#preload("res:///scenes/ending.tscn")
+var levels: Array[PackedScene] = [load("res:///scenes/main.tscn"),
+load("res:///scenes/levels/level1.tscn"),
+load("res:///scenes/levels/level2.tscn"),
+#load("res:///scenes/levels/level3.tscn"),
+#load("res:///scenes/levels/level4.tscn"),
+#load("res:///scenes/levels/level5.tscn"),
+#load("res:///scenes/levels/level6.tscn"),
+#load("res:///scenes/levels/level7.tscn"),
+#load("res:///scenes/levels/level8.tscn"),
+#load("res:///scenes/levels/level9.tscn"),
+#load("res:///scenes/levels/level10.tscn"),
+#load("res:///scenes/levels/level11.tscn"),
+#load("res:///scenes/ending.tscn")
 ]
 #
 
 ## NOTE: for debugging purposes
 func _ready() -> void:
 	if OS.is_debug_build():
-		level_counter = 0
+		level_counter = 1

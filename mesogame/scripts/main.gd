@@ -13,13 +13,13 @@ const TOOLTIP_OFFSET: Vector2 = Vector2(20,-60)
 
 @export var box_width: int = 5
 @export var box_height: int = 5
+@export var max_table_pages: int = 1
 @export var level_title: String = ""
 
 var items_in_grid = []
 var item_explained
 var table_pos: int = 0
 var movement_ongoing: bool = false
-var max_table_pages: int = 5
 var finished_moving_items: bool = false
 
 @onready var next_level_btn = $HUD/HBoxContainer/NextButton
@@ -172,9 +172,8 @@ func _on_left_pressed() -> void:
 		table_pos -= 1
 		move_table(table_pos)
 
-
 func _on_right_pressed() -> void:
-	if table_pos < max_table_pages and not movement_ongoing and finished_moving_items:
+	if table_pos < max_table_pages - 1 and not movement_ongoing and finished_moving_items:
 		movement_ongoing = true
 		table_pos += 1
 		move_table(table_pos)
@@ -204,7 +203,8 @@ func _on_animation_finished(anim_name: StringName) -> void:
 		else:
 			CharacterQuota.characters.clear()
 			items_in_grid.clear()
-			get_tree().reload_current_scene()
+			print(Globals.level_counter)
+			get_tree().change_scene_to_packed(Globals.levels[Globals.level_counter])
 
 
 func play_swoosh() -> void:

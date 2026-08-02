@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Mesogame"
-run/main_scene="uid://cogxdgtms8ujh"
+run/main_scene="uid://ccogaly6aen5e"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -27,6 +27,8 @@ AudioLibrary="*uid://xbwlt0vjqnn1"
 window/size/viewport_width=960
 window/size/viewport_height=540
 window/stretch/mode="canvas_items"
+mouse_cursor/custom_image="uid://qo2vnkllbwm8"
+mouse_cursor/tooltip_position_offset=Vector2(0, 0)
 
 [gui]
 
