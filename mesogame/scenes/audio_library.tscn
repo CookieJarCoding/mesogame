@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://xbwlt0vjqnn1"]
+
+[ext_resource type="Script" uid="uid://d2mous1jj0r73" path="res://scripts/audio_library.gd" id="1_3avnm"]
+[ext_resource type="AudioStream" uid="uid://doo6srgdqwrb0" path="res://sounds/swoosh.mp3" id="2_612mp"]
+
+[node name="AudioLibrary" type="Node" unique_id=413458466]
+script = ExtResource("1_3avnm")
+
+[node name="Swoosh" type="AudioStreamPlayer" parent="." unique_id=1132213815]
+stream = ExtResource("2_612mp")
+volume_db = 2.0
+pitch_scale = 1.3

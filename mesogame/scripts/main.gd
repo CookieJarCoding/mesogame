@@ -17,12 +17,14 @@ var items_in_grid = []
 var item_explained
 var table_pos: int = 0
 var movement_ongoing: bool = false
+var max_table_pages: int = 5
 
 @onready var next_level_btn = $HUD/NextButton
 @onready var camera = $Camera
 @onready var table = $PlaceholderTable
 @onready var item_group = $ItemGroup
 @onready var box = $Box
+@onready var anim = $Anim
 
 
 # Called when the node enters the scene tree for the first time.
@@ -137,16 +139,8 @@ func check_win() -> bool:
 
 
 func _on_next_button_pressed() -> void:
-	Globals.level_counter += 1
-	#print(Globals.level_counter)
-
-	# CHECK IF THIS WORKS SUCH THAT THESE ARE SPACED OUT EVERY THREE LEVELS
-	if Globals.level_counter % 3 == 1 or Globals.level_counter == 12:
-		@warning_ignore("integer_division")
-		if Globals.level_counter == 13: 
-			get_tree().change_scene_to_file("res:///scenes/ending.tscn")
-		else:
-			get_tree().change_scene_to_file("res:///scenes/interstitial_letter.tscn")
+	anim.play("exit")
+	$HUD.play_exit()
 
 
 func move_table(pos: int) -> void:
@@ -168,7 +162,7 @@ func _on_left_pressed() -> void:
 
 
 func _on_right_pressed() -> void:
-	if not movement_ongoing:
+	if table_pos < max_table_pages and not movement_ongoing:
 		movement_ongoing = true
 		table_pos += 1
 		move_table(table_pos)
@@ -183,3 +177,19 @@ func _on_reset_button_pressed() -> void:
 	CharacterQuota.characters.clear()
 	items_in_grid.clear()
 	get_tree().call_deferred("reload_current_scene")
+
+
+func _on_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "exit":
+		Globals.level_counter += 1
+		# CHECK IF THIS WORKS SUCH THAT THESE ARE SPACED OUT EVERY THREE LEVELS
+		if Globals.level_counter % 3 == 1 or Globals.level_counter == 12:
+			@warning_ignore("integer_division")
+			if Globals.level_counter == 13: 
+				get_tree().change_scene_to_file("res:///scenes/ending.tscn")
+			else:
+				get_tree().change_scene_to_file("res:///scenes/interstitial_letter.tscn")
+
+
+func play_swoosh() -> void:
+	AudioLibrary.play_sfx(AudioLibrary.sfx.SWOOSH)

@@ -36,10 +36,28 @@ tracks/0/keys = {
 "values": [Vector2(100, -254), Vector2(100, -34)]
 }
 
+[sub_resource type="Animation" id="Animation_uo2fv"]
+resource_name = "hud_exit"
+length = 4.5
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(0.35355335, 1),
+"update": 0,
+"values": [Vector2(100, -34), Vector2(100, -254)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6fi6k"]
 _data = {
 &"RESET": SubResource("Animation_6fi6k"),
-&"hud_entrance": SubResource("Animation_5ysmq")
+&"hud_entrance": SubResource("Animation_5ysmq"),
+&"hud_exit": SubResource("Animation_uo2fv")
 }
 
 [node name="HUD" type="CanvasLayer" unique_id=2074363166]
@@ -97,6 +115,6 @@ horizontal_alignment = 2
 [node name="CharQuota" parent="Panel/VBoxContainer/MarginContainer/ScrollContainer/VBox" unique_id=454399947 instance_placeholder="res://scenes/character_quota.tscn"]
 layout_mode = 2
 
-[node name="Intro" type="AnimationPlayer" parent="." unique_id=1992133697]
+[node name="Anim" type="AnimationPlayer" parent="." unique_id=1992133697]
 libraries/ = SubResource("AnimationLibrary_6fi6k")
 autoplay = &"hud_entrance"

@@ -4,6 +4,7 @@ extends CanvasLayer
 const char_quota: PackedScene = preload("res://scenes/character_quota.tscn")
 
 @onready var vbox: VBoxContainer = $Panel/VBoxContainer/MarginContainer/ScrollContainer/VBox
+@onready var anim = $Anim
 
 
 func create_character(char_name: String, score: int, quota: int, likes: Array, dislikes: Array, texture_path: String) -> void:
@@ -16,3 +17,7 @@ func create_character(char_name: String, score: int, quota: int, likes: Array, d
 	q.portrait = load(texture_path)
 	
 	vbox.add_child(q)
+
+
+func play_exit() -> void:
+	anim.play("hud_exit")
