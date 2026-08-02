@@ -139,7 +139,7 @@ func _process(_delta: float) -> void:
 			if is_inside_dropable and body_ref:
 				global_position = body_ref.global_position - last_area_touched.position
 				packed.emit(self)
-				#print("boop1")
+				print("boop1")
 				in_grid = true
 			elif on_table:
 				global_position = get_parent().position + starting_position
@@ -192,7 +192,7 @@ func is_valid_fragile() -> bool:
 					#print(self.name,": ","one of the surrounding cells is empty, so not all surroundings are soft")
 					return false
 		for item in surroundings:
-			if not item.soft:
+			if not item.soft and item != self:
 				#print(self.name,": ","one of the surrounding items is not soft, so invalid")
 				return false
 		#print(self.name,": ", "not at risk of breakage!")
