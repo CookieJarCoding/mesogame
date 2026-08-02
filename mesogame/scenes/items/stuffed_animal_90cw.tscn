@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://c0cbfhu4wp3xl"]
+
+[ext_resource type="Script" uid="uid://dat06wuy3tvfy" path="res://scripts/item_unit.gd" id="1_of5b1"]
+[ext_resource type="Texture2D" uid="uid://dqdxf7aca5ket" path="res://assets/items/stuffed_animal.png" id="2_e4lif"]
+[ext_resource type="PackedScene" uid="uid://drugy3tw1e82w" path="res://scenes/tile_collision.tscn" id="3_qhfnh"]
+
+[node name="StuffedAnimal" type="Node2D" unique_id=705416440]
+script = ExtResource("1_of5b1")
+item_name = "StuffedAnimal"
+item_description = "flavor text"
+soft = true
+type = 2
+placeholder = 1
+
+[node name="StuffedAnimal" type="Sprite2D" parent="." unique_id=1331438369]
+position = Vector2(150.99998, -147)
+rotation = 1.5707964
+scale = Vector2(0.3765213, 0.3588661)
+texture = ExtResource("2_e4lif")
+
+[node name="AreaGroup" type="Node2D" parent="." unique_id=528034439]
+
+[node name="Area2" parent="AreaGroup" unique_id=1338945821 instance=ExtResource("3_qhfnh")]
+position = Vector2(0, -276)
+
+[node name="Area7" parent="AreaGroup" unique_id=1878093580 instance=ExtResource("3_qhfnh")]
+
+[node name="Area12" parent="AreaGroup" unique_id=934719615 instance=ExtResource("3_qhfnh")]
+position = Vector2(138, -276)
+
+[node name="Area8" parent="AreaGroup" unique_id=849255024 instance=ExtResource("3_qhfnh")]
+position = Vector2(138, -138)
+
+[node name="Area9" parent="AreaGroup" unique_id=1379179407 instance=ExtResource("3_qhfnh")]
+position = Vector2(138, 0)
+
+[node name="Area10" parent="AreaGroup" unique_id=2055443677 instance=ExtResource("3_qhfnh")]
+position = Vector2(276, -138)

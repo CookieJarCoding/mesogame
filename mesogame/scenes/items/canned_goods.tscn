@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bxd5oievwqopp"]
+[gd_scene format=3 uid="uid://tcpaxhvkoq8i"]
 
 [ext_resource type="Script" uid="uid://dat06wuy3tvfy" path="res://scripts/item_unit.gd" id="1_n6bj8"]
 [ext_resource type="Texture2D" uid="uid://db2sntxu5k0ox" path="res://assets/items/canned_good.png" id="2_n6bj8"]

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://vk5qd6uuuv4b"]
+
+[ext_resource type="Script" uid="uid://dat06wuy3tvfy" path="res://scripts/item_unit.gd" id="1_5ms1f"]
+[ext_resource type="Texture2D" uid="uid://u0xjomjhuxwk" path="res://assets/items/action figure.png" id="2_8ea0u"]
+[ext_resource type="PackedScene" uid="uid://drugy3tw1e82w" path="res://scenes/tile_collision.tscn" id="3_xfdr3"]
+
+[node name="ActionFigure90" type="Node2D" unique_id=705416440]
+script = ExtResource("1_5ms1f")
+item_name = "Action Figure"
+item_description = "flavor text"
+type = 2
+placeholder = 1
+
+[node name="ActionFigure" type="Sprite2D" parent="." unique_id=1331438369]
+position = Vector2(71, -4.000004)
+rotation = 1.5707964
+scale = Vector2(0.8156862, 0.81568617)
+texture = ExtResource("2_8ea0u")
+
+[node name="AreaGroup" type="Node2D" parent="." unique_id=528034439]
+
+[node name="Area1" parent="AreaGroup" unique_id=974894371 instance=ExtResource("3_xfdr3")]
+
+[node name="Area7" parent="AreaGroup" unique_id=1878093580 instance=ExtResource("3_xfdr3")]
+position = Vector2(138, 0)

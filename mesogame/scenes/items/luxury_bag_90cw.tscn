@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://bvmpry8rndv88"]
+
+[ext_resource type="Script" uid="uid://dat06wuy3tvfy" path="res://scripts/item_unit.gd" id="1_akhig"]
+[ext_resource type="Texture2D" uid="uid://iuj4ekll1cxs" path="res://assets/items/luxury_bag.png" id="2_bq046"]
+[ext_resource type="PackedScene" uid="uid://drugy3tw1e82w" path="res://scenes/tile_collision.tscn" id="3_deepx"]
+
+[node name="LuxuryBag" type="Node2D" unique_id=705416440]
+script = ExtResource("1_akhig")
+item_name = "'Luxury' Bag"
+item_description = "flavor text"
+soft = true
+liquid_risk = true
+type = 0
+placeholder = 1
+
+[node name="LuxuryBag" type="Sprite2D" parent="." unique_id=1331438369]
+position = Vector2(129, -129)
+rotation = 1.5707964
+scale = Vector2(0.75346476, 0.69808686)
+texture = ExtResource("2_bq046")
+
+[node name="AreaGroup" type="Node2D" parent="." unique_id=528034439]
+
+[node name="Area1" parent="AreaGroup" unique_id=974894371 instance=ExtResource("3_deepx")]
+position = Vector2(138, 138)
+
+[node name="Area3" parent="AreaGroup" unique_id=1383483874 instance=ExtResource("3_deepx")]
+position = Vector2(276, -138)
+
+[node name="Area4" parent="AreaGroup" unique_id=502907766 instance=ExtResource("3_deepx")]
+position = Vector2(138, -414)
+
+[node name="Area2" parent="AreaGroup" unique_id=1338945821 instance=ExtResource("3_deepx")]
+
+[node name="Area7" parent="AreaGroup" unique_id=1878093580 instance=ExtResource("3_deepx")]
+position = Vector2(0, -276)
+
+[node name="Area8" parent="AreaGroup" unique_id=849255024 instance=ExtResource("3_deepx")]
+position = Vector2(0, -138)
+
+[node name="Area9" parent="AreaGroup" unique_id=1379179407 instance=ExtResource("3_deepx")]
+position = Vector2(138, 0)
+
+[node name="Area10" parent="AreaGroup" unique_id=2055443677 instance=ExtResource("3_deepx")]
+position = Vector2(138, -138)
+
+[node name="Area11" parent="AreaGroup" unique_id=1517922019 instance=ExtResource("3_deepx")]
+position = Vector2(138, -276)
