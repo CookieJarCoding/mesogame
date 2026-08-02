@@ -79,7 +79,7 @@ _data = {
 &"entrance": SubResource("Animation_a8y0u")
 }
 
-[node name="Main" type="Node" unique_id=1421864953]
+[node name="Main" type="Node2D" unique_id=1180765290]
 script = ExtResource("1_sugp2")
 
 [node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("7_tipki")]

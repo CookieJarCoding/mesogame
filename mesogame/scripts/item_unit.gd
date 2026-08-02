@@ -5,6 +5,7 @@ class_name ItemUnit
 signal packed(item: ItemUnit)
 signal removed(item: ItemUnit)
 signal hovered(item: ItemUnit)
+signal unhovered(item: ItemUnit)
 
 const CLICK_COOLDOWN = 10
 
@@ -30,6 +31,7 @@ var areas = []
 var last_area_touched
 var clicked
 var released
+var is_hovered_over
 @export var placeholder: int = 0
 
 
@@ -86,10 +88,18 @@ func _process(_delta: float) -> void:
 	for area in areas:
 		area.draggable = false
 	
+	is_hovered_over = false
+	
 	for area in areas:
 		if area is TileCollision and area.hovered_over:
-			hovered.emit(self)
 			draggable = true
+			is_hovered_over = true
+	
+	if is_hovered_over:
+		hovered.emit(self)
+	else:
+		unhovered.emit(self)
+
 	
 	if draggable:
 		for area in areas:

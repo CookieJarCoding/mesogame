@@ -16,6 +16,9 @@ extends CanvasLayer
 @onready var fragile_panel: Panel = $ItemInformationPanel/ItemInformationGrid/TagGrid/FragilePanel
 @onready var soft_panel: Panel = $ItemInformationPanel/ItemInformationGrid/TagGrid/SoftPanel
 
+func _ready() -> void:
+	self.visible = false
+
 # Called when the node enters the scene tree for the first time.
 func update(item: ItemUnit):
 	luxury_panel.visible = false
@@ -57,6 +60,8 @@ func update(item: ItemUnit):
 		fragile_panel.visible = true
 	elif item.soft:
 		soft_panel.visible = true
+
+	self.visible = true
 
 	
 

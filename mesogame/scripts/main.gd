@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 
 const TILE_WIDTH: int = 128
@@ -8,11 +8,13 @@ const TEST_ITEM: PackedScene = preload("res://scenes/item_unit.tscn")
 const BOX_DEFAULT_SCALE: Vector2 = Vector2(0.94, 1.0)
 const VIEWPORT_WIDTH: float = 960
 const VIEWPORT_HEIGHT: float = 540
+const TOOLTIP_OFFSET: Vector2 = Vector2(20,-60)
 
 @export var box_width: int = 5
 @export var box_height: int = 5
 
 var items_in_grid = []
+var item_explained
 var table_pos: int = 0
 var movement_ongoing: bool = false
 
@@ -41,6 +43,7 @@ func _ready() -> void:
 		item.packed.connect(_on_item_packed)
 		item.removed.connect(_on_item_removed)
 		item.hovered.connect(_on_item_hovered)
+		item.unhovered.connect(_on_item_unhovered)
 	
 	# func create_character(char_name: String, score: int, quota: int, likes: Array, dislikes: Array)
 	## NOTE: Max two likes/dislikes
@@ -99,7 +102,15 @@ func _on_item_removed(item: Node2D) -> void:
 	tally_scores()
 
 func _on_item_hovered(item: Node2D) -> void:
+	item_explained = item
 	$ItemInformation.update(item)
+	print($ItemInformation.get_child(0).name)
+
+	$ItemInformation.get_child(0).global_position = Vector2(get_global_mouse_position().x*0.3+TOOLTIP_OFFSET.x,get_global_mouse_position().y*0.3+TOOLTIP_OFFSET.y)
+
+func _on_item_unhovered(item: Node2D) -> void:
+	if item == item_explained:
+		$ItemInformation.visible = false
 
 func tally_scores() -> void:
 	for character in CharacterQuota.characters:
