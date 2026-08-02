@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://xhhbdwt73rvo" path="res://scripts/hud.gd" id="1_ahhtf"]
 [ext_resource type="StyleBox" uid="uid://canmf3wayoyeg" path="res://resources/score_board.tres" id="2_oo0fn"]
 [ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="3_5ysmq"]
+[ext_resource type="Texture2D" uid="uid://bfkjsqym2yckn" path="res://assets/reset.png" id="4_uo2fv"]
+[ext_resource type="Texture2D" uid="uid://b33wtvop20utb" path="res://assets/send.png" id="5_047uy"]
 
 [sub_resource type="Animation" id="Animation_6fi6k"]
 length = 0.001
@@ -75,6 +77,34 @@ offset_bottom = 256.585
 grow_horizontal = 2
 theme_override_styles/panel = ExtResource("2_oo0fn")
 
+[node name="PopupPanel" type="Panel" parent="Panel" unique_id=1268628076]
+self_modulate = Color(1, 0.50980395, 0.50980395, 1)
+z_index = -999
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -138.76538
+offset_top = 198.0
+offset_right = 11.234619
+offset_bottom = 303.0001
+grow_horizontal = 2
+theme_override_styles/panel = ExtResource("2_oo0fn")
+
+[node name="Text" type="RichTextLabel" parent="Panel/PopupPanel" unique_id=282281104]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 50.0
+offset_right = 141.0
+offset_bottom = 94.0
+theme_override_colors/default_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
+theme_override_fonts/normal_font = ExtResource("3_5ysmq")
+text = "Needs Soft surroundings!"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=982994534]
 layout_mode = 1
 anchors_preset = 15
@@ -112,9 +142,39 @@ text = "Score/Quota  "
 fit_content = true
 horizontal_alignment = 2
 
-[node name="CharQuota" parent="Panel/VBoxContainer/MarginContainer/ScrollContainer/VBox" unique_id=454399947 instance_placeholder="res://scenes/character_quota.tscn"]
+[node name="CharQuota" parent="Panel/VBoxContainer/MarginContainer/ScrollContainer/VBox" unique_id=1407520035 instance_placeholder="res://scenes/character_quota.tscn"]
 layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=2047191589]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 303.0
+offset_right = 274.0
+offset_bottom = 353.0
+
+[node name="ResetButton" type="TextureButton" parent="Panel/HBoxContainer" unique_id=917968535]
+custom_maximum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+texture_normal = ExtResource("4_uo2fv")
+stretch_mode = 5
+
+[node name="NextButton" type="TextureButton" parent="Panel/HBoxContainer" unique_id=399632439]
+custom_maximum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 0
+texture_normal = ExtResource("5_047uy")
+stretch_mode = 5
 
 [node name="Anim" type="AnimationPlayer" parent="." unique_id=1992133697]
 libraries/ = SubResource("AnimationLibrary_6fi6k")
 autoplay = &"hud_entrance"
+
+[node name="WarningTimer" type="Timer" parent="." unique_id=1870999160]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="pressed" from="Panel/HBoxContainer/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="timeout" from="WarningTimer" to="." method="_on_warning_timer_timeout"]

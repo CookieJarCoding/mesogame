@@ -3,14 +3,12 @@
 [ext_resource type="Script" uid="uid://b32xx8y6kbo1q" path="res://scripts/level_scripts/level_6.gd" id="1_sdnvp"]
 [ext_resource type="PackedScene" uid="uid://c4yjamtvwcpmh" path="res://scenes/hud.tscn" id="2_7xq2f"]
 [ext_resource type="Texture2D" uid="uid://dyevrv6ok3m4q" path="res://assets/pause.png" id="3_xmmsn"]
-[ext_resource type="Texture2D" uid="uid://bfkjsqym2yckn" path="res://assets/reset.png" id="4_vjdek"]
-[ext_resource type="Texture2D" uid="uid://b33wtvop20utb" path="res://assets/send.png" id="5_qw2ud"]
 [ext_resource type="Texture2D" uid="uid://imdai3c5bn6g" path="res://assets/arrow.png" id="6_y661n"]
 [ext_resource type="Script" uid="uid://bme42p1aic0si" path="res://scripts/hoverable.gd" id="7_ie8wy"]
 [ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="8_h4dr5"]
 [ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="9_cmwrw"]
 [ext_resource type="PackedScene" uid="uid://blwn3kp63m1yf" path="res://scenes/item_information.tscn" id="10_7memh"]
-[ext_resource type="PackedScene" uid="uid://tcpaxhvkoq8i" path="res://scenes/items/canned_goods.tscn" id="11_fp2uk"]
+[ext_resource type="PackedScene" uid="uid://bxd5oievwqopp" path="res://scenes/items/canned_goods.tscn" id="11_fp2uk"]
 [ext_resource type="PackedScene" uid="uid://bek2aya3xy4hl" path="res://scenes/items/chocolates.tscn" id="13_s2xic"]
 [ext_resource type="PackedScene" uid="uid://c8m74t5h186ib" path="res://scenes/items/action_figure.tscn" id="14_gh4cf"]
 [ext_resource type="PackedScene" uid="uid://bo66gsffkyhc5" path="res://scenes/items/honey_jars.tscn" id="15_c8ocx"]
@@ -55,34 +53,22 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("HUD/HBoxContainer:position")
+tracks/2/path = NodePath("HUD/Left:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(206.59, 255.98)]
+"values": [Vector2(40, 312)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("HUD/Left:position")
+tracks/3/path = NodePath("HUD/Right:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(40, 312)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("HUD/Right:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -148,34 +134,22 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("HUD/HBoxContainer:position")
+tracks/4/path = NodePath("HUD/Left:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 1.5),
-"transitions": PackedFloat32Array(0.241, 1),
-"update": 0,
-"values": [Vector2(206.59, 35.98), Vector2(206.59, 255.98)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("HUD/Left:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
 "times": PackedFloat32Array(0, 1.5),
 "transitions": PackedFloat32Array(0.25, 1),
 "update": 0,
 "values": [Vector2(-120, 400), Vector2(40, 440)]
 }
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("HUD/Right:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HUD/Right:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
 "times": PackedFloat32Array(0, 1.5),
 "transitions": PackedFloat32Array(0.25, 1),
 "update": 0,
@@ -241,34 +215,22 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("HUD/HBoxContainer:position")
+tracks/4/path = NodePath("HUD/Left:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0, 1.5),
 "transitions": PackedFloat32Array(0.25, 1),
 "update": 0,
-"values": [Vector2(206.59, 255.98), Vector2(206.59, 35.98)]
+"values": [Vector2(40, 440), Vector2(-120, 480)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("HUD/Left:position")
+tracks/5/path = NodePath("HUD/Right:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 1.5),
-"transitions": PackedFloat32Array(0.25, 1),
-"update": 0,
-"values": [Vector2(40, 440), Vector2(-120, 480)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("HUD/Right:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
 "times": PackedFloat32Array(0, 1.5),
 "transitions": PackedFloat32Array(0.25, 1),
 "update": 0,
@@ -299,27 +261,6 @@ offset_right = 63.0
 offset_bottom = 63.0
 scale = Vector2(0.585, 0.585)
 texture_normal = ExtResource("3_xmmsn")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="HUD" unique_id=1805670119]
-offset_left = 206.59
-offset_top = 255.98
-offset_right = 370.59045
-offset_bottom = 335.98022
-
-[node name="ResetButton" type="TextureButton" parent="HUD/HBoxContainer" unique_id=1915793373]
-custom_maximum_size = Vector2(80, 80)
-layout_mode = 2
-size_flags_horizontal = 0
-texture_normal = ExtResource("4_vjdek")
-stretch_mode = 5
-
-[node name="NextButton" type="TextureButton" parent="HUD/HBoxContainer" unique_id=2052625345]
-custom_maximum_size = Vector2(80, 80)
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 4
-texture_normal = ExtResource("5_qw2ud")
-stretch_mode = 5
 
 [node name="Left" type="TextureButton" parent="HUD" unique_id=1777119729]
 visible = false
@@ -473,8 +414,6 @@ libraries/ = SubResource("AnimationLibrary_jkv2x")
 autoplay = &"entrance"
 
 [connection signal="pressed" from="HUD/PauseButton" to="HUD/SettingsMenu" method="_on_pause_button_pressed"]
-[connection signal="pressed" from="HUD/HBoxContainer/ResetButton" to="." method="_on_reset_button_pressed"]
-[connection signal="pressed" from="HUD/HBoxContainer/NextButton" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="HUD/Left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="HUD/Right" to="." method="_on_right_pressed"]
 [connection signal="animation_finished" from="Anim" to="." method="_on_animation_finished"]
