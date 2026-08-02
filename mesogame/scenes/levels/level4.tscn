@@ -13,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://c8m74t5h186ib" path="res://scenes/items/action_figure.tscn" id="14_7cvth"]
 [ext_resource type="PackedScene" uid="uid://duc7f3cqg1p7h" path="res://scenes/items/fridge_magnet.tscn" id="14_q6dln"]
 [ext_resource type="PackedScene" uid="uid://cngxctywg2m20" path="res://scenes/items/shirt.tscn" id="16_8toe1"]
-[ext_resource type="PackedScene" uid="uid://bjhuyvsloqvgk" path="res://scenes/items/chopsticks.tscn" id="16_qtppw"]
 [ext_resource type="PackedScene" uid="uid://dp48b0gpq6w0o" path="res://scenes/items/scarf.tscn" id="17_3fbce"]
 [ext_resource type="PackedScene" uid="uid://bvmpry8rndv88" path="res://scenes/items/luxury_bag.tscn" id="18_qtppw"]
 [ext_resource type="PackedScene" uid="uid://c55i08wr8w2f1" path="res://scenes/items/pillow.tscn" id="19_atlnk"]
@@ -356,12 +355,6 @@ position = Vector2(4937, 1601)
 
 [node name="ActionFigure2" parent="ItemGroup" unique_id=956983042 instance=ExtResource("14_7cvth")]
 position = Vector2(5115, 1635)
-
-[node name="Chopsticks" parent="ItemGroup" unique_id=699230402 instance=ExtResource("16_qtppw")]
-position = Vector2(5355, 1668)
-
-[node name="Chopsticks2" parent="ItemGroup" unique_id=323818478 instance=ExtResource("16_qtppw")]
-position = Vector2(5442, 1479)
 
 [node name="Chocolates" parent="ItemGroup" unique_id=1352430525 instance=ExtResource("13_2c5pw")]
 position = Vector2(7271, 1594)
