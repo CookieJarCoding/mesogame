@@ -12,7 +12,8 @@ type = 4
 placeholder = 1
 
 [node name="Chopsticks" type="Sprite2D" parent="." unique_id=1331438369]
-position = Vector2(9.536743e-07, -65)
+position = Vector2(69, -2.0000002)
+rotation = 1.5707964
 scale = Vector2(0.8156862, 0.81568617)
 texture = ExtResource("2_ma33w")
 
@@ -21,4 +22,4 @@ texture = ExtResource("2_ma33w")
 [node name="Area1" parent="AreaGroup" unique_id=974894371 instance=ExtResource("3_u0oln")]
 
 [node name="Area7" parent="AreaGroup" unique_id=1878093580 instance=ExtResource("3_u0oln")]
-position = Vector2(0, -138)
+position = Vector2(138, 0)

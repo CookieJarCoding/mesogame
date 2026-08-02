@@ -207,7 +207,7 @@ anchors_preset = -1
 offset_right = 960.0
 offset_bottom = 540.0
 mouse_filter = 2
-color = Color(0, 0, 0, 0)
+color = Color(0.57254905, 0.77254903, 0.85882354, 0)
 
 [connection signal="pressed" from="MainMenu/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="MainMenu/SettingsButton" to="." method="_on_settings_button_pressed"]

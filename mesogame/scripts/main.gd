@@ -1,5 +1,6 @@
 extends Node2D
 
+class_name Level
 
 const TILE_WIDTH: int = 128
 const TILE_HEIGHT: int = 128
@@ -55,12 +56,12 @@ func _ready() -> void:
 		item.unhovered.connect(_on_item_unhovered)
 	
 	# func create_character(char_name: String, score: int, quota: int, likes: Array, dislikes: Array)
-	## NOTE: Max two likes/dislikes
-	$HUD.create_character("Joanne", 0, 1,
-		[Globals.item_types.APPAREL],
-		[],
-		"res://assets/characters/joanne.png"
-	)
+	### NOTE: Max two likes/dislikes
+	#$HUD.create_character("Joanne", 0, 1,
+		#[Globals.item_types.APPAREL],
+		#[],
+		#"res://assets/characters/joanne.png"
+	#)
 	#$HUD.create_character("Jay and Ethan", 0, 10,
 		#[Globals.item_types.TOYS, Globals.item_types.CONSUMABLES],
 		#[Globals.item_types.APPAREL]

@@ -129,7 +129,7 @@ func _process(_delta: float) -> void:
 			#print("boop0")
 		if Input.is_action_pressed("click") and Globals.is_dragging:
 			global_position = get_global_mouse_position() - offset
-			print(global_position)
+			#print(global_position)
 		elif Input.is_action_just_released("click"):
 		#elif released:
 			#released = not released
@@ -143,7 +143,7 @@ func _process(_delta: float) -> void:
 				in_grid = true
 			elif on_table:
 				global_position = get_parent().position + starting_position
-				print(get_parent().position, ", ", starting_position, ", ", global_position)
+				#print(get_parent().position, ", ", starting_position, ", ", global_position)
 			else:
 				global_position = initialPos
 				if prev_body_ref:

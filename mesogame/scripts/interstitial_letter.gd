@@ -22,7 +22,7 @@ var letters: Array[String] = ["fill",
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	AudioLibrary.play_music(AudioLibrary.music.LETTER)
-	RenderingServer.set_default_clear_color(Color(0,0,0))
+	RenderingServer.set_default_clear_color(Color("92c5db"))
 	intro_label.visible_characters = 0
 	labelB.visible_characters = 0
 	salutations_label.visible_characters = 0
@@ -73,4 +73,4 @@ func scroll_text(scroll, duration: float) -> void:
 
 func _on_start_button_pressed() -> void:
 	CharacterQuota.characters.clear()
-	get_tree().change_scene_to_file("res:///scenes/main.tscn")
+	get_tree().change_scene_to_packed(Globals.levels[Globals.level_counter])
