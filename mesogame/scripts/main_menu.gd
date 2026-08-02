@@ -28,10 +28,12 @@ func _process(delta: float) -> void:
 func _on_settings_button_pressed() -> void:
 	$SettingsMenu.visible = true
 	$MainMenu.visible = false
+	$Logo.visible = false
 
 
 func _on_settings_close_button_pressed() -> void:
 	$MainMenu.visible = true
+	$Logo.visible = true
 
 
 func _on_play_button_pressed() -> void:

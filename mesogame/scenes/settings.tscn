@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://co7d2ugo4flyq" path="res://scripts/settings_menu.gd" id="1_5p8wc"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7yvfd"]
+bg_color = Color(0, 0, 0, 0.8235294)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r6d6q"]
 content_margin_left = 8.0
 content_margin_top = 8.0
@@ -45,6 +48,7 @@ offset_right = 360.0
 offset_bottom = 225.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7yvfd")
 script = ExtResource("1_5p8wc")
 
 [node name="MainGrid" type="GridContainer" parent="." unique_id=1537678975]

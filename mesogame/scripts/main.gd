@@ -119,9 +119,12 @@ func check_win() -> bool:
 
 
 func _on_next_button_pressed() -> void:
-	get_tree().change_scene_to_file("res:///scenes/interstitial_letter.tscn")
 	Globals.level_counter +=1
-	#print(Globals.level_counter)
+	print(Globals.level_counter)
+	if Globals.level_counter > 4:
+		get_tree().change_scene_to_file("res:///scenes/ending.tscn")
+	else:
+		get_tree().change_scene_to_file("res:///scenes/interstitial_letter.tscn")
 
 
 func move_table(pos: int) -> void:

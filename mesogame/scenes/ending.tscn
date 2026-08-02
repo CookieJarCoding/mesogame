@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dpr3ajsjcluvy"]
+
+[ext_resource type="Script" uid="uid://qdxke5vo648y" path="res://scripts/ending.gd" id="1_fyrdv"]
+[ext_resource type="Texture2D" uid="uid://bst7uuu3kix1p" path="res://assets/draft_ending.png" id="1_mqjok"]
+
+[node name="Ending" type="Node2D" unique_id=1578198199]
+script = ExtResource("1_fyrdv")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=593546964]
+anchor_mode = 0
+zoom = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1741008384]
+position = Vector2(960, 540)
+texture = ExtResource("1_mqjok")
+
+[node name="QuitToMenuButton" type="Button" parent="." unique_id=1657195169]
+offset_left = 1716.0
+offset_top = 931.0
+offset_right = 1889.0
+offset_bottom = 1035.0
+text = "QUIT TO MENU"
+
+[connection signal="pressed" from="QuitToMenuButton" to="." method="_on_quit_to_menu_button_pressed"]
