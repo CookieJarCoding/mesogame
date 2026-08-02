@@ -29,6 +29,6 @@ func _on_pause_button_pressed() -> void:
 
 func _on_quit_button_pressed() -> void:
 	if Globals.level_counter > 0:
-		pass
+		get_tree().change_scene_to_file("res://scenes/mainmenu.tscn")
 	else:
 		get_tree().quit()
