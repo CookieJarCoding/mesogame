@@ -141,11 +141,15 @@ func tally_scores() -> void:
 		#print(character.score)
 
 func check_win() -> bool:
-	# TODO: Loop across the items_in_grid array, to check if the fragile and liquid risks are satisfied
+	# DONE: Loop across the items_in_grid array, to check if the fragile and liquid risks are satisfied
 	var winning = true
 	for character in CharacterQuota.characters:
 		if character.score < character.quota:
 			winning = false
+	for item in items_in_grid:
+		if not item.is_valid_fragile() or not item.is_valid_liquid():
+			winning = false
+
 	return winning
 
 
