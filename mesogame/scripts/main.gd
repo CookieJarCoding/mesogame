@@ -101,9 +101,18 @@ func _on_settings_button_pressed() -> void:
 	$SettingsMenu.visible = true;
 
 
-func _on_item_packed(item: Node2D) -> void:
+func _on_item_packed(item: ItemUnit) -> void:
 	if item not in items_in_grid:
 		items_in_grid.append(item)
+	if not item.is_valid_liquid():
+		AudioLibrary.play_sfx(AudioLibrary.sfx.WRONG)
+	elif item.liquid_container:
+		AudioLibrary.play_sfx(AudioLibrary.sfx.LIQUID)
+	if not item.is_valid_fragile():
+		AudioLibrary.play_sfx(AudioLibrary.sfx.WRONG)
+	elif item.fragile:
+		AudioLibrary.play_sfx(AudioLibrary.sfx.FRAGILE)
+
 	item.reparent(box)
 	#for k in item_group.get_children():
 		#k.top_level = false
@@ -111,7 +120,7 @@ func _on_item_packed(item: Node2D) -> void:
 		#i.top_level = true
 	tally_scores()
 
-func _on_item_removed(item: Node2D) -> void:
+func _on_item_removed(item: ItemUnit) -> void:
 	if item in items_in_grid:
 		items_in_grid.erase(item)
 	item.reparent(item_group)
@@ -121,14 +130,14 @@ func _on_item_removed(item: Node2D) -> void:
 		#i.top_level = true
 	tally_scores()
 
-func _on_item_hovered(item: Node2D) -> void:
+func _on_item_hovered(item: ItemUnit) -> void:
 	item_explained = item
 	item_information.update(item)
 	#print($ItemInformation.get_child(0).name)
 
 	item_information.get_child(0).global_position = Vector2(get_global_mouse_position().x*camera.zoom.x+TOOLTIP_OFFSET.x,get_global_mouse_position().y*camera.zoom.x+TOOLTIP_OFFSET.y)
 
-func _on_item_unhovered(item: Node2D) -> void:
+func _on_item_unhovered(item: ItemUnit) -> void:
 	if item == item_explained:
 		item_information.visible = false
 

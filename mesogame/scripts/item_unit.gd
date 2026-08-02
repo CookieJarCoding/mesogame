@@ -169,15 +169,13 @@ func is_valid_liquid() -> bool:
 		var collisions = area.collide()
 		for opposite_item in collisions:
 			if opposite_item != null:
-				if (self.liquid_risk and not self.wrapped and opposite_item.liquid_container):
+				if (self.liquid_risk and not self.wrapped and opposite_item.liquid_container) or (opposite_item.liquid_risk and not opposite_item.wrapped and self.liquid_container):
 					#print(self.name,": ", "liquid risk!")
-					AudioLibrary.play_sfx(AudioLibrary.sfx.WRONG)
 					return false
 				else:
 					pass
 					# print(self.name,": ", "you're fine for now!")
-	#print(self.name,": ", "not at risk of liquid!")
-	AudioLibrary.play_sfx(AudioLibrary.sfx.LIQUID)
+		# print(self.name,": ", "not at risk of liquid!")
 	return true
 
 func is_valid_fragile() -> bool:
@@ -192,13 +190,10 @@ func is_valid_fragile() -> bool:
 					# WARNING: not optimized since this double counts, but yeah
 				else:
 					#print(self.name,": ","one of the surrounding cells is empty, so not all surroundings are soft")
-					AudioLibrary.play_sfx(AudioLibrary.sfx.WRONG)
 					return false
 		for item in surroundings:
 			if not item.soft:
 				#print(self.name,": ","one of the surrounding items is not soft, so invalid")
-				AudioLibrary.play_sfx(AudioLibrary.sfx.WRONG)
 				return false
-	#print(self.name,": ", "not at risk of breakage!")
-	AudioLibrary.play_sfx(AudioLibrary.sfx.FRAGILE)
+		#print(self.name,": ", "not at risk of breakage!")
 	return true
