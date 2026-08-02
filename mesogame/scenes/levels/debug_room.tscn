@@ -458,12 +458,12 @@ shape = SubResource("RectangleShape2D_jbj1t")
 [node name="Box" type="Sprite2D" parent="." unique_id=296530830]
 z_index = -200
 position = Vector2(2170, 668)
-scale = Vector2(0.94, 1)
+scale = Vector2(1.128, 1.2)
 texture = ExtResource("17_6lgfe")
 
 [node name="BoxTopLeftCorner" type="Node2D" parent="Box" unique_id=151532924]
 top_level = true
-position = Vector2(1818, 316)
+position = Vector2(1748, 246)
 
 [node name="Anim" type="AnimationPlayer" parent="." unique_id=822451176]
 libraries/ = SubResource("AnimationLibrary_jkv2x")

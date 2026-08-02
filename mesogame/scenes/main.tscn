@@ -427,7 +427,7 @@ scale = Vector2(0.94, 1)
 texture = ExtResource("7_85g3d")
 
 [node name="BoxTopLeftCorner" type="Node2D" parent="Box" unique_id=151532924]
-position = Vector2(-377.175, -352.79)
+position = Vector2(1818, 316)
 
 [node name="PlaceholderTable" type="ColorRect" parent="." unique_id=867550278]
 visible = false
