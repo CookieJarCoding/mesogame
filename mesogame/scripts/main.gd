@@ -90,7 +90,8 @@ func _on_settings_button_pressed() -> void:
 
 
 func _on_item_packed(item: Node2D) -> void:
-	items_in_grid.append(item)
+	if item not in items_in_grid:
+		items_in_grid.append(item)
 	item.reparent(box)
 	#for k in item_group.get_children():
 		#k.top_level = false

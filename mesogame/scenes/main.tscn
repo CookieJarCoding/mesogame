@@ -216,8 +216,6 @@ item_description = "flavor text, maybe"
 
 [node name="ActionFigure" parent="ItemGroup" unique_id=816862143 instance=ExtResource("4_85g3d")]
 position = Vector2(1968, 1584)
-item_description = "flavor text, maybe"
-soft = true
 
 [node name="Backpack" parent="ItemGroup" unique_id=127231213 instance=ExtResource("6_ya4ey")]
 position = Vector2(696, 1464)

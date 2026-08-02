@@ -13,8 +13,8 @@ type = 4
 placeholder = 1
 
 [node name="Pillow" type="Sprite2D" parent="." unique_id=1331438369]
-position = Vector2(138, 1)
-scale = Vector2(0.8156862, 0.81568617)
+position = Vector2(68.223526, 1)
+scale = Vector2(0.5387955, 0.81568617)
 texture = ExtResource("2_udwtr")
 
 [node name="AreaGroup" type="Node2D" parent="." unique_id=528034439]
@@ -24,23 +24,14 @@ texture = ExtResource("2_udwtr")
 [node name="Area2" parent="AreaGroup" unique_id=1338945821 instance=ExtResource("3_8coy1")]
 position = Vector2(138, 0)
 
-[node name="Area3" parent="AreaGroup" unique_id=1214395660 instance=ExtResource("3_8coy1")]
-position = Vector2(276, 0)
-
 [node name="Area4" parent="AreaGroup" unique_id=882035104 instance=ExtResource("3_8coy1")]
 position = Vector2(0, 138)
 
 [node name="Area5" parent="AreaGroup" unique_id=12502235 instance=ExtResource("3_8coy1")]
 position = Vector2(138, 138)
 
-[node name="Area6" parent="AreaGroup" unique_id=2027920128 instance=ExtResource("3_8coy1")]
-position = Vector2(276, 138)
-
 [node name="Area7" parent="AreaGroup" unique_id=1878093580 instance=ExtResource("3_8coy1")]
 position = Vector2(0, -138)
 
 [node name="Area8" parent="AreaGroup" unique_id=849255024 instance=ExtResource("3_8coy1")]
 position = Vector2(138, -138)
-
-[node name="Area9" parent="AreaGroup" unique_id=958074305 instance=ExtResource("3_8coy1")]
-position = Vector2(276, -138)
