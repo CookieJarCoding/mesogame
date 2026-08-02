@@ -109,7 +109,7 @@ tracks/3/path = NodePath("HUD/LevelTitle:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 1.5, 6, 7.5),
+"times": PackedFloat32Array(0, 2.5, 6, 7.5),
 "transitions": PackedFloat32Array(0.25881627, 1, 0.31863996, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -153,11 +153,9 @@ _data = {
 
 [node name="Main" type="Node2D" unique_id=1180765290]
 script = ExtResource("1_sugp2")
+level_title = "First Box!"
 
 [node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("7_tipki")]
-
-[node name="SettingsMenu" parent="HUD" unique_id=186484164 instance=ExtResource("7_o6xl0")]
-visible = false
 
 [node name="PauseButton" type="TextureButton" parent="HUD" unique_id=1637305200]
 texture_filter = 1
@@ -249,6 +247,9 @@ scroll_active = false
 autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="SettingsMenu" parent="HUD" unique_id=186484164 instance=ExtResource("7_o6xl0")]
+visible = false
 
 [node name="ItemGroup" type="Node2D" parent="." unique_id=1210610719]
 

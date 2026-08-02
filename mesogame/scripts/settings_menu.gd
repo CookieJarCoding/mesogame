@@ -2,6 +2,11 @@ extends Panel
 
 signal settings_close
 
+
+func _ready() -> void:
+	if Globals.level_counter > 0:
+		$MainGrid/QuitButton.text = "Quit To Menu"
+
 func _on_music_volume_slider_value_changed(value: float) -> void:
 	var bus_idx = AudioServer.get_bus_index("Music")
 	AudioServer.set_bus_volume_linear(0, value)
@@ -21,4 +26,7 @@ func _on_pause_button_pressed() -> void:
 	self.visible = not self.visible
 
 func _on_quit_button_pressed() -> void:
-	get_tree().quit()
+	if Globals.level_counter > 0:
+		pass
+	else:
+		get_tree().quit()

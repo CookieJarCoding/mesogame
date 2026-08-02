@@ -10,7 +10,7 @@ enum item_types {
 	APPAREL,
 	TECHNOLOGY
 }
-var level_counter: int = 1
+var level_counter: int = 0
 var level_paths: Array[String] = ["fill",
 "res:///scenes/level1.tscn",
 "res:///scenes/level2.tscn",
@@ -24,3 +24,9 @@ var level_paths: Array[String] = ["fill",
 "res:///scenes/level10.tscn",
 "res:///scenes/level11.tscn",
 "res:///scenes/ending.tscn"]
+
+
+## NOTE: for debugging purposes
+func _ready() -> void:
+	if OS.is_debug_build():
+		level_counter = 0

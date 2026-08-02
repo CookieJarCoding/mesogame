@@ -31,16 +31,25 @@ func _on_settings_button_pressed() -> void:
 	$Logo.visible = false
 
 
+func _physics_process(_delta: float) -> void:
+	print($TransitionRect.color)
+
+
 func _on_settings_close_button_pressed() -> void:
 	$MainMenu.visible = true
 	$Logo.visible = true
 
 
 func _on_play_button_pressed() -> void:
-	#tween here involving $TransitionRect
-	#var tween = create_tween()
-	#tween.tween_property($TransitionRect, "color:a", 255, 5)
+	# tween here involving $TransitionRect
+	var fade_tween = create_tween()
+	fade_tween.tween_property($TransitionRect, "color:a", 1, 5)
+	fade_tween.connect("finished", complete_transition)
 	#print(transition_rect.color.a)
+
+
+func complete_transition() -> void:
+	Globals.level_counter += 1
 	get_tree().change_scene_to_file("res:///scenes/interstitial_letter.tscn")
 
 
