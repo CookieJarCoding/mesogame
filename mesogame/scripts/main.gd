@@ -22,7 +22,7 @@ var table_pos: int = 0
 var movement_ongoing: bool = false
 var finished_moving_items: bool = false
 
-@onready var next_level_btn = $HUD/HBoxContainer/NextButton
+#@onready var next_level_btn = $HUD/HBoxContainer/NextButton
 @onready var camera = $Camera
 @onready var table = $PlaceholderTable
 @onready var item_group = $ItemGroup
@@ -41,6 +41,8 @@ func _ready() -> void:
 	$TileBG.visible = true
 	$Table.visible = true
 	$HUD/LevelTitle.text = level_title
+	$HUD.connect("reset_level", _on_reset_button_pressed)
+	$HUD.connect("next_level", _on_next_button_pressed)
 	
 	for i in range(box_height):
 		for j in range(box_width):
@@ -86,12 +88,7 @@ func _ready() -> void:
 
 
 func _physics_process(_delta: float) -> void:
-	if check_win():
-		next_level_btn.visible = true
-		next_level_btn.disabled = false
-	else: 
-		next_level_btn.visible = false
-		next_level_btn.disabled = true
+	$HUD.set_next_level(check_win())
 
 
 func _on_settings_button_pressed() -> void:
@@ -103,10 +100,12 @@ func _on_item_packed(item: ItemUnit) -> void:
 		items_in_grid.append(item)
 	if not item.is_valid_liquid():
 		AudioLibrary.play_sfx(AudioLibrary.sfx.WRONG)
+		$HUD.display_warning("Needs Dry surroundings!")
 	elif item.liquid_container:
 		AudioLibrary.play_sfx(AudioLibrary.sfx.LIQUID)
 	if not item.is_valid_fragile():
 		AudioLibrary.play_sfx(AudioLibrary.sfx.WRONG)
+		$HUD.display_warning("Needs Soft surroundings!")
 	elif item.fragile:
 		AudioLibrary.play_sfx(AudioLibrary.sfx.FRAGILE)
 
@@ -144,6 +143,8 @@ func tally_scores() -> void:
 	for character in CharacterQuota.characters:
 		character.score = 0
 		for item in items_in_grid:
+			if not item.is_valid_liquid() or not item.is_valid_fragile():
+				continue
 			if item.type in character.likes:
 				character.score += 2
 			elif item.type not in character.dislikes:
