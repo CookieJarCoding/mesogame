@@ -20,6 +20,7 @@ var movement_ongoing: bool = false
 @onready var camera = $Camera
 @onready var table = $PlaceholderTable
 @onready var item_group = $ItemGroup
+@onready var box = $Box
 
 
 # Called when the node enters the scene tree for the first time.
@@ -81,18 +82,20 @@ func _on_settings_button_pressed() -> void:
 
 func _on_item_packed(item: Node2D) -> void:
 	items_in_grid.append(item)
-	for k in item_group.get_children():
-		k.top_level = false
-	for i in items_in_grid:
-		i.top_level = true
+	item.reparent(box)
+	#for k in item_group.get_children():
+		#k.top_level = false
+	#for i in items_in_grid:
+		#i.top_level = true
 	tally_scores()
 
 func _on_item_removed(item: Node2D) -> void:
 	items_in_grid.erase(item)
-	for k in item_group.get_children():
-		k.top_level = false
-	for i in items_in_grid:
-		i.top_level = true
+	item.reparent(item_group)
+	#for k in item_group.get_children():
+		#k.top_level = false
+	#for i in items_in_grid:
+		#i.top_level = true
 	tally_scores()
 
 func _on_item_hovered(item: Node2D) -> void:
