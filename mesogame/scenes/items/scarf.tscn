@@ -13,9 +13,8 @@ liquid_risk = true
 placeholder = 1
 
 [node name="Scarf" type="Sprite2D" parent="." unique_id=1331438369]
-position = Vector2(-139, 2.000061)
-rotation = 1.5707964
-scale = Vector2(0.8156862, 0.81568617)
+position = Vector2(133, 277)
+scale = Vector2(-0.816, 0.816)
 texture = ExtResource("2_gnn0u")
 
 [node name="AreaGroup" type="Node2D" parent="." unique_id=528034439]
@@ -26,7 +25,7 @@ texture = ExtResource("2_gnn0u")
 position = Vector2(138, 0)
 
 [node name="Area3" parent="AreaGroup" unique_id=1214395660 instance=ExtResource("3_2a25b")]
-position = Vector2(0, -138)
+position = Vector2(276, 0)
 
 [node name="Area4" parent="AreaGroup" unique_id=882035104 instance=ExtResource("3_2a25b")]
 position = Vector2(0, 138)
@@ -35,13 +34,13 @@ position = Vector2(0, 138)
 position = Vector2(138, 138)
 
 [node name="Area6" parent="AreaGroup" unique_id=2027920128 instance=ExtResource("3_2a25b")]
-position = Vector2(138, -138)
+position = Vector2(276, 138)
 
 [node name="Area7" parent="AreaGroup" unique_id=1878093580 instance=ExtResource("3_2a25b")]
-position = Vector2(-138, 138)
+position = Vector2(0, 276)
 
 [node name="Area8" parent="AreaGroup" unique_id=849255024 instance=ExtResource("3_2a25b")]
-position = Vector2(-276, 138)
+position = Vector2(0, 414)
 
 [node name="Area9" parent="AreaGroup" unique_id=958074305 instance=ExtResource("3_2a25b")]
-position = Vector2(-414, 138)
+position = Vector2(0, 552)

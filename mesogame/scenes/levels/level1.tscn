@@ -381,10 +381,6 @@ z_index = 100
 [node name="ItemGroup" type="Node2D" parent="." unique_id=1210610719]
 position = Vector2(0, 800)
 
-[node name="Scarf" parent="ItemGroup" unique_id=705416440 instance=ExtResource("11_4niyd")]
-position = Vector2(2681, 1417)
-item_description = "flavor text, maybe"
-
 [node name="ActionFigure" parent="ItemGroup" unique_id=816862143 instance=ExtResource("13_gqmnx")]
 position = Vector2(1770, 1617)
 
@@ -416,6 +412,9 @@ position = Vector2(538, 1672)
 
 [node name="Chopsticks" parent="ItemGroup" unique_id=1149282944 instance=ExtResource("18_jrfo0")]
 position = Vector2(1409, 1434)
+
+[node name="Scarf" parent="ItemGroup" unique_id=705416440 instance=ExtResource("11_4niyd")]
+position = Vector2(2340, 1333)
 
 [node name="Camera" type="Camera2D" parent="." unique_id=113758559]
 anchor_mode = 0
