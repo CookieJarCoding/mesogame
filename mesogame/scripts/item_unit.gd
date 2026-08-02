@@ -52,9 +52,7 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.is_action_pressed("click"):
 			clicked = true
-			AudioLibrary.play_sfx(AudioLibrary.sfx.PLOP_PLOP)
 		elif event.is_action_released("click"):
-			AudioLibrary.play_sfx(AudioLibrary.sfx.PLOP_FLAT)
 			released = true
 
 	
@@ -122,6 +120,7 @@ func _process(_delta: float) -> void:
 				initialPos = global_position
 			offset = get_global_mouse_position() - global_position
 			#print("Press")
+			AudioLibrary.play_sfx(AudioLibrary.sfx.PLOP_PLOP)
 			Globals.is_dragging = true
 			removed.emit(self)
 			#print("boop0")
@@ -129,6 +128,7 @@ func _process(_delta: float) -> void:
 			global_position = get_global_mouse_position() - offset
 		elif released:
 			released = not released
+			AudioLibrary.play_sfx(AudioLibrary.sfx.PLOP_FLAT)
 			Globals.is_dragging = false
 			#print("Release")
 			if is_inside_dropable and body_ref:
