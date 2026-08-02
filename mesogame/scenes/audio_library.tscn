@@ -9,6 +9,9 @@
 [ext_resource type="AudioStream" uid="uid://dks0x824lyapq" path="res://sounds/fragile.mp3" id="6_12ah6"]
 [ext_resource type="AudioStream" uid="uid://dmffs0l65q7xn" path="res://sounds/quota.mp3" id="7_2ofme"]
 [ext_resource type="AudioStream" uid="uid://bb8586udd8iyy" path="res://sounds/wrong.mp3" id="8_veggk"]
+[ext_resource type="AudioStream" uid="uid://pn48dwxatg1b" path="res://sounds/packaged_with_care.mp3" id="10_6govp"]
+[ext_resource type="AudioStream" uid="uid://coextft04vdfj" path="res://sounds/from_home.mp3" id="11_svrp5"]
+[ext_resource type="AudioStream" uid="uid://cynef45qctt1k" path="res://sounds/bringing_gifts.mp3" id="12_2wnal"]
 
 [node name="AudioLibrary" type="Node" unique_id=413458466]
 script = ExtResource("1_3avnm")
@@ -36,5 +39,17 @@ stream = ExtResource("8_veggk")
 
 [node name="Swoosh" type="AudioStreamPlayer" parent="." unique_id=1132213815]
 stream = ExtResource("2_612mp")
-volume_db = 2.0
+volume_db = 5.0
 pitch_scale = 1.3
+
+[node name="GameplayBGM" type="AudioStreamPlayer" parent="." unique_id=1512894300]
+stream = ExtResource("10_6govp")
+volume_db = -3.0
+
+[node name="LetterBGM" type="AudioStreamPlayer" parent="." unique_id=1367569709]
+stream = ExtResource("11_svrp5")
+volume_db = -3.0
+
+[node name="TitleBGM" type="AudioStreamPlayer" parent="." unique_id=1616493139]
+stream = ExtResource("12_2wnal")
+volume_db = -3.0

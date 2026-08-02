@@ -32,6 +32,8 @@ var finished_moving_items: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	AudioLibrary.play_music(AudioLibrary.music.GAMEPLAY)
+	
 	finished_moving_items = false
 	$Box.scale = BOX_DEFAULT_SCALE * box_width / 5.0
 	$TileBG.visible = true
@@ -196,6 +198,10 @@ func _on_animation_finished(anim_name: StringName) -> void:
 				get_tree().change_scene_to_file("res:///scenes/ending.tscn")
 			else:
 				get_tree().change_scene_to_file("res:///scenes/interstitial_letter.tscn")
+		else:
+			CharacterQuota.characters.clear()
+			items_in_grid.clear()
+			get_tree().reload_current_scene()
 
 
 func play_swoosh() -> void:

@@ -5,10 +5,16 @@
 [ext_resource type="Texture2D" uid="uid://bceume708lr4x" path="res://assets/Button.png" id="2_dfy5j"]
 [ext_resource type="Script" uid="uid://bme42p1aic0si" path="res://scripts/hoverable.gd" id="3_7yvfd"]
 [ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="3_dfy5j"]
+[ext_resource type="Texture2D" uid="uid://d2nm5gpwqde0i" path="res://assets/main_menu_image.png" id="7_dfy5j"]
 [ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="8_85riq"]
 
 [node name="MainMenuNode" type="Node" unique_id=1814970323]
 script = ExtResource("1_wf3n4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=943943603]
+position = Vector2(480, 270)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_dfy5j")
 
 [node name="MainMenu" type="VBoxContainer" parent="." unique_id=1838381428]
 propagate_maximum_size = false
@@ -86,7 +92,8 @@ vertical_alignment = 1
 [node name="Logo" type="Control" parent="." unique_id=764757910]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
+offset_left = 500.0
+offset_right = 540.0
 offset_bottom = 40.0
 
 [node name="B" type="RichTextLabel" parent="Logo" unique_id=2025730266]

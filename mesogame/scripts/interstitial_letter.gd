@@ -21,6 +21,7 @@ var letters: Array[String] = ["fill",
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	AudioLibrary.play_music(AudioLibrary.music.LETTER)
 	RenderingServer.set_default_clear_color(Color(0,0,0))
 	intro_label.visible_characters = 0
 	labelB.visible_characters = 0

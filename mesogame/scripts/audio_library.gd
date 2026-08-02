@@ -12,6 +12,12 @@ enum sfx {
 	SWOOSH
 }
 
+enum music {
+	GAMEPLAY,
+	LETTER,
+	TITLE
+}
+
 
 func play_sfx(s: sfx):
 	if s == sfx.PAGE_FLIP:
@@ -30,3 +36,21 @@ func play_sfx(s: sfx):
 		$Wrong.play(0.0)
 	elif s == sfx.SWOOSH:
 		$Swoosh.play(4.0)
+
+
+func play_music(s: music):
+	if s == music.GAMEPLAY and not $GameplayBGM.playing:
+		stop_all_music()
+		$GameplayBGM.play()
+	if s == music.LETTER and not $LetterBGM.playing:
+		stop_all_music()
+		$LetterBGM.play()
+	if s == music.TITLE and not $TitleBGM.playing:
+		stop_all_music()
+		$TitleBGM.play()
+
+
+func stop_all_music() -> void:
+	$GameplayBGM.stop()
+	$LetterBGM.stop()
+	$TitleBGM.stop()
