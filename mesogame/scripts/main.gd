@@ -213,3 +213,11 @@ func move_items_up() -> void:
 	tween.tween_property(item_group, "position:y", 0.0, 1.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_EXPO)
 	await tween.finished
 	finished_moving_items = true
+
+
+
+func move_items_down() -> void:
+	var tween = create_tween()
+	tween.tween_property(item_group, "position:y", 800.0, 1.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_EXPO)
+	await tween.finished
+	finished_moving_items = true
