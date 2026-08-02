@@ -281,6 +281,8 @@ _data = {
 
 [node name="DebugRoom" type="Node2D" unique_id=1180765290]
 script = ExtResource("1_gu7rv")
+box_width = 7
+box_height = 7
 level_title = "Debug Room!"
 
 [node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("2_vdrx5")]
