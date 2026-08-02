@@ -4,15 +4,15 @@ var delta_counter = 0.0
 @onready var envelope_start_pos = $Envelope.position
 var salutations: Array[String] = ["fill",
 	"Lovelove, Nanang.",
-	"Lovelove, Nanang",
 	"Bagets mo, Joj",
+	"Lovelove, Nanang",
 	"See you soon, Nanang"
 ]
 var letters: Array[String] = ["fill",
-"""Hi! It’s your nanang again. I’m so happy you get to come back here to Batangas! Jay and Ethan have gotten so tall while you were away. Do you remember in 1971, they were only up to your stomach? Now they’re probably up to your shoulder already! Ang saya, ‘di ba? Maybe you could pack some toys and sweets for them in your balikbayan box? Promise, ‘di ko hahayaang kunin ulit ng Tita Kara mo yung mga padala mo. Alam mo naman kung paano siya, e.""",
-"""I don’t know how, but your Tita Kara already knows you’re coming back. Siguro sinabi sa kanya ni Jay. O napagtanto niya nung inaayos ko ang kwarto mo. Anyway, she asked me if you were bringing back perfume and that one luxury bag brand she always wants more of even if she has a lot already. Manghiram ka kaya sa collection niya. Joanne misses you. Nahiya pa siyang humingi ng damit sa’yo. Sana magkasya lahat ng gusto nila! Yung akin, pag-isipan ko pa.""",
+"""Hi! It’s your nanang again. Hopefully this gets sent. Joanne taught me how to write these weeks ago pero kabado pa rin ako. Can’t help it, but I’m so happy you get to come back here to Batangas! Jay and Ethan have gotten so tall while you were away. Do you remember in 1971, they were only up to your stomach? Now they’re probably up to your shoulder already! Ang saya, ‘di ba? Maybe you could pack some toys and sweets for them in your balikbayan box? Joanne didn’t ask for anything, pero alam mo naman siya pagdating sa damit. She misses you. We all do.""",
 """‘Sup. Si Joanne ‘to. Mikey called me, told me to ask you about getting that new model of instacam. Grabe siya kung makahingi, ‘no? Don’t forget about Tito Albert. He’s all about the polo brands. Although it’s been a while since I saw him with a new piece, so who knows? Alam mo naman na siguro yung akin. Doesn’t have to be masyadong japorms. Nanang says hi and asks for food and woodwork stuff. Miss ka na nila Jay at Ethan.""",
-"""It’s your nanang. Everything’s arranged. We’ll wait for you at the airport. Everyone’s gonna be so happy. Lalo na ako. It’s been so long without you, and we have a lot to catch up on. I want to know everything. Kwentuhan tayo every day hanggang umalis ka, ha? You’re still the little girl who would always tell me about your day on my lap, and that barely changed even when you moved away. No matter how long you’re gone next time, we’ll still be here. We’ll always wait for you.""",
+"""Hay! ‘Yang Tita Kara mo talaga! She somehow found out you’re already coming back, and sending balikbayan boxes! Now you’ll have to get even bigger boxes, kase alam mo na ‘yan. Even if she’s picky, she’ll pester us if she gets too little. Grabe, ‘no? They say you can’t be born already being bad, but after 50 years of living with her, I wonder how we stayed close as sisters. Kaya mo na siguro ‘yan! Tiwala ako sa’yo.""",
+"""It’s your nanang. Everything’s arranged. We’ll wait for you at the airport. Marami rin palang humingi sa’yo! Hope it wasn’t that hard to fit them all. Maybe get just two big boxes. One for me and your siblings, and another for your Tita Kara, Tito Albert, and Mikey. Everyone’s gonna be so happy. Lalo na ako. It’s been so long without you, and we have a lot to catch up on. I want to know everything. Kwentuhan tayo every day hanggang umalis ka, ha? I’ll be here. I’m not going anywhere. I will always have time for you.""",
 """Oh? I think I forgot something..."""]
 
 @onready var intro_label = $VBoxContainer/Intro
@@ -26,7 +26,10 @@ func _ready() -> void:
 	labelB.visible_characters = 0
 	salutations_label.visible_characters = 0
 	
-	if Globals.level_counter == 4:
+	if Globals.level_counter < 4:
+		labelB.text = letters[1]
+		salutations_label.text = salutations[1]
+	elif Globals.level_counter == 4:
 		labelB.text = letters[2] # CHECK
 		salutations_label.text = salutations[2]
 	elif Globals.level_counter == 7:
@@ -37,6 +40,7 @@ func _ready() -> void:
 		salutations_label.text = salutations[4]
 	elif Globals.level_counter == 12:
 		labelB.text = letters[5]
+		intro_label.text = ""
 		salutations_label.text = ""
 	
 	var tween = get_tree().create_tween()

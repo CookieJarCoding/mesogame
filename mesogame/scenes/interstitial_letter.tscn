@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dc63twgyf24km"]
 
 [ext_resource type="Script" uid="uid://bxcwavxsgkuh8" path="res://scripts/interstitial_letter.gd" id="1_8gbjm"]
-[ext_resource type="FontFile" uid="uid://dlwf6aj0kpa40" path="res://fonts/SwilyBright-Italic.otf" id="2_8gbjm"]
+[ext_resource type="FontFile" uid="uid://c8qs47p5ijr6i" path="res://fonts/HappyTime.otf" id="2_eit5r"]
 [ext_resource type="Texture2D" uid="uid://bceume708lr4x" path="res://assets/Button.png" id="3_x17jk"]
 [ext_resource type="Script" uid="uid://bme42p1aic0si" path="res://scripts/hoverable.gd" id="4_eit5r"]
 [ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="5_bsrl5"]
@@ -28,7 +28,7 @@ theme_override_constants/separation = 29
 [node name="Intro" type="RichTextLabel" parent="VBoxContainer" unique_id=389964967]
 layout_mode = 2
 theme_override_constants/line_separation = 12
-theme_override_fonts/normal_font = ExtResource("2_8gbjm")
+theme_override_fonts/normal_font = ExtResource("2_eit5r")
 theme_override_font_sizes/normal_font_size = 21
 text = "Dear Toni,"
 fit_content = true
@@ -36,15 +36,15 @@ fit_content = true
 [node name="Letter" type="RichTextLabel" parent="VBoxContainer" unique_id=513206348]
 layout_mode = 2
 theme_override_constants/line_separation = 12
-theme_override_fonts/normal_font = ExtResource("2_8gbjm")
+theme_override_fonts/normal_font = ExtResource("2_eit5r")
 theme_override_font_sizes/normal_font_size = 21
-text = "Hi! It’s your nanang again. I’m so happy you get to come back here to Batangas! Jay and Ethan have gotten so tall while you were away. Do you remember in 1971, they were only up to your stomach? Now they’re probably up to your shoulder already! Ang saya, ‘di ba? Maybe you could pack some toys and sweets for them in your balikbayan box? Promise, ‘di ko hahayaang kunin ulit ng Tita Kara mo yung mga padala mo. Alam mo naman kung paano siya, e."
+text = "Hi! It’s your nanang again. Hopefully this gets sent. Joanne taught me how to write these weeks ago pero kabado pa rin ako. Can’t help it, but I’m so happy you get to come back here to Batangas! Jay and Ethan have gotten so tall while you were away. Do you remember in 1971, they were only up to your stomach? Now they’re probably up to your shoulder already! Ang saya, ‘di ba? Maybe you could pack some toys and sweets for them in your balikbayan box? Joanne didn’t ask for anything, pero alam mo naman siya pagdating sa damit. She misses you. We all do."
 fit_content = true
 
 [node name="Salutations" type="RichTextLabel" parent="VBoxContainer" unique_id=1037942577]
 layout_mode = 2
 theme_override_constants/line_separation = 12
-theme_override_fonts/normal_font = ExtResource("2_8gbjm")
+theme_override_fonts/normal_font = ExtResource("2_eit5r")
 theme_override_font_sizes/normal_font_size = 21
 text = "Lovelove, Nanang!"
 fit_content = true
