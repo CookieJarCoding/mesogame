@@ -125,7 +125,7 @@ corner_radius_bottom_left = 15
 script = ExtResource("1_su6px")
 
 [node name="ItemInformationPanel" type="Panel" parent="." unique_id=1876405338]
-custom_minimum_size = Vector2(200, 160)
+custom_minimum_size = Vector2(200, 180)
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
