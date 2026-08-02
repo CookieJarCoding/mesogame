@@ -39,8 +39,8 @@ var is_hovered_over
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	initialPos = global_position
-	starting_position = global_position
+	initialPos = global_position - get_parent().position
+	starting_position = global_position - get_parent().position
 	area_group = $AreaGroup
 	areas = area_group.get_children()
 	#for area in areas:
@@ -61,7 +61,7 @@ func _process(_delta: float) -> void:
 	#if body_ref:
 		#print(body_ref.global_position)
 	
-	print(draggable)
+	#print(draggable)
 	
 	is_inside_dropable = false
 	on_table = false
@@ -129,6 +129,7 @@ func _process(_delta: float) -> void:
 			#print("boop0")
 		if Input.is_action_pressed("click") and Globals.is_dragging:
 			global_position = get_global_mouse_position() - offset
+			print(global_position)
 		elif Input.is_action_just_released("click"):
 		#elif released:
 			#released = not released
@@ -142,6 +143,7 @@ func _process(_delta: float) -> void:
 				in_grid = true
 			elif on_table:
 				global_position = get_parent().position + starting_position
+				print(get_parent().position, ", ", starting_position, ", ", global_position)
 			else:
 				global_position = initialPos
 				if prev_body_ref:

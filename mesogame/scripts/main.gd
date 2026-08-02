@@ -19,6 +19,7 @@ var item_explained
 var table_pos: int = 0
 var movement_ongoing: bool = false
 var max_table_pages: int = 5
+var finished_moving_items: bool = false
 
 @onready var next_level_btn = $HUD/NextButton
 @onready var camera = $Camera
@@ -30,6 +31,7 @@ var max_table_pages: int = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	finished_moving_items = false
 	$Box.scale = BOX_DEFAULT_SCALE * box_width / 5.0
 	$TileBG.visible = true
 	$Table.visible = true
@@ -159,14 +161,14 @@ func declare_not_moving() -> void:
 	movement_ongoing = false
 
 func _on_left_pressed() -> void:
-	if table_pos > 0 and not movement_ongoing:
+	if table_pos > 0 and not movement_ongoing and finished_moving_items:
 		movement_ongoing = true
 		table_pos -= 1
 		move_table(table_pos)
 
 
 func _on_right_pressed() -> void:
-	if table_pos < max_table_pages and not movement_ongoing:
+	if table_pos < max_table_pages and not movement_ongoing and finished_moving_items:
 		movement_ongoing = true
 		table_pos += 1
 		move_table(table_pos)
@@ -197,3 +199,10 @@ func _on_animation_finished(anim_name: StringName) -> void:
 
 func play_swoosh() -> void:
 	AudioLibrary.play_sfx(AudioLibrary.sfx.SWOOSH)
+
+
+func move_items_up() -> void:
+	var tween = create_tween()
+	tween.tween_property(item_group, "position:y", 0.0, 1.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_EXPO)
+	await tween.finished
+	finished_moving_items = true
