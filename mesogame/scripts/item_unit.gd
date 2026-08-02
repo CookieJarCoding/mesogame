@@ -137,10 +137,25 @@ func _process(_delta: float) -> void:
 			Globals.is_dragging = false
 			#print("Release")
 			if is_inside_dropable and body_ref:
+				#print(body_ref.global_position)
+				#print(last_area_touched.position)
+				#print(get_global_mouse_position())
 				global_position = body_ref.global_position - last_area_touched.position
-				packed.emit(self)
-				print("boop1")
-				in_grid = true
+				var fully_inside = true
+				var main = self.get_parent().get_parent()
+				var box_top_left = main.get_child(4).get_child(0).global_position
+				var grid_width = main.box_width*128+10*(main.box_width-1)
+				var bounds = [box_top_left.x, box_top_left.x + grid_width, box_top_left.y, box_top_left.y + grid_width]
+				for area in areas:
+					if area.global_position.x < bounds[0] or area.global_position.x > bounds[1] or area.global_position.y < bounds[2] or area.global_position.y > bounds[3]:
+						print("NO! BAD!")
+						fully_inside = false
+				if not fully_inside:
+					global_position = initialPos
+				else:
+					packed.emit(self)
+					print("boop1")
+					in_grid = true
 			elif on_table:
 				global_position = get_parent().position + starting_position
 				#print(get_parent().position, ", ", starting_position, ", ", global_position)
