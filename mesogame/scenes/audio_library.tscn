@@ -2,23 +2,37 @@
 
 [ext_resource type="Script" uid="uid://d2mous1jj0r73" path="res://scripts/audio_library.gd" id="1_3avnm"]
 [ext_resource type="AudioStream" uid="uid://doo6srgdqwrb0" path="res://sounds/swoosh.mp3" id="2_612mp"]
+[ext_resource type="AudioStream" uid="uid://d1efygp7idirf" path="res://sounds/page_flip.mp3" id="2_mtsm2"]
+[ext_resource type="AudioStream" uid="uid://v6fjyvt0iw3b" path="res://sounds/plop_plop.mp3" id="3_6govp"]
+[ext_resource type="AudioStream" uid="uid://cmt3mhaoi2ox0" path="res://sounds/plop_flat.mp3" id="4_svrp5"]
+[ext_resource type="AudioStream" uid="uid://uq2511hocy0o" path="res://sounds/liquid.mp3" id="5_2wnal"]
+[ext_resource type="AudioStream" uid="uid://dks0x824lyapq" path="res://sounds/fragile.mp3" id="6_12ah6"]
+[ext_resource type="AudioStream" uid="uid://dmffs0l65q7xn" path="res://sounds/quota.mp3" id="7_2ofme"]
+[ext_resource type="AudioStream" uid="uid://bb8586udd8iyy" path="res://sounds/wrong.mp3" id="8_veggk"]
 
 [node name="AudioLibrary" type="Node" unique_id=413458466]
 script = ExtResource("1_3avnm")
 
 [node name="PageFlip" type="AudioStreamPlayer" parent="." unique_id=1675184931]
+stream = ExtResource("2_mtsm2")
 
 [node name="PlopPlop" type="AudioStreamPlayer" parent="." unique_id=38154905]
+stream = ExtResource("3_6govp")
 
 [node name="Plop_Flat" type="AudioStreamPlayer" parent="." unique_id=1471542123]
+stream = ExtResource("4_svrp5")
 
 [node name="Liquid" type="AudioStreamPlayer" parent="." unique_id=1073361263]
+stream = ExtResource("5_2wnal")
 
 [node name="Fragile" type="AudioStreamPlayer" parent="." unique_id=1478902245]
+stream = ExtResource("6_12ah6")
 
 [node name="Quota" type="AudioStreamPlayer" parent="." unique_id=752405464]
+stream = ExtResource("7_2ofme")
 
 [node name="Wrong" type="AudioStreamPlayer" parent="." unique_id=1945519941]
+stream = ExtResource("8_veggk")
 
 [node name="Swoosh" type="AudioStreamPlayer" parent="." unique_id=1132213815]
 stream = ExtResource("2_612mp")

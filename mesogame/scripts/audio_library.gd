@@ -15,18 +15,18 @@ enum sfx {
 
 func play_sfx(s: sfx):
 	if s == sfx.PAGE_FLIP:
-		pass
+		$PageFlip.play(0.0)
 	elif s == sfx.PLOP_PLOP:
-		pass
+		$PlopPlop.play(0.0)
 	elif s == sfx.PLOP_FLAT:
-		pass
+		$Plop_Flat.play(0.0)
 	elif s == sfx.LIQUID:
-		pass
+		$Liquid.play(0.0)
 	elif s == sfx.FRAGILE:
-		pass
+		$Fragile.play(0.0)
 	elif s == sfx.QUOTA:
-		pass
+		$Quota.play(0.0)
 	elif s == sfx.WRONG:
-		pass
+		$Wrong.play(0.0)
 	elif s == sfx.SWOOSH:
 		$Swoosh.play(4.0)

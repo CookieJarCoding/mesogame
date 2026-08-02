@@ -52,7 +52,9 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.is_action_pressed("click"):
 			clicked = true
+			AudioLibrary.play_sfx(AudioLibrary.sfx.PLOP_PLOP)
 		elif event.is_action_released("click"):
+			AudioLibrary.play_sfx(AudioLibrary.sfx.PLOP_FLAT)
 			released = true
 
 	
@@ -163,11 +165,13 @@ func is_valid_liquid() -> bool:
 			if opposite_item != null:
 				if (self.liquid_risk and not self.wrapped and opposite_item.liquid_container):
 					#print(self.name,": ", "liquid risk!")
+					AudioLibrary.play_sfx(AudioLibrary.sfx.WRONG)
 					return false
 				else:
 					pass
 					# print(self.name,": ", "you're fine for now!")
 	#print(self.name,": ", "not at risk of liquid!")
+	AudioLibrary.play_sfx(AudioLibrary.sfx.LIQUID)
 	return true
 
 func is_valid_fragile() -> bool:
@@ -182,10 +186,13 @@ func is_valid_fragile() -> bool:
 					# WARNING: not optimized since this double counts, but yeah
 				else:
 					#print(self.name,": ","one of the surrounding cells is empty, so not all surroundings are soft")
+					AudioLibrary.play_sfx(AudioLibrary.sfx.WRONG)
 					return false
 		for item in surroundings:
 			if not item.soft:
 				#print(self.name,": ","one of the surrounding items is not soft, so invalid")
+				AudioLibrary.play_sfx(AudioLibrary.sfx.WRONG)
 				return false
 	#print(self.name,": ", "not at risk of breakage!")
+	AudioLibrary.play_sfx(AudioLibrary.sfx.FRAGILE)
 	return true
