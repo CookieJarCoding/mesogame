@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://b2bv683sqi0v0"]
+
+[ext_resource type="Script" uid="uid://dat06wuy3tvfy" path="res://scripts/item_unit.gd" id="1_4berp"]
+[ext_resource type="Texture2D" uid="uid://3xnrkpcqrkrc" path="res://assets/items/blanket.png" id="2_audif"]
+[ext_resource type="PackedScene" uid="uid://drugy3tw1e82w" path="res://scenes/tile_collision.tscn" id="3_uxt4a"]
+
+[node name="Blanket" type="Node2D" unique_id=705416440]
+script = ExtResource("1_4berp")
+item_name = "Blanket"
+item_description = "flavor text"
+soft = true
+type = 4
+placeholder = 1
+
+[node name="Blanket" type="Sprite2D" parent="." unique_id=1331438369]
+position = Vector2(72, 65.00003)
+rotation = 3.1415927
+scale = Vector2(-0.816, 0.816)
+texture = ExtResource("2_audif")
+
+[node name="AreaGroup" type="Node2D" parent="." unique_id=528034439]
+
+[node name="Area1" parent="AreaGroup" unique_id=974894371 instance=ExtResource("3_uxt4a")]
+
+[node name="Area2" parent="AreaGroup" unique_id=1338945821 instance=ExtResource("3_uxt4a")]
+position = Vector2(276, 138)
+
+[node name="Area3" parent="AreaGroup" unique_id=1214395660 instance=ExtResource("3_uxt4a")]
+position = Vector2(-138, 0)
+
+[node name="Area4" parent="AreaGroup" unique_id=882035104 instance=ExtResource("3_uxt4a")]
+position = Vector2(276, 0)
+
+[node name="Area5" parent="AreaGroup" unique_id=12502235 instance=ExtResource("3_uxt4a")]
+position = Vector2(138, -276)
+
+[node name="Area10" parent="AreaGroup" unique_id=10641655 instance=ExtResource("3_uxt4a")]
+position = Vector2(0, 276)
+
+[node name="Area11" parent="AreaGroup" unique_id=1714282633 instance=ExtResource("3_uxt4a")]
+position = Vector2(0, -276)
+
+[node name="Area12" parent="AreaGroup" unique_id=853968602 instance=ExtResource("3_uxt4a")]
+position = Vector2(0, 414)
+
+[node name="Area13" parent="AreaGroup" unique_id=405005211 instance=ExtResource("3_uxt4a")]
+position = Vector2(-138, -276)
+
+[node name="Area14" parent="AreaGroup" unique_id=73193003 instance=ExtResource("3_uxt4a")]
+position = Vector2(138, 276)
+
+[node name="Area6" parent="AreaGroup" unique_id=2027920128 instance=ExtResource("3_uxt4a")]
+position = Vector2(-138, -138)
+
+[node name="Area7" parent="AreaGroup" unique_id=1878093580 instance=ExtResource("3_uxt4a")]
+position = Vector2(276, 276)
+
+[node name="Area8" parent="AreaGroup" unique_id=849255024 instance=ExtResource("3_uxt4a")]
+position = Vector2(276, -138)
+
+[node name="Area9" parent="AreaGroup" unique_id=958074305 instance=ExtResource("3_uxt4a")]
+position = Vector2(276, -276)

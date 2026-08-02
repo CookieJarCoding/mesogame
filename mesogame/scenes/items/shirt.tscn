@@ -13,17 +13,16 @@ liquid_risk = true
 placeholder = 1
 
 [node name="Shirt" type="Sprite2D" parent="." unique_id=1331438369]
-position = Vector2(206.00002, -160)
+position = Vector2(66.00003, -152.00002)
 scale = Vector2(0.75346476, 0.71813434)
 texture = ExtResource("2_ugtq4")
 
 [node name="AreaGroup" type="Node2D" parent="." unique_id=528034439]
 
 [node name="Area1" parent="AreaGroup" unique_id=974894371 instance=ExtResource("3_6qibw")]
-position = Vector2(414, -276)
+position = Vector2(-138, -276)
 
 [node name="Area2" parent="AreaGroup" unique_id=1338945821 instance=ExtResource("3_6qibw")]
-position = Vector2(138, 0)
 
 [node name="Area7" parent="AreaGroup" unique_id=1878093580 instance=ExtResource("3_6qibw")]
 position = Vector2(0, -276)
@@ -35,10 +34,10 @@ position = Vector2(138, -276)
 position = Vector2(138, -138)
 
 [node name="Area9" parent="AreaGroup" unique_id=1379179407 instance=ExtResource("3_6qibw")]
-position = Vector2(276, 0)
+position = Vector2(138, 0)
 
 [node name="Area10" parent="AreaGroup" unique_id=2055443677 instance=ExtResource("3_6qibw")]
-position = Vector2(276, -138)
+position = Vector2(0, -138)
 
 [node name="Area11" parent="AreaGroup" unique_id=1517922019 instance=ExtResource("3_6qibw")]
 position = Vector2(276, -276)

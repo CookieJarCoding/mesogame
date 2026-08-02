@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://vbqdq5g66g6o"]
+
+[ext_resource type="Script" uid="uid://dat06wuy3tvfy" path="res://scripts/item_unit.gd" id="1_mvhhv"]
+[ext_resource type="Texture2D" uid="uid://dwc4wynwh2r0" path="res://assets/items/camera.png" id="2_tls8x"]
+[ext_resource type="PackedScene" uid="uid://drugy3tw1e82w" path="res://scenes/tile_collision.tscn" id="3_jg2t0"]
+
+[node name="Camera" type="Node2D" unique_id=705416440]
+script = ExtResource("1_mvhhv")
+item_name = "Camera"
+item_description = "flavor text"
+fragile = true
+liquid_risk = true
+type = 6
+placeholder = 1
+
+[node name="Camera" type="Sprite2D" parent="." unique_id=1331438369]
+position = Vector2(69, -69)
+rotation = -1.5707964
+scale = Vector2(0.8156862, 0.81568617)
+texture = ExtResource("2_tls8x")
+
+[node name="AreaGroup" type="Node2D" parent="." unique_id=528034439]
+
+[node name="Area1" parent="AreaGroup" unique_id=974894371 instance=ExtResource("3_jg2t0")]
+
+[node name="Area2" parent="AreaGroup" unique_id=1338945821 instance=ExtResource("3_jg2t0")]
+position = Vector2(138, 0)
+
+[node name="Area7" parent="AreaGroup" unique_id=1878093580 instance=ExtResource("3_jg2t0")]
+position = Vector2(138, -138)

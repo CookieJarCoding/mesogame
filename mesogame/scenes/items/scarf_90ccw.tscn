@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://ljo2xbw203ex"]
+
+[ext_resource type="Script" uid="uid://dat06wuy3tvfy" path="res://scripts/item_unit.gd" id="1_xfirl"]
+[ext_resource type="Texture2D" uid="uid://dc7w507bduk3n" path="res://assets/items/scarf.png" id="2_fr5wf"]
+[ext_resource type="PackedScene" uid="uid://drugy3tw1e82w" path="res://scenes/tile_collision.tscn" id="3_moe7f"]
+
+[node name="Scarf" type="Node2D" unique_id=705416440]
+script = ExtResource("1_xfirl")
+item_name = "Scarf"
+item_description = "flavor text"
+soft = true
+liquid_risk = true
+placeholder = 1
+
+[node name="Scarf" type="Sprite2D" parent="." unique_id=1331438369]
+position = Vector2(-131, -144)
+scale = Vector2(0.816, 0.816)
+texture = ExtResource("2_fr5wf")
+
+[node name="AreaGroup" type="Node2D" parent="." unique_id=528034439]
+
+[node name="Area1" parent="AreaGroup" unique_id=974894371 instance=ExtResource("3_moe7f")]
+
+[node name="Area2" parent="AreaGroup" unique_id=1338945821 instance=ExtResource("3_moe7f")]
+position = Vector2(0, -138)
+
+[node name="Area3" parent="AreaGroup" unique_id=1214395660 instance=ExtResource("3_moe7f")]
+position = Vector2(-276, -276)
+
+[node name="Area4" parent="AreaGroup" unique_id=882035104 instance=ExtResource("3_moe7f")]
+position = Vector2(0, 138)
+
+[node name="Area5" parent="AreaGroup" unique_id=12502235 instance=ExtResource("3_moe7f")]
+position = Vector2(0, -276)
+
+[node name="Area6" parent="AreaGroup" unique_id=2027920128 instance=ExtResource("3_moe7f")]
+position = Vector2(-138, -414)
+
+[node name="Area7" parent="AreaGroup" unique_id=1878093580 instance=ExtResource("3_moe7f")]
+position = Vector2(-276, -414)
+
+[node name="Area8" parent="AreaGroup" unique_id=849255024 instance=ExtResource("3_moe7f")]
+position = Vector2(0, -414)
+
+[node name="Area9" parent="AreaGroup" unique_id=958074305 instance=ExtResource("3_moe7f")]
+position = Vector2(-138, -276)

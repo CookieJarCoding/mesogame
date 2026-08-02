@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cxpfw407fmcbe"]
+
+[ext_resource type="Script" uid="uid://dat06wuy3tvfy" path="res://scripts/item_unit.gd" id="1_oqh0y"]
+[ext_resource type="Texture2D" uid="uid://sbxwocprluil" path="res://assets/items/chopsticks.png" id="2_1lfmo"]
+[ext_resource type="PackedScene" uid="uid://drugy3tw1e82w" path="res://scenes/tile_collision.tscn" id="3_vbgid"]
+
+[node name="Chopsticks2" type="Node2D" unique_id=705416440]
+script = ExtResource("1_oqh0y")
+item_name = "Chopsticks"
+item_description = "flavor text"
+type = 4
+placeholder = 1
+
+[node name="Chopsticks" type="Sprite2D" parent="." unique_id=1331438369]
+position = Vector2(-1.999999, -75)
+scale = Vector2(0.8156862, 0.81568617)
+texture = ExtResource("2_1lfmo")
+
+[node name="AreaGroup" type="Node2D" parent="." unique_id=528034439]
+
+[node name="Area1" parent="AreaGroup" unique_id=974894371 instance=ExtResource("3_vbgid")]
+
+[node name="Area7" parent="AreaGroup" unique_id=1878093580 instance=ExtResource("3_vbgid")]
+position = Vector2(0, -138)
