@@ -84,7 +84,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_constants/separation = 7
+theme_override_constants/separation = 19
 
 [node name="Heading" type="RichTextLabel" parent="Panel/VBoxContainer/MarginContainer/ScrollContainer/VBox" unique_id=852089660]
 layout_mode = 2
@@ -95,7 +95,6 @@ fit_content = true
 horizontal_alignment = 2
 
 [node name="CharQuota" parent="Panel/VBoxContainer/MarginContainer/ScrollContainer/VBox" unique_id=454399947 instance_placeholder="res://scenes/character_quota.tscn"]
-visible = false
 layout_mode = 2
 
 [node name="Intro" type="AnimationPlayer" parent="." unique_id=1992133697]

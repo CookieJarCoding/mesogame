@@ -49,7 +49,8 @@ func _ready() -> void:
 	## NOTE: Max two likes/dislikes
 	$HUD.create_character("Joanne", 0, 1,
 		[Globals.item_types.APPAREL],
-		[]
+		[],
+		"res://assets/characters/joanne.png"
 	)
 	#$HUD.create_character("Jay and Ethan", 0, 10,
 		#[Globals.item_types.TOYS, Globals.item_types.CONSUMABLES],
@@ -141,6 +142,7 @@ func _on_next_button_pressed() -> void:
 
 	# CHECK IF THIS WORKS SUCH THAT THESE ARE SPACED OUT EVERY THREE LEVELS
 	if Globals.level_counter % 3 == 1:
+		@warning_ignore("integer_division")
 		if Globals.level_counter / 3 == 4: 
 			get_tree().change_scene_to_file("res:///scenes/ending.tscn")
 		else:

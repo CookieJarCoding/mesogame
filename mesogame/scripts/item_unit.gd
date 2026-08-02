@@ -95,10 +95,10 @@ func _process(_delta: float) -> void:
 			draggable = true
 			is_hovered_over = true
 	
-	if is_hovered_over:
-		hovered.emit(self)
-	else:
-		unhovered.emit(self)
+	#if is_hovered_over:
+		#hovered.emit(self)
+	#else:
+		#unhovered.emit(self)
 
 	
 	if draggable:
@@ -138,7 +138,12 @@ func _process(_delta: float) -> void:
 
 
 func _physics_process(_delta: float) -> void:
-	pass
+	var item_sprite = get_child(0)
+	if item_sprite is Sprite2D:
+		if item_sprite.get_rect().has_point(to_local(get_global_mouse_position())):
+			hovered.emit(self)
+		else:
+			unhovered.emit(self)
 	#print(is_valid_liquid())
 	#print(is_valid_fragile())
 

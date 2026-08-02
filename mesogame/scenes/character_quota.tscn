@@ -2,26 +2,34 @@
 
 [ext_resource type="Script" uid="uid://c4gk1kt3gbfrg" path="res://scripts/character_quota.gd" id="1_rbgsv"]
 [ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="2_k85q4"]
+[ext_resource type="Texture2D" uid="uid://b006bf0q07qup" path="res://assets/characters/joanne.png" id="3_5l0r4"]
 
 [node name="CharQuota" type="VBoxContainer" unique_id=454399947]
-offset_right = 246.0
-offset_bottom = 65.0
+offset_right = 277.0
+offset_bottom = 77.0
 script = ExtResource("1_rbgsv")
 
-[node name="HBox" type="HBoxContainer" parent="." unique_id=333082711]
+[node name="M" type="MarginContainer" parent="." unique_id=1665907868]
 layout_mode = 2
+theme_override_constants/margin_left = 52
 
-[node name="Name" type="RichTextLabel" parent="HBox" unique_id=654314691]
+[node name="HBox" type="HBoxContainer" parent="M" unique_id=333082711]
 layout_mode = 2
-size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="Name" type="RichTextLabel" parent="M/HBox" unique_id=654314691]
+layout_mode = 2
+size_flags_horizontal = 6
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("2_k85q4")
 theme_override_font_sizes/normal_font_size = 20
-text = "Character 1"
+text = "Jay&Ethan"
 fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Score" type="RichTextLabel" parent="HBox" unique_id=1089166409]
+[node name="Score" type="RichTextLabel" parent="M/HBox" unique_id=1089166409]
 custom_minimum_size = Vector2(80.22, 0)
 layout_mode = 2
 size_flags_horizontal = 10
@@ -57,3 +65,8 @@ theme_override_fonts/normal_font = ExtResource("2_k85q4")
 theme_override_font_sizes/normal_font_size = 16
 text = "Dislikes: "
 fit_content = true
+
+[node name="Portrait" type="Sprite2D" parent="." unique_id=2099423151]
+position = Vector2(25.625002, 3.375002)
+scale = Vector2(0.10714285, 0.10714285)
+texture = ExtResource("3_5l0r4")

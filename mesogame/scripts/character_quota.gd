@@ -9,15 +9,17 @@ var score: int = 0
 var quota: int = 0
 var likes = []
 var dislikes = []
+var portrait
 
-@onready var score_label = $HBox/Score
+@onready var score_label = $M/HBox/Score
 @onready var likes_label = $MarginContainer/Likes
 @onready var dislikes_label = $MarginContainer2/Dislikes
 
 func _ready() -> void:
 	characters.append(self)
 
-	$HBox/Name.text = char_name
+	$M/HBox/Name.text = char_name
+	$Portrait.texture = portrait
 	
 	if likes.size() == 1:
 		likes_label.text = "Likes: " + ets(likes[0])
