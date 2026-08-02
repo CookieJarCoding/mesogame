@@ -1,23 +1,27 @@
 [gd_scene format=3 uid="uid://dd1bx7fxrlbca"]
 
 [ext_resource type="Script" uid="uid://co7d2ugo4flyq" path="res://scripts/settings_menu.gd" id="1_5p8wc"]
+[ext_resource type="Texture2D" uid="uid://dqd68yvky1kgf" path="res://assets/whiteboard.png" id="1_6wm04"]
+[ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="3_f4mfi"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7yvfd"]
-bg_color = Color(0, 0, 0, 0.8235294)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vcm7i"]
+texture = ExtResource("1_6wm04")
+texture_margin_left = 3.0
+texture_margin_right = 3.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r6d6q"]
 content_margin_left = 8.0
 content_margin_top = 8.0
 content_margin_right = 8.0
 content_margin_bottom = 8.0
-bg_color = Color(0, 0, 0, 0.627451)
+bg_color = Color(0, 0, 0.13333334, 0.627451)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6wm04"]
-bg_color = Color(0.6, 0.6, 0.6, 0.78431374)
+bg_color = Color(0.6, 0.6, 0.6666667, 0.78431374)
 corner_radius_top_left = 8
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
@@ -34,6 +38,13 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 8
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aob3v"]
+bg_color = Color(0.078431375, 0.21960784, 0.27450982, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_esf6n"]
 
 [node name="SettingsMenu" type="Panel" unique_id=2007337710]
@@ -48,7 +59,7 @@ offset_right = 360.0
 offset_bottom = 225.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_7yvfd")
+theme_override_styles/panel = SubResource("StyleBoxTexture_vcm7i")
 script = ExtResource("1_5p8wc")
 
 [node name="MainGrid" type="GridContainer" parent="." unique_id=1537678975]
@@ -66,12 +77,14 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MainGrid" unique_id=384543637]
-custom_minimum_size = Vector2(0, 100)
-custom_maximum_size = Vector2(-1, 100)
+custom_minimum_size = Vector2(0, 80)
+custom_maximum_size = Vector2(-1, 80)
 clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.015686275, 0.12941177, 0.16862746, 1)
+theme_override_fonts/normal_font = ExtResource("3_f4mfi")
 theme_override_font_sizes/normal_font_size = 64
 text = "Settings"
 autowrap_mode = 0
@@ -87,7 +100,9 @@ columns = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 32
+theme_override_colors/default_color = Color(0.015686275, 0.12941177, 0.16862746, 1)
+theme_override_fonts/normal_font = ExtResource("3_f4mfi")
+theme_override_font_sizes/normal_font_size = 36
 bbcode_enabled = true
 text = "Music Volume
 "
@@ -117,7 +132,9 @@ columns = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 32
+theme_override_colors/default_color = Color(0.015686275, 0.12941177, 0.16862746, 1)
+theme_override_fonts/normal_font = ExtResource("3_f4mfi")
+theme_override_font_sizes/normal_font_size = 36
 bbcode_enabled = true
 text = "Sound Volume
 "
@@ -139,7 +156,10 @@ ticks_position = 3
 
 [node name="CloseButton" type="Button" parent="MainGrid" unique_id=1777694714]
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
+theme_override_colors/icon_normal_color = Color(0.078431375, 0.21960784, 0.27450982, 1)
+theme_override_fonts/font = ExtResource("3_f4mfi")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_aob3v")
 text = "Close"
 
 [node name="AspectRatioContainer" type="AspectRatioContainer" parent="MainGrid" unique_id=821008602]
@@ -154,7 +174,10 @@ shape = SubResource("RectangleShape2D_esf6n")
 
 [node name="QuitButton" type="Button" parent="MainGrid" unique_id=575629705]
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
+theme_override_colors/icon_normal_color = Color(0.078431375, 0.21960784, 0.27450982, 1)
+theme_override_fonts/font = ExtResource("3_f4mfi")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_aob3v")
 text = "Quit"
 
 [connection signal="value_changed" from="MainGrid/MusicVolume/MusicVolumeSlider" to="." method="_on_music_volume_slider_value_changed"]
