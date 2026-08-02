@@ -381,14 +381,23 @@ z_index = 100
 [node name="ItemGroup" type="Node2D" parent="." unique_id=1210610719]
 position = Vector2(0, 800)
 
-[node name="CannedGoods" parent="ItemGroup" unique_id=705416440 instance=ExtResource("12_hkuam")]
-position = Vector2(637, 1612)
+[node name="Shirt" parent="ItemGroup" unique_id=1209161982 instance=ExtResource("13_ydw67")]
+position = Vector2(1725, 1614)
+
+[node name="Scarf" parent="ItemGroup" unique_id=1146730901 instance=ExtResource("15_6igki")]
+position = Vector2(4577, 1561)
+
+[node name="Backpack" parent="ItemGroup" unique_id=115239823 instance=ExtResource("21_bxuut")]
+position = Vector2(5156, 1653)
 
 [node name="StuffedAnimal" parent="ItemGroup" unique_id=754929349 instance=ExtResource("16_sqrei")]
 position = Vector2(1317, 1718)
 
+[node name="CannedGoods" parent="ItemGroup" unique_id=705416440 instance=ExtResource("12_hkuam")]
+position = Vector2(637, 1612)
+
 [node name="Chocolates" parent="ItemGroup" unique_id=91019937 instance=ExtResource("16_f3b2k")]
-position = Vector2(4035, 1541)
+position = Vector2(4005, 1478)
 
 [node name="ActionFigure" parent="ItemGroup" unique_id=769774734 instance=ExtResource("11_8kpy5")]
 position = Vector2(1137, 1630)
@@ -398,15 +407,6 @@ position = Vector2(2214, 1717)
 
 [node name="HoneyJars" parent="ItemGroup" unique_id=1060283158 instance=ExtResource("15_yhrca")]
 position = Vector2(2431, 1582)
-
-[node name="Shirt" parent="ItemGroup" unique_id=1209161982 instance=ExtResource("13_ydw67")]
-position = Vector2(1725, 1685)
-
-[node name="Scarf" parent="ItemGroup" unique_id=1146730901 instance=ExtResource("15_6igki")]
-position = Vector2(4724, 1627)
-
-[node name="Backpack" parent="ItemGroup" unique_id=115239823 instance=ExtResource("21_bxuut")]
-position = Vector2(5156, 1653)
 
 [node name="Camera" type="Camera2D" parent="." unique_id=113758559]
 anchor_mode = 0

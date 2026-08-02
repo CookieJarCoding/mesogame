@@ -168,7 +168,7 @@ func is_valid_liquid() -> bool:
 	for area in areas:
 		var collisions = area.collide()
 		for opposite_item in collisions:
-			if opposite_item != null:
+			if opposite_item != null and opposite_item is ItemUnit:
 				if (self.liquid_risk and not self.wrapped and opposite_item.liquid_container) or (opposite_item.liquid_risk and not opposite_item.wrapped and self.liquid_container):
 					#print(self.name,": ", "liquid risk!")
 					return false
@@ -184,7 +184,7 @@ func is_valid_fragile() -> bool:
 		for area in areas:
 			var collisions = area.collide()
 			for opposite_item in collisions:
-				if opposite_item != null:
+				if opposite_item != null and opposite_item is ItemUnit:
 					surroundings.append(opposite_item) 
 					# NOTE: this is a note
 					# WARNING: not optimized since this double counts, but yeah

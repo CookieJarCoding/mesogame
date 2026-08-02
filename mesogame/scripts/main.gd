@@ -128,6 +128,8 @@ func _on_item_removed(item: ItemUnit) -> void:
 	tally_scores()
 
 func _on_item_hovered(item: ItemUnit) -> void:
+	if movement_ongoing:
+		return
 	item_explained = item
 	item_information.update(item)
 	#print($ItemInformation.get_child(0).name)
@@ -163,7 +165,7 @@ func check_win() -> bool:
 
 
 func _on_next_button_pressed() -> void:
-	AudioLibrary.play_sfx(AudioLibrary.sfx.PAGE_FLIP)
+	AudioLibrary.play_sfx(AudioLibrary.sfx.QUOTA)
 	anim.play("exit")
 	$HUD.play_exit()
 
@@ -180,16 +182,28 @@ func declare_not_moving() -> void:
 	movement_ongoing = false
 
 func _on_left_pressed() -> void:
-	if table_pos > 0 and not movement_ongoing and finished_moving_items:
-		movement_ongoing = true
-		table_pos -= 1
-		move_table(table_pos)
+	if table_pos > 0 and finished_moving_items:
+		if not movement_ongoing:
+			AudioLibrary.play_sfx(AudioLibrary.sfx.PAGE_FLIP)
+			movement_ongoing = true
+			table_pos -= 1
+			move_table(table_pos)
+			if table_pos == 0:
+				$HUD/Left.visible = false
+			if table_pos < max_table_pages - 1:
+				$HUD/Right.visible = true
 
 func _on_right_pressed() -> void:
-	if table_pos < max_table_pages - 1 and not movement_ongoing and finished_moving_items:
-		movement_ongoing = true
-		table_pos += 1
-		move_table(table_pos)
+	if table_pos < max_table_pages - 1 and finished_moving_items:
+		if not movement_ongoing:
+			AudioLibrary.play_sfx(AudioLibrary.sfx.PAGE_FLIP)
+			movement_ongoing = true
+			table_pos += 1
+			move_table(table_pos)
+			if table_pos == max_table_pages - 1:
+				$HUD/Right.visible = false
+			if table_pos > 0:
+				$HUD/Left.visible = true
 
 func set_handle_with_care() -> void:
 	for item in $ItemGroup.get_children():

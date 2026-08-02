@@ -21,7 +21,7 @@ enum music {
 
 func play_sfx(s: sfx):
 	if s == sfx.PAGE_FLIP:
-		$PageFlip.play(0.0)
+		$PageFlip.play(0.3)
 	elif s == sfx.PLOP_PLOP:
 		$PlopPlop.play(0.15)
 	elif s == sfx.PLOP_FLAT:

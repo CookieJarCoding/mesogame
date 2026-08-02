@@ -1,24 +1,27 @@
-[gd_scene format=3 uid="uid://0026xtwut5wy"]
+[gd_scene format=3 uid="uid://b2u1ng048am8s"]
 
-[ext_resource type="Script" uid="uid://dhq5y88s2l417" path="res://scripts/level_scripts/level_7.gd" id="1_prm31"]
-[ext_resource type="PackedScene" uid="uid://c4yjamtvwcpmh" path="res://scenes/hud.tscn" id="2_co2u6"]
-[ext_resource type="Texture2D" uid="uid://dyevrv6ok3m4q" path="res://assets/pause.png" id="3_hckfr"]
-[ext_resource type="Texture2D" uid="uid://bfkjsqym2yckn" path="res://assets/reset.png" id="4_ubfq5"]
-[ext_resource type="Texture2D" uid="uid://b33wtvop20utb" path="res://assets/send.png" id="5_08qf2"]
-[ext_resource type="Texture2D" uid="uid://imdai3c5bn6g" path="res://assets/arrow.png" id="6_vxsie"]
-[ext_resource type="Script" uid="uid://bme42p1aic0si" path="res://scripts/hoverable.gd" id="7_yi5iu"]
-[ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="8_7716e"]
-[ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="9_5gm5m"]
-[ext_resource type="PackedScene" uid="uid://blwn3kp63m1yf" path="res://scenes/item_information.tscn" id="10_f3jlr"]
-[ext_resource type="PackedScene" uid="uid://b3clb5dtvgjyn" path="res://scenes/items/blanket.tscn" id="11_l0cwd"]
-[ext_resource type="PackedScene" uid="uid://b8ueivqliytm3" path="res://scenes/items/stuffed_animal.tscn" id="12_68ps3"]
-[ext_resource type="PackedScene" uid="uid://1ajxi2hkjtyg" path="res://scenes/items/perfume.tscn" id="17_gycp8"]
-[ext_resource type="PackedScene" uid="uid://b0nog3nlf2vsj" path="res://scenes/items/pillow_90.tscn" id="18_prm31"]
-[ext_resource type="Texture2D" uid="uid://bd3yrl67sc6we" path="res://assets/box.png" id="19_d0tw8"]
-[ext_resource type="Texture2D" uid="uid://su86w6p5cupc" path="res://assets/tile_bg.png" id="20_1h8sb"]
-[ext_resource type="PackedScene" uid="uid://cpqhd5ebxd1vf" path="res://scenes/items/camera_180.tscn" id="20_hckfr"]
-[ext_resource type="PackedScene" uid="uid://ljo2xbw203ex" path="res://scenes/items/scarf_90ccw.tscn" id="20_ubfq5"]
-[ext_resource type="Texture2D" uid="uid://b6fgaeuibgs2t" path="res://assets/table.png" id="21_e008a"]
+[ext_resource type="Script" uid="uid://b32xx8y6kbo1q" path="res://scripts/level_scripts/level_6.gd" id="1_sdnvp"]
+[ext_resource type="PackedScene" uid="uid://c4yjamtvwcpmh" path="res://scenes/hud.tscn" id="2_7xq2f"]
+[ext_resource type="Texture2D" uid="uid://dyevrv6ok3m4q" path="res://assets/pause.png" id="3_xmmsn"]
+[ext_resource type="Texture2D" uid="uid://bfkjsqym2yckn" path="res://assets/reset.png" id="4_vjdek"]
+[ext_resource type="Texture2D" uid="uid://b33wtvop20utb" path="res://assets/send.png" id="5_qw2ud"]
+[ext_resource type="Texture2D" uid="uid://imdai3c5bn6g" path="res://assets/arrow.png" id="6_y661n"]
+[ext_resource type="Script" uid="uid://bme42p1aic0si" path="res://scripts/hoverable.gd" id="7_ie8wy"]
+[ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="8_h4dr5"]
+[ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="9_cmwrw"]
+[ext_resource type="PackedScene" uid="uid://blwn3kp63m1yf" path="res://scenes/item_information.tscn" id="10_7memh"]
+[ext_resource type="PackedScene" uid="uid://tcpaxhvkoq8i" path="res://scenes/items/canned_goods.tscn" id="11_fp2uk"]
+[ext_resource type="PackedScene" uid="uid://bek2aya3xy4hl" path="res://scenes/items/chocolates.tscn" id="13_s2xic"]
+[ext_resource type="PackedScene" uid="uid://c8m74t5h186ib" path="res://scenes/items/action_figure.tscn" id="14_gh4cf"]
+[ext_resource type="PackedScene" uid="uid://bo66gsffkyhc5" path="res://scenes/items/honey_jars.tscn" id="15_c8ocx"]
+[ext_resource type="PackedScene" uid="uid://bjhuyvsloqvgk" path="res://scenes/items/chopsticks.tscn" id="15_km634"]
+[ext_resource type="PackedScene" uid="uid://cngxctywg2m20" path="res://scenes/items/shirt.tscn" id="16_mokrb"]
+[ext_resource type="PackedScene" uid="uid://dp48b0gpq6w0o" path="res://scenes/items/scarf.tscn" id="17_qab5v"]
+[ext_resource type="PackedScene" uid="uid://duc7f3cqg1p7h" path="res://scenes/items/fridge_magnet.tscn" id="17_xmmsn"]
+[ext_resource type="PackedScene" uid="uid://bwxgenndeaqsm" path="res://scenes/items/backpack.tscn" id="18_pok8i"]
+[ext_resource type="Texture2D" uid="uid://bd3yrl67sc6we" path="res://assets/box.png" id="19_ddpvl"]
+[ext_resource type="Texture2D" uid="uid://su86w6p5cupc" path="res://assets/tile_bg.png" id="20_8epf1"]
+[ext_resource type="Texture2D" uid="uid://b6fgaeuibgs2t" path="res://assets/table.png" id="21_nl3jc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jbj1t"]
 size = Vector2(2452.7998, 225.39142)
@@ -279,14 +282,14 @@ _data = {
 &"exit": SubResource("Animation_jbj1t")
 }
 
-[node name="Level7" type="Node2D" unique_id=1180765290]
-script = ExtResource("1_prm31")
-box_width = 8
-box_height = 8
-max_table_pages = 2
-level_title = "Seventh Box!"
+[node name="Level6" type="Node2D" unique_id=1180765290]
+script = ExtResource("1_sdnvp")
+box_width = 6
+box_height = 6
+max_table_pages = 3
+level_title = "Sixth Box!"
 
-[node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("2_co2u6")]
+[node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("2_7xq2f")]
 
 [node name="PauseButton" type="TextureButton" parent="HUD" unique_id=1637305200]
 texture_filter = 1
@@ -295,7 +298,7 @@ offset_top = 3.0
 offset_right = 63.0
 offset_bottom = 63.0
 scale = Vector2(0.585, 0.585)
-texture_normal = ExtResource("3_hckfr")
+texture_normal = ExtResource("3_xmmsn")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HUD" unique_id=1805670119]
 offset_left = 206.59
@@ -307,7 +310,7 @@ offset_bottom = 335.98022
 custom_maximum_size = Vector2(80, 80)
 layout_mode = 2
 size_flags_horizontal = 0
-texture_normal = ExtResource("4_ubfq5")
+texture_normal = ExtResource("4_vjdek")
 stretch_mode = 5
 
 [node name="NextButton" type="TextureButton" parent="HUD/HBoxContainer" unique_id=2052625345]
@@ -315,7 +318,7 @@ custom_maximum_size = Vector2(80, 80)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
-texture_normal = ExtResource("5_08qf2")
+texture_normal = ExtResource("5_qw2ud")
 stretch_mode = 5
 
 [node name="Left" type="TextureButton" parent="HUD" unique_id=1777119729]
@@ -332,9 +335,9 @@ offset_bottom = -77.99979
 grow_horizontal = 0
 grow_vertical = 0
 scale = Vector2(0.31, 0.31)
-texture_normal = ExtResource("6_vxsie")
+texture_normal = ExtResource("6_y661n")
 flip_h = true
-script = ExtResource("7_yi5iu")
+script = ExtResource("7_ie8wy")
 
 [node name="Right" type="TextureButton" parent="HUD" unique_id=1285339589]
 anchors_preset = 3
@@ -349,8 +352,8 @@ offset_bottom = -77.99942
 grow_horizontal = 0
 grow_vertical = 0
 scale = Vector2(0.31, 0.31)
-texture_normal = ExtResource("6_vxsie")
-script = ExtResource("7_yi5iu")
+texture_normal = ExtResource("6_y661n")
+script = ExtResource("7_ie8wy")
 
 [node name="LevelTitle" type="RichTextLabel" parent="HUD" unique_id=423819574]
 modulate = Color(1, 1, 1, 0)
@@ -364,7 +367,7 @@ offset_bottom = 64.99999
 grow_horizontal = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/normal_font = ExtResource("8_7716e")
+theme_override_fonts/normal_font = ExtResource("8_h4dr5")
 theme_override_font_sizes/normal_font_size = 28
 text = "First Box!"
 fit_content = true
@@ -373,42 +376,51 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SettingsMenu" parent="HUD" unique_id=186484164 instance=ExtResource("9_5gm5m")]
+[node name="SettingsMenu" parent="HUD" unique_id=186484164 instance=ExtResource("9_cmwrw")]
 process_mode = 3
 visible = false
 z_index = 100
 
-[node name="ItemInformation" parent="." unique_id=1848763749 instance=ExtResource("10_f3jlr")]
+[node name="ItemInformation" parent="." unique_id=1848763749 instance=ExtResource("10_7memh")]
 
 [node name="ItemGroup" type="Node2D" parent="." unique_id=1210610719]
 position = Vector2(0, 800)
 
-[node name="Blanket" parent="ItemGroup" unique_id=705416440 instance=ExtResource("11_l0cwd")]
-position = Vector2(309, 1420)
+[node name="Shirt" parent="ItemGroup" unique_id=705416440 instance=ExtResource("16_mokrb")]
+position = Vector2(536, 1666)
 
-[node name="StuffedAnimal" parent="ItemGroup" unique_id=628762933 instance=ExtResource("12_68ps3")]
-position = Vector2(4833, 1753)
+[node name="Scarf" parent="ItemGroup" unique_id=1427190506 instance=ExtResource("17_qab5v")]
+position = Vector2(1429, 1563)
 
-[node name="StuffedAnimal2" parent="ItemGroup" unique_id=1181197668 instance=ExtResource("12_68ps3")]
-position = Vector2(4373, 1716)
+[node name="Backpack" parent="ItemGroup" unique_id=1232050733 instance=ExtResource("18_pok8i")]
+position = Vector2(7436, 1730)
 
-[node name="Camera" parent="ItemGroup" unique_id=1526290895 instance=ExtResource("20_hckfr")]
-position = Vector2(2147, 1524)
+[node name="ActionFigure" parent="ItemGroup" unique_id=1798338996 instance=ExtResource("14_gh4cf")]
+position = Vector2(1026, 1532)
 
-[node name="Perfume" parent="ItemGroup" unique_id=1135623501 instance=ExtResource("17_gycp8")]
-position = Vector2(1268, 1686)
+[node name="ActionFigure2" parent="ItemGroup" unique_id=361707291 instance=ExtResource("14_gh4cf")]
+position = Vector2(5007, 1578)
 
-[node name="Perfume2" parent="ItemGroup" unique_id=1018251651 instance=ExtResource("17_gycp8")]
-position = Vector2(1503, 1524)
+[node name="FridgeMagnet" parent="ItemGroup" unique_id=1760294168 instance=ExtResource("17_xmmsn")]
+position = Vector2(1933, 1617)
 
-[node name="Perfume3" parent="ItemGroup" unique_id=441108178 instance=ExtResource("17_gycp8")]
-position = Vector2(1757, 1666)
+[node name="FridgeMagnet2" parent="ItemGroup" unique_id=638121068 instance=ExtResource("17_xmmsn")]
+position = Vector2(4820, 1627)
 
-[node name="Pillow" parent="ItemGroup" unique_id=1687347451 instance=ExtResource("18_prm31")]
-position = Vector2(5317, 1509)
+[node name="FridgeMagnet3" parent="ItemGroup" unique_id=1180552384 instance=ExtResource("17_xmmsn")]
+position = Vector2(7916, 1676)
 
-[node name="Scarf" parent="ItemGroup" unique_id=729962055 instance=ExtResource("20_ubfq5")]
-position = Vector2(6033, 1718)
+[node name="Chopsticks2" parent="ItemGroup" unique_id=1092865347 instance=ExtResource("15_km634")]
+position = Vector2(7913, 1475)
+
+[node name="Chocolates" parent="ItemGroup" unique_id=1302583956 instance=ExtResource("13_s2xic")]
+position = Vector2(4000, 1547)
+
+[node name="HoneyJars" parent="ItemGroup" unique_id=1007474316 instance=ExtResource("15_c8ocx")]
+position = Vector2(4457, 1734)
+
+[node name="CannedGoods" parent="ItemGroup" unique_id=831222602 instance=ExtResource("11_fp2uk")]
+position = Vector2(5296, 1572)
 
 [node name="Camera" type="Camera2D" parent="." unique_id=113758559]
 anchor_mode = 0
@@ -417,8 +429,8 @@ zoom = Vector2(0.3, 0.3)
 [node name="Box" type="Sprite2D" parent="." unique_id=296530830]
 z_index = -200
 position = Vector2(2170, 668)
-scale = Vector2(1.504, 1.6)
-texture = ExtResource("19_d0tw8")
+scale = Vector2(1.128, 1.2)
+texture = ExtResource("19_ddpvl")
 
 [node name="BoxTopLeftCorner" type="Node2D" parent="Box" unique_id=151532924]
 top_level = true
@@ -438,15 +450,15 @@ z_index = -1000
 texture_repeat = 2
 position = Vector2(4400, 863)
 scale = Vector2(0.9, 0.9)
-texture = ExtResource("20_1h8sb")
+texture = ExtResource("20_8epf1")
 region_enabled = true
 region_rect = Rect2(0, 0, 20000, 5000)
 
 [node name="Table" type="Sprite2D" parent="." unique_id=1608285561]
 z_index = -150
-position = Vector2(1600, 1659.6852)
-scale = Vector2(1.6666669, 1.3291245)
-texture = ExtResource("21_e008a")
+position = Vector2(1600, 1602.1852)
+scale = Vector2(1.6666669, 1.702501)
+texture = ExtResource("21_nl3jc")
 region_enabled = true
 region_rect = Rect2(0, 771.6155, 1920, 308.38452)
 
