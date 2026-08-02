@@ -10,7 +10,7 @@
 [ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="8_6vxnv"]
 [ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="9_flme0"]
 [ext_resource type="PackedScene" uid="uid://blwn3kp63m1yf" path="res://scenes/item_information.tscn" id="10_0qxt0"]
-[ext_resource type="PackedScene" uid="uid://bxd5oievwqopp" path="res://scenes/items/canned_goods.tscn" id="11_lsxft"]
+[ext_resource type="PackedScene" uid="uid://tcpaxhvkoq8i" path="res://scenes/items/canned_goods.tscn" id="11_lsxft"]
 [ext_resource type="PackedScene" uid="uid://b8ueivqliytm3" path="res://scenes/items/stuffed_animal.tscn" id="12_rfqup"]
 [ext_resource type="PackedScene" uid="uid://bek2aya3xy4hl" path="res://scenes/items/chocolates.tscn" id="13_0y7c6"]
 [ext_resource type="PackedScene" uid="uid://c8m74t5h186ib" path="res://scenes/items/action_figure.tscn" id="14_d1mne"]
@@ -281,9 +281,10 @@ _data = {
 &"exit": SubResource("Animation_jbj1t")
 }
 
-[node name="Level2" type="Node2D" unique_id=1180765290]
+[node name="Level3" type="Node2D" unique_id=1180765290]
 script = ExtResource("1_022ip")
 max_table_pages = 2
+level_title = "Third Box!"
 
 [node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("2_hl16f")]
 
@@ -300,7 +301,7 @@ texture_normal = ExtResource("3_v6yyo")
 offset_left = 206.59
 offset_top = 255.98
 offset_right = 370.59045
-offset_bottom = 335.9803
+offset_bottom = 335.98022
 
 [node name="ResetButton" type="TextureButton" parent="HUD/HBoxContainer" unique_id=1915793373]
 custom_maximum_size = Vector2(80, 80)
@@ -326,7 +327,7 @@ anchor_bottom = 1.0
 offset_left = -920.0
 offset_top = -228.0
 offset_right = -620.0
-offset_bottom = -77.99988
+offset_bottom = -77.99979
 grow_horizontal = 0
 grow_vertical = 0
 scale = Vector2(0.31, 0.31)
@@ -343,7 +344,7 @@ anchor_bottom = 1.0
 offset_left = -136.0
 offset_top = -228.0
 offset_right = 164.00024
-offset_bottom = -77.99945
+offset_bottom = -77.99942
 grow_horizontal = 0
 grow_vertical = 0
 scale = Vector2(0.31, 0.31)

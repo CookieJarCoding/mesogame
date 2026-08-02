@@ -33,7 +33,10 @@ var finished_moving_items: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$Box/BoxTopLeftCorner.position = Vector2(1818 - 70 * (box_width - 5), 316 - 70 * (box_width - 5))
+	if Globals.level_counter < 7:
+		$Box/BoxTopLeftCorner.position = Vector2(1818 - 70 * (box_width - 5), 316 - 70 * (box_width - 5))
+	else:
+		$Box/BoxTopLeftCorner.position = Vector2(2795 - 70 * (box_width - 5), 620 - 70 * (box_width - 5))
 	AudioLibrary.play_music(AudioLibrary.music.GAMEPLAY)
 	
 	finished_moving_items = false
@@ -123,7 +126,7 @@ func _on_item_hovered(item: Node2D) -> void:
 	item_information.update(item)
 	#print($ItemInformation.get_child(0).name)
 
-	item_information.get_child(0).global_position = Vector2(get_global_mouse_position().x*0.3+TOOLTIP_OFFSET.x,get_global_mouse_position().y*0.3+TOOLTIP_OFFSET.y)
+	item_information.get_child(0).global_position = Vector2(get_global_mouse_position().x*camera.zoom.x+TOOLTIP_OFFSET.x,get_global_mouse_position().y*camera.zoom.x+TOOLTIP_OFFSET.y)
 
 func _on_item_unhovered(item: Node2D) -> void:
 	if item == item_explained:
