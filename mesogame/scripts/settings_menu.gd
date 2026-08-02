@@ -19,7 +19,7 @@ func _on_sound_volume_slider_value_changed(value: float) -> void:
 
 func _on_close_button_pressed() -> void:
 	self.visible = false
-	print(self.get_parent())
+	#print(self.get_parent())
 	emit_signal("settings_close")
 
 func _on_pause_button_pressed() -> void:

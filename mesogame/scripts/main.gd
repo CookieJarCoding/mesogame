@@ -102,7 +102,8 @@ func _on_item_packed(item: Node2D) -> void:
 	tally_scores()
 
 func _on_item_removed(item: Node2D) -> void:
-	items_in_grid.erase(item)
+	if item in items_in_grid:
+		items_in_grid.erase(item)
 	item.reparent(item_group)
 	#for k in item_group.get_children():
 		#k.top_level = false
@@ -113,7 +114,7 @@ func _on_item_removed(item: Node2D) -> void:
 func _on_item_hovered(item: Node2D) -> void:
 	item_explained = item
 	$ItemInformation.update(item)
-	print($ItemInformation.get_child(0).name)
+	#print($ItemInformation.get_child(0).name)
 
 	$ItemInformation.get_child(0).global_position = Vector2(get_global_mouse_position().x*0.3+TOOLTIP_OFFSET.x,get_global_mouse_position().y*0.3+TOOLTIP_OFFSET.y)
 
@@ -130,7 +131,7 @@ func tally_scores() -> void:
 			elif item.type not in character.dislikes:
 				character.score += 1
 		character.update_score()
-		print(character.score)
+		#print(character.score)
 
 func check_win() -> bool:
 	# TODO: Loop across the items_in_grid array, to check if the fragile and liquid risks are satisfied

@@ -32,8 +32,6 @@ func _on_settings_button_pressed() -> void:
 	$Logo.visible = false
 
 
-func _physics_process(_delta: float) -> void:
-	print($TransitionRect.color)
 
 
 func _on_settings_close_button_pressed() -> void:

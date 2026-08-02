@@ -61,6 +61,8 @@ func _process(_delta: float) -> void:
 	#if body_ref:
 		#print(body_ref.global_position)
 	
+	print(draggable)
+	
 	is_inside_dropable = false
 	on_table = false
 	var drop_space = null
@@ -112,8 +114,9 @@ func _process(_delta: float) -> void:
 			area.draggable = true
 	
 	if draggable:
-		if clicked:
-			clicked = not clicked
+		if Input.is_action_just_pressed("click"):
+		#if clicked:
+			#clicked = not clicked
 			if body_ref:
 				initialPos = body_ref.global_position - last_area_touched.position
 			else:
@@ -126,8 +129,9 @@ func _process(_delta: float) -> void:
 			#print("boop0")
 		if Input.is_action_pressed("click") and Globals.is_dragging:
 			global_position = get_global_mouse_position() - offset
-		elif released:
-			released = not released
+		elif Input.is_action_just_released("click"):
+		#elif released:
+			#released = not released
 			AudioLibrary.play_sfx(AudioLibrary.sfx.PLOP_FLAT)
 			Globals.is_dragging = false
 			#print("Release")

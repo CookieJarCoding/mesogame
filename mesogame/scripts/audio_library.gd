@@ -17,13 +17,13 @@ func play_sfx(s: sfx):
 	if s == sfx.PAGE_FLIP:
 		$PageFlip.play(0.0)
 	elif s == sfx.PLOP_PLOP:
-		$PlopPlop.play(0.0)
+		$PlopPlop.play(0.15)
 	elif s == sfx.PLOP_FLAT:
-		$Plop_Flat.play(0.0)
+		$Plop_Flat.play(0.5)
 	elif s == sfx.LIQUID:
-		$Liquid.play(0.0)
+		$Liquid.play(2.0)
 	elif s == sfx.FRAGILE:
-		$Fragile.play(0.0)
+		$Fragile.play(0.6)
 	elif s == sfx.QUOTA:
 		$Quota.play(0.0)
 	elif s == sfx.WRONG:
