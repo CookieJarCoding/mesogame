@@ -100,12 +100,12 @@ func _on_item_packed(item: ItemUnit) -> void:
 		items_in_grid.append(item)
 	if not item.is_valid_liquid():
 		AudioLibrary.play_sfx(AudioLibrary.sfx.WRONG)
-		$HUD.display_warning("Needs Dry surroundings!")
+		$HUD.display_warning("Needs DRY surroundings!")
 	elif item.liquid_container:
 		AudioLibrary.play_sfx(AudioLibrary.sfx.LIQUID)
 	if not item.is_valid_fragile():
 		AudioLibrary.play_sfx(AudioLibrary.sfx.WRONG)
-		$HUD.display_warning("Needs Soft surroundings!")
+		$HUD.display_warning("Needs SOFT surroundings!")
 	elif item.fragile:
 		AudioLibrary.play_sfx(AudioLibrary.sfx.FRAGILE)
 

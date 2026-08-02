@@ -30,4 +30,4 @@ load("res:///scenes/levels/level7.tscn"),
 ## NOTE: for debugging purposes
 func _ready() -> void:
 	if OS.is_debug_build():
-		level_counter = 7
+		level_counter = 0
