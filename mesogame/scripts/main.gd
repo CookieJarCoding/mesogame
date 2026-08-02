@@ -21,12 +21,13 @@ var movement_ongoing: bool = false
 var max_table_pages: int = 5
 var finished_moving_items: bool = false
 
-@onready var next_level_btn = $HUD/NextButton
+@onready var next_level_btn = $HUD/HBoxContainer/NextButton
 @onready var camera = $Camera
 @onready var table = $PlaceholderTable
 @onready var item_group = $ItemGroup
 @onready var box = $Box
 @onready var anim = $Anim
+@onready var item_information = $ItemInformation
 
 
 # Called when the node enters the scene tree for the first time.
@@ -115,14 +116,14 @@ func _on_item_removed(item: Node2D) -> void:
 
 func _on_item_hovered(item: Node2D) -> void:
 	item_explained = item
-	$ItemInformation.update(item)
+	item_information.update(item)
 	#print($ItemInformation.get_child(0).name)
 
-	$ItemInformation.get_child(0).global_position = Vector2(get_global_mouse_position().x*0.3+TOOLTIP_OFFSET.x,get_global_mouse_position().y*0.3+TOOLTIP_OFFSET.y)
+	item_information.get_child(0).global_position = Vector2(get_global_mouse_position().x*0.3+TOOLTIP_OFFSET.x,get_global_mouse_position().y*0.3+TOOLTIP_OFFSET.y)
 
 func _on_item_unhovered(item: Node2D) -> void:
 	if item == item_explained:
-		$ItemInformation.visible = false
+		item_information.visible = false
 
 func tally_scores() -> void:
 	for character in CharacterQuota.characters:

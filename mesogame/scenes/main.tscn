@@ -3,7 +3,9 @@
 [ext_resource type="Script" uid="uid://b2monko8e05e7" path="res://scripts/main.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://dp48b0gpq6w0o" path="res://scenes/items/scarf.tscn" id="2_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://c55i08wr8w2f1" path="res://scenes/items/pillow.tscn" id="3_tipki"]
+[ext_resource type="Texture2D" uid="uid://bfkjsqym2yckn" path="res://assets/reset.png" id="4_0ld40"]
 [ext_resource type="PackedScene" uid="uid://c8m74t5h186ib" path="res://scenes/items/action_figure.tscn" id="4_85g3d"]
+[ext_resource type="Texture2D" uid="uid://b33wtvop20utb" path="res://assets/send.png" id="4_dp3eg"]
 [ext_resource type="Texture2D" uid="uid://imdai3c5bn6g" path="res://assets/arrow.png" id="5_a8y0u"]
 [ext_resource type="PackedScene" uid="uid://bo66gsffkyhc5" path="res://scenes/items/honey_jars.tscn" id="6_eb6dy"]
 [ext_resource type="Script" uid="uid://bme42p1aic0si" path="res://scripts/hoverable.gd" id="6_jkv2x"]
@@ -168,33 +170,26 @@ offset_bottom = 63.0
 scale = Vector2(0.585, 0.585)
 texture_normal = ExtResource("7_choun")
 
-[node name="NextButton" type="Button" parent="HUD" unique_id=848256786]
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -656.0
-offset_top = -276.0
-offset_right = -584.0
-offset_bottom = -221.99988
-grow_horizontal = 0
-grow_vertical = 0
-text = "NEXT"
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD" unique_id=1805670119]
+offset_left = 206.59
+offset_top = 255.98
+offset_right = 370.59045
+offset_bottom = 335.98004
 
-[node name="ResetButton" type="Button" parent="HUD" unique_id=386650858]
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -736.0
-offset_top = -276.0
-offset_right = -664.0
-offset_bottom = -221.99988
-grow_horizontal = 0
-grow_vertical = 0
-text = "RESET"
+[node name="ResetButton" type="TextureButton" parent="HUD/HBoxContainer" unique_id=1915793373]
+custom_maximum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 0
+texture_normal = ExtResource("4_0ld40")
+stretch_mode = 5
+
+[node name="NextButton" type="TextureButton" parent="HUD/HBoxContainer" unique_id=2052625345]
+custom_maximum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture_normal = ExtResource("4_dp3eg")
+stretch_mode = 5
 
 [node name="Left" type="TextureButton" parent="HUD" unique_id=1777119729]
 anchors_preset = 3
@@ -251,7 +246,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="SettingsMenu" parent="HUD" unique_id=186484164 instance=ExtResource("7_o6xl0")]
+process_mode = 3
 visible = false
+z_index = 100
+
+[node name="ItemInformation" parent="." unique_id=1848763749 instance=ExtResource("16_jbj1t")]
 
 [node name="ItemGroup" type="Node2D" parent="." unique_id=1210610719]
 position = Vector2(0, 800)
@@ -341,11 +340,9 @@ shape = SubResource("RectangleShape2D_jbj1t")
 libraries/ = SubResource("AnimationLibrary_jkv2x")
 autoplay = &"entrance"
 
-[node name="ItemInformation" parent="." unique_id=1848763749 instance=ExtResource("16_jbj1t")]
-
 [connection signal="pressed" from="HUD/PauseButton" to="HUD/SettingsMenu" method="_on_pause_button_pressed"]
-[connection signal="pressed" from="HUD/NextButton" to="." method="_on_next_button_pressed"]
-[connection signal="pressed" from="HUD/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="HUD/HBoxContainer/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="HUD/HBoxContainer/NextButton" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="HUD/Left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="HUD/Right" to="." method="_on_right_pressed"]
 [connection signal="animation_finished" from="Anim" to="." method="_on_animation_finished"]

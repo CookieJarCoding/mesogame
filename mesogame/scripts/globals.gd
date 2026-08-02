@@ -11,20 +11,20 @@ enum item_types {
 	TECHNOLOGY
 }
 var level_counter: int = 0
-var level_paths: Array[String] = ["fill",
-"res:///scenes/level1.tscn",
-"res:///scenes/level2.tscn",
-"res:///scenes/level3.tscn",
-"res:///scenes/level4.tscn",
-"res:///scenes/level5.tscn",
-"res:///scenes/level6.tscn",
-"res:///scenes/level7.tscn",
-"res:///scenes/level8.tscn",
-"res:///scenes/level9.tscn",
-"res:///scenes/level10.tscn",
-"res:///scenes/level11.tscn",
-"res:///scenes/ending.tscn"]
-
+#var levels: Array[PackedScene] = [preload("res:///scenes/level1.tscn"),
+#preload("res:///scenes/level1.tscn"),
+#preload("res:///scenes/level2.tscn"),
+#preload("res:///scenes/level3.tscn"),
+#preload("res:///scenes/level4.tscn"),
+#preload("res:///scenes/level5.tscn"),
+#preload("res:///scenes/level6.tscn"),
+#preload("res:///scenes/level7.tscn"),
+#preload("res:///scenes/level8.tscn"),
+#preload("res:///scenes/level9.tscn"),
+#preload("res:///scenes/level10.tscn"),
+#preload("res:///scenes/level11.tscn"),
+#preload("res:///scenes/ending.tscn")]
+#
 
 ## NOTE: for debugging purposes
 func _ready() -> void:
