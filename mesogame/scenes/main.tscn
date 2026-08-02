@@ -281,6 +281,8 @@ _data = {
 
 [node name="Main" type="Node2D" unique_id=1180765290]
 script = ExtResource("1_sugp2")
+box_width = 6
+box_height = 6
 level_title = "First Box!"
 
 [node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("7_tipki")]
@@ -425,8 +427,7 @@ scale = Vector2(0.94, 1)
 texture = ExtResource("7_85g3d")
 
 [node name="BoxTopLeftCorner" type="Node2D" parent="Box" unique_id=151532924]
-top_level = true
-position = Vector2(1818, 316)
+position = Vector2(-377.175, -352.79)
 
 [node name="PlaceholderTable" type="ColorRect" parent="." unique_id=867550278]
 visible = false
