@@ -6,6 +6,20 @@
 [node name="AudioLibrary" type="Node" unique_id=413458466]
 script = ExtResource("1_3avnm")
 
+[node name="PageFlip" type="AudioStreamPlayer" parent="." unique_id=1675184931]
+
+[node name="PlopPlop" type="AudioStreamPlayer" parent="." unique_id=38154905]
+
+[node name="Plop_Flat" type="AudioStreamPlayer" parent="." unique_id=1471542123]
+
+[node name="Liquid" type="AudioStreamPlayer" parent="." unique_id=1073361263]
+
+[node name="Fragile" type="AudioStreamPlayer" parent="." unique_id=1478902245]
+
+[node name="Quota" type="AudioStreamPlayer" parent="." unique_id=752405464]
+
+[node name="Wrong" type="AudioStreamPlayer" parent="." unique_id=1945519941]
+
 [node name="Swoosh" type="AudioStreamPlayer" parent="." unique_id=1132213815]
 stream = ExtResource("2_612mp")
 volume_db = 2.0
