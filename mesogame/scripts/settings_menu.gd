@@ -18,6 +18,7 @@ func _on_sound_volume_slider_value_changed(value: float) -> void:
 	GameSettings.sound_volume = value
 
 func _on_close_button_pressed() -> void:
+	AudioLibrary.play_sfx(AudioLibrary.sfx.PAGE_FLIP)
 	self.visible = false
 	get_tree().paused = false
 	#print(self.get_parent())
@@ -26,8 +27,10 @@ func _on_close_button_pressed() -> void:
 func _on_pause_button_pressed() -> void:
 	get_tree().paused = not get_tree().paused
 	self.visible = not self.visible
+	AudioLibrary.play_sfx(AudioLibrary.sfx.PAGE_FLIP)
 
 func _on_quit_button_pressed() -> void:
+	AudioLibrary.play_sfx(AudioLibrary.sfx.PAGE_FLIP)
 	if Globals.level_counter > 0:
 		Globals.level_counter = 0
 		get_tree().paused = false

@@ -27,17 +27,19 @@ func _process(delta: float) -> void:
 
 
 func _on_settings_button_pressed() -> void:
+	AudioLibrary.play_sfx(AudioLibrary.sfx.PAGE_FLIP)
 	$SettingsMenu.visible = true
 	$MainMenu.visible = false
 	$Logo.visible = false
 
 func _on_settings_close_button_pressed() -> void:
+	AudioLibrary.play_sfx(AudioLibrary.sfx.PAGE_FLIP)
 	$MainMenu.visible = true
 	$Logo.visible = true
 
 
 func _on_play_button_pressed() -> void:
-	# tween here involving $TransitionRect
+	AudioLibrary.play_sfx(AudioLibrary.sfx.PAGE_FLIP)
 	var fade_tween = create_tween()
 	fade_tween.tween_property($TransitionRect, "color:a", 1, 5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_EXPO)
 	## NOTE: For dummy timing purposes, don't delete
@@ -53,4 +55,5 @@ func complete_transition() -> void:
 
 
 func _on_quit_button_pressed() -> void:
+	AudioLibrary.play_sfx(AudioLibrary.sfx.PAGE_FLIP)
 	get_tree().quit()

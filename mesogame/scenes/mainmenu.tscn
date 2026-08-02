@@ -98,100 +98,100 @@ offset_bottom = 40.0
 
 [node name="B" type="RichTextLabel" parent="Logo" unique_id=2025730266]
 layout_mode = 0
-offset_left = 32.0
-offset_top = 98.0
-offset_right = 92.0
-offset_bottom = 170.0
+offset_left = 251.0
+offset_top = 19.0
+offset_right = 311.0
+offset_bottom = 91.0
 theme_override_fonts/normal_font = ExtResource("2_7yvfd")
 theme_override_font_sizes/normal_font_size = 44
 text = "b"
 
 [node name="A" type="RichTextLabel" parent="Logo" unique_id=25681036]
 layout_mode = 0
-offset_left = 64.105
-offset_top = 98.0
-offset_right = 124.10501
-offset_bottom = 170.0
+offset_left = 283.105
+offset_top = 8.0
+offset_right = 343.105
+offset_bottom = 80.0
 theme_override_fonts/normal_font = ExtResource("2_7yvfd")
 theme_override_font_sizes/normal_font_size = 44
 text = "A"
 
 [node name="L" type="RichTextLabel" parent="Logo" unique_id=1673654344]
 layout_mode = 0
-offset_left = 105.0
-offset_top = 98.0
-offset_right = 165.0
-offset_bottom = 170.0
+offset_left = 324.0
+offset_top = 8.0
+offset_right = 384.0
+offset_bottom = 80.0
 theme_override_fonts/normal_font = ExtResource("2_7yvfd")
 theme_override_font_sizes/normal_font_size = 44
 text = "L"
 
 [node name="I" type="RichTextLabel" parent="Logo" unique_id=733684283]
 layout_mode = 0
-offset_left = 135.34
-offset_top = 98.0
-offset_right = 195.33997
-offset_bottom = 170.0
+offset_left = 354.34
+offset_top = 8.0
+offset_right = 414.33997
+offset_bottom = 80.0
 theme_override_fonts/normal_font = ExtResource("2_7yvfd")
 theme_override_font_sizes/normal_font_size = 44
 text = "I"
 
 [node name="K" type="RichTextLabel" parent="Logo" unique_id=1466514123]
 layout_mode = 0
-offset_left = 156.055
-offset_top = 95.015
-offset_right = 216.05492
-offset_bottom = 167.01505
+offset_left = 375.055
+offset_top = 11.014999
+offset_right = 435.05493
+offset_bottom = 83.015045
 theme_override_fonts/normal_font = ExtResource("2_7yvfd")
 theme_override_font_sizes/normal_font_size = 44
 text = "K"
 
 [node name="B2" type="RichTextLabel" parent="Logo" unique_id=1422021046]
 layout_mode = 0
-offset_left = 196.0
-offset_top = 98.985
-offset_right = 256.0
-offset_bottom = 170.985
+offset_left = 247.0
+offset_top = 100.985
+offset_right = 307.0
+offset_bottom = 172.985
 theme_override_fonts/normal_font = ExtResource("2_7yvfd")
 theme_override_font_sizes/normal_font_size = 44
 text = "b"
 
 [node name="A2" type="RichTextLabel" parent="Logo" unique_id=30517917]
 layout_mode = 0
-offset_left = 228.10501
-offset_top = 98.985
-offset_right = 288.105
-offset_bottom = 170.985
+offset_left = 279.105
+offset_top = 100.985
+offset_right = 339.105
+offset_bottom = 172.985
 theme_override_fonts/normal_font = ExtResource("2_7yvfd")
 theme_override_font_sizes/normal_font_size = 44
 text = "A"
 
 [node name="Y" type="RichTextLabel" parent="Logo" unique_id=1188322806]
 layout_mode = 0
-offset_left = 263.0
-offset_top = 98.985
-offset_right = 323.0
-offset_bottom = 170.985
+offset_left = 314.0
+offset_top = 100.985
+offset_right = 374.0
+offset_bottom = 172.985
 theme_override_fonts/normal_font = ExtResource("2_7yvfd")
 theme_override_font_sizes/normal_font_size = 44
 text = "Y"
 
 [node name="A3" type="RichTextLabel" parent="Logo" unique_id=2036016635]
 layout_mode = 0
-offset_left = 299.33997
-offset_top = 98.985
-offset_right = 359.33994
-offset_bottom = 170.985
+offset_left = 350.33997
+offset_top = 100.985
+offset_right = 410.33994
+offset_bottom = 172.985
 theme_override_fonts/normal_font = ExtResource("2_7yvfd")
 theme_override_font_sizes/normal_font_size = 44
 text = "A"
 
 [node name="N" type="RichTextLabel" parent="Logo" unique_id=1577183043]
 layout_mode = 0
-offset_left = 334.05505
-offset_top = 96.0
-offset_right = 394.055
-offset_bottom = 168.00005
+offset_left = 385.05505
+offset_top = 98.0
+offset_right = 445.055
+offset_bottom = 170.00005
 theme_override_fonts/normal_font = ExtResource("2_7yvfd")
 theme_override_font_sizes/normal_font_size = 44
 text = "N"

@@ -279,7 +279,7 @@ _data = {
 &"exit": SubResource("Animation_jbj1t")
 }
 
-[node name="Level1" type="Node2D" unique_id=1180765290]
+[node name="DebugRoom" type="Node2D" unique_id=1180765290]
 script = ExtResource("1_gu7rv")
 level_title = "Debug Room!"
 

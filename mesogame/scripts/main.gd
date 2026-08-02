@@ -149,6 +149,7 @@ func check_win() -> bool:
 
 
 func _on_next_button_pressed() -> void:
+	AudioLibrary.play_sfx(AudioLibrary.sfx.PAGE_FLIP)
 	anim.play("exit")
 	$HUD.play_exit()
 

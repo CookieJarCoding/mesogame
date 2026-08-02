@@ -11,7 +11,8 @@ enum item_types {
 	TECHNOLOGY
 }
 var level_counter: int = 0
-#var levels: Array[PackedScene] = [preload("res:///scenes/main.tscn"),
+var levels: Array[PackedScene] = [preload("res:///scenes/main.tscn"),
+preload("res:///scenes/levels/debug_room.tscn"),
 #preload("res:///scenes/levels/level1.tscn"),
 #preload("res:///scenes/levels/level2.tscn"),
 #preload("res:///scenes/levels/level3.tscn"),
@@ -23,10 +24,11 @@ var level_counter: int = 0
 #preload("res:///scenes/levels/level9.tscn"),
 #preload("res:///scenes/levels/level10.tscn"),
 #preload("res:///scenes/levels/level11.tscn"),
-#preload("res:///scenes/ending.tscn")]
+#preload("res:///scenes/ending.tscn")
+]
 #
 
 ## NOTE: for debugging purposes
 func _ready() -> void:
 	if OS.is_debug_build():
-		level_counter = 1
+		level_counter = 0
