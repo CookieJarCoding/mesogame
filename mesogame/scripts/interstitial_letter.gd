@@ -39,7 +39,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Globals.level_counter < 5:
-		labelB.text = letters[Globals.level_counter]
+		labelB.text = letters[Globals.level_counter/3+1] # CHECK
 	else:
 		get_tree().quit()
 

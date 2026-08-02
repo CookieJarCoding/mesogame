@@ -10,7 +10,7 @@ enum item_types {
 	APPAREL,
 	TECHNOLOGY
 }
-var level_counter = 1
+var level_counter: int = 1
 var level_paths: Array[String] = ["fill",
 "res:///scenes/level1.tscn",
 "res:///scenes/level2.tscn",

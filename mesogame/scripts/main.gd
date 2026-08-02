@@ -60,6 +60,9 @@ func _ready() -> void:
 		#[]
 	#)
 
+	if Globals.level_counter == 1 or Globals.level_counter == 9 or Globals.level_counter > 10:
+		set_handle_with_care()
+
 
 #func _process(_delta: float) -> void:
 	#if Input.is_action_just_pressed("left") or Input.is_action_just_pressed("ui_left") and table_pos > 0 and not Input.is_action_pressed("click"):
@@ -133,12 +136,15 @@ func check_win() -> bool:
 
 
 func _on_next_button_pressed() -> void:
-	Globals.level_counter +=1
+	Globals.level_counter += 1
 	print(Globals.level_counter)
-	if Globals.level_counter > 4:
-		get_tree().change_scene_to_file("res:///scenes/ending.tscn")
-	else:
-		get_tree().change_scene_to_file("res:///scenes/interstitial_letter.tscn")
+
+	# CHECK IF THIS WORKS SUCH THAT THESE ARE SPACED OUT EVERY THREE LEVELS
+	if Globals.level_counter % 3 == 1:
+		if Globals.level_counter / 3 == 4: 
+			get_tree().change_scene_to_file("res:///scenes/ending.tscn")
+		else:
+			get_tree().change_scene_to_file("res:///scenes/interstitial_letter.tscn")
 
 
 func move_table(pos: int) -> void:
@@ -164,3 +170,8 @@ func _on_right_pressed() -> void:
 		movement_ongoing = true
 		table_pos += 1
 		move_table(table_pos)
+
+func set_handle_with_care() -> void:
+	for item in $ItemGroup.get_children():
+		if not item.soft:
+			item.fragile = true
