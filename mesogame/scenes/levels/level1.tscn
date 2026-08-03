@@ -329,7 +329,6 @@ position = Vector2(1999, 1539)
 
 [node name="FridgeMagnet" parent="ItemGroup" unique_id=765727931 instance=ExtResource("16_6i0tl")]
 position = Vector2(1052, 1525)
-item_description = "flavor text, maybe"
 
 [node name="Shirt" parent="ItemGroup" unique_id=1563393135 instance=ExtResource("17_gvm5i")]
 position = Vector2(334, 1682)

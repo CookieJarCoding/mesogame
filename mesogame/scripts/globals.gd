@@ -49,4 +49,4 @@ func load_data():
 		var file = FileAccess.open(save_path, FileAccess.READ)
 		level_counter = file.get_var(level_counter)
 	else:
-		level_counter = 11
+		level_counter = 0

@@ -3,10 +3,9 @@
 [ext_resource type="Script" uid="uid://co7d2ugo4flyq" path="res://scripts/settings_menu.gd" id="1_5p8wc"]
 [ext_resource type="Texture2D" uid="uid://dqd68yvky1kgf" path="res://assets/whiteboard.png" id="1_6wm04"]
 [ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="3_f4mfi"]
-[ext_resource type="Texture2D" uid="uid://dpbh2r6ju1l5i" path="res://assets/slider_grabber_vector_small.svg" id="4_f4mfi"]
 [ext_resource type="Texture2D" uid="uid://b3mwkqgibacbu" path="res://assets/ticks_thin.png" id="5_es4n0"]
 [ext_resource type="Texture2D" uid="uid://bt1bk1g0pfovp" path="res://assets/checked_button_cropped32.png" id="6_gis3k"]
-[ext_resource type="Texture2D" uid="uid://cfsqes5dkau46" path="res://assets/slider_grabber_small.png" id="7_83j8s"]
+[ext_resource type="Texture2D" uid="uid://dpbh2r6ju1l5i" path="res://assets/slider_grabber_vector_small.svg" id="7_83j8s"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vcm7i"]
 texture = ExtResource("1_6wm04")
@@ -145,9 +144,9 @@ custom_minimum_size = Vector2(0, 60)
 custom_maximum_size = Vector2(-1, 60)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_icons/grabber = ExtResource("4_f4mfi")
-theme_override_icons/grabber_highlight = ExtResource("4_f4mfi")
-theme_override_icons/grabber_disabled = ExtResource("4_f4mfi")
+theme_override_icons/grabber = ExtResource("7_83j8s")
+theme_override_icons/grabber_highlight = ExtResource("7_83j8s")
+theme_override_icons/grabber_disabled = ExtResource("7_83j8s")
 theme_override_icons/tick = ExtResource("5_es4n0")
 theme_override_styles/slider = SubResource("StyleBoxFlat_r6d6q")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_syy7v")
@@ -180,9 +179,9 @@ custom_minimum_size = Vector2(0, 60)
 custom_maximum_size = Vector2(-1, 604)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_icons/grabber = ExtResource("4_f4mfi")
-theme_override_icons/grabber_highlight = ExtResource("4_f4mfi")
-theme_override_icons/grabber_disabled = ExtResource("4_f4mfi")
+theme_override_icons/grabber = ExtResource("7_83j8s")
+theme_override_icons/grabber_highlight = ExtResource("7_83j8s")
+theme_override_icons/grabber_disabled = ExtResource("7_83j8s")
 theme_override_icons/tick = ExtResource("5_es4n0")
 theme_override_styles/slider = SubResource("StyleBoxFlat_r6d6q")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_gjs24")
@@ -208,7 +207,7 @@ theme_override_fonts/font = ExtResource("3_f4mfi")
 theme_override_font_sizes/font_size = 26
 theme_override_icons/checked = ExtResource("6_gis3k")
 theme_override_icons/unchecked = ExtResource("7_83j8s")
-text = "Show Item Spaces"
+text = "   Show Item Spaces"
 expand_icon = true
 
 [node name="CloseButton" type="Button" parent="MainGrid" unique_id=1777694714]
