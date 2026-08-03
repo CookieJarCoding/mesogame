@@ -37,7 +37,7 @@ func _ready() -> void:
 	#Globals.load_data()
 	#if OS.is_debug_build():
 		#Globals.level_counter = 1
-	
+	#
 	if Globals.level_counter >= 11:
 		$Box/BoxTopLeftCorner.position = Vector2(1818 - 70 * (box_width - 5), 376 - 70 * (box_width - 5))
 	else:
@@ -51,6 +51,7 @@ func _ready() -> void:
 	$HUD/LevelTitle.text = level_title
 	$HUD.connect("reset_level", _on_reset_button_pressed)
 	$HUD.connect("next_level", _on_next_button_pressed)
+	$HUD.flash_save_icon()
 	
 	for i in range(box_height):
 		for j in range(box_width):
@@ -67,6 +68,7 @@ func _ready() -> void:
 		item.unhovered.connect(_on_item_unhovered)
 
 	hud.set_handle_with_care_visibility(false)
+	
 
 	# func create_character(char_name: String, score: int, quota: int, likes: Array, dislikes: Array)
 	### NOTE: Max two likes/dislikes

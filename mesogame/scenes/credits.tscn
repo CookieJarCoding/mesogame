@@ -26,8 +26,13 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0.16470589, 0.39215687, 0.4862745, 1)
 theme_override_fonts/normal_font = ExtResource("2_mah5v")
-text = "i mean you should probably decide what exactly this says randolf LOL
-"
+theme_override_font_sizes/normal_font_size = 33
+text = "Director - CookieJar
+Artists and Illustrators - zzzzzzzzzz10, glo_32
+SFX and Music - Jose600100
+Programmers - CookieJar, kskyeddr, theflagrantwing
+
+Thanks for playing! <33"
 horizontal_alignment = 1
 vertical_alignment = 1
 

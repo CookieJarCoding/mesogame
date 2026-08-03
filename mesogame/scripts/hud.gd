@@ -56,3 +56,9 @@ func set_next_level(state: bool) -> void:
 
 func set_handle_with_care_visibility(visibility: bool) -> void:
 	handle_with_care.visible = visibility
+
+
+func flash_save_icon() -> void:
+	$SaveIcon.modulate.a = 1
+	var tween = create_tween()
+	tween.tween_property($SaveIcon, "modulate:a", 0, 2).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_CUBIC)

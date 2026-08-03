@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://dmyyw6cj5dyru"]
+[gd_scene format=3 uid="uid://ccc2fq0ikt0cr"]
 
-[ext_resource type="Script" uid="uid://cyclavvga15jj" path="res://scripts/level_scripts/level_9.gd" id="1_7kkvr"]
+[ext_resource type="Script" uid="uid://ccuuvq6tnsh6w" path="res://scripts/level_scripts/level_8.gd" id="1_7kkvr"]
 [ext_resource type="PackedScene" uid="uid://c4yjamtvwcpmh" path="res://scenes/hud.tscn" id="2_7kkvr"]
 [ext_resource type="Texture2D" uid="uid://dyevrv6ok3m4q" path="res://assets/pause.png" id="3_iiwue"]
 [ext_resource type="Texture2D" uid="uid://imdai3c5bn6g" path="res://assets/arrow.png" id="6_75nnh"]
@@ -17,9 +17,9 @@
 [ext_resource type="PackedScene" uid="uid://vbqdq5g66g6o" path="res://scenes/items/camera_90ccw.tscn" id="16_k12p4"]
 [ext_resource type="PackedScene" uid="uid://c8m74t5h186ib" path="res://scenes/items/action_figure.tscn" id="16_wgfvi"]
 [ext_resource type="Texture2D" uid="uid://ck8ks4oyt60n5" path="res://assets/box_thin.png" id="17_k12p4"]
-[ext_resource type="PackedScene" uid="uid://c55i08wr8w2f1" path="res://scenes/items/pillow.tscn" id="17_xr5re"]
 [ext_resource type="PackedScene" uid="uid://bo66gsffkyhc5" path="res://scenes/items/honey_jars.tscn" id="18_o4j2a"]
 [ext_resource type="PackedScene" uid="uid://c1amob5v683j7" path="res://scenes/items/canned_goods_90.tscn" id="19_7kkvr"]
+[ext_resource type="PackedScene" uid="uid://b0nog3nlf2vsj" path="res://scenes/items/pillow_90.tscn" id="19_iiwue"]
 [ext_resource type="Texture2D" uid="uid://su86w6p5cupc" path="res://assets/tile_bg.png" id="20_6ktn0"]
 [ext_resource type="Texture2D" uid="uid://b6fgaeuibgs2t" path="res://assets/table.png" id="21_kmpa7"]
 
@@ -359,11 +359,11 @@ position = Vector2(5267, 1440)
 [node name="Scarf" parent="ItemGroup" unique_id=1158260323 instance=ExtResource("9_hw1kd")]
 position = Vector2(2490, 1772)
 
-[node name="Pillow" parent="ItemGroup" unique_id=705416440 instance=ExtResource("17_xr5re")]
-position = Vector2(927, 1617)
-
 [node name="CannedGoods90" parent="ItemGroup" unique_id=1921066332 instance=ExtResource("19_7kkvr")]
 position = Vector2(4851, 1738)
+
+[node name="Pillow" parent="ItemGroup" unique_id=705416440 instance=ExtResource("19_iiwue")]
+position = Vector2(838, 1535)
 
 [node name="Camera" type="Camera2D" parent="." unique_id=113758559]
 anchor_mode = 0

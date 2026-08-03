@@ -23,7 +23,6 @@ boot_splash/minimum_display_time=3000
 
 global="*uid://bweaojkgobbgi"
 Globals="*uid://bweaojkgobbgi"
-GameSettings="*uid://c1pv43urt6ofe"
 AudioLibrary="*uid://xbwlt0vjqnn1"
 
 [display]

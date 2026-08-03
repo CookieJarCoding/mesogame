@@ -17,3 +17,5 @@ func _ready() -> void:
 		[Globals.item_types.TOYS],
 		"res://assets/characters/ange.png"
 	)
+	
+	Globals.level_counter = 11

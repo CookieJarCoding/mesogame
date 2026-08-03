@@ -17,3 +17,7 @@ func _ready() -> void:
 		[Globals.item_types.LUXURY],
 		"res://assets/characters/alfred.png"
 	)
+	
+	set_handle_with_care()
+	
+	Globals.level_counter = 12

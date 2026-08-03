@@ -9,3 +9,4 @@ func _ready() -> void:
 		[],
 		"res://assets/characters/joanne.png"
 	)
+	Globals.level_counter = 1

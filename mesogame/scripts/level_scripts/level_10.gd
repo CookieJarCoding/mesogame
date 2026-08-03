@@ -16,3 +16,5 @@ func _ready() -> void:
 	)
 	
 	set_handle_with_care()
+	
+	Globals.level_counter = 10

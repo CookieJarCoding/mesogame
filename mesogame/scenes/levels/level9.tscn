@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bh8300pr4i3hp"]
 
-[ext_resource type="Script" uid="uid://ccuuvq6tnsh6w" path="res://scripts/level_scripts/level_8.gd" id="1_5v622"]
+[ext_resource type="Script" uid="uid://cyclavvga15jj" path="res://scripts/level_scripts/level_9.gd" id="1_8x1us"]
 [ext_resource type="PackedScene" uid="uid://c4yjamtvwcpmh" path="res://scenes/hud.tscn" id="2_7kkvr"]
 [ext_resource type="Texture2D" uid="uid://dyevrv6ok3m4q" path="res://assets/pause.png" id="3_iiwue"]
 [ext_resource type="Texture2D" uid="uid://imdai3c5bn6g" path="res://assets/arrow.png" id="6_75nnh"]
@@ -246,11 +246,11 @@ _data = {
 }
 
 [node name="Level9" type="Node2D" unique_id=1180765290]
-script = ExtResource("1_5v622")
+script = ExtResource("1_8x1us")
 box_width = 8
 box_height = 8
 max_table_pages = 4
-level_title = "Good fun!"
+level_title = "Good fun..."
 
 [node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("2_7kkvr")]
 

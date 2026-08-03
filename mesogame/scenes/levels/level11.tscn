@@ -8,7 +8,7 @@
 [ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="6_bsp33"]
 [ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="7_b8h5j"]
 [ext_resource type="PackedScene" uid="uid://blwn3kp63m1yf" path="res://scenes/item_information.tscn" id="8_7iyh2"]
-[ext_resource type="PackedScene" uid="uid://m2p5xgunqcah" path="res://scenes/items/luxury_bag.tscn" id="8_d31ew"]
+[ext_resource type="PackedScene" uid="uid://bvmpry8rndv88" path="res://scenes/items/luxury_bag.tscn" id="8_d31ew"]
 [ext_resource type="PackedScene" uid="uid://vk5qd6uuuv4b" path="res://scenes/items/action_figure_90.tscn" id="10_dmode"]
 [ext_resource type="PackedScene" uid="uid://b8ueivqliytm3" path="res://scenes/items/stuffed_animal.tscn" id="11_2t5od"]
 [ext_resource type="PackedScene" uid="uid://cxpfw407fmcbe" path="res://scenes/items/chopsticks_90.tscn" id="13_s42k0"]

@@ -32,8 +32,10 @@ func _process(delta: float) -> void:
 	delta_counter += delta
 	if Globals.level_counter == 0:
 		$MainMenu/ClearButton.visible = false
+		$MainMenu/PlayButton/Text.text = "PLAY"
 	else:
 		$MainMenu/ClearButton.visible = true
+		$MainMenu/PlayButton/Text.text = "CONTINUE"
 
 
 func _on_settings_button_pressed() -> void:

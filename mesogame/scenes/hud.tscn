@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bfkjsqym2yckn" path="res://assets/reset.png" id="4_uo2fv"]
 [ext_resource type="Texture2D" uid="uid://b33wtvop20utb" path="res://assets/send.png" id="5_047uy"]
 [ext_resource type="Texture2D" uid="uid://bo5d88wlhjs8g" path="res://assets/handle_with_care.png" id="6_047uy"]
+[ext_resource type="Texture2D" uid="uid://dr4y0lst3c7rn" path="res://assets/save_icon.png" id="7_5pdws"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_es4n0"]
 texture = ExtResource("6_047uy")
@@ -187,6 +188,23 @@ autoplay = &"hud_entrance"
 [node name="WarningTimer" type="Timer" parent="." unique_id=1870999160]
 wait_time = 5.0
 one_shot = true
+
+[node name="SaveIcon" type="TextureRect" parent="." unique_id=97167577]
+modulate = Color(1, 1, 1, 0)
+custom_maximum_size = Vector2(48, 48)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -302.0
+offset_top = -302.0
+offset_right = -23.0
+offset_bottom = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+texture = ExtResource("7_5pdws")
 
 [connection signal="pressed" from="Panel/HBoxContainer/ResetButton" to="." method="_on_reset_button_pressed"]
 [connection signal="pressed" from="Panel/HBoxContainer/NextButton" to="." method="_on_next_button_pressed"]

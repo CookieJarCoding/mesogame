@@ -258,6 +258,7 @@ scale = Vector2(0.585, 0.585)
 texture_normal = ExtResource("3_v6yyo")
 
 [node name="Left" type="TextureButton" parent="HUD" unique_id=1777119729]
+visible = false
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
