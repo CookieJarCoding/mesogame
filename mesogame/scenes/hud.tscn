@@ -168,6 +168,11 @@ size_flags_vertical = 0
 texture_normal = ExtResource("5_047uy")
 stretch_mode = 5
 
+[node name="Panel2" type="Panel" parent="." unique_id=795946074]
+offset_left = 390.0
+offset_right = 430.0
+offset_bottom = 40.0
+
 [node name="Anim" type="AnimationPlayer" parent="." unique_id=1992133697]
 libraries/ = SubResource("AnimationLibrary_6fi6k")
 autoplay = &"hud_entrance"
