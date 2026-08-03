@@ -29,3 +29,19 @@ collide_with_areas = true
 position = Vector2(64, 0)
 target_position = Vector2(50, 0)
 collide_with_areas = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1373979879]
+custom_minimum_size = Vector2(128, 128)
+custom_maximum_size = Vector2(128, -1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.39607844, 0.44313726, 0.98039216, 0.18431373)

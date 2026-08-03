@@ -31,6 +31,7 @@ func _process(_delta: float) -> void:
 			hovered_over = false
 			#draggable = false
 			#scale = Vector2(1, 1)
+	$ColorRect.visible = hovered_over
 
 func _physics_process(_delta: float) -> void:
 	var item_parent = self.get_parent().get_parent()
