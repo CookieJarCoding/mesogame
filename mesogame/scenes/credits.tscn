@@ -1,7 +1,63 @@
 [gd_scene format=3 uid="uid://ddpu4iqntbfno"]
 
+[ext_resource type="Texture2D" uid="uid://bceume708lr4x" path="res://assets/Button.png" id="1_0bpdh"]
+[ext_resource type="Script" uid="uid://diklsdnr0w0li" path="res://scripts/credits.gd" id="1_8gwij"]
+[ext_resource type="FontFile" uid="uid://c8qs47p5ijr6i" path="res://fonts/HappyTime.otf" id="2_mah5v"]
+[ext_resource type="Script" uid="uid://bme42p1aic0si" path="res://scripts/hoverable.gd" id="4_kyhnv"]
+[ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="5_ooihk"]
+
 [node name="Credits" type="Node2D" unique_id=812290645]
+script = ExtResource("1_8gwij")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=641536931]
+offset_right = 960.0
+offset_bottom = 540.0
+color = Color(0.57254905, 0.77254903, 0.85882354, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1877824939]
 offset_right = 960.0
 offset_bottom = 540.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2009920543]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=209195237]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.16470589, 0.39215687, 0.4862745, 1)
+theme_override_fonts/normal_font = ExtResource("2_mah5v")
+text = "i mean you should probably decide what exactly this says randolf LOL
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackToMenu" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=1719597151]
+custom_maximum_size = Vector2(225, 92.22)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture_normal = ExtResource("1_0bpdh")
+stretch_mode = 0
+script = ExtResource("4_kyhnv")
+
+[node name="Text" type="RichTextLabel" parent="MarginContainer/VBoxContainer/BackToMenu" unique_id=2090083931]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.5
+offset_top = -26.0
+offset_right = 88.5
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.19607843, 0.16470589, 0.12156863, 1)
+theme_override_fonts/normal_font = ExtResource("5_ooihk")
+text = "BACK TO MENU"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BackToMenu" to="." method="_on_back_to_menu_pressed"]

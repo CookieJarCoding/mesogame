@@ -11,9 +11,6 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_quit_to_menu_button_pressed() -> void:
-	Globals.level_counter = 1
-	Globals.has_finished = true
+func _on_back_to_menu_pressed() -> void:
 	AudioLibrary.play_sfx(AudioLibrary.sfx.PAGE_FLIP)
-	get_tree().change_scene_to_file("res:///scenes/mainmenu.tscn")
-	
+	get_tree().change_scene_to_file("res://scenes/mainmenu.tscn")
