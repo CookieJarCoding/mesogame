@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dmyyw6cj5dyru"]
+[gd_scene format=3 uid="uid://bh8300pr4i3hp"]
 
 [ext_resource type="Script" uid="uid://ccuuvq6tnsh6w" path="res://scripts/level_scripts/level_8.gd" id="1_5v622"]
 [ext_resource type="PackedScene" uid="uid://c4yjamtvwcpmh" path="res://scenes/hud.tscn" id="2_7kkvr"]
@@ -19,7 +19,6 @@
 [ext_resource type="Texture2D" uid="uid://ck8ks4oyt60n5" path="res://assets/box_thin.png" id="17_k12p4"]
 [ext_resource type="PackedScene" uid="uid://c55i08wr8w2f1" path="res://scenes/items/pillow.tscn" id="17_xr5re"]
 [ext_resource type="Texture2D" uid="uid://su86w6p5cupc" path="res://assets/tile_bg.png" id="20_6ktn0"]
-[ext_resource type="PackedScene" uid="uid://bek2aya3xy4hl" path="res://scenes/items/chocolates.tscn" id="21_1dg3w"]
 [ext_resource type="Texture2D" uid="uid://b6fgaeuibgs2t" path="res://assets/table.png" id="21_kmpa7"]
 [ext_resource type="PackedScene" uid="uid://bxd5oievwqopp" path="res://scenes/items/canned_goods.tscn" id="22_k12p4"]
 
@@ -373,9 +372,6 @@ position = Vector2(8320, 1683)
 
 [node name="Pillow" parent="ItemGroup" unique_id=1484520604 instance=ExtResource("17_xr5re")]
 position = Vector2(8555, 1593)
-
-[node name="Chocolates" parent="ItemGroup" unique_id=109129520 instance=ExtResource("21_1dg3w")]
-position = Vector2(928, 1594)
 
 [node name="CannedGoods" parent="ItemGroup" unique_id=1445272233 instance=ExtResource("22_k12p4")]
 position = Vector2(1935, 1590)

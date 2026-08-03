@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://b0nog3nlf2vsj" path="res://scenes/items/pillow_90.tscn" id="14_21itu"]
 [ext_resource type="PackedScene" uid="uid://b8ueivqliytm3" path="res://scenes/items/stuffed_animal.tscn" id="14_i6on5"]
 [ext_resource type="PackedScene" uid="uid://duc7f3cqg1p7h" path="res://scenes/items/fridge_magnet.tscn" id="15_c8gdp"]
-[ext_resource type="PackedScene" uid="uid://vbqdq5g66g6o" path="res://scenes/items/camera_90ccw.tscn" id="16_w4xpj"]
+[ext_resource type="PackedScene" uid="uid://cpqhd5ebxd1vf" path="res://scenes/items/camera_180.tscn" id="16_u8rrv"]
 [ext_resource type="PackedScene" uid="uid://doktiklc7r5d2" path="res://scenes/items/backpack_flipped_180.tscn" id="17_sa2bg"]
 [ext_resource type="PackedScene" uid="uid://c8m74t5h186ib" path="res://scenes/items/action_figure.tscn" id="17_uh1vt"]
 [ext_resource type="PackedScene" uid="uid://c55i08wr8w2f1" path="res://scenes/items/pillow.tscn" id="18_14mch"]
@@ -352,9 +352,6 @@ position = Vector2(3841, 1583)
 [node name="Pillow2" parent="ItemGroup" unique_id=165083245 instance=ExtResource("18_14mch")]
 position = Vector2(4344, 1665)
 
-[node name="Camera" parent="ItemGroup" unique_id=578169863 instance=ExtResource("16_w4xpj")]
-position = Vector2(867, 1535)
-
 [node name="Backpack2" parent="ItemGroup" unique_id=830383917 instance=ExtResource("17_sa2bg")]
 position = Vector2(4696, 1708)
 
@@ -384,6 +381,9 @@ position = Vector2(445, 1674)
 
 [node name="CannedGoods" parent="ItemGroup" unique_id=1524823080 instance=ExtResource("20_ipfcg")]
 position = Vector2(1815, 1668)
+
+[node name="Camera" parent="ItemGroup" unique_id=1482752892 instance=ExtResource("16_u8rrv")]
+position = Vector2(785, 1385)
 
 [node name="Camera" type="Camera2D" parent="." unique_id=113758559]
 anchor_mode = 0
