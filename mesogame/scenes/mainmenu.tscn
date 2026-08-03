@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bceume708lr4x" path="res://assets/Button.png" id="2_dfy5j"]
 [ext_resource type="Script" uid="uid://bme42p1aic0si" path="res://scripts/hoverable.gd" id="3_7yvfd"]
 [ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="3_dfy5j"]
+[ext_resource type="Texture2D" uid="uid://drjinwwu6r0e6" path="res://assets/box_icon.png" id="7_85riq"]
 [ext_resource type="Texture2D" uid="uid://d2nm5gpwqde0i" path="res://assets/main_menu_image.png" id="7_dfy5j"]
 [ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="8_85riq"]
 
@@ -156,6 +157,15 @@ anchors_preset = 0
 offset_left = 500.0
 offset_right = 540.0
 offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Logo" unique_id=1286610019]
+layout_mode = 0
+offset_left = 237.0
+offset_top = 31.999998
+offset_right = 2157.0
+offset_bottom = 1112.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_85riq")
 
 [node name="B" type="RichTextLabel" parent="Logo" unique_id=2025730266]
 layout_mode = 0
