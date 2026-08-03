@@ -15,9 +15,9 @@ var letters: Array[String] = ["fill",
 """It’s your nanang. Everything’s arranged. We’ll wait for you at the airport. Marami rin palang humingi sa’yo! Hope it wasn’t that hard to fit them all. Maybe get just two big boxes. One for me and your siblings, and another for your Tita Kara, Tito Albert, and Mikey. Everyone’s gonna be so happy. Lalo na ako. It’s been so long without you, and we have a lot to catch up on. I want to know everything. Kwentuhan tayo every day hanggang umalis ka, ha? I’ll be here. I’m not going anywhere. I will always have time for you.""",
 """Oh? I think I forgot something..."""]
 
-@onready var intro_label = $VBoxContainer/Intro
-@onready var labelB = $VBoxContainer/Letter
-@onready var salutations_label = $VBoxContainer/Salutations
+@onready var intro_label = $MarginContainer/VBoxContainer/Intro
+@onready var labelB = $MarginContainer/VBoxContainer/Letter
+@onready var salutations_label = $MarginContainer/VBoxContainer/Salutations
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
