@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="3_f4mfi"]
 [ext_resource type="Texture2D" uid="uid://dpbh2r6ju1l5i" path="res://assets/slider_grabber_vector_small.svg" id="4_f4mfi"]
 [ext_resource type="Texture2D" uid="uid://b3mwkqgibacbu" path="res://assets/ticks_thin.png" id="5_es4n0"]
+[ext_resource type="Texture2D" uid="uid://dg4qbui0405i7" path="res://assets/slider_grabber.png" id="6_gis3k"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vcm7i"]
 texture = ExtResource("1_6wm04")
@@ -39,6 +40,8 @@ content_margin_right = 4.0
 content_margin_bottom = 4.0
 bg_color = Color(0.078431375, 0.21960784, 0.27450982, 1)
 corner_radius_top_left = 16
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
 corner_radius_bottom_left = 16
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gjs24"]
@@ -190,6 +193,28 @@ step = 0.1
 value = 0.7
 tick_count = 11
 ticks_position = 3
+
+[node name="GridContainer" type="GridContainer" parent="MainGrid" unique_id=906889359]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainGrid/GridContainer" unique_id=123897004]
+propagate_maximum_size = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.015686275, 0.12941177, 0.16862746, 1)
+theme_override_fonts/normal_font = ExtResource("3_f4mfi")
+theme_override_font_sizes/normal_font_size = 36
+bbcode_enabled = true
+text = "Toggle Area Visibility
+"
+vertical_alignment = 1
+
+[node name="CheckButton" type="CheckBox" parent="MainGrid/GridContainer" unique_id=1341462812]
+layout_mode = 2
+text = "Toggle Area Visibility"
+icon = ExtResource("6_gis3k")
+expand_icon = true
 
 [node name="CloseButton" type="Button" parent="MainGrid" unique_id=1777694714]
 layout_mode = 2
