@@ -230,12 +230,10 @@ func _on_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "exit":
 		Globals.level_counter += 1
 		# CHECK IF THIS WORKS SUCH THAT THESE ARE SPACED OUT EVERY THREE LEVELS
-		if Globals.level_counter % 3 == 1 or Globals.level_counter == 12:
-			@warning_ignore("integer_division")
-			if Globals.level_counter == 13: 
-				get_tree().change_scene_to_file("res:///scenes/ending.tscn")
-			else:
-				get_tree().change_scene_to_file("res:///scenes/interstitial_letter.tscn")
+		if Globals.level_counter == 1 or Globals.level_counter == 4 or Globals.level_counter == 7 or Globals.level_counter == 10 or Globals.level_counter == 11:
+			get_tree().change_scene_to_file("res:///scenes/interstitial_letter.tscn")
+		elif Globals.level_counter == 13:
+			get_tree().change_scene_to_file("res:///scenes/ending.tscn")
 		else:
 			CharacterQuota.characters.clear()
 			items_in_grid.clear()

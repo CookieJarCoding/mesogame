@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bjhuyvsloqvgk" path="res://scenes/items/chopsticks.tscn" id="12_onnik"]
 [ext_resource type="PackedScene" uid="uid://dp48b0gpq6w0o" path="res://scenes/items/scarf.tscn" id="13_4hopg"]
 [ext_resource type="PackedScene" uid="uid://bo66gsffkyhc5" path="res://scenes/items/honey_jars.tscn" id="13_6k74a"]
-[ext_resource type="Texture2D" uid="uid://bd3yrl67sc6we" path="res://assets/box.png" id="14_edkbi"]
+[ext_resource type="Texture2D" uid="uid://c4hdc11ap3gyc" path="res://assets/luggage.png" id="15_05nkg"]
 [ext_resource type="Texture2D" uid="uid://su86w6p5cupc" path="res://assets/tile_bg.png" id="15_l6bth"]
 [ext_resource type="Texture2D" uid="uid://b6fgaeuibgs2t" path="res://assets/table.png" id="16_rowq8"]
 
@@ -243,8 +243,8 @@ _data = {
 
 [node name="LevelEnd" type="Node2D" unique_id=1180765290]
 script = ExtResource("1_05nkg")
-box_width = 10
-box_height = 10
+box_width = 7
+box_height = 7
 
 [node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("2_05nkg")]
 
@@ -353,7 +353,7 @@ zoom = Vector2(0.3, 0.3)
 z_index = -200
 position = Vector2(2170, 668)
 scale = Vector2(0.94, 1)
-texture = ExtResource("14_edkbi")
+texture = ExtResource("15_05nkg")
 
 [node name="BoxTopLeftCorner" type="Node2D" parent="Box" unique_id=151532924]
 top_level = true
