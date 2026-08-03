@@ -10,10 +10,14 @@ config_version=5
 
 [application]
 
-config/name="Mesogame"
+config/name="Balik Bayan"
 run/main_scene="uid://cogxdgtms8ujh"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0.49411765, 0.84705883, 0.33333334, 1)
+boot_splash/stretch_mode=0
+boot_splash/image="uid://sdmkt2vhv7p"
+config/icon="uid://dbt0f1tqec1dw"
+boot_splash/minimum_display_time=3000
 
 [autoload]
 
