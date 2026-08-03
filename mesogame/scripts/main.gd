@@ -138,7 +138,10 @@ func _on_item_hovered(item: ItemUnit) -> void:
 	item_information.update(item)
 	#print($ItemInformation.get_child(0).name)
 
-	item_information.get_child(0).global_position = Vector2(get_global_mouse_position().x*camera.zoom.x+TOOLTIP_OFFSET.x,get_global_mouse_position().y*camera.zoom.x+TOOLTIP_OFFSET.y)
+	item_information.get_child(0).global_position = Vector2(
+		clampf(get_global_mouse_position().x*camera.zoom.x+TOOLTIP_OFFSET.x, 0, 999999),
+		clampf(get_global_mouse_position().y*camera.zoom.x+TOOLTIP_OFFSET.y, 0, 540.0 - 180.0)
+		)
 
 func _on_item_unhovered(item: ItemUnit) -> void:
 	if item == item_explained:

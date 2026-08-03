@@ -259,6 +259,7 @@ scale = Vector2(0.585, 0.585)
 texture_normal = ExtResource("3_b3p8y")
 
 [node name="Left" type="TextureButton" parent="HUD" unique_id=1777119729]
+visible = false
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -335,7 +336,7 @@ position = Vector2(5156, 1653)
 position = Vector2(1317, 1718)
 
 [node name="CannedGoods" parent="ItemGroup" unique_id=705416440 instance=ExtResource("12_hkuam")]
-position = Vector2(637, 1612)
+position = Vector2(526, 1652)
 
 [node name="Chocolates" parent="ItemGroup" unique_id=91019937 instance=ExtResource("16_f3b2k")]
 position = Vector2(4005, 1478)

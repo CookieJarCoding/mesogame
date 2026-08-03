@@ -54,8 +54,14 @@ func _on_play_button_pressed() -> void:
 
 func complete_transition() -> void:
 	RenderingServer.set_default_clear_color(Color("#92c5db"))
-	Globals.level_counter += 1
-	get_tree().change_scene_to_packed(INTERSTITIAL)
+	
+	## NOTE: default state
+	if Globals.level_counter == 0:
+		Globals.level_counter += 1
+		get_tree().change_scene_to_packed(INTERSTITIAL)
+	## NOTE: after loading a save
+	else:
+		get_tree().change_scene_to_packed(Globals.levels[Globals.level_counter])
 
 
 func _on_quit_button_pressed() -> void:

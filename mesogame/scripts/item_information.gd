@@ -15,6 +15,7 @@ extends CanvasLayer
 @onready var liquid_risk_panel: Panel = $ItemInformationPanel/ItemInformationGrid/TagGrid/LiquidRiskPanel
 @onready var fragile_panel: Panel = $ItemInformationPanel/ItemInformationGrid/TagGrid/FragilePanel
 @onready var soft_panel: Panel = $ItemInformationPanel/ItemInformationGrid/TagGrid/SoftPanel
+@onready var tag_grid: GridContainer = $ItemInformationPanel/ItemInformationGrid/TagGrid
 
 func _ready() -> void:
 	self.visible = false
@@ -29,6 +30,7 @@ func update(item: ItemUnit):
 	apparel_panel.visible = false
 	technology_panel.visible = false
 
+	tag_grid.visible = false
 	liquid_panel.visible = false
 	liquid_risk_panel.visible = false
 	fragile_panel.visible = false
@@ -53,12 +55,16 @@ func update(item: ItemUnit):
 		technology_panel.visible = true
 
 	if item.liquid_container:
+		tag_grid.visible = true
 		liquid_panel.visible = true
 	elif item.liquid_risk:
+		tag_grid.visible = true
 		liquid_risk_panel.visible = true
 	if item.fragile:
+		tag_grid.visible = true
 		fragile_panel.visible = true
 	elif item.soft:
+		tag_grid.visible = true
 		soft_panel.visible = true
 
 	self.visible = true
