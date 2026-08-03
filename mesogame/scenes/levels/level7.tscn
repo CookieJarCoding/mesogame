@@ -246,7 +246,7 @@ script = ExtResource("1_prm31")
 box_width = 8
 box_height = 8
 max_table_pages = 2
-level_title = "Seventh Box!"
+level_title = "Handle with care."
 
 [node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("2_co2u6")]
 
