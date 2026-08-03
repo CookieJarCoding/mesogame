@@ -94,12 +94,13 @@ theme_override_styles/panel = ExtResource("2_oo0fn")
 [node name="Text" type="RichTextLabel" parent="Panel/PopupPanel" unique_id=282281104]
 layout_mode = 0
 offset_left = 8.0
-offset_top = 50.0
+offset_top = 27.0
 offset_right = 141.0
 offset_bottom = 94.0
 theme_override_colors/default_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
 theme_override_fonts/normal_font = ExtResource("3_5ysmq")
-text = "Needs Soft surroundings!"
+text = "Porous
+needs Soft surroundings!"
 fit_content = true
 scroll_active = false
 horizontal_alignment = 1
