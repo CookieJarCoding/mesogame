@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ccc2fq0ikt0cr"]
+[gd_scene format=3 uid="uid://dmyyw6cj5dyru"]
 
 [ext_resource type="Script" uid="uid://cyclavvga15jj" path="res://scripts/level_scripts/level_9.gd" id="1_7kkvr"]
 [ext_resource type="PackedScene" uid="uid://c4yjamtvwcpmh" path="res://scenes/hud.tscn" id="2_7kkvr"]
@@ -19,9 +19,9 @@
 [ext_resource type="Texture2D" uid="uid://ck8ks4oyt60n5" path="res://assets/box_thin.png" id="17_k12p4"]
 [ext_resource type="PackedScene" uid="uid://c55i08wr8w2f1" path="res://scenes/items/pillow.tscn" id="17_xr5re"]
 [ext_resource type="PackedScene" uid="uid://bo66gsffkyhc5" path="res://scenes/items/honey_jars.tscn" id="18_o4j2a"]
+[ext_resource type="PackedScene" uid="uid://c1amob5v683j7" path="res://scenes/items/canned_goods_90.tscn" id="19_7kkvr"]
 [ext_resource type="Texture2D" uid="uid://su86w6p5cupc" path="res://assets/tile_bg.png" id="20_6ktn0"]
 [ext_resource type="Texture2D" uid="uid://b6fgaeuibgs2t" path="res://assets/table.png" id="21_kmpa7"]
-[ext_resource type="PackedScene" uid="uid://bxd5oievwqopp" path="res://scenes/items/canned_goods.tscn" id="22_k12p4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jbj1t"]
 size = Vector2(2452.7998, 225.39142)
@@ -334,9 +334,6 @@ position = Vector2(1818, 1762)
 [node name="Shirt" parent="ItemGroup" unique_id=1020454921 instance=ExtResource("10_1dg3w")]
 position = Vector2(349, 1766)
 
-[node name="CannedGoods" parent="ItemGroup" unique_id=1924815822 instance=ExtResource("22_k12p4")]
-position = Vector2(4767, 1671)
-
 [node name="HoneyJars" parent="ItemGroup" unique_id=1426415744 instance=ExtResource("18_o4j2a")]
 position = Vector2(1347, 1696)
 
@@ -366,6 +363,9 @@ position = Vector2(5738, 1591)
 
 [node name="Pillow" parent="ItemGroup" unique_id=705416440 instance=ExtResource("17_xr5re")]
 position = Vector2(927, 1617)
+
+[node name="CannedGoods90" parent="ItemGroup" unique_id=1921066332 instance=ExtResource("19_7kkvr")]
+position = Vector2(4851, 1738)
 
 [node name="Camera" type="Camera2D" parent="." unique_id=113758559]
 anchor_mode = 0
