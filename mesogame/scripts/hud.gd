@@ -8,6 +8,7 @@ const char_quota: PackedScene = preload("res://scenes/character_quota.tscn")
 @onready var vbox: VBoxContainer = $Panel/VBoxContainer/MarginContainer/ScrollContainer/VBox
 @onready var anim = $Anim
 @onready var warning_timer = $WarningTimer
+@onready var handle_with_care = $Panel/HandleWithCare
 
 
 func create_character(char_name: String, score: int, quota: int, likes: Array, dislikes: Array, texture_path: String) -> void:
@@ -52,3 +53,7 @@ func _on_next_button_pressed() -> void:
 func set_next_level(state: bool) -> void:
 	$Panel/HBoxContainer/NextButton.visible = state
 	$Panel/HBoxContainer/NextButton.disabled = not state
+
+func set_handle_with_care_visibility(visibility: bool) -> void:
+	handle_with_care.visible = visibility
+

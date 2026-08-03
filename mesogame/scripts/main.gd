@@ -29,6 +29,7 @@ var finished_moving_items: bool = false
 @onready var box = $Box
 @onready var anim = $Anim
 @onready var item_information = $ItemInformation
+@onready var hud = $HUD
 
 
 # Called when the node enters the scene tree for the first time.
@@ -63,7 +64,9 @@ func _ready() -> void:
 		item.removed.connect(_on_item_removed)
 		item.hovered.connect(_on_item_hovered)
 		item.unhovered.connect(_on_item_unhovered)
-	
+
+	hud.set_handle_with_care_visibility(false)
+
 	# func create_character(char_name: String, score: int, quota: int, likes: Array, dislikes: Array)
 	### NOTE: Max two likes/dislikes
 	#$HUD.create_character("Joanne", 0, 1,
@@ -179,7 +182,7 @@ func check_win() -> bool:
 func _on_next_button_pressed() -> void:
 	AudioLibrary.play_sfx(AudioLibrary.sfx.QUOTA)
 	anim.play("exit")
-	$HUD.play_exit()
+	hud.play_exit()
 
 
 func move_table(pos: int) -> void:
@@ -218,10 +221,10 @@ func _on_right_pressed() -> void:
 				$HUD/Left.visible = true
 
 func set_handle_with_care() -> void:
+	hud.set_handle_with_care_visibility(true)
 	for item in $ItemGroup.get_children():
 		if not item.soft:
 			item.fragile = true
-
 
 func _on_reset_button_pressed() -> void:
 	CharacterQuota.characters.clear()

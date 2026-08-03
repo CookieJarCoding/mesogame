@@ -5,6 +5,10 @@
 [ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="3_5ysmq"]
 [ext_resource type="Texture2D" uid="uid://bfkjsqym2yckn" path="res://assets/reset.png" id="4_uo2fv"]
 [ext_resource type="Texture2D" uid="uid://b33wtvop20utb" path="res://assets/send.png" id="5_047uy"]
+[ext_resource type="Texture2D" uid="uid://bo5d88wlhjs8g" path="res://assets/handle_with_care.png" id="6_047uy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_es4n0"]
+texture = ExtResource("6_047uy")
 
 [sub_resource type="Animation" id="Animation_6fi6k"]
 length = 0.001
@@ -168,10 +172,13 @@ size_flags_vertical = 0
 texture_normal = ExtResource("5_047uy")
 stretch_mode = 5
 
-[node name="Panel2" type="Panel" parent="." unique_id=795946074]
-offset_left = 390.0
-offset_right = 430.0
-offset_bottom = 40.0
+[node name="HandleWithCare" type="Panel" parent="Panel" unique_id=795946074]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 23.0
+offset_right = 348.0
+offset_bottom = 136.6
+theme_override_styles/panel = SubResource("StyleBoxTexture_es4n0")
 
 [node name="Anim" type="AnimationPlayer" parent="." unique_id=1992133697]
 libraries/ = SubResource("AnimationLibrary_6fi6k")

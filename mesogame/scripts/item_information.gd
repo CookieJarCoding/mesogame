@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 @onready var item_name_label: RichTextLabel = $ItemInformationPanel/ItemInformationGrid/ItemNameLabel
-@onready var item_description_label: RichTextLabel = $ItemInformationPanel/ItemInformationGrid/ItemDescriptionLabel
+@onready var item_description_label: RichTextLabel = $ItemInformationPanel/ItemInformationGrid/DescriptionGrid/ItemDescriptionLabel
 
 @onready var luxury_panel: Panel = $ItemInformationPanel/ItemInformationGrid/TypeGrid/LuxuryPanel
 @onready var consumable_panel: Panel = $ItemInformationPanel/ItemInformationGrid/TypeGrid/ConsumablePanel
