@@ -49,6 +49,7 @@ func _ready() -> void:
 	tween.tween_property($Envelope, "modulate:a", 1, 3)
 	await tween.finished
 	scroll_text(intro_label, 0.3)
+	AudioLibrary.play_sfx(AudioLibrary.sfx.PEN_WRITE)
 
 
 func _process(delta: float) -> void:

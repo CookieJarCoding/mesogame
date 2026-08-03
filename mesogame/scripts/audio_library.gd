@@ -3,6 +3,7 @@ extends Node
 
 enum sfx {
 	PAGE_FLIP,
+	PEN_WRITE,
 	PLOP_PLOP,
 	PLOP_FLAT,
 	LIQUID,
@@ -22,6 +23,8 @@ enum music {
 func play_sfx(s: sfx):
 	if s == sfx.PAGE_FLIP:
 		$PageFlip.play(0.3)
+	elif s == sfx.PEN_WRITE:
+		$PenWrite.play(3)
 	elif s == sfx.PLOP_PLOP:
 		$PlopPlop.play(0.15)
 	elif s == sfx.PLOP_FLAT:

@@ -11,6 +11,7 @@ enum item_types {
 	TECHNOLOGY
 }
 var level_counter: int = 0
+var has_finished: bool = false
 var levels: Array[PackedScene] = [load("res:///scenes/main.tscn"),
 load("res:///scenes/levels/level1.tscn"),
 load("res:///scenes/levels/level2.tscn"),

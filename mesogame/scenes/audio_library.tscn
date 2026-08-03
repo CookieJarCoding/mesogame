@@ -4,6 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://doo6srgdqwrb0" path="res://sounds/swoosh.mp3" id="2_612mp"]
 [ext_resource type="AudioStream" uid="uid://d1efygp7idirf" path="res://sounds/page_flip.mp3" id="2_mtsm2"]
 [ext_resource type="AudioStream" uid="uid://v6fjyvt0iw3b" path="res://sounds/plop_plop.mp3" id="3_6govp"]
+[ext_resource type="AudioStream" uid="uid://dib5ln27351hv" path="res://sounds/pen_write.mp3" id="3_12ah6"]
 [ext_resource type="AudioStream" uid="uid://cmt3mhaoi2ox0" path="res://sounds/plop_flat.mp3" id="4_svrp5"]
 [ext_resource type="AudioStream" uid="uid://uq2511hocy0o" path="res://sounds/liquid.mp3" id="5_2wnal"]
 [ext_resource type="AudioStream" uid="uid://dks0x824lyapq" path="res://sounds/fragile.mp3" id="6_12ah6"]
@@ -20,11 +21,15 @@ script = ExtResource("1_3avnm")
 stream = ExtResource("2_mtsm2")
 bus = &"SFX"
 
+[node name="PenWrite" type="AudioStreamPlayer" parent="." unique_id=1923267780]
+stream = ExtResource("3_12ah6")
+volume_db = 20.0
+
 [node name="PlopPlop" type="AudioStreamPlayer" parent="." unique_id=38154905]
 stream = ExtResource("3_6govp")
 bus = &"SFX"
 
-[node name="Plop_Flat" type="AudioStreamPlayer" parent="." unique_id=1471542123]
+[node name="PlopFlat" type="AudioStreamPlayer" parent="." unique_id=1471542123]
 stream = ExtResource("4_svrp5")
 bus = &"SFX"
 

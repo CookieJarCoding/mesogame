@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://ddpu4iqntbfno"]
+
+[node name="Credits" type="Node2D" unique_id=812290645]
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1877824939]
+offset_right = 960.0
+offset_bottom = 540.0

@@ -15,6 +15,10 @@ func _ready() -> void:
 	letters = $Logo.get_children()
 	for letter in letters:
 		initial_positions.append(letter.position)
+	if Globals.has_finished == true:
+		$MainMenu/CreditsButton.visible = true
+	else: 
+		$MainMenu/CreditsButton.visible = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -57,3 +61,8 @@ func complete_transition() -> void:
 func _on_quit_button_pressed() -> void:
 	AudioLibrary.play_sfx(AudioLibrary.sfx.PAGE_FLIP)
 	get_tree().quit()
+
+
+func _on_credits_button_pressed() -> void:
+	AudioLibrary.play_sfx(AudioLibrary.sfx.PAGE_FLIP)
+	get_tree().change_scene_to_file("res://scenes/credits.tscn")
