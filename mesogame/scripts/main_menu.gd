@@ -73,5 +73,6 @@ func _on_credits_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/credits.tscn")
 
 func _on_clear_progress_button_pressed() -> void:
+	AudioLibrary.play_sfx(AudioLibrary.sfx.PAGE_FLIP)
 	Globals.level_counter = 0
 	Globals.save()
