@@ -56,4 +56,3 @@ func set_next_level(state: bool) -> void:
 
 func set_handle_with_care_visibility(visibility: bool) -> void:
 	handle_with_care.visible = visibility
-

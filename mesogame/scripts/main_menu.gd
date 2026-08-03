@@ -12,6 +12,7 @@ var delta_counter = 0.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Globals.load_data()
 	letters = $Logo.get_children()
 	for letter in letters:
 		initial_positions.append(letter.position)
@@ -19,6 +20,7 @@ func _ready() -> void:
 		$MainMenu/CreditsButton.visible = true
 	else: 
 		$MainMenu/CreditsButton.visible = false
+		AudioLibrary.play_music(AudioLibrary.music.TITLE)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -28,6 +30,10 @@ func _process(delta: float) -> void:
 		letter.position.y = initial_positions[i].y + BOB_AMPLITUDE * sin(BOB_SPEED * delta_counter + OFFSET_DIFFERENTIAL * i)
 	
 	delta_counter += delta
+	if Globals.level_counter == 0:
+		$MainMenu/ClearButton.visible = false
+	else:
+		$MainMenu/ClearButton.visible = true
 
 
 func _on_settings_button_pressed() -> void:

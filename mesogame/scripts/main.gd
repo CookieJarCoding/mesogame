@@ -34,8 +34,9 @@ var finished_moving_items: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if OS.is_debug_build():
-		Globals.level_counter = 0
+	#Globals.load_data()
+	#if OS.is_debug_build():
+		#Globals.level_counter = 1
 	
 	if Globals.level_counter >= 11:
 		$Box/BoxTopLeftCorner.position = Vector2(1818 - 70 * (box_width - 5), 376 - 70 * (box_width - 5))

@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://bme42p1aic0si" path="res://scripts/hoverable.gd" id="4_eit5r"]
 [ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="5_bsrl5"]
 [ext_resource type="Texture2D" uid="uid://bmy28447hvi" path="res://assets/envelope.png" id="6_eit5r"]
+[ext_resource type="Texture2D" uid="uid://cbc1g5pjmoc82" path="res://assets/letter_paper_texture.png" id="7_bsrl5"]
 
 [node name="IntroLetter" type="MarginContainer" unique_id=1230503490]
 anchors_preset = 8
@@ -20,6 +21,11 @@ offset_bottom = 254.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8gbjm")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1868502833]
+custom_minimum_size = Vector2(960, 540)
+layout_mode = 2
+texture = ExtResource("7_bsrl5")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=383481100]
 layout_mode = 2
