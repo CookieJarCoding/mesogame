@@ -7,11 +7,13 @@ class_name TileCollision
 var hovered_over: bool = false
 var draggable: bool = false
 
+@export var isvisible: bool = false
 @onready var north_ray: RayCast2D = $NorthRay
 @onready var south_ray: RayCast2D = $SouthRay
 @onready var west_ray: RayCast2D = $WestRay
 @onready var east_ray: RayCast2D = $EastRay
 @onready var rays = [north_ray, south_ray, west_ray, east_ray]
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,6 +23,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	$ColorRect.visible = isvisible
 	if ($Collision.global_position.x - $Collision.shape.size.x/2 < get_global_mouse_position().x and get_global_mouse_position().x < $Collision.global_position.x + $Collision.shape.size.x/2) and ($Collision.global_position.y - $Collision.shape.size.y/2 < get_global_mouse_position().y and get_global_mouse_position().y < $Collision.global_position.y + $Collision.shape.size.y/2):
 		if not Globals.is_dragging:
 			hovered_over = true
@@ -31,7 +34,7 @@ func _process(_delta: float) -> void:
 			hovered_over = false
 			#draggable = false
 			#scale = Vector2(1, 1)
-	$ColorRect.visible = hovered_over
+	
 
 func _physics_process(_delta: float) -> void:
 	var item_parent = self.get_parent().get_parent()

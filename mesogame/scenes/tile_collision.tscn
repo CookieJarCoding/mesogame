@@ -7,6 +7,7 @@ size = Vector2(128, 128)
 
 [node name="Area" type="Area2D" unique_id=974894371]
 script = ExtResource("1_7sfpy")
+isvisible = true
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=631607362]
 shape = SubResource("RectangleShape2D_wnm2j")
