@@ -74,9 +74,6 @@ func _ready() -> void:
 		#[]
 	#)
 
-	if Globals.level_counter == 9 or Globals.level_counter > 10:
-		set_handle_with_care()
-
 
 #func _process(_delta: float) -> void:
 	#if Input.is_action_just_pressed("left") or Input.is_action_just_pressed("ui_left") and table_pos > 0 and not Input.is_action_pressed("click"):
