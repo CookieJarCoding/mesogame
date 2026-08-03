@@ -8,6 +8,7 @@
 [ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="6_bsp33"]
 [ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="7_b8h5j"]
 [ext_resource type="PackedScene" uid="uid://blwn3kp63m1yf" path="res://scenes/item_information.tscn" id="8_7iyh2"]
+[ext_resource type="PackedScene" uid="uid://bvmpry8rndv88" path="res://scenes/items/luxury_bag.tscn" id="8_d31ew"]
 [ext_resource type="PackedScene" uid="uid://vk5qd6uuuv4b" path="res://scenes/items/action_figure_90.tscn" id="10_dmode"]
 [ext_resource type="PackedScene" uid="uid://b8ueivqliytm3" path="res://scenes/items/stuffed_animal.tscn" id="11_2t5od"]
 [ext_resource type="PackedScene" uid="uid://cxpfw407fmcbe" path="res://scenes/items/chopsticks_90.tscn" id="13_s42k0"]
@@ -20,8 +21,8 @@
 [ext_resource type="PackedScene" uid="uid://duc7f3cqg1p7h" path="res://scenes/items/fridge_magnet.tscn" id="18_mqt10"]
 [ext_resource type="PackedScene" uid="uid://c1amob5v683j7" path="res://scenes/items/canned_goods_90.tscn" id="20_02r4x"]
 [ext_resource type="PackedScene" uid="uid://bo66gsffkyhc5" path="res://scenes/items/honey_jars.tscn" id="21_oi7be"]
-[ext_resource type="PackedScene" uid="uid://dg1adt12kjpmj" path="res://scenes/items/chocolates_90.tscn" id="21_rohyx"]
 [ext_resource type="PackedScene" uid="uid://1ajxi2hkjtyg" path="res://scenes/items/perfume.tscn" id="22_417m5"]
+[ext_resource type="PackedScene" uid="uid://bek2aya3xy4hl" path="res://scenes/items/chocolates.tscn" id="23_d31ew"]
 [ext_resource type="Texture2D" uid="uid://ck8ks4oyt60n5" path="res://assets/box_thin.png" id="23_lj3p4"]
 [ext_resource type="Texture2D" uid="uid://su86w6p5cupc" path="res://assets/tile_bg.png" id="24_ve5el"]
 [ext_resource type="Texture2D" uid="uid://b6fgaeuibgs2t" path="res://assets/table.png" id="25_frp4u"]
@@ -94,7 +95,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1.5),
 "transitions": PackedFloat32Array(0.35355344, 1),
 "update": 0,
-"values": [Vector2(4000, 668), Vector2(2170, 668)]
+"values": [Vector2(4500, 728), Vector2(2170, 728)]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -175,7 +176,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1.5),
 "transitions": PackedFloat32Array(0.29730165, 1.189207),
 "update": 0,
-"values": [Vector2(2170, 668), Vector2(4000, 668)]
+"values": [Vector2(2170, 728), Vector2(4500, 728)]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -253,7 +254,7 @@ _data = {
 script = ExtResource("1_bpv8q")
 box_width = 10
 box_height = 10
-max_table_pages = 3
+max_table_pages = 4
 
 [node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("2_d31ew")]
 
@@ -275,8 +276,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -920.0
 offset_top = -228.0
-offset_right = -620.0
-offset_bottom = -77.999756
+offset_right = -619.99945
+offset_bottom = -77.99982
 grow_horizontal = 0
 grow_vertical = 0
 scale = Vector2(0.31, 0.31)
@@ -292,8 +293,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -136.0
 offset_top = -228.0
-offset_right = 164.00024
-offset_bottom = -77.99939
+offset_right = 164.00037
+offset_bottom = -77.99945
 grow_horizontal = 0
 grow_vertical = 0
 scale = Vector2(0.31, 0.31)
@@ -331,19 +332,22 @@ z_index = 100
 [node name="ItemGroup" type="Node2D" parent="." unique_id=1210610719]
 position = Vector2(0, 800)
 
+[node name="LuxuryBag" parent="ItemGroup" unique_id=705416440 instance=ExtResource("8_d31ew")]
+position = Vector2(10489, 1771)
+
 [node name="Scarf" parent="ItemGroup" unique_id=1160028078 instance=ExtResource("14_ybk5v")]
-position = Vector2(4690, 1699)
+position = Vector2(11550, 1795)
 
 [node name="Scarf2" parent="ItemGroup" unique_id=1862668704 instance=ExtResource("15_bpv8q")]
-position = Vector2(5320, 1931)
+position = Vector2(12213, 1931)
 
 [node name="Backpack" parent="ItemGroup" unique_id=2022575483 instance=ExtResource("17_5g35d")]
 position = Vector2(3926, 1808)
 
 [node name="StuffedAnimal" parent="ItemGroup" unique_id=1750574391 instance=ExtResource("11_2t5od")]
-position = Vector2(1760, 1889)
+position = Vector2(4417, 1963)
 
-[node name="Chopsticks2" parent="ItemGroup" unique_id=705416440 instance=ExtResource("13_s42k0")]
+[node name="Chopsticks2" parent="ItemGroup" unique_id=487147931 instance=ExtResource("13_s42k0")]
 position = Vector2(129, 1740)
 
 [node name="Chopsticks3" parent="ItemGroup" unique_id=2079039449 instance=ExtResource("13_s42k0")]
@@ -377,28 +381,28 @@ position = Vector2(5660, 1733)
 position = Vector2(5845, 1636)
 
 [node name="FridgeMagnet3" parent="ItemGroup" unique_id=199974921 instance=ExtResource("18_mqt10")]
-position = Vector2(6986, 1736)
+position = Vector2(7151, 1731)
 
 [node name="FridgeMagnet4" parent="ItemGroup" unique_id=2073850253 instance=ExtResource("18_mqt10")]
-position = Vector2(7154, 1653)
+position = Vector2(7319, 1648)
 
 [node name="Camera" parent="ItemGroup" unique_id=1163979137 instance=ExtResource("16_ywgi4")]
-position = Vector2(7341, 1769)
+position = Vector2(7506, 1764)
 
 [node name="Cassette" parent="ItemGroup" unique_id=19547861 instance=ExtResource("18_32cl3")]
-position = Vector2(7672, 1797)
+position = Vector2(7837, 1792)
 
 [node name="HoneyJars" parent="ItemGroup" unique_id=1960782813 instance=ExtResource("21_oi7be")]
-position = Vector2(8749, 1796)
+position = Vector2(8602, 1778)
 
 [node name="CannedGoods90" parent="ItemGroup" unique_id=727936615 instance=ExtResource("20_02r4x")]
-position = Vector2(8036, 1925)
-
-[node name="Chocolates" parent="ItemGroup" unique_id=104551498 instance=ExtResource("21_rohyx")]
-position = Vector2(8397, 1907)
+position = Vector2(8201, 1920)
 
 [node name="Perfume" parent="ItemGroup" unique_id=1214511384 instance=ExtResource("22_417m5")]
-position = Vector2(9058, 1725)
+position = Vector2(8979, 1679)
+
+[node name="Chocolates" parent="ItemGroup" unique_id=293736656 instance=ExtResource("23_d31ew")]
+position = Vector2(5004, 1769)
 
 [node name="Camera" type="Camera2D" parent="." unique_id=113758559]
 anchor_mode = 0

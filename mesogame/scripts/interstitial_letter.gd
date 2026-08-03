@@ -36,10 +36,10 @@ func _ready() -> void:
 	elif Globals.level_counter == 7:
 		labelB.text = letters[3]
 		salutations_label.text = salutations[3]
-	elif Globals.level_counter == 10:
+	elif Globals.level_counter == 11:
 		labelB.text = letters[4]
 		salutations_label.text = salutations[4]
-	elif Globals.level_counter == 12:
+	elif Globals.level_counter == 13:
 		labelB.text = letters[5]
 		intro_label.text = ""
 		salutations_label.text = ""

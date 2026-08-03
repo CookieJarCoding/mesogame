@@ -33,7 +33,13 @@ var finished_moving_items: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$Box/BoxTopLeftCorner.position = Vector2(1818 - 70 * (box_width - 5), 316 - 70 * (box_width - 5))
+	if OS.is_debug_build():
+		Globals.level_counter = 13
+	
+	if Globals.level_counter >= 11:
+		$Box/BoxTopLeftCorner.position = Vector2(1818 - 70 * (box_width - 5), 376 - 70 * (box_width - 5))
+	else:
+		$Box/BoxTopLeftCorner.position = Vector2(1818 - 70 * (box_width - 5), 316 - 70 * (box_width - 5))
 	AudioLibrary.play_music(AudioLibrary.music.GAMEPLAY)
 	
 	finished_moving_items = false
@@ -227,7 +233,7 @@ func _on_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "exit":
 		Globals.level_counter += 1
 		# CHECK IF THIS WORKS SUCH THAT THESE ARE SPACED OUT EVERY THREE LEVELS
-		if Globals.level_counter == 1 or Globals.level_counter == 4 or Globals.level_counter == 7 or Globals.level_counter == 10 or Globals.level_counter == 11:
+		if Globals.level_counter == 1 or Globals.level_counter == 4 or Globals.level_counter == 7 or Globals.level_counter == 11 or Globals.level_counter == 13:
 			get_tree().change_scene_to_file("res:///scenes/interstitial_letter.tscn")
 		elif Globals.level_counter == 13:
 			get_tree().change_scene_to_file("res:///scenes/ending.tscn")

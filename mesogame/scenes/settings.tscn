@@ -5,7 +5,6 @@
 [ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="3_f4mfi"]
 [ext_resource type="Texture2D" uid="uid://dpbh2r6ju1l5i" path="res://assets/slider_grabber_vector_small.svg" id="4_f4mfi"]
 [ext_resource type="Texture2D" uid="uid://b3mwkqgibacbu" path="res://assets/ticks_thin.png" id="5_es4n0"]
-[ext_resource type="Texture2D" uid="uid://dg4qbui0405i7" path="res://assets/slider_grabber.png" id="6_gis3k"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vcm7i"]
 texture = ExtResource("1_6wm04")
@@ -123,26 +122,25 @@ autowrap_mode = 0
 horizontal_alignment = 1
 
 [node name="MusicVolume" type="GridContainer" parent="MainGrid" unique_id=210953242]
-custom_minimum_size = Vector2(0, 80)
-custom_maximum_size = Vector2(-1, 80)
+custom_minimum_size = Vector2(0, 60)
+custom_maximum_size = Vector2(-1, 60)
 layout_mode = 2
 columns = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MainGrid/MusicVolume" unique_id=283984823]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 3
 theme_override_colors/default_color = Color(0.015686275, 0.12941177, 0.16862746, 1)
 theme_override_fonts/normal_font = ExtResource("3_f4mfi")
-theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/normal_font_size = 28
 bbcode_enabled = true
 text = "Music Volume
 "
 vertical_alignment = 1
 
 [node name="MusicVolumeSlider" type="HSlider" parent="MainGrid/MusicVolume" unique_id=1300378711]
-custom_minimum_size = Vector2(0, 80)
-custom_maximum_size = Vector2(-1, 80)
+custom_minimum_size = Vector2(0, 60)
+custom_maximum_size = Vector2(-1, 60)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_icons/grabber = ExtResource("4_f4mfi")
@@ -159,26 +157,25 @@ tick_count = 11
 ticks_position = 3
 
 [node name="SoundVolume" type="GridContainer" parent="MainGrid" unique_id=552690538]
-custom_minimum_size = Vector2(0, 80)
-custom_maximum_size = Vector2(-1, 80)
+custom_minimum_size = Vector2(0, 60)
+custom_maximum_size = Vector2(-1, 60)
 layout_mode = 2
 columns = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MainGrid/SoundVolume" unique_id=74485017]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 3
 theme_override_colors/default_color = Color(0.015686275, 0.12941177, 0.16862746, 1)
 theme_override_fonts/normal_font = ExtResource("3_f4mfi")
-theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/normal_font_size = 28
 bbcode_enabled = true
 text = "Sound Volume
 "
 vertical_alignment = 1
 
 [node name="SoundVolumeSlider" type="HSlider" parent="MainGrid/SoundVolume" unique_id=1919741405]
-custom_minimum_size = Vector2(0, 80)
-custom_maximum_size = Vector2(-1, 80)
+custom_minimum_size = Vector2(0, 60)
+custom_maximum_size = Vector2(-1, 604)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_icons/grabber = ExtResource("4_f4mfi")
@@ -195,25 +192,16 @@ tick_count = 11
 ticks_position = 3
 
 [node name="GridContainer" type="GridContainer" parent="MainGrid" unique_id=906889359]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
-
-[node name="RichTextLabel" type="RichTextLabel" parent="MainGrid/GridContainer" unique_id=123897004]
-propagate_maximum_size = true
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_colors/default_color = Color(0.015686275, 0.12941177, 0.16862746, 1)
-theme_override_fonts/normal_font = ExtResource("3_f4mfi")
-theme_override_font_sizes/normal_font_size = 36
-bbcode_enabled = true
-text = "Toggle Area Visibility
-"
-vertical_alignment = 1
 
 [node name="CheckButton" type="CheckBox" parent="MainGrid/GridContainer" unique_id=1341462812]
 layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.015686275, 0.12941177, 0.16862746, 1)
+theme_override_fonts/font = ExtResource("3_f4mfi")
+theme_override_font_sizes/font_size = 26
 text = "Toggle Area Visibility"
-icon = ExtResource("6_gis3k")
 expand_icon = true
 
 [node name="CloseButton" type="Button" parent="MainGrid" unique_id=1777694714]
@@ -239,6 +227,7 @@ shape = SubResource("RectangleShape2D_esf6n")
 
 [node name="QuitButton" type="Button" parent="MainGrid" unique_id=575629705]
 layout_mode = 2
+size_flags_vertical = 0
 theme_override_colors/icon_normal_color = Color(0.078431375, 0.21960784, 0.27450982, 1)
 theme_override_fonts/font = ExtResource("3_f4mfi")
 theme_override_font_sizes/font_size = 36
@@ -250,5 +239,6 @@ text = "Quit"
 
 [connection signal="value_changed" from="MainGrid/MusicVolume/MusicVolumeSlider" to="." method="_on_music_volume_slider_value_changed"]
 [connection signal="value_changed" from="MainGrid/SoundVolume/SoundVolumeSlider" to="." method="_on_sound_volume_slider_value_changed"]
+[connection signal="toggled" from="MainGrid/GridContainer/CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="pressed" from="MainGrid/CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="pressed" from="MainGrid/QuitButton" to="." method="_on_quit_button_pressed"]
