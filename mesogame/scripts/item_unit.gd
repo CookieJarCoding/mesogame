@@ -117,6 +117,7 @@ func _process(_delta: float) -> void:
 		if Input.is_action_just_pressed("click"):
 		#if clicked:
 			#clicked = not clicked
+			in_grid = false
 			if body_ref:
 				initialPos = body_ref.global_position - last_area_touched.position
 			else:
@@ -154,7 +155,7 @@ func _process(_delta: float) -> void:
 					global_position = initialPos
 				else:
 					packed.emit(self)
-					print("boop1")
+					print("boop2")
 					in_grid = true
 			elif on_table:
 				global_position = get_parent().position + starting_position
@@ -165,6 +166,7 @@ func _process(_delta: float) -> void:
 					body_ref = prev_body_ref
 				if in_grid:
 					packed.emit(self)
+					print("boop3")
 					#print("boop2")
 
 
