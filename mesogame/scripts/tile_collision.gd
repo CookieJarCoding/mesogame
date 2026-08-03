@@ -7,7 +7,7 @@ class_name TileCollision
 var hovered_over: bool = false
 var draggable: bool = false
 
-@export var isvisible: bool = false
+#@export var isvisible: bool = false
 @onready var north_ray: RayCast2D = $NorthRay
 @onready var south_ray: RayCast2D = $SouthRay
 @onready var west_ray: RayCast2D = $WestRay
@@ -23,7 +23,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	$ColorRect.visible = isvisible
+	$ColorRect.visible = Globals.show_tiles
 	if ($Collision.global_position.x - $Collision.shape.size.x/2 < get_global_mouse_position().x and get_global_mouse_position().x < $Collision.global_position.x + $Collision.shape.size.x/2) and ($Collision.global_position.y - $Collision.shape.size.y/2 < get_global_mouse_position().y and get_global_mouse_position().y < $Collision.global_position.y + $Collision.shape.size.y/2):
 		if not Globals.is_dragging:
 			hovered_over = true
@@ -36,8 +36,7 @@ func _process(_delta: float) -> void:
 			#scale = Vector2(1, 1)
 	
 
-func _physics_process(_delta: float) -> void:
-	var item_parent = self.get_parent().get_parent()
+	#var item_parent = self.get_parent().get_parent()
 	# collide([item_parent.fragile, item_parent.soft, item_parent.liquid_container, item_parent.liquid_risk, item_parent.wrapped])
 
 	# item_properties: Array[bool]

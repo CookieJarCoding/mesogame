@@ -5,6 +5,8 @@
 [ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="3_f4mfi"]
 [ext_resource type="Texture2D" uid="uid://dpbh2r6ju1l5i" path="res://assets/slider_grabber_vector_small.svg" id="4_f4mfi"]
 [ext_resource type="Texture2D" uid="uid://b3mwkqgibacbu" path="res://assets/ticks_thin.png" id="5_es4n0"]
+[ext_resource type="Texture2D" uid="uid://bt1bk1g0pfovp" path="res://assets/checked_button_cropped32.png" id="6_gis3k"]
+[ext_resource type="Texture2D" uid="uid://cfsqes5dkau46" path="res://assets/slider_grabber_small.png" id="7_83j8s"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vcm7i"]
 texture = ExtResource("1_6wm04")
@@ -199,9 +201,14 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_colors/font_color = Color(0.015686275, 0.12941177, 0.16862746, 1)
+theme_override_colors/font_pressed_color = Color(0.015686275, 0.12941177, 0.16862746, 1)
+theme_override_colors/font_hover_color = Color(0.5803922, 0.7764706, 0.85882354, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.5803922, 0.7764706, 0.85882354, 1)
 theme_override_fonts/font = ExtResource("3_f4mfi")
 theme_override_font_sizes/font_size = 26
-text = "Toggle Area Visibility"
+theme_override_icons/checked = ExtResource("6_gis3k")
+theme_override_icons/unchecked = ExtResource("7_83j8s")
+text = "Show Item Spaces"
 expand_icon = true
 
 [node name="CloseButton" type="Button" parent="MainGrid" unique_id=1777694714]

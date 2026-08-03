@@ -6,6 +6,7 @@ signal settings_close
 func _ready() -> void:
 	if Globals.level_counter > 0:
 		$MainGrid/QuitButton.text = "Quit To Menu"
+	$MainGrid/GridContainer/CheckButton.pressed = Globals.show_tiles
 
 func _on_music_volume_slider_value_changed(value: float) -> void:
 	var bus_idx = AudioServer.get_bus_index("Music")

@@ -7,7 +7,6 @@ size = Vector2(128, 128)
 
 [node name="Area" type="Area2D" unique_id=974894371]
 script = ExtResource("1_7sfpy")
-isvisible = true
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=631607362]
 shape = SubResource("RectangleShape2D_wnm2j")
@@ -32,6 +31,7 @@ target_position = Vector2(50, 0)
 collide_with_areas = true
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1373979879]
+z_index = -50
 custom_minimum_size = Vector2(128, 128)
 custom_maximum_size = Vector2(128, -1)
 anchors_preset = 8
