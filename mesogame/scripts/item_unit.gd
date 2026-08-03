@@ -171,7 +171,9 @@ func _process(_delta: float) -> void:
 func _physics_process(_delta: float) -> void:
 	var item_sprite = get_child(0)
 	if item_sprite is Sprite2D:
-		if item_sprite.get_rect().has_point(to_local(get_global_mouse_position())):
+		var rect: Rect2 = item_sprite.get_rect() * Transform2D(0, item_sprite.scale, 0, Vector2())
+		rect.position += item_sprite.position
+		if rect.has_point(to_local(get_global_mouse_position())):
 			hovered.emit(self)
 		else:
 			unhovered.emit(self)

@@ -323,7 +323,7 @@ z_index = 100
 position = Vector2(0, 800)
 
 [node name="Shirt" parent="ItemGroup" unique_id=1209161982 instance=ExtResource("13_ydw67")]
-position = Vector2(1725, 1614)
+position = Vector2(1860, 1617)
 
 [node name="Scarf" parent="ItemGroup" unique_id=1146730901 instance=ExtResource("15_6igki")]
 position = Vector2(4577, 1561)

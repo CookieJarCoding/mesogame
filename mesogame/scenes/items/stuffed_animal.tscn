@@ -13,7 +13,7 @@ type = 2
 placeholder = 1
 
 [node name="StuffedAnimal" type="Sprite2D" parent="." unique_id=1331438369]
-position = Vector2(140, -153.00002)
+position = Vector2(141, -142)
 scale = Vector2(0.3765213, 0.3588661)
 texture = ExtResource("2_hls0l")
 
@@ -35,3 +35,9 @@ position = Vector2(276, 0)
 
 [node name="Area10" parent="AreaGroup" unique_id=2055443677 instance=ExtResource("3_w0tth")]
 position = Vector2(276, -138)
+
+[node name="_TEST" type="Node2D" parent="." unique_id=1237495842]
+position = Vector2(-22, -325)
+
+[node name="_TEST2" type="Node2D" parent="." unique_id=1559449691]
+position = Vector2(303, 41)
