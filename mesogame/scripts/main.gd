@@ -236,6 +236,7 @@ func _on_reset_button_pressed() -> void:
 func _on_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "exit":
 		Globals.level_counter += 1
+		Globals.save()
 		# CHECK IF THIS WORKS SUCH THAT THESE ARE SPACED OUT EVERY THREE LEVELS
 		if Globals.level_counter == 1 or Globals.level_counter == 4 or Globals.level_counter == 7 or Globals.level_counter == 11 or Globals.level_counter == 13:
 			get_tree().change_scene_to_file("res:///scenes/interstitial_letter.tscn")

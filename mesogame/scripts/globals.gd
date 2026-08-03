@@ -16,6 +16,8 @@ enum item_types {
 	TECHNOLOGY
 }
 var level_counter: int = 0
+var music_volume: float = 0.7
+var sound_volume: float = 0.7
 var has_finished: bool = false
 var levels: Array[PackedScene] = [load("res:///scenes/main.tscn"),
 load("res:///scenes/levels/level1.tscn"),
@@ -43,6 +45,8 @@ func _ready() -> void:
 func save() -> void:
 	var file = FileAccess.open(save_path, FileAccess.WRITE)
 	file.store_var(level_counter)
+	file.store_var(music_volume)
+	file.store_var(sound_volume)
 
 func load_data():
 	if FileAccess.file_exists(save_path):
@@ -50,3 +54,7 @@ func load_data():
 		level_counter = file.get_var(level_counter)
 	else:
 		level_counter = 0
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_WM_GO_BACK_REQUEST:
+		save()
