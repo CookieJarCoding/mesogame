@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://c55i08wr8w2f1" path="res://scenes/items/pillow.tscn" id="18_14mch"]
 [ext_resource type="PackedScene" uid="uid://dd3siki8edolo" path="res://scenes/items/shirt_180.tscn" id="19_a0e7p"]
 [ext_resource type="PackedScene" uid="uid://cxpfw407fmcbe" path="res://scenes/items/chopsticks_90.tscn" id="19_k056o"]
-[ext_resource type="PackedScene" uid="uid://bxd5oievwqopp" path="res://scenes/items/canned_goods.tscn" id="20_ipfcg"]
+[ext_resource type="PackedScene" uid="uid://tcpaxhvkoq8i" path="res://scenes/items/canned_goods.tscn" id="20_ipfcg"]
 [ext_resource type="PackedScene" uid="uid://ljo2xbw203ex" path="res://scenes/items/scarf_90ccw.tscn" id="20_sa2bg"]
 [ext_resource type="PackedScene" uid="uid://bo66gsffkyhc5" path="res://scenes/items/honey_jars.tscn" id="21_otn3r"]
 [ext_resource type="Texture2D" uid="uid://ck8ks4oyt60n5" path="res://assets/box_thin.png" id="21_w7wb3"]
@@ -254,6 +254,7 @@ script = ExtResource("1_a0e7p")
 box_width = 8
 box_height = 8
 max_table_pages = 3
+level_title = "A little of this..."
 
 [node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("2_otn3r")]
 

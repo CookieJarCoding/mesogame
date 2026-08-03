@@ -8,7 +8,7 @@
 [ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="8_h4dr5"]
 [ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="9_cmwrw"]
 [ext_resource type="PackedScene" uid="uid://blwn3kp63m1yf" path="res://scenes/item_information.tscn" id="10_7memh"]
-[ext_resource type="PackedScene" uid="uid://bxd5oievwqopp" path="res://scenes/items/canned_goods.tscn" id="11_fp2uk"]
+[ext_resource type="PackedScene" uid="uid://tcpaxhvkoq8i" path="res://scenes/items/canned_goods.tscn" id="11_fp2uk"]
 [ext_resource type="PackedScene" uid="uid://bek2aya3xy4hl" path="res://scenes/items/chocolates.tscn" id="13_s2xic"]
 [ext_resource type="PackedScene" uid="uid://c8m74t5h186ib" path="res://scenes/items/action_figure.tscn" id="14_gh4cf"]
 [ext_resource type="PackedScene" uid="uid://bo66gsffkyhc5" path="res://scenes/items/honey_jars.tscn" id="15_c8ocx"]
@@ -249,7 +249,7 @@ script = ExtResource("1_sdnvp")
 box_width = 6
 box_height = 6
 max_table_pages = 3
-level_title = "Sixth Box!"
+level_title = "Is this the last?"
 
 [node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("2_7xq2f")]
 

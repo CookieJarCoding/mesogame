@@ -242,7 +242,7 @@ _data = {
 
 [node name="Level1" type="Node2D" unique_id=1180765290]
 script = ExtResource("1_4fww7")
-level_title = "First Box!"
+level_title = "What to put?"
 
 [node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("2_3w4mx")]
 

@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://c55i08wr8w2f1" path="res://scenes/items/pillow.tscn" id="17_xr5re"]
 [ext_resource type="Texture2D" uid="uid://su86w6p5cupc" path="res://assets/tile_bg.png" id="20_6ktn0"]
 [ext_resource type="Texture2D" uid="uid://b6fgaeuibgs2t" path="res://assets/table.png" id="21_kmpa7"]
-[ext_resource type="PackedScene" uid="uid://bxd5oievwqopp" path="res://scenes/items/canned_goods.tscn" id="22_k12p4"]
+[ext_resource type="PackedScene" uid="uid://tcpaxhvkoq8i" path="res://scenes/items/canned_goods.tscn" id="22_k12p4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jbj1t"]
 size = Vector2(2452.7998, 225.39142)
@@ -250,7 +250,7 @@ script = ExtResource("1_5v622")
 box_width = 8
 box_height = 8
 max_table_pages = 4
-level_title = "Ninth Box!"
+level_title = "Good fun!"
 
 [node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("2_7kkvr")]
 

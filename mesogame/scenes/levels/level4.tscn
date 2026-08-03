@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://duc7f3cqg1p7h" path="res://scenes/items/fridge_magnet.tscn" id="14_q6dln"]
 [ext_resource type="PackedScene" uid="uid://cngxctywg2m20" path="res://scenes/items/shirt.tscn" id="16_8toe1"]
 [ext_resource type="PackedScene" uid="uid://dp48b0gpq6w0o" path="res://scenes/items/scarf.tscn" id="17_3fbce"]
-[ext_resource type="PackedScene" uid="uid://bvmpry8rndv88" path="res://scenes/items/luxury_bag.tscn" id="18_qtppw"]
+[ext_resource type="PackedScene" uid="uid://m2p5xgunqcah" path="res://scenes/items/luxury_bag.tscn" id="18_qtppw"]
 [ext_resource type="PackedScene" uid="uid://c55i08wr8w2f1" path="res://scenes/items/pillow.tscn" id="19_atlnk"]
 [ext_resource type="Texture2D" uid="uid://bd3yrl67sc6we" path="res://assets/box.png" id="19_ku6mp"]
 [ext_resource type="Texture2D" uid="uid://su86w6p5cupc" path="res://assets/tile_bg.png" id="20_rv7jb"]
@@ -248,7 +248,7 @@ script = ExtResource("1_ev8xs")
 box_width = 6
 box_height = 6
 max_table_pages = 3
-level_title = "Fourth Box!"
+level_title = "Upsizing!"
 
 [node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("2_atlnk")]
 

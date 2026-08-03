@@ -8,7 +8,7 @@
 [ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="8_hph83"]
 [ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="9_pxqp1"]
 [ext_resource type="PackedScene" uid="uid://blwn3kp63m1yf" path="res://scenes/item_information.tscn" id="10_idwux"]
-[ext_resource type="PackedScene" uid="uid://bxd5oievwqopp" path="res://scenes/items/canned_goods.tscn" id="11_nhdg1"]
+[ext_resource type="PackedScene" uid="uid://tcpaxhvkoq8i" path="res://scenes/items/canned_goods.tscn" id="11_nhdg1"]
 [ext_resource type="PackedScene" uid="uid://b8ueivqliytm3" path="res://scenes/items/stuffed_animal.tscn" id="12_wd10u"]
 [ext_resource type="PackedScene" uid="uid://c8m74t5h186ib" path="res://scenes/items/action_figure.tscn" id="14_pxgjg"]
 [ext_resource type="PackedScene" uid="uid://bo66gsffkyhc5" path="res://scenes/items/honey_jars.tscn" id="15_gdo0w"]
@@ -247,6 +247,7 @@ script = ExtResource("1_4r5lo")
 box_width = 6
 box_height = 6
 max_table_pages = 3
+level_title = "Winnie the Pooh?"
 
 [node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("2_4r5lo")]
 

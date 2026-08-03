@@ -253,6 +253,7 @@ script = ExtResource("1_ofiom")
 box_width = 10
 box_height = 10
 max_table_pages = 3
+level_title = "For the relatives"
 
 [node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("2_fjltj")]
 
