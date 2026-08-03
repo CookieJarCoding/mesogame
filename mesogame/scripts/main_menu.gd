@@ -41,8 +41,8 @@ func _on_settings_close_button_pressed() -> void:
 	$MainMenu.visible = true
 	$Logo.visible = true
 
-
 func _on_play_button_pressed() -> void:
+	Globals.load_data()
 	AudioLibrary.play_sfx(AudioLibrary.sfx.PAGE_FLIP)
 	var fade_tween = create_tween()
 	fade_tween.tween_property($TransitionRect, "color:a", 1, 5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_EXPO)
@@ -50,7 +50,6 @@ func _on_play_button_pressed() -> void:
 	fade_tween.tween_property($TransitionRect, "position", $TransitionRect.position, 1.5)
 	fade_tween.connect("finished", complete_transition)
 	#print(transition_rect.color.a)
-
 
 func complete_transition() -> void:
 	RenderingServer.set_default_clear_color(Color("#92c5db"))
@@ -72,3 +71,7 @@ func _on_quit_button_pressed() -> void:
 func _on_credits_button_pressed() -> void:
 	AudioLibrary.play_sfx(AudioLibrary.sfx.PAGE_FLIP)
 	get_tree().change_scene_to_file("res://scenes/credits.tscn")
+
+func _on_clear_progress_button_pressed() -> void:
+	Globals.level_counter = 0
+	Globals.save()

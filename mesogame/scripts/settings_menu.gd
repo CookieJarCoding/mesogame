@@ -32,6 +32,9 @@ func _on_pause_button_pressed() -> void:
 func _on_quit_button_pressed() -> void:
 	AudioLibrary.play_sfx(AudioLibrary.sfx.PAGE_FLIP)
 	if Globals.level_counter > 0:
+		Globals.save()
+		CharacterQuota.characters.clear()
+		self.get_parent().get_parent().items_in_grid.clear()
 		Globals.level_counter = 0
 		get_tree().paused = false
 		get_tree().change_scene_to_file("res://scenes/mainmenu.tscn")

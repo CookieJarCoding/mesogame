@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Mesogame"
-run/main_scene="uid://py34yt4xivdw"
+run/main_scene="uid://cogxdgtms8ujh"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

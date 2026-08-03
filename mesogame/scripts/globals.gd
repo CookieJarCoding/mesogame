@@ -1,5 +1,7 @@
 extends Node2D
 
+var save_path = "user://save_file.save"
+
 var is_dragging = false
 enum item_types {
 	LUXURY,
@@ -31,4 +33,15 @@ load("res:///scenes/levels/level7.tscn"),
 ## NOTE: for debugging purposes
 func _ready() -> void:
 	if OS.is_debug_build():
+		level_counter = 0
+
+func save() -> void:
+	var file = FileAccess.open(save_path, FileAccess.WRITE)
+	file.store_var(level_counter)
+
+func load_data():
+	if FileAccess.file_exists(save_path):
+		var file = FileAccess.open(save_path, FileAccess.READ)
+		level_counter = file.get_var(level_counter)
+	else:
 		level_counter = 0
