@@ -28,7 +28,7 @@ func play_sfx(s: sfx):
 	elif s == sfx.PLOP_PLOP:
 		$PlopPlop.play(0.15)
 	elif s == sfx.PLOP_FLAT:
-		$Plop_Flat.play(0.5)
+		$PlopFlat.play(0.5)
 	elif s == sfx.LIQUID:
 		$Liquid.play(2.0)
 	elif s == sfx.FRAGILE:

@@ -31,7 +31,7 @@ func display_warning(tx: String) -> void:
 	if warning_timer.is_stopped():
 		warning_timer.start()
 		var tween = create_tween()
-		tween.tween_property($Panel/PopupPanel, "position:y", 248.0, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+		tween.tween_property($Panel/PopupPanel, "position:y", 268.0, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
 	else:
 		warning_timer.start()
 

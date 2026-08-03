@@ -98,6 +98,12 @@ func _on_settings_button_pressed() -> void:
 func _on_item_packed(item: ItemUnit) -> void:
 	if item not in items_in_grid:
 		items_in_grid.append(item)
+	item.reparent(box)
+	
+	## NOTE This code is held together by sticks and tape
+	for i in range(5):
+		await get_tree().process_frame
+	
 	if not item.is_valid_liquid():
 		AudioLibrary.play_sfx(AudioLibrary.sfx.WRONG)
 		$HUD.display_warning("Porous\nneeds DRY surroundings!")
@@ -109,7 +115,6 @@ func _on_item_packed(item: ItemUnit) -> void:
 	elif item.fragile:
 		AudioLibrary.play_sfx(AudioLibrary.sfx.FRAGILE)
 
-	item.reparent(box)
 	#for k in item_group.get_children():
 		#k.top_level = false
 	#for i in items_in_grid:
