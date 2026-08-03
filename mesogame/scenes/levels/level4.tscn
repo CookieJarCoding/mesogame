@@ -9,13 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="9_npa1m"]
 [ext_resource type="PackedScene" uid="uid://blwn3kp63m1yf" path="res://scenes/item_information.tscn" id="10_ll01n"]
 [ext_resource type="PackedScene" uid="uid://b8ueivqliytm3" path="res://scenes/items/stuffed_animal.tscn" id="12_cdy06"]
-[ext_resource type="PackedScene" uid="uid://bek2aya3xy4hl" path="res://scenes/items/chocolates.tscn" id="13_2c5pw"]
 [ext_resource type="PackedScene" uid="uid://c8m74t5h186ib" path="res://scenes/items/action_figure.tscn" id="14_7cvth"]
 [ext_resource type="PackedScene" uid="uid://duc7f3cqg1p7h" path="res://scenes/items/fridge_magnet.tscn" id="14_q6dln"]
 [ext_resource type="PackedScene" uid="uid://cngxctywg2m20" path="res://scenes/items/shirt.tscn" id="16_8toe1"]
 [ext_resource type="PackedScene" uid="uid://dp48b0gpq6w0o" path="res://scenes/items/scarf.tscn" id="17_3fbce"]
-[ext_resource type="PackedScene" uid="uid://m2p5xgunqcah" path="res://scenes/items/luxury_bag.tscn" id="18_qtppw"]
-[ext_resource type="PackedScene" uid="uid://c55i08wr8w2f1" path="res://scenes/items/pillow.tscn" id="19_atlnk"]
 [ext_resource type="Texture2D" uid="uid://bd3yrl67sc6we" path="res://assets/box.png" id="19_ku6mp"]
 [ext_resource type="Texture2D" uid="uid://su86w6p5cupc" path="res://assets/tile_bg.png" id="20_rv7jb"]
 [ext_resource type="Texture2D" uid="uid://b6fgaeuibgs2t" path="res://assets/table.png" id="21_bf472"]
@@ -326,9 +323,6 @@ z_index = 100
 [node name="ItemGroup" type="Node2D" parent="." unique_id=1210610719]
 position = Vector2(0, 800)
 
-[node name="LuxuryBag" parent="ItemGroup" unique_id=1123159826 instance=ExtResource("18_qtppw")]
-position = Vector2(7844, 1702)
-
 [node name="Shirt" parent="ItemGroup" unique_id=1209161982 instance=ExtResource("16_8toe1")]
 position = Vector2(2289, 1759)
 
@@ -355,12 +349,6 @@ position = Vector2(4937, 1601)
 
 [node name="ActionFigure2" parent="ItemGroup" unique_id=956983042 instance=ExtResource("14_7cvth")]
 position = Vector2(5115, 1635)
-
-[node name="Chocolates" parent="ItemGroup" unique_id=1352430525 instance=ExtResource("13_2c5pw")]
-position = Vector2(7271, 1594)
-
-[node name="Pillow" parent="ItemGroup" unique_id=782571277 instance=ExtResource("19_atlnk")]
-position = Vector2(8656, 1526)
 
 [node name="Camera" type="Camera2D" parent="." unique_id=113758559]
 anchor_mode = 0

@@ -359,9 +359,6 @@ position = Vector2(5267, 1440)
 [node name="Scarf" parent="ItemGroup" unique_id=1158260323 instance=ExtResource("9_hw1kd")]
 position = Vector2(2490, 1772)
 
-[node name="Scarf2" parent="ItemGroup" unique_id=898837058 instance=ExtResource("9_hw1kd")]
-position = Vector2(5738, 1591)
-
 [node name="Pillow" parent="ItemGroup" unique_id=705416440 instance=ExtResource("17_xr5re")]
 position = Vector2(927, 1617)
 

@@ -8,7 +8,7 @@
 [ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="8_h4dr5"]
 [ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="9_cmwrw"]
 [ext_resource type="PackedScene" uid="uid://blwn3kp63m1yf" path="res://scenes/item_information.tscn" id="10_7memh"]
-[ext_resource type="PackedScene" uid="uid://tcpaxhvkoq8i" path="res://scenes/items/canned_goods.tscn" id="11_fp2uk"]
+[ext_resource type="PackedScene" uid="uid://bxd5oievwqopp" path="res://scenes/items/canned_goods.tscn" id="11_fp2uk"]
 [ext_resource type="PackedScene" uid="uid://bek2aya3xy4hl" path="res://scenes/items/chocolates.tscn" id="13_s2xic"]
 [ext_resource type="PackedScene" uid="uid://c8m74t5h186ib" path="res://scenes/items/action_figure.tscn" id="14_gh4cf"]
 [ext_resource type="PackedScene" uid="uid://bo66gsffkyhc5" path="res://scenes/items/honey_jars.tscn" id="15_c8ocx"]
@@ -16,7 +16,6 @@
 [ext_resource type="PackedScene" uid="uid://cngxctywg2m20" path="res://scenes/items/shirt.tscn" id="16_mokrb"]
 [ext_resource type="PackedScene" uid="uid://dp48b0gpq6w0o" path="res://scenes/items/scarf.tscn" id="17_qab5v"]
 [ext_resource type="PackedScene" uid="uid://duc7f3cqg1p7h" path="res://scenes/items/fridge_magnet.tscn" id="17_xmmsn"]
-[ext_resource type="PackedScene" uid="uid://bwxgenndeaqsm" path="res://scenes/items/backpack.tscn" id="18_pok8i"]
 [ext_resource type="Texture2D" uid="uid://bd3yrl67sc6we" path="res://assets/box.png" id="19_ddpvl"]
 [ext_resource type="Texture2D" uid="uid://su86w6p5cupc" path="res://assets/tile_bg.png" id="20_8epf1"]
 [ext_resource type="Texture2D" uid="uid://b6fgaeuibgs2t" path="res://assets/table.png" id="21_nl3jc"]
@@ -332,9 +331,6 @@ position = Vector2(536, 1666)
 
 [node name="Scarf" parent="ItemGroup" unique_id=1427190506 instance=ExtResource("17_qab5v")]
 position = Vector2(1429, 1563)
-
-[node name="Backpack" parent="ItemGroup" unique_id=1232050733 instance=ExtResource("18_pok8i")]
-position = Vector2(7436, 1730)
 
 [node name="ActionFigure" parent="ItemGroup" unique_id=1798338996 instance=ExtResource("14_gh4cf")]
 position = Vector2(1026, 1532)

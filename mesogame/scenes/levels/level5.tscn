@@ -8,12 +8,11 @@
 [ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="8_hph83"]
 [ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="9_pxqp1"]
 [ext_resource type="PackedScene" uid="uid://blwn3kp63m1yf" path="res://scenes/item_information.tscn" id="10_idwux"]
-[ext_resource type="PackedScene" uid="uid://tcpaxhvkoq8i" path="res://scenes/items/canned_goods.tscn" id="11_nhdg1"]
+[ext_resource type="PackedScene" uid="uid://bxd5oievwqopp" path="res://scenes/items/canned_goods.tscn" id="11_nhdg1"]
 [ext_resource type="PackedScene" uid="uid://b8ueivqliytm3" path="res://scenes/items/stuffed_animal.tscn" id="12_wd10u"]
 [ext_resource type="PackedScene" uid="uid://c8m74t5h186ib" path="res://scenes/items/action_figure.tscn" id="14_pxgjg"]
 [ext_resource type="PackedScene" uid="uid://bo66gsffkyhc5" path="res://scenes/items/honey_jars.tscn" id="15_gdo0w"]
 [ext_resource type="PackedScene" uid="uid://duc7f3cqg1p7h" path="res://scenes/items/fridge_magnet.tscn" id="15_ngf84"]
-[ext_resource type="PackedScene" uid="uid://cngxctywg2m20" path="res://scenes/items/shirt.tscn" id="16_lxeoi"]
 [ext_resource type="PackedScene" uid="uid://b3clb5dtvgjyn" path="res://scenes/items/blanket.tscn" id="19_4r5lo"]
 [ext_resource type="Texture2D" uid="uid://bd3yrl67sc6we" path="res://assets/box.png" id="19_h7anq"]
 [ext_resource type="Texture2D" uid="uid://su86w6p5cupc" path="res://assets/tile_bg.png" id="20_c3pvc"]
@@ -327,12 +326,6 @@ position = Vector2(0, 800)
 
 [node name="StuffedAnimal" parent="ItemGroup" unique_id=1134448245 instance=ExtResource("12_wd10u")]
 position = Vector2(5276, 1688)
-
-[node name="Shirt" parent="ItemGroup" unique_id=705416440 instance=ExtResource("16_lxeoi")]
-position = Vector2(1671, 1693)
-
-[node name="StuffedAnimal2" parent="ItemGroup" unique_id=270911864 instance=ExtResource("12_wd10u")]
-position = Vector2(7947, 1726)
 
 [node name="HoneyJars" parent="ItemGroup" unique_id=1384608439 instance=ExtResource("15_gdo0w")]
 position = Vector2(400, 1520)

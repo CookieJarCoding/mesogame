@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://c55i08wr8w2f1" path="res://scenes/items/pillow.tscn" id="17_xr5re"]
 [ext_resource type="Texture2D" uid="uid://su86w6p5cupc" path="res://assets/tile_bg.png" id="20_6ktn0"]
 [ext_resource type="Texture2D" uid="uid://b6fgaeuibgs2t" path="res://assets/table.png" id="21_kmpa7"]
-[ext_resource type="PackedScene" uid="uid://tcpaxhvkoq8i" path="res://scenes/items/canned_goods.tscn" id="22_k12p4"]
+[ext_resource type="PackedScene" uid="uid://bxd5oievwqopp" path="res://scenes/items/canned_goods.tscn" id="22_k12p4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jbj1t"]
 size = Vector2(2452.7998, 225.39142)
@@ -396,6 +396,18 @@ position = Vector2(10659, 1545)
 
 [node name="Perfume5" parent="ItemGroup" unique_id=283581588 instance=ExtResource("14_7kkvr")]
 position = Vector2(11235, 1757)
+
+[node name="Perfume10" parent="ItemGroup" unique_id=2087568337 instance=ExtResource("14_7kkvr")]
+position = Vector2(12313, 1539)
+
+[node name="Perfume11" parent="ItemGroup" unique_id=1266943296 instance=ExtResource("14_7kkvr")]
+position = Vector2(12255, 1710)
+
+[node name="Perfume12" parent="ItemGroup" unique_id=717114022 instance=ExtResource("14_7kkvr")]
+position = Vector2(12012, 1743)
+
+[node name="Perfume13" parent="ItemGroup" unique_id=2051215518 instance=ExtResource("14_7kkvr")]
+position = Vector2(11970, 1507)
 
 [node name="Camera" type="Camera2D" parent="." unique_id=113758559]
 anchor_mode = 0

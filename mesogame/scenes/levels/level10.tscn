@@ -15,13 +15,10 @@
 [ext_resource type="PackedScene" uid="uid://duc7f3cqg1p7h" path="res://scenes/items/fridge_magnet.tscn" id="15_c8gdp"]
 [ext_resource type="PackedScene" uid="uid://cpqhd5ebxd1vf" path="res://scenes/items/camera_180.tscn" id="16_u8rrv"]
 [ext_resource type="PackedScene" uid="uid://doktiklc7r5d2" path="res://scenes/items/backpack_flipped_180.tscn" id="17_sa2bg"]
-[ext_resource type="PackedScene" uid="uid://c8m74t5h186ib" path="res://scenes/items/action_figure.tscn" id="17_uh1vt"]
 [ext_resource type="PackedScene" uid="uid://c55i08wr8w2f1" path="res://scenes/items/pillow.tscn" id="18_14mch"]
 [ext_resource type="PackedScene" uid="uid://dd3siki8edolo" path="res://scenes/items/shirt_180.tscn" id="19_a0e7p"]
 [ext_resource type="PackedScene" uid="uid://cxpfw407fmcbe" path="res://scenes/items/chopsticks_90.tscn" id="19_k056o"]
-[ext_resource type="PackedScene" uid="uid://tcpaxhvkoq8i" path="res://scenes/items/canned_goods.tscn" id="20_ipfcg"]
 [ext_resource type="PackedScene" uid="uid://ljo2xbw203ex" path="res://scenes/items/scarf_90ccw.tscn" id="20_sa2bg"]
-[ext_resource type="PackedScene" uid="uid://bo66gsffkyhc5" path="res://scenes/items/honey_jars.tscn" id="21_otn3r"]
 [ext_resource type="Texture2D" uid="uid://ck8ks4oyt60n5" path="res://assets/box_thin.png" id="21_w7wb3"]
 [ext_resource type="Texture2D" uid="uid://su86w6p5cupc" path="res://assets/tile_bg.png" id="22_j1ei2"]
 [ext_resource type="Texture2D" uid="uid://b6fgaeuibgs2t" path="res://assets/table.png" id="23_acsl5"]
@@ -373,15 +370,6 @@ position = Vector2(1395, 1519)
 
 [node name="Shirt" parent="ItemGroup" unique_id=334425122 instance=ExtResource("19_a0e7p")]
 position = Vector2(5297, 1716)
-
-[node name="ActionFigure" parent="ItemGroup" unique_id=584338978 instance=ExtResource("17_uh1vt")]
-position = Vector2(227, 1698)
-
-[node name="HoneyJars" parent="ItemGroup" unique_id=67601459 instance=ExtResource("21_otn3r")]
-position = Vector2(445, 1674)
-
-[node name="CannedGoods" parent="ItemGroup" unique_id=1524823080 instance=ExtResource("20_ipfcg")]
-position = Vector2(1815, 1668)
 
 [node name="Camera" parent="ItemGroup" unique_id=1482752892 instance=ExtResource("16_u8rrv")]
 position = Vector2(785, 1385)
