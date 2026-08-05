@@ -13,14 +13,18 @@
 [ext_resource type="PackedScene" uid="uid://b0nog3nlf2vsj" path="res://scenes/items/pillow_90.tscn" id="14_21itu"]
 [ext_resource type="PackedScene" uid="uid://b8ueivqliytm3" path="res://scenes/items/stuffed_animal.tscn" id="14_i6on5"]
 [ext_resource type="PackedScene" uid="uid://duc7f3cqg1p7h" path="res://scenes/items/fridge_magnet.tscn" id="15_c8gdp"]
+[ext_resource type="PackedScene" uid="uid://c1nt5gv67kvis" path="res://scenes/items/camera_90cw.tscn" id="16_08hg2"]
 [ext_resource type="PackedScene" uid="uid://cpqhd5ebxd1vf" path="res://scenes/items/camera_180.tscn" id="16_u8rrv"]
 [ext_resource type="PackedScene" uid="uid://doktiklc7r5d2" path="res://scenes/items/backpack_flipped_180.tscn" id="17_sa2bg"]
 [ext_resource type="PackedScene" uid="uid://c55i08wr8w2f1" path="res://scenes/items/pillow.tscn" id="18_14mch"]
 [ext_resource type="PackedScene" uid="uid://dd3siki8edolo" path="res://scenes/items/shirt_180.tscn" id="19_a0e7p"]
 [ext_resource type="PackedScene" uid="uid://cxpfw407fmcbe" path="res://scenes/items/chopsticks_90.tscn" id="19_k056o"]
+[ext_resource type="PackedScene" uid="uid://drhgk7pmr5221" path="res://scenes/items/camera.tscn" id="20_a0e7p"]
 [ext_resource type="PackedScene" uid="uid://ljo2xbw203ex" path="res://scenes/items/scarf_90ccw.tscn" id="20_sa2bg"]
+[ext_resource type="PackedScene" uid="uid://vbqdq5g66g6o" path="res://scenes/items/camera_90ccw.tscn" id="21_otn3r"]
 [ext_resource type="Texture2D" uid="uid://ck8ks4oyt60n5" path="res://assets/box_thin.png" id="21_w7wb3"]
 [ext_resource type="Texture2D" uid="uid://su86w6p5cupc" path="res://assets/tile_bg.png" id="22_j1ei2"]
+[ext_resource type="PackedScene" uid="uid://bjhuyvsloqvgk" path="res://scenes/items/chopsticks.tscn" id="22_u8rrv"]
 [ext_resource type="Texture2D" uid="uid://b6fgaeuibgs2t" path="res://assets/table.png" id="23_acsl5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jbj1t"]
@@ -341,10 +345,22 @@ position = Vector2(8669, 1820)
 [node name="Backpack" parent="ItemGroup" unique_id=1180006784 instance=ExtResource("10_4c83q")]
 position = Vector2(7267, 1553)
 
-[node name="Chopsticks3" parent="ItemGroup" unique_id=1534239633 instance=ExtResource("19_k056o")]
-position = Vector2(1597, 1688)
+[node name="Camera" parent="ItemGroup" unique_id=1482752892 instance=ExtResource("16_u8rrv")]
+position = Vector2(785, 1385)
 
-[node name="Pillow" parent="ItemGroup" unique_id=705416440 instance=ExtResource("14_21itu")]
+[node name="Camera2" parent="ItemGroup" unique_id=14343766 instance=ExtResource("20_a0e7p")]
+position = Vector2(556, 1558)
+
+[node name="Camera3" parent="ItemGroup" unique_id=409947684 instance=ExtResource("21_otn3r")]
+position = Vector2(214, 1584)
+
+[node name="Camera4" parent="ItemGroup" unique_id=705416440 instance=ExtResource("16_08hg2")]
+position = Vector2(1151, 1535)
+
+[node name="Chopsticks3" parent="ItemGroup" unique_id=1534239633 instance=ExtResource("19_k056o")]
+position = Vector2(1992, 1677)
+
+[node name="Pillow" parent="ItemGroup" unique_id=1000430911 instance=ExtResource("14_21itu")]
 position = Vector2(3841, 1583)
 
 [node name="Pillow2" parent="ItemGroup" unique_id=165083245 instance=ExtResource("18_14mch")]
@@ -354,25 +370,22 @@ position = Vector2(4344, 1665)
 position = Vector2(4696, 1708)
 
 [node name="FridgeMagnet" parent="ItemGroup" unique_id=513587711 instance=ExtResource("15_c8gdp")]
-position = Vector2(943, 1697)
+position = Vector2(1767, 1500)
 
 [node name="FridgeMagnet2" parent="ItemGroup" unique_id=1104155307 instance=ExtResource("15_c8gdp")]
-position = Vector2(1140, 1732)
+position = Vector2(1535, 1721)
 
 [node name="FridgeMagnet3" parent="ItemGroup" unique_id=1842869434 instance=ExtResource("15_c8gdp")]
-position = Vector2(1201, 1519)
+position = Vector2(1596, 1508)
 
 [node name="FridgeMagnet4" parent="ItemGroup" unique_id=1743329517 instance=ExtResource("15_c8gdp")]
-position = Vector2(1334, 1705)
-
-[node name="FridgeMagnet5" parent="ItemGroup" unique_id=931151300 instance=ExtResource("15_c8gdp")]
-position = Vector2(1395, 1519)
+position = Vector2(1729, 1694)
 
 [node name="Shirt" parent="ItemGroup" unique_id=334425122 instance=ExtResource("19_a0e7p")]
 position = Vector2(5297, 1716)
 
-[node name="Camera" parent="ItemGroup" unique_id=1482752892 instance=ExtResource("16_u8rrv")]
-position = Vector2(785, 1385)
+[node name="Chopsticks" parent="ItemGroup" unique_id=815620088 instance=ExtResource("22_u8rrv")]
+position = Vector2(2216, 1585)
 
 [node name="Camera" type="Camera2D" parent="." unique_id=113758559]
 anchor_mode = 0

@@ -20,7 +20,10 @@
 [ext_resource type="PackedScene" uid="uid://c5hlhqh1dr53d" path="res://scenes/items/shirt_90ccw.tscn" id="18_5j2dn"]
 [ext_resource type="PackedScene" uid="uid://del4y8f7xyx28" path="res://scenes/items/luxury_bag_90cw.tscn" id="20_mcrnq"]
 [ext_resource type="PackedScene" uid="uid://cpqhd5ebxd1vf" path="res://scenes/items/camera_180.tscn" id="21_jvx7p"]
+[ext_resource type="PackedScene" uid="uid://mbbgvhaheqsr" path="res://scenes/items/stuffed_animal_90ccw.tscn" id="22_fvdjd"]
 [ext_resource type="PackedScene" uid="uid://1ajxi2hkjtyg" path="res://scenes/items/perfume.tscn" id="22_wiv44"]
+[ext_resource type="PackedScene" uid="uid://bjhuyvsloqvgk" path="res://scenes/items/chopsticks.tscn" id="23_ofiom"]
+[ext_resource type="PackedScene" uid="uid://bwxgenndeaqsm" path="res://scenes/items/backpack.tscn" id="24_fjltj"]
 [ext_resource type="Texture2D" uid="uid://ck8ks4oyt60n5" path="res://assets/box_thin.png" id="24_y6sq7"]
 [ext_resource type="Texture2D" uid="uid://su86w6p5cupc" path="res://assets/tile_bg.png" id="25_xmoq6"]
 [ext_resource type="Texture2D" uid="uid://b6fgaeuibgs2t" path="res://assets/table.png" id="26_yshdj"]
@@ -252,7 +255,7 @@ _data = {
 script = ExtResource("1_ofiom")
 box_width = 10
 box_height = 10
-max_table_pages = 3
+max_table_pages = 4
 level_title = "For the relatives"
 
 [node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("2_fjltj")]
@@ -335,10 +338,10 @@ position = Vector2(0, 800)
 position = Vector2(308, 1874)
 
 [node name="Shirt2" parent="ItemGroup" unique_id=1562401933 instance=ExtResource("18_5j2dn")]
-position = Vector2(7300, 2012)
+position = Vector2(7300, 2003)
 
 [node name="Shirt" parent="ItemGroup" unique_id=207321364 instance=ExtResource("17_gbni7")]
-position = Vector2(7777, 1860)
+position = Vector2(7777, 1851)
 
 [node name="Scarf3" parent="ItemGroup" unique_id=388336118 instance=ExtResource("16_65jma")]
 position = Vector2(1732, 1723)
@@ -349,8 +352,11 @@ position = Vector2(1077, 2000)
 [node name="Scarf2" parent="ItemGroup" unique_id=741086154 instance=ExtResource("12_65jma")]
 position = Vector2(1135, 1571)
 
+[node name="Backpack" parent="ItemGroup" unique_id=141671068 instance=ExtResource("24_fjltj")]
+position = Vector2(10714, 1793)
+
 [node name="LuxuryBag" parent="ItemGroup" unique_id=1474155494 instance=ExtResource("20_mcrnq")]
-position = Vector2(8125, 2036)
+position = Vector2(8125, 2027)
 
 [node name="StuffedAnimal" parent="ItemGroup" unique_id=400030906 instance=ExtResource("14_xbk0o")]
 position = Vector2(2074, 1857)
@@ -365,25 +371,31 @@ position = Vector2(2579, 1572)
 position = Vector2(2689, 1769)
 
 [node name="FridgeMagnet4" parent="ItemGroup" unique_id=1934881563 instance=ExtResource("17_f3no0")]
-position = Vector2(4072, 1698)
+position = Vector2(4072, 1680)
 
 [node name="ActionFigure" parent="ItemGroup" unique_id=1141641441 instance=ExtResource("15_mdeir")]
-position = Vector2(4246, 1789)
+position = Vector2(4246, 1771)
 
 [node name="ActionFigure2" parent="ItemGroup" unique_id=538321031 instance=ExtResource("15_mdeir")]
-position = Vector2(4438, 1789)
+position = Vector2(4438, 1771)
 
 [node name="Pillow" parent="ItemGroup" unique_id=1373825734 instance=ExtResource("16_hkgte")]
-position = Vector2(4639, 1645)
+position = Vector2(4639, 1627)
 
 [node name="Pillow2" parent="ItemGroup" unique_id=1110131665 instance=ExtResource("16_hkgte")]
-position = Vector2(5123, 1632)
+position = Vector2(5123, 1614)
 
 [node name="Perfume" parent="ItemGroup" unique_id=1207395585 instance=ExtResource("22_wiv44")]
-position = Vector2(8486, 1640)
+position = Vector2(8486, 1631)
 
 [node name="Camera" parent="ItemGroup" unique_id=2097121558 instance=ExtResource("21_jvx7p")]
-position = Vector2(8678, 1684)
+position = Vector2(8678, 1675)
+
+[node name="StuffedAnimal2" parent="ItemGroup" unique_id=1413499839 instance=ExtResource("22_fvdjd")]
+position = Vector2(11409, 1825)
+
+[node name="Chopsticks" parent="ItemGroup" unique_id=1942209683 instance=ExtResource("23_ofiom")]
+position = Vector2(11696, 1684)
 
 [node name="Camera" type="Camera2D" parent="." unique_id=113758559]
 anchor_mode = 0

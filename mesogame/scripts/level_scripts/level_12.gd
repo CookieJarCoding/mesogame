@@ -7,7 +7,7 @@ func _ready() -> void:
 		[Globals.item_types.CONSUMABLES],
 		"res://assets/characters/mikey.png"
 	)
-	$HUD.create_character("Tita Kara", 0, 21,
+	$HUD.create_character("Tita Kara", 0, 18,
 		[Globals.item_types.LUXURY, Globals.item_types.HANDICRAFTS],
 		[Globals.item_types.CONSUMABLES, Globals.item_types.TOYS],
 		"res://assets/characters/kara.png"

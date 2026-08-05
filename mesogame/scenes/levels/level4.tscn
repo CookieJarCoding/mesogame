@@ -244,7 +244,7 @@ _data = {
 script = ExtResource("1_ev8xs")
 box_width = 6
 box_height = 6
-max_table_pages = 3
+max_table_pages = 2
 level_title = "Upsizing!"
 
 [node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("2_atlnk")]

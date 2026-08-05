@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Balik Bayan"
-run/main_scene="uid://cogxdgtms8ujh"
+run/main_scene="uid://cdcl7v5hhs2s5"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 boot_splash/bg_color=Color(0.49411765, 0.84705883, 0.33333334, 1)
 boot_splash/stretch_mode=0
