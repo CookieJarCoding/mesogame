@@ -35,9 +35,11 @@ var finished_moving_items: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#Globals.load_data()
-	#if OS.is_debug_build():
-		#Globals.level_counter = 1
-	#
+	if OS.is_debug_build():
+		Globals.level_counter = 8
+	
+	
+	print(Globals.level_counter)
 	if Globals.level_counter >= 11:
 		$Box/BoxTopLeftCorner.position = Vector2(1818 - 70 * (box_width - 5), 376 - 70 * (box_width - 5))
 	else:
@@ -66,6 +68,14 @@ func _ready() -> void:
 		item.removed.connect(_on_item_removed)
 		item.hovered.connect(_on_item_hovered)
 		item.unhovered.connect(_on_item_unhovered)
+	
+	
+	for pre_placed_items in box.get_children():
+		if pre_placed_items == box.get_child(0):
+			continue
+		items_in_grid.append(pre_placed_items)
+		pre_placed_items.hovered.connect(_on_item_hovered)
+		pre_placed_items.unhovered.connect(_on_item_unhovered)
 
 	hud.set_handle_with_care_visibility(false)
 	
@@ -98,6 +108,7 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	$HUD.set_next_level(check_win())
+	#print(items_in_grid)
 
 
 func _on_settings_button_pressed() -> void:
@@ -141,6 +152,7 @@ func _on_item_removed(item: ItemUnit) -> void:
 	tally_scores()
 
 func _on_item_hovered(item: ItemUnit) -> void:
+	#print("His")
 	if movement_ongoing:
 		return
 	item_explained = item
@@ -240,7 +252,7 @@ func _on_animation_finished(anim_name: StringName) -> void:
 		Globals.level_counter += 1
 		Globals.save()
 		# CHECK IF THIS WORKS SUCH THAT THESE ARE SPACED OUT EVERY THREE LEVELS
-		if Globals.level_counter == 1 or Globals.level_counter == 4 or Globals.level_counter == 7 or Globals.level_counter == 11 or Globals.level_counter == 13:
+		if Globals.level_counter == 1 or Globals.level_counter == 4 or Globals.level_counter == 7 or Globals.level_counter == 12 or Globals.level_counter == 14:
 			get_tree().change_scene_to_file("res:///scenes/interstitial_letter.tscn")
 		elif Globals.level_counter == 13:
 			get_tree().change_scene_to_file("res:///scenes/ending.tscn")

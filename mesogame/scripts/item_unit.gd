@@ -45,6 +45,9 @@ func _ready() -> void:
 	starting_position = global_position - get_parent().position
 	area_group = $AreaGroup
 	areas = area_group.get_children()
+	
+	if locked:
+		modulate = Color(0.0, 0.4, 0.6)
 	#for area in areas:
 		#if area is Area2D:
 			#area.area_entered.connect(_on_tile_area_entered.bind(area))
@@ -65,10 +68,13 @@ func _process(_delta: float) -> void:
 	
 	#print(draggable)
 	
+	if locked:
+		return
+	
 	is_inside_dropable = false
 	on_table = false
 	var drop_space = null
-	
+
 	## NOTE: Checks for any free space
 	for area in areas:
 		if area.has_overlapping_areas():

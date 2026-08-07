@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="3_5ysmq"]
 [ext_resource type="Texture2D" uid="uid://bfkjsqym2yckn" path="res://assets/reset.png" id="4_uo2fv"]
 [ext_resource type="Texture2D" uid="uid://b33wtvop20utb" path="res://assets/send.png" id="5_047uy"]
+[ext_resource type="Script" uid="uid://bme42p1aic0si" path="res://scripts/hoverable.gd" id="5_hd3ao"]
 [ext_resource type="Texture2D" uid="uid://bo5d88wlhjs8g" path="res://assets/handle_with_care.png" id="6_047uy"]
 [ext_resource type="Texture2D" uid="uid://dr4y0lst3c7rn" path="res://assets/save_icon.png" id="7_5pdws"]
 
@@ -164,6 +165,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 texture_normal = ExtResource("4_uo2fv")
 stretch_mode = 5
+script = ExtResource("5_hd3ao")
 
 [node name="NextButton" type="TextureButton" parent="Panel/HBoxContainer" unique_id=399632439]
 custom_maximum_size = Vector2(50, 50)
@@ -172,6 +174,7 @@ size_flags_horizontal = 6
 size_flags_vertical = 0
 texture_normal = ExtResource("5_047uy")
 stretch_mode = 5
+script = ExtResource("5_hd3ao")
 
 [node name="HandleWithCare" type="Panel" parent="Panel" unique_id=795946074]
 layout_mode = 0

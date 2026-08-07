@@ -2,22 +2,20 @@ extends Level
 
 func _ready() -> void:
 	super()
-	$HUD.create_character("Mikey", 0, 22,
-		[Globals.item_types.TOYS, Globals.item_types.TECHNOLOGY],
-		[Globals.item_types.CONSUMABLES],
-		"res://assets/characters/mikey.png"
+	$HUD.create_character("Jay & Ethan", 0, 28,
+		[Globals.item_types.TOYS, Globals.item_types.CONSUMABLES],
+		[Globals.item_types.APPAREL],
+		"res://assets/characters/jay_ethan.png"
 	)
-	$HUD.create_character("Tita Kara", 0, 18,
-		[Globals.item_types.LUXURY, Globals.item_types.HANDICRAFTS],
-		[Globals.item_types.CONSUMABLES, Globals.item_types.TOYS],
-		"res://assets/characters/kara.png"
+	$HUD.create_character("Joanne", 0, 27,
+		[Globals.item_types.APPAREL],
+		[],
+		"res://assets/characters/joanne.png"
 	)
-	$HUD.create_character("Tito Albert", 0, 24,
-		[Globals.item_types.APPAREL, Globals.item_types.TOYS],
-		[Globals.item_types.LUXURY],
-		"res://assets/characters/alfred.png"
+	$HUD.create_character("Nanang", 0, 27,
+		[Globals.item_types.CONSUMABLES, Globals.item_types.HANDICRAFTS],
+		[Globals.item_types.TOYS],
+		"res://assets/characters/ange.png"
 	)
-	
-	set_handle_with_care()
 	
 	Globals.level_counter = 12

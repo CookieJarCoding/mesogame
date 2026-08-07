@@ -32,15 +32,16 @@ load("res:///scenes/levels/level9.tscn"),
 load("res:///scenes/levels/level10.tscn"),
 load("res:///scenes/levels/level11.tscn"),
 load("res:///scenes/levels/level12.tscn"),
+load("res:///scenes/levels/level13.tscn"),
 load("res://scenes/levels/levelend.tscn"), # NOTE: ending level
 load("res:///scenes/ending.tscn") # NOTE: ending scene
 ]
 #
 
 ## NOTE: for debugging purposes
-func _ready() -> void:
-	if OS.is_debug_build():
-		level_counter = 0
+#func _ready() -> void:
+	#if OS.is_debug_build():
+		#level_counter = 0
 
 func save() -> void:
 	var file = FileAccess.open(save_path, FileAccess.WRITE)
