@@ -2,6 +2,7 @@ extends CanvasLayer
 
 signal reset_level
 signal next_level
+signal show_tutorial
 
 const char_quota: PackedScene = preload("res://scenes/character_quota.tscn")
 
@@ -62,3 +63,7 @@ func flash_save_icon() -> void:
 	$SaveIcon.modulate.a = 1
 	var tween = create_tween()
 	tween.tween_property($SaveIcon, "modulate:a", 0, 2).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_CUBIC)
+
+
+func _on_tutorial_pressed() -> void:
+	show_tutorial.emit()

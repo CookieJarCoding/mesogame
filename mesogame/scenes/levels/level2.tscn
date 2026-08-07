@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://b8ueivqliytm3" path="res://scenes/items/stuffed_animal.tscn" id="16_sqrei"]
 [ext_resource type="Texture2D" uid="uid://su86w6p5cupc" path="res://assets/tile_bg.png" id="17_7r2ys"]
 [ext_resource type="Texture2D" uid="uid://b6fgaeuibgs2t" path="res://assets/table.png" id="18_h3qar"]
+[ext_resource type="PackedScene" uid="uid://c4jdub0wmstg1" path="res://scenes/popup_tutorial.tscn" id="20_b3p8y"]
 [ext_resource type="PackedScene" uid="uid://bwxgenndeaqsm" path="res://scenes/items/backpack.tscn" id="21_bxuut"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jbj1t"]
@@ -400,6 +401,8 @@ shape = SubResource("RectangleShape2D_jbj1t")
 [node name="Anim" type="AnimationPlayer" parent="." unique_id=822451176]
 libraries/ = SubResource("AnimationLibrary_jkv2x")
 autoplay = &"entrance"
+
+[node name="Tutorial" parent="." unique_id=1722057529 instance=ExtResource("20_b3p8y")]
 
 [connection signal="pressed" from="HUD/PauseButton" to="HUD/SettingsMenu" method="_on_pause_button_pressed"]
 [connection signal="pressed" from="HUD/Left" to="." method="_on_left_pressed"]

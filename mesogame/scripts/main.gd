@@ -53,6 +53,7 @@ func _ready() -> void:
 	$HUD/LevelTitle.text = level_title
 	$HUD.connect("reset_level", _on_reset_button_pressed)
 	$HUD.connect("next_level", _on_next_button_pressed)
+	$HUD.connect("show_tutorial", _on_tutorial_pressed)
 	$HUD.flash_save_icon()
 	
 	for i in range(box_height):
@@ -280,3 +281,9 @@ func move_items_down() -> void:
 	tween.tween_property(item_group, "position:y", 800.0, 1.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_EXPO)
 	await tween.finished
 	finished_moving_items = true
+
+
+func _on_tutorial_pressed() -> void:
+	var tut = get_node_or_null("Tutorial")
+	if tut != null and tut is CanvasLayer:
+		tut.show_tutorial()

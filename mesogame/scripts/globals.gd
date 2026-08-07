@@ -19,6 +19,11 @@ var level_counter: int = 0
 var music_volume: float = 0.7
 var sound_volume: float = 0.7
 var has_finished: bool = false
+var tutorials_seen: Array[bool] = [
+	false,
+	false,
+	false
+]
 var levels: Array[PackedScene] = [load("res:///scenes/main.tscn"),
 load("res:///scenes/levels/level1.tscn"),
 load("res:///scenes/levels/level2.tscn"),

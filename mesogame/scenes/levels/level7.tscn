@@ -17,8 +17,11 @@
 [ext_resource type="Texture2D" uid="uid://ck8ks4oyt60n5" path="res://assets/box_thin.png" id="17_ricaf"]
 [ext_resource type="PackedScene" uid="uid://b0nog3nlf2vsj" path="res://scenes/items/pillow_90.tscn" id="18_prm31"]
 [ext_resource type="Texture2D" uid="uid://su86w6p5cupc" path="res://assets/tile_bg.png" id="20_1h8sb"]
+[ext_resource type="Script" uid="uid://b2e2kb4diiq7n" path="res://scripts/popup_tutorial.gd" id="20_co2u6"]
 [ext_resource type="PackedScene" uid="uid://ljo2xbw203ex" path="res://scenes/items/scarf_90ccw.tscn" id="20_ubfq5"]
 [ext_resource type="Texture2D" uid="uid://b6fgaeuibgs2t" path="res://assets/table.png" id="21_e008a"]
+[ext_resource type="Texture2D" uid="uid://dqd68yvky1kgf" path="res://assets/whiteboard.png" id="21_hckfr"]
+[ext_resource type="Texture2D" uid="uid://cyuxwxkkjddgl" path="res://assets/tutorial_fragiles.png" id="22_co2u6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jbj1t"]
 size = Vector2(2452.7998, 225.39142)
@@ -243,6 +246,39 @@ _data = {
 &"exit": SubResource("Animation_jbj1t")
 }
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vcm7i"]
+texture = ExtResource("21_hckfr")
+texture_margin_left = 3.0
+texture_margin_right = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aob3v"]
+bg_color = Color(0.078431375, 0.21960784, 0.27450982, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gis3k"]
+bg_color = Color(0.26666668, 0.40784314, 0.4627451, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_83j8s"]
+bg_color = Color(0.20392157, 0.34509805, 0.4, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_es4n0"]
+bg_color = Color(0.26666668, 0.40784314, 0.4627451, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
 [node name="Level7" type="Node2D" unique_id=1180765290]
 script = ExtResource("1_prm31")
 box_width = 8
@@ -408,7 +444,98 @@ shape = SubResource("RectangleShape2D_jbj1t")
 libraries/ = SubResource("AnimationLibrary_jkv2x")
 autoplay = &"entrance"
 
+[node name="Tutorial" type="CanvasLayer" parent="." unique_id=1722057529]
+process_mode = 3
+layer = 2
+script = ExtResource("20_co2u6")
+tutorial_index = 1
+
+[node name="ColorRect" type="ColorRect" parent="Tutorial" unique_id=958798644]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.47058824)
+
+[node name="Popup" type="Panel" parent="Tutorial" unique_id=2007337710]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -225.0
+offset_right = 360.0
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(360, 225)
+theme_override_styles/panel = SubResource("StyleBoxTexture_vcm7i")
+
+[node name="MainGrid" type="VBoxContainer" parent="Tutorial/Popup" unique_id=547619745]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -210.0
+offset_right = 300.0
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Heading" type="RichTextLabel" parent="Tutorial/Popup/MainGrid" unique_id=47361940]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.015686275, 0.12941177, 0.16862746, 1)
+theme_override_fonts/normal_font = ExtResource("8_7716e")
+theme_override_font_sizes/normal_font_size = 40
+text = "Fragiles"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[node name="Image" type="TextureRect" parent="Tutorial/Popup/MainGrid" unique_id=1478991507]
+custom_maximum_size = Vector2(-1, 180)
+layout_mode = 2
+texture = ExtResource("22_co2u6")
+stretch_mode = 5
+
+[node name="M" type="MarginContainer" parent="Tutorial/Popup/MainGrid" unique_id=1341751836]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Tutorial" type="RichTextLabel" parent="Tutorial/Popup/MainGrid/M" unique_id=1198238401]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.015686275, 0.12941177, 0.16862746, 1)
+theme_override_constants/line_separation = 7
+theme_override_fonts/normal_font = ExtResource("8_7716e")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[u]Fragile[/u] items must have [u]Soft[/u] surroundings on [u]all four sides[/u]. Box walls are not soft."
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Continue" type="Button" parent="Tutorial/Popup/MainGrid" unique_id=575629705]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_colors/icon_normal_color = Color(0.078431375, 0.21960784, 0.27450982, 1)
+theme_override_fonts/font = ExtResource("8_7716e")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_aob3v")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gis3k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_83j8s")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_es4n0")
+text = "Continue"
+
 [connection signal="pressed" from="HUD/PauseButton" to="HUD/SettingsMenu" method="_on_pause_button_pressed"]
 [connection signal="pressed" from="HUD/Left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="HUD/Right" to="." method="_on_right_pressed"]
 [connection signal="animation_finished" from="Anim" to="." method="_on_animation_finished"]
+[connection signal="pressed" from="Tutorial/Popup/MainGrid/Continue" to="Tutorial" method="_on_continue_pressed"]

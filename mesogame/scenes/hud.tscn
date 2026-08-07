@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://bme42p1aic0si" path="res://scripts/hoverable.gd" id="5_hd3ao"]
 [ext_resource type="Texture2D" uid="uid://bo5d88wlhjs8g" path="res://assets/handle_with_care.png" id="6_047uy"]
 [ext_resource type="Texture2D" uid="uid://dr4y0lst3c7rn" path="res://assets/save_icon.png" id="7_5pdws"]
+[ext_resource type="Script" uid="uid://xiklepxerjf0" path="res://scripts/hoverable_regular.gd" id="9_0i1j5"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_es4n0"]
 texture = ExtResource("6_047uy")
@@ -67,6 +68,16 @@ _data = {
 &"hud_entrance": SubResource("Animation_5ysmq"),
 &"hud_exit": SubResource("Animation_uo2fv")
 }
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hd3ao"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0i1j5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mphia"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0m4u7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_apjy4"]
 
 [node name="HUD" type="CanvasLayer" unique_id=2074363166]
 script = ExtResource("1_ahhtf")
@@ -209,6 +220,28 @@ grow_vertical = 0
 mouse_filter = 2
 texture = ExtResource("7_5pdws")
 
+[node name="Tutorial" type="Button" parent="." unique_id=1159883325]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -25.0
+offset_top = 6.0
+offset_right = -7.0
+offset_bottom = 45.0
+grow_horizontal = 0
+pivot_offset = Vector2(18, 0)
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("3_5ysmq")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hd3ao")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_0i1j5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mphia")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_0m4u7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_apjy4")
+text = "i"
+script = ExtResource("9_0i1j5")
+
 [connection signal="pressed" from="Panel/HBoxContainer/ResetButton" to="." method="_on_reset_button_pressed"]
 [connection signal="pressed" from="Panel/HBoxContainer/NextButton" to="." method="_on_next_button_pressed"]
 [connection signal="timeout" from="WarningTimer" to="." method="_on_warning_timer_timeout"]
+[connection signal="pressed" from="Tutorial" to="." method="_on_tutorial_pressed"]
