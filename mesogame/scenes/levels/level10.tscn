@@ -313,13 +313,13 @@ vertical_alignment = 1
 position = Vector2(0, 800)
 
 [node name="Scarf2" parent="ItemGroup" unique_id=135389775 instance=ExtResource("9_hw1kd")]
-position = Vector2(10872, 1643)
+position = Vector2(1414, 1651)
 
 [node name="Backpack" parent="ItemGroup" unique_id=1978362861 instance=ExtResource("13_ofvo0")]
 position = Vector2(376, 1743)
 
 [node name="Cassette" parent="ItemGroup" unique_id=1331335864 instance=ExtResource("12_5v622")]
-position = Vector2(1458, 1606)
+position = Vector2(986, 1500)
 
 [node name="StuffedAnimal" parent="ItemGroup" unique_id=1225398180 instance=ExtResource("13_lnxpb")]
 position = Vector2(4216, 1630)
@@ -340,7 +340,7 @@ position = Vector2(4840, 1690)
 position = Vector2(5347, 1717)
 
 [node name="FridgeMagnet4" parent="ItemGroup" unique_id=525602575 instance=ExtResource("14_lnxpb")]
-position = Vector2(7872, 1505)
+position = Vector2(5692, 1631)
 
 [node name="Chopsticks" parent="ItemGroup" unique_id=645042869 instance=ExtResource("15_250dg")]
 position = Vector2(7562, 1535)
@@ -377,6 +377,12 @@ position = Vector2(11789, 1784)
 
 [node name="Perfume4" parent="ItemGroup" unique_id=2077898707 instance=ExtResource("14_7kkvr")]
 position = Vector2(10659, 1545)
+
+[node name="Perfume14" parent="ItemGroup" unique_id=1368016896 instance=ExtResource("14_7kkvr")]
+position = Vector2(10820, 1715)
+
+[node name="Perfume15" parent="ItemGroup" unique_id=1270993913 instance=ExtResource("14_7kkvr")]
+position = Vector2(11018, 1591)
 
 [node name="Perfume5" parent="ItemGroup" unique_id=283581588 instance=ExtResource("14_7kkvr")]
 position = Vector2(11235, 1757)

@@ -36,8 +36,8 @@ load("res:///scenes/levels/level8.tscn"),
 load("res:///scenes/levels/level9.tscn"),
 load("res:///scenes/levels/level10.tscn"),
 load("res:///scenes/levels/level11.tscn"),
-load("res:///scenes/levels/level13.tscn"),
 load("res:///scenes/levels/level12.tscn"),
+load("res:///scenes/levels/level13.tscn"),
 load("res://scenes/levels/levelend.tscn"), # NOTE: ending level
 load("res:///scenes/ending.tscn") # NOTE: ending scene
 ]

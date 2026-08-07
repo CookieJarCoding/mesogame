@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cngxctywg2m20" path="res://scenes/items/shirt.tscn" id="16_mokrb"]
 [ext_resource type="PackedScene" uid="uid://dp48b0gpq6w0o" path="res://scenes/items/scarf.tscn" id="17_qab5v"]
 [ext_resource type="PackedScene" uid="uid://duc7f3cqg1p7h" path="res://scenes/items/fridge_magnet.tscn" id="17_xmmsn"]
+[ext_resource type="PackedScene" uid="uid://c4jdub0wmstg1" path="res://scenes/popup_tutorial.tscn" id="18_km634"]
 [ext_resource type="Texture2D" uid="uid://bd3yrl67sc6we" path="res://assets/box.png" id="19_ddpvl"]
 [ext_resource type="Texture2D" uid="uid://su86w6p5cupc" path="res://assets/tile_bg.png" id="20_8epf1"]
 [ext_resource type="Texture2D" uid="uid://b6fgaeuibgs2t" path="res://assets/table.png" id="21_nl3jc"]
@@ -392,6 +393,8 @@ shape = SubResource("RectangleShape2D_jbj1t")
 [node name="Anim" type="AnimationPlayer" parent="." unique_id=822451176]
 libraries/ = SubResource("AnimationLibrary_jkv2x")
 autoplay = &"entrance"
+
+[node name="Tutorial" parent="." unique_id=1722057529 instance=ExtResource("18_km634")]
 
 [connection signal="pressed" from="HUD/Left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="HUD/Right" to="." method="_on_right_pressed"]

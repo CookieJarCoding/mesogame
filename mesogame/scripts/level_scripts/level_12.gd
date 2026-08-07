@@ -7,12 +7,12 @@ func _ready() -> void:
 		[Globals.item_types.APPAREL],
 		"res://assets/characters/jay_ethan.png"
 	)
-	$HUD.create_character("Joanne", 0, 27,
+	$HUD.create_character("Joanne", 0, 26,
 		[Globals.item_types.APPAREL],
 		[],
 		"res://assets/characters/joanne.png"
 	)
-	$HUD.create_character("Nanang", 0, 27,
+	$HUD.create_character("Nanang", 0, 26,
 		[Globals.item_types.CONSUMABLES, Globals.item_types.HANDICRAFTS],
 		[Globals.item_types.TOYS],
 		"res://assets/characters/ange.png"

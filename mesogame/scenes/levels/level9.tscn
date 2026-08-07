@@ -337,9 +337,6 @@ position = Vector2(3937, 1645)
 [node name="Backpack" parent="ItemGroup" unique_id=1220287099 instance=ExtResource("13_ofvo0")]
 position = Vector2(4279, 1615)
 
-[node name="Cassette" parent="ItemGroup" unique_id=1716670024 instance=ExtResource("12_5v622")]
-position = Vector2(5267, 1440)
-
 [node name="Scarf" parent="ItemGroup" unique_id=1158260323 instance=ExtResource("9_hw1kd")]
 position = Vector2(2490, 1772)
 
@@ -362,6 +359,11 @@ texture = ExtResource("17_k12p4")
 [node name="BoxTopLeftCorner" type="Node2D" parent="Box" unique_id=151532924]
 top_level = true
 position = Vector2(1818, 316)
+
+[node name="Cassette" parent="Box" unique_id=1716670024 instance=ExtResource("12_5v622")]
+position = Vector2(-49.202026, 126.875)
+scale = Vector2(0.6648936, 0.625)
+locked = true
 
 [node name="PlaceholderTable" type="ColorRect" parent="." unique_id=867550278]
 visible = false
