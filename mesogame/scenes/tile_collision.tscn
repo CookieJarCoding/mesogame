@@ -32,6 +32,7 @@ collide_with_areas = true
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1373979879]
 z_index = -50
+z_as_relative = false
 custom_minimum_size = Vector2(128, 128)
 custom_maximum_size = Vector2(128, -1)
 anchors_preset = 8

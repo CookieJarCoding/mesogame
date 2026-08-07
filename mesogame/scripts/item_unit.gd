@@ -9,13 +9,14 @@ signal unhovered(item: ItemUnit)
 
 const CLICK_COOLDOWN = 10
 
-@export var item_name = ""
-@export var item_description = ""
-@export var fragile = false
-@export var soft = false
-@export var liquid_container = false
-@export var liquid_risk = false
-@export var wrapped = false
+@export var item_name: String = ""
+@export var item_description: String = ""
+@export var fragile: bool = false
+@export var locked: bool = false
+@export var soft: bool = false
+@export var liquid_container: bool = false
+@export var liquid_risk: bool = false
+@export var wrapped: bool = false
 @export var type: Globals.item_types = Globals.item_types.APPAREL
 
 var draggable = false
@@ -39,6 +40,7 @@ var is_hovered_over
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	z_as_relative = false
 	initialPos = global_position - get_parent().position
 	starting_position = global_position - get_parent().position
 	area_group = $AreaGroup

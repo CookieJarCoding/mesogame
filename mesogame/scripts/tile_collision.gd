@@ -24,6 +24,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	$ColorRect.visible = Globals.show_tiles
+	print(Globals.show_tiles)
+	
 	if ($Collision.global_position.x - $Collision.shape.size.x/2 < get_global_mouse_position().x and get_global_mouse_position().x < $Collision.global_position.x + $Collision.shape.size.x/2) and ($Collision.global_position.y - $Collision.shape.size.y/2 < get_global_mouse_position().y and get_global_mouse_position().y < $Collision.global_position.y + $Collision.shape.size.y/2):
 		if not Globals.is_dragging:
 			hovered_over = true
