@@ -5,6 +5,110 @@
 [ext_resource type="Texture2D" uid="uid://bceume708lr4x" path="res://assets/Button.png" id="3_2x1jc"]
 [ext_resource type="Script" uid="uid://bme42p1aic0si" path="res://scripts/hoverable.gd" id="4_qa3ag"]
 [ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="5_5amew"]
+[ext_resource type="FontFile" uid="uid://c8qs47p5ijr6i" path="res://fonts/HappyTime.otf" id="6_5amew"]
+[ext_resource type="AudioStream" uid="uid://cnhx7h7oige8u" path="res://sounds/airport_ambience.mp3" id="7_t1k4y"]
+
+[sub_resource type="Animation" id="Animation_t1k4y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AirportAmbience:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-30.0]
+}
+
+[sub_resource type="Animation" id="Animation_5amew"]
+resource_name = "ending_animation"
+length = 78.0
+step = 0.5
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(3, 12, 20, 29, 32, 35, 40, 49, 55, 61, 67, 73, 78),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [0, 5.0],
+"method": &"scroll_text"
+}, {
+"args": [1, 3.0],
+"method": &"scroll_text"
+}, {
+"args": [2, 5.0],
+"method": &"scroll_text"
+}, {
+"args": [3, 2.0],
+"method": &"scroll_text"
+}, {
+"args": [4, 2.0],
+"method": &"scroll_text"
+}, {
+"args": [5, 2.0],
+"method": &"scroll_text"
+}, {
+"args": [6, 5.0],
+"method": &"scroll_text"
+}, {
+"args": [7, 2.0],
+"method": &"scroll_text"
+}, {
+"args": [8, 3.0],
+"method": &"scroll_text"
+}, {
+"args": [9, 3.0],
+"method": &"scroll_text"
+}, {
+"args": [10, 3.0],
+"method": &"scroll_text"
+}, {
+"args": [11, 4.0],
+"method": &"scroll_text"
+}, {
+"args": [],
+"method": &"fade_in_picture"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AirportAmbience")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [60.0],
+"method": &"play"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AirportAmbience:volume_db")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(20, 29),
+"transitions": PackedFloat32Array(0.37892938, 1),
+"update": 0,
+"values": [-30.0, -80.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t1k4y"]
+_data = {
+&"RESET": SubResource("Animation_t1k4y"),
+&"ending_animation": SubResource("Animation_5amew")
+}
 
 [node name="Ending" type="Node2D" unique_id=1578198199]
 script = ExtResource("1_fyrdv")
@@ -56,6 +160,45 @@ vertical_alignment = 1
 wait_time = 7.0
 one_shot = true
 autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=10681990]
+
+[node name="Transition" type="ColorRect" parent="CanvasLayer" unique_id=138554165]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.57619995, 0.7748599, 0.86, 1)
+
+[node name="Caption" type="RichTextLabel" parent="CanvasLayer" unique_id=396017319]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 120.0
+offset_top = -100.0
+offset_right = -120.0
+offset_bottom = 84.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0.16470589, 0.39215687, 0.4862745, 1)
+theme_override_constants/line_separation = 6
+theme_override_fonts/normal_font = ExtResource("6_5amew")
+theme_override_font_sizes/normal_font_size = 24
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=435535260]
+libraries/ = SubResource("AnimationLibrary_t1k4y")
+autoplay = &"ending_animation"
+
+[node name="AirportAmbience" type="AudioStreamPlayer" parent="." unique_id=516971070]
+stream = ExtResource("7_t1k4y")
+volume_db = -30.0
 
 [connection signal="pressed" from="QuitToMenuButton" to="." method="_on_quit_to_menu_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

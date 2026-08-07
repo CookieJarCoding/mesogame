@@ -41,6 +41,11 @@ func _on_quit_button_pressed() -> void:
 		CharacterQuota.characters.clear()
 		self.get_parent().get_parent().items_in_grid.clear()
 		Globals.level_counter = 0
+		Globals.tutorials_seen = [
+			false,
+			false,
+			false
+		]
 		get_tree().paused = false
 		get_tree().change_scene_to_file("res://scenes/mainmenu.tscn")
 	else:

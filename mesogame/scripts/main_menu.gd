@@ -1,7 +1,7 @@
 extends Node
 
 
-const BOB_SPEED: float = 4.0
+const BOB_SPEED: float = 2.9
 const BOB_AMPLITUDE: float = 3.0
 const OFFSET_DIFFERENTIAL: float = 0.7
 const INTERSTITIAL: PackedScene = preload("res://scenes/interstitial_letter.tscn")

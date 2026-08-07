@@ -9,3 +9,7 @@ func _ready() -> void:
 		[],
 		"res://assets/characters/toni_casual.png"
 	)
+
+
+func fade_out_music() -> void:
+	AudioLibrary.fade_out_music(AudioLibrary.music.GAMEPLAY)

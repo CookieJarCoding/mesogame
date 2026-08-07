@@ -59,6 +59,7 @@ bus = &"SFX"
 stream = ExtResource("10_6govp")
 volume_db = -3.0
 bus = &"Music"
+parameters/looping = false
 
 [node name="LetterBGM" type="AudioStreamPlayer" parent="." unique_id=1367569709]
 stream = ExtResource("11_svrp5")
@@ -69,3 +70,4 @@ bus = &"Music"
 stream = ExtResource("12_2wnal")
 volume_db = -3.0
 bus = &"Music"
+parameters/looping = false

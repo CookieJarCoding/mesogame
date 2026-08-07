@@ -35,12 +35,14 @@ var finished_moving_items: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#Globals.load_data()
+	#if OS.is_debug_build():
+		#Globals.level_counter = 8
+	#
 	if OS.is_debug_build():
-		Globals.level_counter = 8
-	
+		Globals.level_counter = 14
 	
 	print(Globals.level_counter)
-	if Globals.level_counter >= 11:
+	if Globals.level_counter >= 12 and Globals.level_counter < 14:
 		$Box/BoxTopLeftCorner.position = Vector2(1818 - 70 * (box_width - 5), 376 - 70 * (box_width - 5))
 	else:
 		$Box/BoxTopLeftCorner.position = Vector2(1818 - 70 * (box_width - 5), 316 - 70 * (box_width - 5))
@@ -55,6 +57,10 @@ func _ready() -> void:
 	$HUD.connect("next_level", _on_next_button_pressed)
 	$HUD.connect("show_tutorial", _on_tutorial_pressed)
 	$HUD.flash_save_icon()
+	
+	var tut = get_node_or_null("Tutorial")
+	if tut != null and tut is CanvasLayer:
+		$HUD.display_tutorial_icon()
 	
 	for i in range(box_height):
 		for j in range(box_width):
@@ -255,13 +261,15 @@ func _on_animation_finished(anim_name: StringName) -> void:
 		# CHECK IF THIS WORKS SUCH THAT THESE ARE SPACED OUT EVERY THREE LEVELS
 		if Globals.level_counter == 1 or Globals.level_counter == 4 or Globals.level_counter == 7 or Globals.level_counter == 12 or Globals.level_counter == 14:
 			get_tree().change_scene_to_file("res:///scenes/interstitial_letter.tscn")
-		elif Globals.level_counter == 13:
-			get_tree().change_scene_to_file("res:///scenes/ending.tscn")
+		elif Globals.level_counter == 15:
+			pass
 		else:
 			CharacterQuota.characters.clear()
 			items_in_grid.clear()
 			print(Globals.level_counter)
 			get_tree().change_scene_to_packed(Globals.levels[Globals.level_counter])
+	if anim_name == "fade_to_ending":
+		get_tree().change_scene_to_file("res://scenes/ending.tscn")
 
 
 func play_swoosh() -> void:

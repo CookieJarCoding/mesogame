@@ -2,11 +2,9 @@
 
 [ext_resource type="Script" uid="uid://oi68yy1lfyvx" path="res://scripts/level_scripts/level_7.gd" id="1_prm31"]
 [ext_resource type="PackedScene" uid="uid://c4yjamtvwcpmh" path="res://scenes/hud.tscn" id="2_co2u6"]
-[ext_resource type="Texture2D" uid="uid://dyevrv6ok3m4q" path="res://assets/pause.png" id="3_hckfr"]
 [ext_resource type="Texture2D" uid="uid://imdai3c5bn6g" path="res://assets/arrow.png" id="6_vxsie"]
 [ext_resource type="Script" uid="uid://bme42p1aic0si" path="res://scripts/hoverable.gd" id="7_yi5iu"]
 [ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="8_7716e"]
-[ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="9_5gm5m"]
 [ext_resource type="PackedScene" uid="uid://blwn3kp63m1yf" path="res://scenes/item_information.tscn" id="10_f3jlr"]
 [ext_resource type="PackedScene" uid="uid://c1nt5gv67kvis" path="res://scenes/items/camera_90cw.tscn" id="13_4u223"]
 [ext_resource type="PackedScene" uid="uid://c6jmbcp1vhgao" path="res://scenes/items/cassette.tscn" id="14_vd1yw"]
@@ -288,15 +286,6 @@ level_title = "Fragile!"
 
 [node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("2_co2u6")]
 
-[node name="PauseButton" type="TextureButton" parent="HUD" unique_id=1637305200]
-texture_filter = 1
-offset_left = 3.0
-offset_top = 3.0
-offset_right = 63.0
-offset_bottom = 63.0
-scale = Vector2(0.585, 0.585)
-texture_normal = ExtResource("3_hckfr")
-
 [node name="Left" type="TextureButton" parent="HUD" unique_id=1777119729]
 visible = false
 anchors_preset = 3
@@ -351,11 +340,6 @@ scroll_active = false
 autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="SettingsMenu" parent="HUD" unique_id=186484164 instance=ExtResource("9_5gm5m")]
-process_mode = 3
-visible = false
-z_index = 100
 
 [node name="ItemInformation" parent="." unique_id=1848763749 instance=ExtResource("10_f3jlr")]
 
@@ -534,7 +518,6 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_83j8s")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_es4n0")
 text = "Continue"
 
-[connection signal="pressed" from="HUD/PauseButton" to="HUD/SettingsMenu" method="_on_pause_button_pressed"]
 [connection signal="pressed" from="HUD/Left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="HUD/Right" to="." method="_on_right_pressed"]
 [connection signal="animation_finished" from="Anim" to="." method="_on_animation_finished"]

@@ -93,7 +93,7 @@ vertical_alignment = 1
 
 [node name="Envelope" type="Sprite2D" parent="." unique_id=129040398]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(426, 345.705)
+position = Vector2(490.00006, 345.70496)
 rotation = -0.31415927
 scale = Vector2(0.12588236, 0.12588236)
 texture = ExtResource("6_eit5r")

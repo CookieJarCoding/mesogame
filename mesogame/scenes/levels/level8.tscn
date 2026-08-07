@@ -2,11 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dhq5y88s2l417" path="res://scripts/level_scripts/level_8.gd" id="1_lnxpb"]
 [ext_resource type="PackedScene" uid="uid://c4yjamtvwcpmh" path="res://scenes/hud.tscn" id="2_250dg"]
-[ext_resource type="Texture2D" uid="uid://dyevrv6ok3m4q" path="res://assets/pause.png" id="3_wgfvi"]
 [ext_resource type="Texture2D" uid="uid://imdai3c5bn6g" path="res://assets/arrow.png" id="4_xr5re"]
 [ext_resource type="Script" uid="uid://bme42p1aic0si" path="res://scripts/hoverable.gd" id="5_o4j2a"]
 [ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="6_7kkvr"]
-[ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="7_iiwue"]
 [ext_resource type="PackedScene" uid="uid://blwn3kp63m1yf" path="res://scenes/item_information.tscn" id="8_1dg3w"]
 [ext_resource type="PackedScene" uid="uid://b3clb5dtvgjyn" path="res://scenes/items/blanket.tscn" id="9_k12p4"]
 [ext_resource type="PackedScene" uid="uid://b8ueivqliytm3" path="res://scenes/items/stuffed_animal.tscn" id="10_75nnh"]
@@ -286,15 +284,6 @@ level_title = "Handle with care."
 
 [node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("2_250dg")]
 
-[node name="PauseButton" type="TextureButton" parent="HUD" unique_id=1637305200]
-texture_filter = 1
-offset_left = 3.0
-offset_top = 3.0
-offset_right = 63.0
-offset_bottom = 63.0
-scale = Vector2(0.585, 0.585)
-texture_normal = ExtResource("3_wgfvi")
-
 [node name="Left" type="TextureButton" parent="HUD" unique_id=1777119729]
 visible = false
 anchors_preset = 3
@@ -349,11 +338,6 @@ scroll_active = false
 autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="SettingsMenu" parent="HUD" unique_id=186484164 instance=ExtResource("7_iiwue")]
-process_mode = 3
-visible = false
-z_index = 100
 
 [node name="ItemInformation" parent="." unique_id=1848763749 instance=ExtResource("8_1dg3w")]
 
@@ -527,7 +511,6 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_83j8s")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_es4n0")
 text = "Continue"
 
-[connection signal="pressed" from="HUD/PauseButton" to="HUD/SettingsMenu" method="_on_pause_button_pressed"]
 [connection signal="pressed" from="HUD/Left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="HUD/Right" to="." method="_on_right_pressed"]
 [connection signal="animation_finished" from="Anim" to="." method="_on_animation_finished"]

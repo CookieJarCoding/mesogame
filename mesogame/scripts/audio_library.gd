@@ -54,6 +54,15 @@ func play_music(s: music):
 
 
 func stop_all_music() -> void:
+	$GameplayBGM.volume_db = -3.0
 	$GameplayBGM.stop()
 	$LetterBGM.stop()
 	$TitleBGM.stop()
+
+
+func fade_out_music(s: music):
+	var tween = create_tween()
+	if s == music.GAMEPLAY:
+		tween.tween_property($GameplayBGM, "volume_db", -80.0, 5.0).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUINT)
+		await tween.finished
+		stop_all_music()

@@ -2,11 +2,9 @@
 
 [ext_resource type="Script" uid="uid://nt0n0bomrbcy" path="res://scripts/level_scripts/level_13.gd" id="1_qx3q5"]
 [ext_resource type="PackedScene" uid="uid://c4yjamtvwcpmh" path="res://scenes/hud.tscn" id="2_uuw03"]
-[ext_resource type="Texture2D" uid="uid://dyevrv6ok3m4q" path="res://assets/pause.png" id="3_3w08t"]
 [ext_resource type="Texture2D" uid="uid://imdai3c5bn6g" path="res://assets/arrow.png" id="4_4da8d"]
 [ext_resource type="Script" uid="uid://bme42p1aic0si" path="res://scripts/hoverable.gd" id="5_gi8ab"]
 [ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="6_f86k7"]
-[ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="7_6psd6"]
 [ext_resource type="PackedScene" uid="uid://blwn3kp63m1yf" path="res://scenes/item_information.tscn" id="8_dfseq"]
 [ext_resource type="PackedScene" uid="uid://cngxctywg2m20" path="res://scenes/items/shirt.tscn" id="9_y4ob2"]
 [ext_resource type="PackedScene" uid="uid://c5hlhqh1dr53d" path="res://scenes/items/shirt_90ccw.tscn" id="10_80v4r"]
@@ -260,15 +258,6 @@ level_title = "For the relatives"
 
 [node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("2_uuw03")]
 
-[node name="PauseButton" type="TextureButton" parent="HUD" unique_id=1637305200]
-texture_filter = 1
-offset_left = 3.0
-offset_top = 3.0
-offset_right = 63.0
-offset_bottom = 63.0
-scale = Vector2(0.585, 0.585)
-texture_normal = ExtResource("3_3w08t")
-
 [node name="Left" type="TextureButton" parent="HUD" unique_id=1777119729]
 visible = false
 anchors_preset = 3
@@ -323,11 +312,6 @@ scroll_active = false
 autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="SettingsMenu" parent="HUD" unique_id=186484164 instance=ExtResource("7_6psd6")]
-process_mode = 3
-visible = false
-z_index = 100
 
 [node name="ItemInformation" parent="." unique_id=1848763749 instance=ExtResource("8_dfseq")]
 
@@ -451,7 +435,6 @@ shape = SubResource("RectangleShape2D_jbj1t")
 libraries/ = SubResource("AnimationLibrary_jkv2x")
 autoplay = &"entrance"
 
-[connection signal="pressed" from="HUD/PauseButton" to="HUD/SettingsMenu" method="_on_pause_button_pressed"]
 [connection signal="pressed" from="HUD/Left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="HUD/Right" to="." method="_on_right_pressed"]
 [connection signal="animation_finished" from="Anim" to="." method="_on_animation_finished"]

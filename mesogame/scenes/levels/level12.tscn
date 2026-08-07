@@ -2,11 +2,9 @@
 
 [ext_resource type="Script" uid="uid://d2rfihhciouvq" path="res://scripts/level_scripts/level_12.gd" id="1_bpv8q"]
 [ext_resource type="PackedScene" uid="uid://c4yjamtvwcpmh" path="res://scenes/hud.tscn" id="2_d31ew"]
-[ext_resource type="Texture2D" uid="uid://dyevrv6ok3m4q" path="res://assets/pause.png" id="3_7128s"]
 [ext_resource type="Texture2D" uid="uid://imdai3c5bn6g" path="res://assets/arrow.png" id="4_v747f"]
 [ext_resource type="Script" uid="uid://bme42p1aic0si" path="res://scripts/hoverable.gd" id="5_w7mia"]
 [ext_resource type="FontFile" uid="uid://n3q1jka0d8pi" path="res://fonts/Play Area.otf" id="6_bsp33"]
-[ext_resource type="PackedScene" uid="uid://dd1bx7fxrlbca" path="res://scenes/settings.tscn" id="7_b8h5j"]
 [ext_resource type="PackedScene" uid="uid://blwn3kp63m1yf" path="res://scenes/item_information.tscn" id="8_7iyh2"]
 [ext_resource type="PackedScene" uid="uid://bvmpry8rndv88" path="res://scenes/items/luxury_bag.tscn" id="8_d31ew"]
 [ext_resource type="PackedScene" uid="uid://vk5qd6uuuv4b" path="res://scenes/items/action_figure_90.tscn" id="10_dmode"]
@@ -259,15 +257,6 @@ level_title = "For the family"
 
 [node name="HUD" parent="." unique_id=2074363166 instance=ExtResource("2_d31ew")]
 
-[node name="PauseButton" type="TextureButton" parent="HUD" unique_id=1637305200]
-texture_filter = 1
-offset_left = 3.0
-offset_top = 3.0
-offset_right = 63.0
-offset_bottom = 63.0
-scale = Vector2(0.585, 0.585)
-texture_normal = ExtResource("3_7128s")
-
 [node name="Left" type="TextureButton" parent="HUD" unique_id=1777119729]
 visible = false
 anchors_preset = 3
@@ -323,87 +312,85 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SettingsMenu" parent="HUD" unique_id=186484164 instance=ExtResource("7_b8h5j")]
-process_mode = 3
-visible = false
-z_index = 100
-
 [node name="ItemInformation" parent="." unique_id=1848763749 instance=ExtResource("8_7iyh2")]
 
 [node name="ItemGroup" type="Node2D" parent="." unique_id=1210610719]
 position = Vector2(0, 800)
 
 [node name="LuxuryBag" parent="ItemGroup" unique_id=705416440 instance=ExtResource("8_d31ew")]
-position = Vector2(10489, 1771)
+position = Vector2(4457, 1854)
 
 [node name="Scarf" parent="ItemGroup" unique_id=1160028078 instance=ExtResource("14_ybk5v")]
-position = Vector2(11550, 1795)
+position = Vector2(1850, 1680)
 
 [node name="Scarf2" parent="ItemGroup" unique_id=1862668704 instance=ExtResource("15_bpv8q")]
-position = Vector2(12213, 1931)
+position = Vector2(2450, 1839)
 
 [node name="Backpack" parent="ItemGroup" unique_id=2022575483 instance=ExtResource("17_5g35d")]
-position = Vector2(3926, 1808)
+position = Vector2(179, 1761)
 
 [node name="StuffedAnimal" parent="ItemGroup" unique_id=1750574391 instance=ExtResource("11_2t5od")]
-position = Vector2(4417, 1963)
+position = Vector2(3926, 1925)
 
 [node name="Chopsticks2" parent="ItemGroup" unique_id=487147931 instance=ExtResource("13_s42k0")]
-position = Vector2(129, 1740)
+position = Vector2(11168, 1720)
 
 [node name="Chopsticks3" parent="ItemGroup" unique_id=2079039449 instance=ExtResource("13_s42k0")]
-position = Vector2(287, 1791)
+position = Vector2(11326, 1771)
 
 [node name="Chopsticks4" parent="ItemGroup" unique_id=616730861 instance=ExtResource("13_s42k0")]
-position = Vector2(449, 1732)
+position = Vector2(11488, 1712)
 
 [node name="Chopsticks5" parent="ItemGroup" unique_id=863845085 instance=ExtResource("13_s42k0")]
-position = Vector2(629, 1794)
+position = Vector2(11668, 1774)
 
 [node name="ActionFigure90" parent="ItemGroup" unique_id=1080722207 instance=ExtResource("10_dmode")]
-position = Vector2(811, 1674)
+position = Vector2(11850, 1654)
 
 [node name="ActionFigure91" parent="ItemGroup" unique_id=547848708 instance=ExtResource("10_dmode")]
-position = Vector2(1142, 1595)
+position = Vector2(12181, 1575)
 
 [node name="ActionFigure92" parent="ItemGroup" unique_id=1029299053 instance=ExtResource("10_dmode")]
-position = Vector2(1456, 1654)
+position = Vector2(12495, 1634)
+
+[node name="ActionFigure93" parent="ItemGroup" unique_id=248965351 instance=ExtResource("10_dmode")]
+position = Vector2(12187, 1740)
 
 [node name="Pillow" parent="ItemGroup" unique_id=1421047789 instance=ExtResource("15_eq6nf")]
-position = Vector2(2234, 1791)
+position = Vector2(5234, 1699)
 
 [node name="Pillow2" parent="ItemGroup" unique_id=1241539544 instance=ExtResource("15_eq6nf")]
-position = Vector2(2573, 1810)
+position = Vector2(5633, 1718)
 
 [node name="FridgeMagnet" parent="ItemGroup" unique_id=1445455129 instance=ExtResource("18_mqt10")]
-position = Vector2(5660, 1733)
+position = Vector2(7495, 1525)
 
 [node name="FridgeMagnet2" parent="ItemGroup" unique_id=280879111 instance=ExtResource("18_mqt10")]
-position = Vector2(5845, 1636)
+position = Vector2(7382, 1705)
 
 [node name="FridgeMagnet3" parent="ItemGroup" unique_id=199974921 instance=ExtResource("18_mqt10")]
-position = Vector2(7151, 1731)
+position = Vector2(7128, 1605)
 
 [node name="FridgeMagnet4" parent="ItemGroup" unique_id=2073850253 instance=ExtResource("18_mqt10")]
-position = Vector2(7319, 1648)
+position = Vector2(7296, 1522)
 
 [node name="Camera" parent="ItemGroup" unique_id=1163979137 instance=ExtResource("16_ywgi4")]
-position = Vector2(7506, 1764)
+position = Vector2(657, 1645)
 
 [node name="Cassette" parent="ItemGroup" unique_id=19547861 instance=ExtResource("18_32cl3")]
-position = Vector2(7837, 1792)
+position = Vector2(1015, 1686)
 
 [node name="HoneyJars" parent="ItemGroup" unique_id=1960782813 instance=ExtResource("21_oi7be")]
-position = Vector2(8602, 1778)
+position = Vector2(8777, 1755)
 
 [node name="CannedGoods90" parent="ItemGroup" unique_id=727936615 instance=ExtResource("20_02r4x")]
-position = Vector2(8201, 1920)
+position = Vector2(8376, 1897)
 
 [node name="Perfume" parent="ItemGroup" unique_id=1214511384 instance=ExtResource("22_417m5")]
-position = Vector2(8979, 1679)
+position = Vector2(1363, 1578)
 
 [node name="Chocolates" parent="ItemGroup" unique_id=293736656 instance=ExtResource("23_d31ew")]
-position = Vector2(5004, 1769)
+position = Vector2(7864, 1813)
 
 [node name="Camera" type="Camera2D" parent="." unique_id=113758559]
 anchor_mode = 0
@@ -455,7 +442,6 @@ shape = SubResource("RectangleShape2D_jbj1t")
 libraries/ = SubResource("AnimationLibrary_jkv2x")
 autoplay = &"entrance"
 
-[connection signal="pressed" from="HUD/PauseButton" to="HUD/SettingsMenu" method="_on_pause_button_pressed"]
 [connection signal="pressed" from="HUD/Left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="HUD/Right" to="." method="_on_right_pressed"]
 [connection signal="animation_finished" from="Anim" to="." method="_on_animation_finished"]

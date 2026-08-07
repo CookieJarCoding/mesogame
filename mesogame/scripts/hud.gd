@@ -67,3 +67,7 @@ func flash_save_icon() -> void:
 
 func _on_tutorial_pressed() -> void:
 	show_tutorial.emit()
+
+
+func display_tutorial_icon() -> void:
+	$Tutorial.visible = true
